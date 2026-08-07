@@ -10,8 +10,35 @@
     "rcept_dt": "20260319",
     "as_of": "2025-12-31"
   },
-  "financial_assets": null,
-  "pension": null,
+  "financial_assets": {
+    "unit": "천원",
+    "total": 920439756,
+    "amortized_cost": 581385490,
+    "fvoci": 25829070,
+    "fvtpl": 313121140,
+    "short_term_deposits": null,
+    "cash": 296472812,
+    "products": [
+      "당기손익인식금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "천원",
+    "dbo": 6281017,
+    "plan_assets": 6935902,
+    "net_liability": -654885,
+    "funding_ratio": 110.4,
+    "principal_guaranteed": null,
+    "indirect_investment": null,
+    "other_assets": null,
+    "employer_contribution": null,
+    "expected_contribution": null,
+    "benefits_paid": null,
+    "service_cost": null,
+    "plan_type": "DB",
+    "providers": []
+  },
   "stock_comp": null,
   "shareholders": {
     "largest": "네오펄스㈜",

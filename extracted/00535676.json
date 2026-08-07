@@ -10,7 +10,19 @@
     "rcept_dt": "20260623",
     "as_of": "2025-12-31"
   },
-  "financial_assets": null,
+  "financial_assets": {
+    "unit": "원",
+    "total": 157528271114,
+    "amortized_cost": 154984418144,
+    "fvoci": 34864470,
+    "fvtpl": 2508988500,
+    "short_term_deposits": 66570576964,
+    "cash": 42167522083,
+    "products": [
+      "기타유동금융자산"
+    ],
+    "maturity_buckets": []
+  },
   "pension": null,
   "stock_comp": null,
   "shareholders": {
@@ -371,5 +383,6 @@
       "debtor": "(주)트루텍",
       "rcp_no": "20251230000344"
     }
-  ]
+  ],
+  "_pe_note": "퇴직연금 탭 제외 — 확정급여채무 금액 미기재(사외적립자산만 공시)"
 }

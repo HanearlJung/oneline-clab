@@ -10,8 +10,35 @@
     "rcept_dt": "20260323",
     "as_of": "2025-12-31"
   },
-  "financial_assets": null,
-  "pension": null,
+  "financial_assets": {
+    "unit": "원",
+    "total": 107154472096,
+    "amortized_cost": 105571935552,
+    "fvoci": null,
+    "fvtpl": 1582536544,
+    "short_term_deposits": 1720000000,
+    "cash": 23806156178,
+    "products": [
+      "기타금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "원",
+    "dbo": 3160813382,
+    "plan_assets": 2391340126,
+    "net_liability": 769473256,
+    "funding_ratio": 75.7,
+    "principal_guaranteed": null,
+    "indirect_investment": null,
+    "other_assets": null,
+    "employer_contribution": null,
+    "expected_contribution": null,
+    "benefits_paid": null,
+    "service_cost": null,
+    "plan_type": "DB",
+    "providers": []
+  },
   "stock_comp": null,
   "shareholders": {
     "largest": "SNT모티브(주) 외 1인",

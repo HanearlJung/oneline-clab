@@ -2,7 +2,7 @@
   "meta": {
     "baseDate": "2026-08-07",
     "companyCount": 100,
-    "generated": "2026-08-07 16:52"
+    "generated": "2026-08-07 18:26"
   },
   "tabs": [
     {
@@ -76,7 +76,7 @@
         }
       ],
       "coverage": {
-        "covered": 50,
+        "covered": 66,
         "total": 100
       },
       "rows": [
@@ -191,6 +191,28 @@
           ]
         },
         {
+          "name": "스틱인베스트먼트",
+          "code": "026890",
+          "market": "KOSPI",
+          "industry": "신탁업 및 집합투자업",
+          "rcpNo": "20260319000750",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000750",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 219억원 보유",
+          "detail": "단기예치 170억원 · 수익증권류 49억원",
+          "amount": 218.9,
+          "metricText": "219억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 170억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
           "name": "삼성전자",
           "code": "005930",
           "market": "KOSPI",
@@ -254,6 +276,50 @@
           "chips": [
             "금융자산",
             "운용상품 보유"
+          ]
+        },
+        {
+          "name": "SK네트웍스",
+          "code": "001740",
+          "market": "KOSPI",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260318001112",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001112",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 5,347억원 보유",
+          "detail": "단기예치 1,097억원 · 수익증권류 4,250억원 · 전략지분(FVOCI) 875억원",
+          "amount": 5347.0,
+          "metricText": "5,347억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 4,250억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "SIMPAC",
+          "code": "009160",
+          "market": "KOSPI",
+          "industry": "1차 철강 제조업",
+          "rcpNo": "20260318001274",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001274",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 36억원 보유",
+          "detail": "단기예치 36억원",
+          "amount": 35.8,
+          "metricText": "36억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 36억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
           ]
         },
         {
@@ -565,6 +631,50 @@
           ]
         },
         {
+          "name": "호텔신라",
+          "code": "008770",
+          "market": "KOSPI",
+          "industry": "기타 상품 전문 소매업",
+          "rcpNo": "20260311004398",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311004398",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 2,992억원 보유",
+          "detail": "단기예치 2,992억원",
+          "amount": 2991.9,
+          "metricText": "2,992억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 2,992억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "대주전자재료",
+          "code": "078600",
+          "market": "KOSDAQ",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20260319000004",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000004",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 153억원 보유",
+          "detail": "단기예치 153억원",
+          "amount": 152.6,
+          "metricText": "153억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 153억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
           "name": "SK",
           "code": "034730",
           "market": "KOSPI",
@@ -606,6 +716,50 @@
           "chips": [
             "금융자산",
             "예치자금 편중"
+          ]
+        },
+        {
+          "name": "한양이엔지",
+          "code": "045100",
+          "market": "KOSDAQ",
+          "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+          "rcpNo": "20260313000818",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313000818",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 936억원 보유",
+          "detail": "단기예치 936억원",
+          "amount": 935.6,
+          "metricText": "936억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 936억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "LS마린솔루션",
+          "code": "060370",
+          "market": "KOSDAQ",
+          "industry": "전기 및 통신 공사업",
+          "rcpNo": "20260316000800",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316000800",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 172억원 보유",
+          "detail": "수익증권류 172억원 · 전략지분(FVOCI) 13억원",
+          "amount": 172.2,
+          "metricText": "172억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 172억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
           ]
         },
         {
@@ -719,6 +873,50 @@
           ]
         },
         {
+          "name": "위메이드",
+          "code": "112040",
+          "market": "KOSDAQ",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260319000853",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000853",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 3,131억원 보유",
+          "detail": "수익증권류 3,131억원 · 전략지분(FVOCI) 258억원",
+          "amount": 3131.2,
+          "metricText": "3,131억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 3,131억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "한양디지텍",
+          "code": "078350",
+          "market": "KOSDAQ",
+          "industry": "반도체 제조업",
+          "rcpNo": "20260316001638",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001638",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 55억원 보유",
+          "detail": "단기예치 55억원",
+          "amount": 54.6,
+          "metricText": "55억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 55억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
           "name": "테스",
           "code": "095610",
           "market": "KOSDAQ",
@@ -741,6 +939,50 @@
           ]
         },
         {
+          "name": "테크윙",
+          "code": "089030",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260623000173",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260623000173",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 691억원 보유",
+          "detail": "단기예치 666억원 · 수익증권류 25억원 · 전략지분(FVOCI) 0억원",
+          "amount": 690.8000000000001,
+          "metricText": "691억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 666억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "브이엠",
+          "code": "089970",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260320000666",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000666",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 8억원 보유",
+          "detail": "단기예치 8억원 · 전략지분(FVOCI) 18억원",
+          "amount": 8.4,
+          "metricText": "8억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 8억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
           "name": "고영",
           "code": "098460",
           "market": "KOSDAQ",
@@ -760,6 +1002,28 @@
           "chips": [
             "금융자산",
             "예치자금 편중"
+          ]
+        },
+        {
+          "name": "스맥",
+          "code": "099440",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260323001679",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001679",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 33억원 보유",
+          "detail": "단기예치 17억원 · 수익증권류 16억원",
+          "amount": 33.0,
+          "metricText": "33억원",
+          "ratio": null,
+          "situation": "운용 여력",
+          "dateValue": null,
+          "timeText": "운용 여력",
+          "action": "여유자금 33억원 채권형·유동성 상품 제안",
+          "chips": [
+            "금융자산",
+            "운용 여력"
           ]
         },
         {
@@ -961,6 +1225,28 @@
           ]
         },
         {
+          "name": "더블유게임즈",
+          "code": "192080",
+          "market": "KOSPI",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260724000595",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724000595",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 2,744억원 보유",
+          "detail": "단기예치 2,744억원",
+          "amount": 2743.6,
+          "metricText": "2,744억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 2,744억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
           "name": "클래시스",
           "code": "214150",
           "market": "KOSDAQ",
@@ -980,6 +1266,28 @@
           "chips": [
             "금융자산",
             "예치자금 편중"
+          ]
+        },
+        {
+          "name": "LS에코에너지",
+          "code": "229640",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20260316001365",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001365",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 70억원 보유",
+          "detail": "단기예치 0억원 · 수익증권류 70억원 · 전략지분(FVOCI) 20억원",
+          "amount": 70.1,
+          "metricText": "70억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 70억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
           ]
         },
         {
@@ -1049,6 +1357,28 @@
           ]
         },
         {
+          "name": "엘앤씨바이오",
+          "code": "290650",
+          "market": "KOSDAQ",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260324000006",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000006",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 695억원 보유",
+          "detail": "수익증권류 695억원",
+          "amount": 695.4,
+          "metricText": "695억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 695억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
           "name": "하이브",
           "code": "352820",
           "market": "KOSPI",
@@ -1068,6 +1398,28 @@
           "chips": [
             "금융자산",
             "예치자금 편중"
+          ]
+        },
+        {
+          "name": "IPARK현대산업개발",
+          "code": "294870",
+          "market": "KOSPI",
+          "industry": "건물 건설업",
+          "rcpNo": "20260318001249",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001249",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 2,304억원 보유",
+          "detail": "단기예치 1,141억원 · 수익증권류 1,163억원",
+          "amount": 2303.5,
+          "metricText": "2,304억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 1,163억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
           ]
         },
         {
@@ -1257,7 +1609,7 @@
         }
       ],
       "coverage": {
-        "covered": 52,
+        "covered": 66,
         "total": 100
       },
       "rows": [
@@ -1476,6 +1828,50 @@
           "dateValue": null,
           "timeText": "추가적립 필요 · 적립률 75.9%",
           "action": "적립 부족분 해소 + 신규 적립금 239억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
+          "name": "SK네트웍스",
+          "code": "001740",
+          "market": "KOSPI",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260318001112",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001112",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 2,331억원 운용 중",
+          "detail": "확정급여채무 2,244억원 · 적립률 103.9%",
+          "amount": 2330.8,
+          "metricText": "2,331억원",
+          "ratio": 103.9,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 103.9%",
+          "action": "적립금 2,331억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "SIMPAC",
+          "code": "009160",
+          "market": "KOSPI",
+          "industry": "1차 철강 제조업",
+          "rcpNo": "20260318001274",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001274",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 39억원 운용 중",
+          "detail": "확정급여채무 44억원 · 적립률 90.7%",
+          "amount": 39.4,
+          "metricText": "39억원",
+          "ratio": 90.7,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 90.7%",
+          "action": "적립 부족분 해소 + 신규 적립금 39억원 운용기관 제안",
           "chips": [
             "퇴직연금",
             "추가적립 필요"
@@ -1834,6 +2230,28 @@
           ]
         },
         {
+          "name": "대주전자재료",
+          "code": "078600",
+          "market": "KOSDAQ",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20260319000004",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000004",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 182억원 운용 중",
+          "detail": "확정급여채무 219억원 · 적립률 82.7%",
+          "amount": 181.5,
+          "metricText": "182억원",
+          "ratio": 82.7,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 82.7%",
+          "action": "적립 부족분 해소 + 신규 적립금 182억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
           "name": "SK",
           "code": "034730",
           "market": "KOSPI",
@@ -1875,6 +2293,50 @@
           "chips": [
             "퇴직연금",
             "추가적립 필요"
+          ]
+        },
+        {
+          "name": "한양이엔지",
+          "code": "045100",
+          "market": "KOSDAQ",
+          "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+          "rcpNo": "20260313000818",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313000818",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 858억원 운용 중",
+          "detail": "확정급여채무 844억원 · 적립률 101.6%",
+          "amount": 857.7,
+          "metricText": "858억원",
+          "ratio": 101.6,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 101.6%",
+          "action": "적립금 858억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "LS마린솔루션",
+          "code": "060370",
+          "market": "KOSDAQ",
+          "industry": "전기 및 통신 공사업",
+          "rcpNo": "20260316000800",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316000800",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 110억원 운용 중",
+          "detail": "확정급여채무 107억원 · 적립률 103.2%",
+          "amount": 110.3,
+          "metricText": "110억원",
+          "ratio": 103.2,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 103.2%",
+          "action": "적립금 110억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
           ]
         },
         {
@@ -2010,6 +2472,50 @@
           ]
         },
         {
+          "name": "위메이드",
+          "code": "112040",
+          "market": "KOSDAQ",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260319000853",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000853",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 69억원 운용 중",
+          "detail": "확정급여채무 63억원 · 적립률 110.4%",
+          "amount": 69.4,
+          "metricText": "69억원",
+          "ratio": 110.4,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 110.4%",
+          "action": "적립금 69억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "한양디지텍",
+          "code": "078350",
+          "market": "KOSDAQ",
+          "industry": "반도체 제조업",
+          "rcpNo": "20260316001638",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001638",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 95억원 운용 중",
+          "detail": "확정급여채무 98억원 · 적립률 96.7%",
+          "amount": 94.9,
+          "metricText": "95억원",
+          "ratio": 96.7,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 96.7%",
+          "action": "적립금 95억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
           "name": "테스",
           "code": "095610",
           "market": "KOSDAQ",
@@ -2076,6 +2582,28 @@
           ]
         },
         {
+          "name": "스맥",
+          "code": "099440",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260323001679",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001679",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 24억원 운용 중",
+          "detail": "확정급여채무 32억원 · 적립률 75.7%",
+          "amount": 23.9,
+          "metricText": "24억원",
+          "ratio": 75.7,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 75.7%",
+          "action": "적립 부족분 해소 + 신규 적립금 24억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
           "name": "아모레퍼시픽",
           "code": "090430",
           "market": "KOSPI",
@@ -2136,6 +2664,28 @@
           "dateValue": null,
           "timeText": "운용기관 경쟁 · 적립률 103.3%",
           "action": "적립금 993억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "씨젠",
+          "code": "096530",
+          "market": "KOSDAQ",
+          "industry": "의료용품 및 기타 의약 관련제품 제조업",
+          "rcpNo": "20260515001029",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515001029",
+          "asOf": "2024-12-31",
+          "reason": "퇴직연금 적립금 500억원 운용 중",
+          "detail": "확정급여채무 504억원 · 적립률 99.3%",
+          "amount": 500.2,
+          "metricText": "500억원",
+          "ratio": 99.3,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 99.3%",
+          "action": "적립금 500억원 운용기관 교체·추가 제안",
           "chips": [
             "퇴직연금",
             "운용기관 경쟁"
@@ -2252,6 +2802,72 @@
           ]
         },
         {
+          "name": "NHN",
+          "code": "181710",
+          "market": "KOSPI",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260318001525",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001525",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 262억원 운용 중",
+          "detail": "확정급여채무 1,160억원 · 적립률 22.6%",
+          "amount": 261.9,
+          "metricText": "262억원",
+          "ratio": 22.6,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 22.6%",
+          "action": "적립 부족분 해소 + 신규 적립금 262억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
+          "name": "더블유게임즈",
+          "code": "192080",
+          "market": "KOSPI",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260724000595",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724000595",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 251억원 운용 중",
+          "detail": "확정급여채무 216억원 · 적립률 116.1%",
+          "amount": 250.6,
+          "metricText": "251억원",
+          "ratio": 116.1,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 116.1%",
+          "action": "적립금 251억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "LS에코에너지",
+          "code": "229640",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20260316001365",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001365",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 15억원 운용 중",
+          "detail": "확정급여채무 13억원 · 적립률 113.3%",
+          "amount": 15.1,
+          "metricText": "15억원",
+          "ratio": 113.3,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 113.3%",
+          "action": "적립금 15억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
           "name": "심텍",
           "code": "222800",
           "market": "KOSDAQ",
@@ -2296,6 +2912,28 @@
           ]
         },
         {
+          "name": "엘앤씨바이오",
+          "code": "290650",
+          "market": "KOSDAQ",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260324000006",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000006",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 35억원 운용 중",
+          "detail": "확정급여채무 47억원 · 적립률 75.5%",
+          "amount": 35.3,
+          "metricText": "35억원",
+          "ratio": 75.5,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 75.5%",
+          "action": "적립 부족분 해소 + 신규 적립금 35억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
           "name": "하이브",
           "code": "352820",
           "market": "KOSPI",
@@ -2312,6 +2950,28 @@
           "dateValue": null,
           "timeText": "운용기관 경쟁 · 적립률 111.8%",
           "action": "적립금 5억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "IPARK현대산업개발",
+          "code": "294870",
+          "market": "KOSPI",
+          "industry": "건물 건설업",
+          "rcpNo": "20260318001249",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001249",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 847억원 운용 중",
+          "detail": "확정급여채무 793억원 · 적립률 106.8%",
+          "amount": 846.6,
+          "metricText": "847억원",
+          "ratio": 106.8,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 106.8%",
+          "action": "적립금 847억원 운용기관 교체·추가 제안",
           "chips": [
             "퇴직연금",
             "운용기관 경쟁"

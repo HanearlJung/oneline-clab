@@ -11,7 +11,22 @@
     "as_of": "2024-12-31"
   },
   "financial_assets": null,
-  "pension": null,
+  "pension": {
+    "unit": "천원",
+    "dbo": 50367480,
+    "plan_assets": 50017653,
+    "net_liability": 349827,
+    "funding_ratio": 99.3,
+    "principal_guaranteed": null,
+    "indirect_investment": null,
+    "other_assets": null,
+    "employer_contribution": null,
+    "expected_contribution": null,
+    "benefits_paid": null,
+    "service_cost": null,
+    "plan_type": "DB",
+    "providers": []
+  },
   "stock_comp": null,
   "shareholders": {
     "largest": null,
@@ -2107,5 +2122,6 @@
       "debtor": "-",
       "rcp_no": "20260429000775"
     }
-  ]
+  ],
+  "_fa_note": "금융자산 탭 제외 — 범주별 금액표 미공시(기타금융자산 세부만)"
 }
