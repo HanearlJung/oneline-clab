@@ -10,7 +10,21 @@
     "rcept_dt": "20260708",
     "as_of": "2025-12-31"
   },
-  "financial_assets": null,
+  "financial_assets": {
+    "unit": "원",
+    "total": 266181132897,
+    "amortized_cost": 197192161672,
+    "fvoci": 3017307000,
+    "fvtpl": 65971224225,
+    "short_term_deposits": 161412477725,
+    "cash": 31037776879,
+    "products": [
+      "단기금융자산",
+      "장기금융자산",
+      "기타금융자산"
+    ],
+    "maturity_buckets": []
+  },
   "pension": null,
   "stock_comp": null,
   "shareholders": {
