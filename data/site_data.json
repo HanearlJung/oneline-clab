@@ -2,7 +2,7 @@
   "meta": {
     "baseDate": "2026-08-07",
     "companyCount": 100,
-    "generated": "2026-08-07 16:02"
+    "generated": "2026-08-07 16:52"
   },
   "tabs": [
     {
@@ -76,7 +76,7 @@
         }
       ],
       "coverage": {
-        "covered": 35,
+        "covered": 50,
         "total": 100
       },
       "rows": [
@@ -100,6 +100,28 @@
           "chips": [
             "금융자산",
             "운용상품 보유"
+          ]
+        },
+        {
+          "name": "현대지에프홀딩스",
+          "code": "005440",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20260319000764",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000764",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 159억원 보유",
+          "detail": "단기예치 159억원",
+          "amount": 159.1,
+          "metricText": "159억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 159억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
           ]
         },
         {
@@ -257,6 +279,50 @@
           ]
         },
         {
+          "name": "한솔케미칼",
+          "code": "014680",
+          "market": "KOSPI",
+          "industry": "기초 화학물질 제조업",
+          "rcpNo": "20260318001424",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001424",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 1,049억원 보유",
+          "detail": "단기예치 460억원 · 수익증권류 589억원 · 전략지분(FVOCI) 57억원",
+          "amount": 1048.9,
+          "metricText": "1,049억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 589억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "SK가스",
+          "code": "018670",
+          "market": "KOSPI",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260320000815",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000815",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 5,139억원 보유",
+          "detail": "단기예치 2,796억원 · 수익증권류 2,342억원 · 전략지분(FVOCI) 2,110억원",
+          "amount": 5138.9,
+          "metricText": "5,139억원",
+          "ratio": null,
+          "situation": "운용 여력",
+          "dateValue": null,
+          "timeText": "운용 여력",
+          "action": "여유자금 5,139억원 채권형·유동성 상품 제안",
+          "chips": [
+            "금융자산",
+            "운용 여력"
+          ]
+        },
+        {
           "name": "동서",
           "code": "026960",
           "market": "KOSPI",
@@ -276,6 +342,28 @@
           "chips": [
             "금융자산",
             "예치자금 편중"
+          ]
+        },
+        {
+          "name": "아모레퍼시픽홀딩스",
+          "code": "002790",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260318000825",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000825",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 1.1조원 보유",
+          "detail": "수익증권류 1.1조원 · 전략지분(FVOCI) 1,074억원",
+          "amount": 11399.1,
+          "metricText": "1.1조원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 1.1조원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
           ]
         },
         {
@@ -499,6 +587,28 @@
           ]
         },
         {
+          "name": "미스토홀딩스",
+          "code": "081660",
+          "market": "KOSPI",
+          "industry": "생활용품 도매업",
+          "rcpNo": "20260318000916",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000916",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 444억원 보유",
+          "detail": "단기예치 370억원 · 수익증권류 75억원 · 전략지분(FVOCI) 57억원",
+          "amount": 444.5,
+          "metricText": "444억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 370억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
           "name": "케이티앤지",
           "code": "033780",
           "market": "KOSPI",
@@ -543,6 +653,28 @@
           ]
         },
         {
+          "name": "티에스이",
+          "code": "131290",
+          "market": "KOSDAQ",
+          "industry": "측정, 시험, 항해, 제어 및 기타 정밀기기 제조업; 광학기기 제외",
+          "rcpNo": "20260318000738",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000738",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 179억원 보유",
+          "detail": "단기예치 62억원 · 수익증권류 117억원 · 전략지분(FVOCI) 62억원",
+          "amount": 178.6,
+          "metricText": "179억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 117억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
           "name": "셀트리온",
           "code": "068270",
           "market": "KOSPI",
@@ -565,6 +697,72 @@
           ]
         },
         {
+          "name": "현대백화점",
+          "code": "069960",
+          "market": "KOSPI",
+          "industry": "종합 소매업",
+          "rcpNo": "20260318001314",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001314",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 634억원 보유",
+          "detail": "단기예치 25억원 · 수익증권류 610억원 · 전략지분(FVOCI) 2억원",
+          "amount": 634.5,
+          "metricText": "634억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 610억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "테스",
+          "code": "095610",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260313000585",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313000585",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 1,777억원 보유",
+          "detail": "단기예치 1,061억원 · 수익증권류 716억원 · 전략지분(FVOCI) 88억원",
+          "amount": 1776.6000000000001,
+          "metricText": "1,777억원",
+          "ratio": null,
+          "situation": "운용 여력",
+          "dateValue": null,
+          "timeText": "운용 여력",
+          "action": "여유자금 1,777억원 채권형·유동성 상품 제안",
+          "chips": [
+            "금융자산",
+            "운용 여력"
+          ]
+        },
+        {
+          "name": "고영",
+          "code": "098460",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260312000804",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000804",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 1,060억원 보유",
+          "detail": "단기예치 1,060억원",
+          "amount": 1060.2,
+          "metricText": "1,060억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 1,060억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
           "name": "아모레퍼시픽",
           "code": "090430",
           "market": "KOSPI",
@@ -581,6 +779,28 @@
           "dateValue": null,
           "timeText": "운용상품 보유",
           "action": "기보유 운용상품 4,696억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "씨에스윈드",
+          "code": "112610",
+          "market": "KOSPI",
+          "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+          "rcpNo": "20260318001110",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001110",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 763억원 보유",
+          "detail": "단기예치 158억원 · 수익증권류 606억원 · 전략지분(FVOCI) 245억원",
+          "amount": 763.3,
+          "metricText": "763억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 606억원 운용사 교체·추가 제안",
           "chips": [
             "금융자산",
             "운용상품 보유"
@@ -631,6 +851,28 @@
           ]
         },
         {
+          "name": "서진시스템",
+          "code": "178320",
+          "market": "KOSDAQ",
+          "industry": "기타 전기장비 제조업",
+          "rcpNo": "20260323001543",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001543",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 110억원 보유",
+          "detail": "단기예치 55억원 · 수익증권류 55억원 · 전략지분(FVOCI) 8억원",
+          "amount": 109.8,
+          "metricText": "110억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 55억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
           "name": "리가켐바이오",
           "code": "141080",
           "market": "KOSDAQ",
@@ -650,6 +892,28 @@
           "chips": [
             "금융자산",
             "예치자금 편중"
+          ]
+        },
+        {
+          "name": "이마트",
+          "code": "139480",
+          "market": "KOSPI",
+          "industry": "종합 소매업",
+          "rcpNo": "20260318001024",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001024",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 2.1조원 보유",
+          "detail": "단기예치 8,280억원 · 수익증권류 1.2조원 · 전략지분(FVOCI) 2.0조원",
+          "amount": 20543.6,
+          "metricText": "2.1조원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 1.2조원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
           ]
         },
         {
@@ -741,6 +1005,28 @@
           ]
         },
         {
+          "name": "펄어비스",
+          "code": "263750",
+          "market": "KOSDAQ",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260319001336",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319001336",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 2,187억원 보유",
+          "detail": "단기예치 2,187억원",
+          "amount": 2187.0,
+          "metricText": "2,187억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 2,187억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
           "name": "에코프로비엠",
           "code": "247540",
           "market": "KOSDAQ",
@@ -807,6 +1093,28 @@
           ]
         },
         {
+          "name": "보로노이",
+          "code": "310210",
+          "market": "KOSDAQ",
+          "industry": "자연과학 및 공학 연구개발업",
+          "rcpNo": "20260320000892",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000892",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 486억원 보유",
+          "detail": "단기예치 486억원",
+          "amount": 485.7,
+          "metricText": "486억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 486억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
           "name": "현대무벡스",
           "code": "319400",
           "market": "KOSDAQ",
@@ -848,6 +1156,28 @@
           "chips": [
             "금융자산",
             "예치자금 편중"
+          ]
+        },
+        {
+          "name": "이수스페셜티케미컬",
+          "code": "457190",
+          "market": "KOSPI",
+          "industry": "기초 화학물질 제조업",
+          "rcpNo": "20260319001027",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319001027",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 10억원 보유",
+          "detail": "단기예치 6억원 · 수익증권류 4억원",
+          "amount": 10.0,
+          "metricText": "10억원",
+          "ratio": null,
+          "situation": "운용 여력",
+          "dateValue": null,
+          "timeText": "운용 여력",
+          "action": "여유자금 10억원 채권형·유동성 상품 제안",
+          "chips": [
+            "금융자산",
+            "운용 여력"
           ]
         }
       ]
@@ -927,7 +1257,7 @@
         }
       ],
       "coverage": {
-        "covered": 40,
+        "covered": 52,
         "total": 100
       },
       "rows": [
@@ -1036,6 +1366,28 @@
           "dateValue": null,
           "timeText": "추가적립 필요 · 적립률 11.7%",
           "action": "적립 부족분 해소 + 신규 적립금 50억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
+          "name": "미래에셋생명",
+          "code": "085620",
+          "market": "KOSPI",
+          "industry": "보험업",
+          "rcpNo": "20260721001043",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260721001043",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 116억원 운용 중",
+          "detail": "원금보장형 116억원(100.0%) · 실적배당형 없음",
+          "amount": 116.1,
+          "metricText": "116억원",
+          "ratio": 62.1,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 62.1%",
+          "action": "적립 부족분 해소 + 신규 적립금 116억원 운용기관 제안",
           "chips": [
             "퇴직연금",
             "추가적립 필요"
@@ -1152,6 +1504,28 @@
           ]
         },
         {
+          "name": "한솔케미칼",
+          "code": "014680",
+          "market": "KOSPI",
+          "industry": "기초 화학물질 제조업",
+          "rcpNo": "20260318001424",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001424",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 992억원 운용 중",
+          "detail": "확정급여채무 966억원 · 적립률 102.8%",
+          "amount": 992.1,
+          "metricText": "992억원",
+          "ratio": 102.8,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 102.8%",
+          "action": "적립금 992억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
           "name": "동서",
           "code": "026960",
           "market": "KOSPI",
@@ -1168,6 +1542,28 @@
           "dateValue": null,
           "timeText": "운용기관 경쟁 · 적립률 112.3%",
           "action": "적립금 203억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "아모레퍼시픽홀딩스",
+          "code": "002790",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260318000825",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000825",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 6,940억원 운용 중",
+          "detail": "확정급여채무 5,440억원 · 적립률 127.6%",
+          "amount": 6939.5,
+          "metricText": "6,940억원",
+          "ratio": 127.6,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 127.6%",
+          "action": "적립금 6,940억원 운용기관 교체·추가 제안",
           "chips": [
             "퇴직연금",
             "운용기관 경쟁"
@@ -1460,6 +1856,28 @@
           ]
         },
         {
+          "name": "미스토홀딩스",
+          "code": "081660",
+          "market": "KOSPI",
+          "industry": "생활용품 도매업",
+          "rcpNo": "20260318000916",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000916",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 2,402억원 운용 중",
+          "detail": "확정급여채무 3,526억원 · 적립률 68.1%",
+          "amount": 2402.0,
+          "metricText": "2,402억원",
+          "ratio": 68.1,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 68.1%",
+          "action": "적립 부족분 해소 + 신규 적립금 2,402억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
           "name": "케이티앤지",
           "code": "033780",
           "market": "KOSPI",
@@ -1548,6 +1966,72 @@
           ]
         },
         {
+          "name": "티에스이",
+          "code": "131290",
+          "market": "KOSDAQ",
+          "industry": "측정, 시험, 항해, 제어 및 기타 정밀기기 제조업; 광학기기 제외",
+          "rcpNo": "20260318000738",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000738",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 27억원 운용 중",
+          "detail": "원금보장형 27억원(100.0%) · 실적배당형 없음",
+          "amount": 27.1,
+          "metricText": "27억원",
+          "ratio": 33.3,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 33.3%",
+          "action": "적립 부족분 해소 + 신규 적립금 27억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
+          "name": "현대백화점",
+          "code": "069960",
+          "market": "KOSPI",
+          "industry": "종합 소매업",
+          "rcpNo": "20260318001314",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001314",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 3,536억원 운용 중",
+          "detail": "확정급여채무 3,137억원 · 적립률 112.7%",
+          "amount": 3536.4,
+          "metricText": "3,536억원",
+          "ratio": 112.7,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 112.7%",
+          "action": "적립금 3,536억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "테스",
+          "code": "095610",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260313000585",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313000585",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 250억원 운용 중",
+          "detail": "확정급여채무 176억원 · 적립률 142.0%",
+          "amount": 249.9,
+          "metricText": "250억원",
+          "ratio": 142.0,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 142.0%",
+          "action": "적립금 250억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
           "name": "에코프로",
           "code": "086520",
           "market": "KOSDAQ",
@@ -1570,6 +2054,28 @@
           ]
         },
         {
+          "name": "고영",
+          "code": "098460",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260312000804",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000804",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 265억원 운용 중",
+          "detail": "확정급여채무 258억원 · 적립률 102.9%",
+          "amount": 265.2,
+          "metricText": "265억원",
+          "ratio": 102.9,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 102.9%",
+          "action": "적립금 265억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
           "name": "아모레퍼시픽",
           "code": "090430",
           "market": "KOSPI",
@@ -1586,6 +2092,28 @@
           "dateValue": null,
           "timeText": "원금보장형 편중 · 적립률 128.4%",
           "action": "원금보장형 6,174억원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "씨에스윈드",
+          "code": "112610",
+          "market": "KOSPI",
+          "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+          "rcpNo": "20260318001110",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001110",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 104억원 운용 중",
+          "detail": "원금보장형 104억원(100.0%) · 실적배당형 없음",
+          "amount": 104.0,
+          "metricText": "104억원",
+          "ratio": 95.4,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 95.4%",
+          "action": "원금보장형 104억원 실적배당형 전환 제안",
           "chips": [
             "퇴직연금",
             "원금보장형 편중"
@@ -1636,6 +2164,28 @@
           ]
         },
         {
+          "name": "서진시스템",
+          "code": "178320",
+          "market": "KOSDAQ",
+          "industry": "기타 전기장비 제조업",
+          "rcpNo": "20260323001543",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001543",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 95억원 운용 중",
+          "detail": "확정급여채무 123억원 · 적립률 77.1%",
+          "amount": 94.7,
+          "metricText": "95억원",
+          "ratio": 77.1,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 77.1%",
+          "action": "적립 부족분 해소 + 신규 적립금 95억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
           "name": "리가켐바이오",
           "code": "141080",
           "market": "KOSDAQ",
@@ -1655,6 +2205,28 @@
           "chips": [
             "퇴직연금",
             "추가적립 필요"
+          ]
+        },
+        {
+          "name": "이마트",
+          "code": "139480",
+          "market": "KOSPI",
+          "industry": "종합 소매업",
+          "rcpNo": "20260318001024",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001024",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 2.4조원 운용 중",
+          "detail": "확정급여채무 2.2조원 · 적립률 108.2%",
+          "amount": 24164.8,
+          "metricText": "2.4조원",
+          "ratio": 108.2,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 108.2%",
+          "action": "적립금 2.4조원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
           ]
         },
         {
@@ -1806,6 +2378,28 @@
           "dateValue": null,
           "timeText": "운용기관 경쟁 · 적립률 108.7%",
           "action": "적립금 85억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "이수스페셜티케미컬",
+          "code": "457190",
+          "market": "KOSPI",
+          "industry": "기초 화학물질 제조업",
+          "rcpNo": "20260319001027",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319001027",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 252억원 운용 중",
+          "detail": "확정급여채무 237억원 · 적립률 106.1%",
+          "amount": 251.7,
+          "metricText": "252억원",
+          "ratio": 106.1,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 106.1%",
+          "action": "적립금 252억원 운용기관 교체·추가 제안",
           "chips": [
             "퇴직연금",
             "운용기관 경쟁"

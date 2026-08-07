@@ -10,7 +10,20 @@
     "rcept_dt": "20260319",
     "as_of": "2025-12-31"
   },
-  "financial_assets": null,
+  "financial_assets": {
+    "unit": "천원",
+    "total": 615935030,
+    "amortized_cost": null,
+    "fvoci": null,
+    "fvtpl": null,
+    "short_term_deposits": 218701804,
+    "cash": null,
+    "products": [
+      "단기금융상품",
+      "장기금융상품"
+    ],
+    "maturity_buckets": []
+  },
   "pension": null,
   "stock_comp": null,
   "shareholders": {
@@ -119,5 +132,6 @@
       "debtor": "-",
       "rcp_no": "20260630000989"
     }
-  ]
+  ],
+  "_pe_note": "퇴직연금 탭 제외 — 주석에 확정급여채무·사외적립자산 금액 미기재"
 }

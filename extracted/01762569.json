@@ -10,8 +10,35 @@
     "rcept_dt": "20260319",
     "as_of": "2025-12-31"
   },
-  "financial_assets": null,
-  "pension": null,
+  "financial_assets": {
+    "unit": "천원",
+    "total": 75309866,
+    "amortized_cost": 74856227,
+    "fvoci": 0,
+    "fvtpl": 453639,
+    "short_term_deposits": 550236,
+    "cash": null,
+    "products": [
+      "기타유동금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "천원",
+    "dbo": 23716259,
+    "plan_assets": 25169843,
+    "net_liability": -1453584,
+    "funding_ratio": 106.1,
+    "principal_guaranteed": null,
+    "indirect_investment": null,
+    "other_assets": null,
+    "employer_contribution": null,
+    "expected_contribution": null,
+    "benefits_paid": null,
+    "service_cost": null,
+    "plan_type": "DB",
+    "providers": []
+  },
   "stock_comp": null,
   "shareholders": {
     "largest": null,
