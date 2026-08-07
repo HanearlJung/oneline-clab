@@ -11,7 +11,22 @@
     "as_of": "2025-12-31"
   },
   "financial_assets": null,
-  "pension": null,
+  "pension": {
+    "unit": "백만원",
+    "dbo": 42699,
+    "plan_assets": 5014,
+    "net_liability": 37685,
+    "funding_ratio": 11.7,
+    "principal_guaranteed": null,
+    "indirect_investment": null,
+    "other_assets": null,
+    "employer_contribution": null,
+    "expected_contribution": null,
+    "benefits_paid": null,
+    "service_cost": null,
+    "plan_type": "DB",
+    "providers": []
+  },
   "stock_comp": null,
   "shareholders": {
     "largest": null,

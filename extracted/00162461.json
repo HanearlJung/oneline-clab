@@ -23,7 +23,22 @@
     ],
     "maturity_buckets": []
   },
-  "pension": null,
+  "pension": {
+    "unit": "백만원",
+    "dbo": 554839,
+    "plan_assets": 273761,
+    "net_liability": 281078,
+    "funding_ratio": 49.3,
+    "principal_guaranteed": 252470,
+    "indirect_investment": 16688,
+    "other_assets": 4603,
+    "employer_contribution": 44791,
+    "expected_contribution": null,
+    "benefits_paid": null,
+    "service_cost": null,
+    "plan_type": "DB",
+    "providers": []
+  },
   "stock_comp": null,
   "shareholders": {
     "largest": null,

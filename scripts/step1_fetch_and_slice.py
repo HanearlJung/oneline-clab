@@ -30,7 +30,12 @@ TOPICS = {
         # '범주별 금융상품' 표 하나에 다 있다. 재무위험관리·공정가치 측정까지
         # 끌어오면 유동성·신용위험 표가 딸려와 분량만 몇 배가 된다.
         "source": "notes",
-        "title": ["범주별 금융상품", "금융상품 공정가치", "금융상품", "금융자산"],
+        "title": ["범주별 금융상품", "금융상품의 범주", "금융자산의 범주",
+                  "금융상품 공정가치", "금융상품", "금융자산"],
+        # '금융상품의 범주별 순손익', '금융자산의 신용건전성' 같은 섹션에는
+        # 정작 범주별 금액표가 없다. 제목만 보고 집으면 엉뚱한 표를 가져온다.
+        "exclude": ["순손익", "손익", "위험", "신용건전성", "사용이 제한", "양도",
+                    "회계정책", "작성기준", "회계추정"],
         "body": ["당기손익-공정가치", "상각후원가"],
         "max_sections": 2,
     },
@@ -65,9 +70,12 @@ def pick_sections(sections: list[dict], rule: dict) -> list[dict]:
     picked, seen = [], set()
 
     # 1) 제목 매칭 — 규칙에 적힌 순서가 우선순위
+    excl = rule.get("exclude", [])
     for pat in rule["title"]:
         for i, s in enumerate(sections):
             if i in seen or len(s["text"]) < MIN_SECTION:
+                continue
+            if any(x in s["title"] for x in excl):
                 continue
             if pat in s["title"]:
                 seen.add(i)
@@ -80,6 +88,8 @@ def pick_sections(sections: list[dict], rule: dict) -> list[dict]:
         for i, s in enumerate(sections):
             if len(s["text"]) < MIN_SECTION:
                 continue
+            if any(x in s["title"] for x in excl):
+                continue    # fallback 에도 제외 규칙을 적용해야 회계정책 서술이 안 걸린다
             n = sum(s["text"].count(kw) for kw in rule.get("body", []))
             if n >= MIN_BODY_HITS:
                 scored.append((n, i, s))

@@ -11,7 +11,24 @@
     "as_of": "2025-12-31"
   },
   "financial_assets": null,
-  "pension": null,
+  "pension": {
+    "unit": "백만원",
+    "dbo": 492685,
+    "plan_assets": 531035,
+    "net_liability": -38350,
+    "funding_ratio": 107.8,
+    "principal_guaranteed": 531035,
+    "indirect_investment": 0,
+    "other_assets": 0,
+    "employer_contribution": 20084,
+    "expected_contribution": null,
+    "benefits_paid": null,
+    "service_cost": null,
+    "plan_type": "DB",
+    "providers": [
+      "DB생명보험"
+    ]
+  },
   "stock_comp": null,
   "shareholders": {
     "largest": null,
