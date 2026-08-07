@@ -1,0 +1,50 @@
+{
+  "corp_code": "00105280",
+  "stock_code": "005440",
+  "name": "현대지에프홀딩스",
+  "market": "KOSPI",
+  "industry": "기타 금융업",
+  "source": {
+    "rcp_no": "20260319000764",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260319",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 4686035,
+      "amount": 50000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "자기주식 취득 및 소각을 통한 주주가치 제고",
+      "method": null,
+      "held_shares": null,
+      "rcp_no": "20260211000412"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 4686035,
+      "amount": 50000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "자기주식 취득 및 소각을 통한 주주가치 제고",
+      "method": null,
+      "held_shares": null,
+      "rcp_no": "20260211000634"
+    }
+  ],
+  "pledge": []
+}

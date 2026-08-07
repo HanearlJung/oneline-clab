@@ -1,0 +1,83 @@
+{
+  "corp_code": "00148595",
+  "stock_code": "038010",
+  "name": "제일테크노스",
+  "market": "KOSDAQ",
+  "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+  "source": {
+    "rcp_no": "20260320000688",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260320",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "나채민외 6인",
+    "largest_ratio": 44.92,
+    "change_date": "2026-04-01",
+    "prev_largest": "나주영외 5인",
+    "reason": "기존 최대주주의 증여/수증에 따른 최대주주변경 - 증여자 : 나주영 (1,850,000주) - 수증자 : 나채민 (1,850,000주)",
+    "unit": "원",
+    "rcp_no": "20260401901251",
+    "prev_ratio": 44.92
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 352567,
+      "amount": 3000000000.0,
+      "period_start": "2025-09-19",
+      "period_end": "2025-09-19",
+      "purpose": "자기주식을 교환대상으로 하는 사모 교환사채의 발행",
+      "method": "기타",
+      "held_shares": 684000,
+      "rcp_no": "20250911000394"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "나주영",
+      "relation": "특수관계인",
+      "contract_type": "주식담보대출",
+      "counterparty": "대구은행",
+      "shares": 600000,
+      "contract_date": "2025-04-30",
+      "maturity": null,
+      "ratio": 6.66,
+      "loan_amount": 25000000.0,
+      "unit": "원",
+      "debtor": "나주영",
+      "rcp_no": "20260403003096"
+    },
+    {
+      "holder": "나주영",
+      "relation": "특수관계인",
+      "contract_type": "주식담보대출",
+      "counterparty": "대구은행",
+      "shares": 600000,
+      "contract_date": "2025-04-30",
+      "maturity": null,
+      "ratio": 6.66,
+      "loan_amount": 25000000.0,
+      "unit": "원",
+      "debtor": "나주영",
+      "rcp_no": "20260804000438"
+    },
+    {
+      "holder": "나채민",
+      "relation": "본인",
+      "contract_type": "담보제공(질권)",
+      "counterparty": "포항세무서",
+      "shares": 346955,
+      "contract_date": "2026-07-31",
+      "maturity": null,
+      "ratio": 3.86,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260804000438"
+    }
+  ]
+}

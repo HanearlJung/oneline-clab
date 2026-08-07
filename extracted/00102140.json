@@ -1,0 +1,53 @@
+{
+  "corp_code": "00102140",
+  "stock_code": "009140",
+  "name": "경인전자",
+  "market": "KOSPI",
+  "industry": "전자부품 제조업",
+  "source": {
+    "rcp_no": "20260312001118",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260312",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "주식회사 케이일레븐파트너스외3명",
+    "largest_ratio": 50.98,
+    "change_date": "2026-06-15",
+    "prev_largest": "김성은외3명",
+    "reason": "특수관계인간 주식 취득 및 처분",
+    "unit": "원",
+    "rcp_no": "20260615800895",
+    "prev_ratio": 50.98
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 9595,
+      "amount": 195738000.0,
+      "period_start": "2025-12-08",
+      "period_end": "2025-12-12",
+      "purpose": "임직원에 대한 상여금 지급 외",
+      "method": "기타",
+      "held_shares": 268260,
+      "rcp_no": "20251127001086"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 2000,
+      "amount": 40600000.0,
+      "period_start": "2026-02-09",
+      "period_end": "2026-02-13",
+      "purpose": "임직원 자기주식 지급",
+      "method": "기타",
+      "held_shares": 258665,
+      "rcp_no": "20260204000383"
+    }
+  ],
+  "pledge": []
+}

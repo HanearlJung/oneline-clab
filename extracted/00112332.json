@@ -1,0 +1,38 @@
+{
+  "corp_code": "00112332",
+  "stock_code": "085620",
+  "name": "미래에셋생명",
+  "market": "KOSPI",
+  "industry": "보험업",
+  "source": {
+    "rcp_no": "20260721001043",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260721",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 82059,
+      "amount": 1001119800.0,
+      "period_start": "2026-03-06",
+      "period_end": "2026-03-06",
+      "purpose": "임원 성과보상 지급",
+      "method": "기타",
+      "held_shares": 14700000,
+      "rcp_no": "20260304001680"
+    }
+  ],
+  "pledge": []
+}

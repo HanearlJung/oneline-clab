@@ -1,0 +1,81 @@
+{
+  "corp_code": "00164779",
+  "stock_code": "000660",
+  "name": "SK하이닉스",
+  "market": "KOSPI",
+  "industry": null,
+  "source": {
+    "rcp_no": "20260317000635",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260317",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "백만원",
+    "total": 69804530,
+    "amortized_cost": 48243805,
+    "fvoci": 1256429,
+    "fvtpl": 20108429,
+    "short_term_deposits": 14679719,
+    "cash": 14923766,
+    "products": [
+      "단기금융상품",
+      "단기투자자산",
+      "장기투자자산"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "백만원",
+    "dbo": 3447188,
+    "plan_assets": 4933932,
+    "net_liability": -1486744,
+    "funding_ratio": 143.1,
+    "principal_guaranteed": 4825314,
+    "indirect_investment": 0,
+    "other_assets": 108618,
+    "employer_contribution": 736528,
+    "expected_contribution": 848730,
+    "benefits_paid": 183803,
+    "service_cost": 293157,
+    "plan_type": "DB+DC",
+    "providers": [
+      "미래에셋생명보험"
+    ]
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 12536,
+      "amount": 15344064000.0,
+      "period_start": "2026-04-23",
+      "period_end": "2026-05-22",
+      "purpose": "사외이사 주식 보수 및 장기성과급 행사에 따른 주식 보수 지급",
+      "method": "기타",
+      "held_shares": 1642984,
+      "rcp_no": "20260422000633"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 114209,
+      "amount": 14187041980.0,
+      "period_start": "2026-05-20",
+      "period_end": "2027-03-30",
+      "purpose": "주식매수선택권의 최초행사에 따른 동일 주주총회 부여물량 전체 공시",
+      "method": "기타",
+      "held_shares": 1630448,
+      "rcp_no": "20260513000549"
+    }
+  ],
+  "pledge": []
+}

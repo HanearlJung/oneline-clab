@@ -1,0 +1,161 @@
+{
+  "corp_code": "01327746",
+  "stock_code": "310210",
+  "name": "보로노이",
+  "market": "KOSDAQ",
+  "industry": "자연과학 및 공학 연구개발업",
+  "source": {
+    "rcp_no": "20260320000892",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260320",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 200000,
+      "amount": 35985200000.0,
+      "period_start": "2025-10-10",
+      "period_end": "2025-10-10",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채 발행",
+      "method": "기타",
+      "held_shares": null,
+      "rcp_no": "20251002000554"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 203401,
+      "amount": 45552264153.0,
+      "period_start": "2025-12-30",
+      "period_end": "2025-12-30",
+      "purpose": "재무 안전성 제고를 위한 운영자금 확보",
+      "method": "장외처분",
+      "held_shares": null,
+      "rcp_no": "20251229000758"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "김현태",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "메리츠증권",
+      "shares": 838927,
+      "contract_date": "2026-05-26",
+      "maturity": "2026-08-21",
+      "ratio": 4.45,
+      "loan_amount": 20000000000.0,
+      "unit": "원",
+      "debtor": "김현태",
+      "rcp_no": "20260622000243"
+    },
+    {
+      "holder": "김현태",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "키움증권",
+      "shares": 704226,
+      "contract_date": "2026-06-04",
+      "maturity": "2026-09-04",
+      "ratio": 3.74,
+      "loan_amount": 20000000000.0,
+      "unit": "원",
+      "debtor": "김현태",
+      "rcp_no": "20260622000243"
+    },
+    {
+      "holder": "김현태",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "유안타증권",
+      "shares": 150000,
+      "contract_date": "2026-06-15",
+      "maturity": "2026-09-14",
+      "ratio": 0.8,
+      "loan_amount": 5000000000.0,
+      "unit": "원",
+      "debtor": "김현태",
+      "rcp_no": "20260622000243"
+    },
+    {
+      "holder": "김현태",
+      "relation": "본인",
+      "contract_type": "주식근질권설정",
+      "counterparty": "유안타증권",
+      "shares": 406802,
+      "contract_date": "2025-12-29",
+      "maturity": "2026-12-30",
+      "ratio": 2.16,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260622000243"
+    },
+    {
+      "holder": "김현태",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "메리츠증권",
+      "shares": 838927,
+      "contract_date": "2026-05-26",
+      "maturity": "2026-08-21",
+      "ratio": 4.45,
+      "loan_amount": 20000000000.0,
+      "unit": "원",
+      "debtor": "김현태",
+      "rcp_no": "20260703000489"
+    },
+    {
+      "holder": "김현태",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "키움증권",
+      "shares": 704226,
+      "contract_date": "2026-06-04",
+      "maturity": "2026-09-04",
+      "ratio": 3.74,
+      "loan_amount": 20000000000.0,
+      "unit": "원",
+      "debtor": "김현태",
+      "rcp_no": "20260703000489"
+    },
+    {
+      "holder": "김현태",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "유안타증권",
+      "shares": 150000,
+      "contract_date": "2026-06-15",
+      "maturity": "2026-09-14",
+      "ratio": 0.8,
+      "loan_amount": 5000000000.0,
+      "unit": "원",
+      "debtor": "김현태",
+      "rcp_no": "20260703000489"
+    },
+    {
+      "holder": "김현태",
+      "relation": "본인",
+      "contract_type": "주식근질권설정",
+      "counterparty": "유안타증권",
+      "shares": 406802,
+      "contract_date": "2025-12-29",
+      "maturity": "2026-12-30",
+      "ratio": 2.16,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260703000489"
+    }
+  ]
+}

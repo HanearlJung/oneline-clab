@@ -1,0 +1,104 @@
+{
+  "corp_code": "00177816",
+  "stock_code": "078600",
+  "name": "대주전자재료",
+  "market": "KOSDAQ",
+  "industry": "전자부품 제조업",
+  "source": {
+    "rcp_no": "20260319000004",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260319",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 150000,
+      "amount": 11430000000.0,
+      "period_start": "2025-12-04",
+      "period_end": "2025-12-04",
+      "purpose": "투자재원 확보 및 재무건전성 증대",
+      "method": "시간외대량매매",
+      "held_shares": 492790,
+      "rcp_no": "20251203000257"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "임해지",
+      "relation": "특수관계인",
+      "contract_type": "질권설정",
+      "counterparty": "양천세무서",
+      "shares": null,
+      "contract_date": "2025-07-30",
+      "maturity": null,
+      "ratio": null,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20250731000456"
+    },
+    {
+      "holder": "임성지",
+      "relation": "특수관계인",
+      "contract_type": "질권설정",
+      "counterparty": "양천세무서",
+      "shares": null,
+      "contract_date": "2025-07-30",
+      "maturity": null,
+      "ratio": null,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20250731000456"
+    },
+    {
+      "holder": "이은수",
+      "relation": "특수관계인",
+      "contract_type": "질권설정",
+      "counterparty": "양천세무서",
+      "shares": null,
+      "contract_date": "2025-07-30",
+      "maturity": null,
+      "ratio": null,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20250731000456"
+    },
+    {
+      "holder": "송태림",
+      "relation": "특수관계인",
+      "contract_type": "질권설정",
+      "counterparty": "양천세무서",
+      "shares": null,
+      "contract_date": "2025-07-30",
+      "maturity": null,
+      "ratio": null,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20250731000456"
+    },
+    {
+      "holder": "송여림",
+      "relation": "특수관계인",
+      "contract_type": "질권설정",
+      "counterparty": "양천세무서",
+      "shares": null,
+      "contract_date": "2025-07-30",
+      "maturity": null,
+      "ratio": null,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20250731000456"
+    }
+  ]
+}

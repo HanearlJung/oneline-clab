@@ -1,0 +1,41 @@
+{
+  "corp_code": "00172185",
+  "stock_code": "004270",
+  "name": "남성",
+  "market": "KOSPI",
+  "industry": "기타 전문 도매업",
+  "source": {
+    "rcp_no": "20260320001336",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260320",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "윤성호 외 8인",
+    "largest_ratio": 37.72,
+    "change_date": "2026-04-10",
+    "prev_largest": "윤남철 외 8인",
+    "reason": "증여에 따른 최대주주 변경",
+    "unit": "원",
+    "rcp_no": "20260413800449",
+    "prev_ratio": 37.72
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 262390,
+      "amount": 2700000000.0,
+      "period_start": "2025-12-29",
+      "period_end": "2025-12-29",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채 발행",
+      "method": "기타",
+      "held_shares": 488967,
+      "rcp_no": "20260416000501"
+    }
+  ],
+  "pledge": []
+}

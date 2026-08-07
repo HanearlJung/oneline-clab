@@ -1,0 +1,65 @@
+{
+  "corp_code": "00105855",
+  "stock_code": "010120",
+  "name": "엘에스일렉트릭",
+  "market": "KOSPI",
+  "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+  "source": {
+    "rcp_no": "20260318001243",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": {
+    "unit": "백만원",
+    "dbo": 259193,
+    "plan_assets": 287297,
+    "net_liability": -28104,
+    "funding_ratio": 110.8,
+    "principal_guaranteed": 287297,
+    "indirect_investment": 0,
+    "other_assets": 0,
+    "employer_contribution": 24102,
+    "expected_contribution": null,
+    "benefits_paid": 35793,
+    "service_cost": 27045,
+    "plan_type": "DB+DC",
+    "providers": []
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 22581,
+      "amount": 19058364000.0,
+      "period_start": "2026-03-27",
+      "period_end": "2026-04-30",
+      "purpose": "임직원의 책임경영을 강화하며, 회사의 장기적 성장(VISION2030 달성)에 기여하게 하기위한 장기성과급지급",
+      "method": "기타",
+      "held_shares": 261509,
+      "rcp_no": "20260326001137"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 32520,
+      "amount": 6104004000.0,
+      "period_start": "2026-07-16",
+      "period_end": "2026-08-14",
+      "purpose": "직원 주식보상",
+      "method": "기타",
+      "held_shares": 1214650,
+      "rcp_no": "20260715000510"
+    }
+  ],
+  "pledge": []
+}

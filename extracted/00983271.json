@@ -1,0 +1,79 @@
+{
+  "corp_code": "00983271",
+  "stock_code": "181710",
+  "name": "NHN",
+  "market": "KOSPI",
+  "industry": "소프트웨어 개발 및 공급업",
+  "source": {
+    "rcp_no": "20260318001525",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 478784,
+      "amount": 12831411200.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주가 안정 도모 및 주주가치 제고",
+      "method": null,
+      "held_shares": 2500233,
+      "rcp_no": "20251023000338"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 431525,
+      "amount": 16700017500.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주가 안정 및 주주가치 제고",
+      "method": null,
+      "held_shares": 1907811,
+      "rcp_no": "20260511000704"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "이준호",
+      "relation": "본인",
+      "contract_type": "근질권설정계약",
+      "counterparty": "하나은행 등",
+      "shares": 6000000,
+      "contract_date": "2023-12-15",
+      "maturity": "2026-12-13",
+      "ratio": 17.77,
+      "loan_amount": 129560.0,
+      "unit": "원",
+      "debtor": "SKY-Kapiolani Hotel LLC.",
+      "rcp_no": "20251001000754"
+    },
+    {
+      "holder": "이준호",
+      "relation": "본인",
+      "contract_type": "근질권설정계약",
+      "counterparty": "하나은행 등",
+      "shares": 6000000,
+      "contract_date": "2023-12-15",
+      "maturity": "2026-12-13",
+      "ratio": 18.32,
+      "loan_amount": 129560.0,
+      "unit": "원",
+      "debtor": "SKY-Kapiolani Hotel LLC.",
+      "rcp_no": "20260511000639"
+    }
+  ]
+}

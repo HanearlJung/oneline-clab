@@ -1,0 +1,112 @@
+{
+  "corp_code": "00580056",
+  "stock_code": "099440",
+  "name": "스맥",
+  "market": "KOSDAQ",
+  "industry": "특수 목적용 기계 제조업",
+  "source": {
+    "rcp_no": "20260323001679",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260323",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "SNT모티브(주) 외 1인",
+    "largest_ratio": 21.26,
+    "change_date": "2026-04-24",
+    "prev_largest": "(주)SNT홀딩스 외 1인",
+    "reason": "특수관계인 간의 시간외대량매매에 따른 최대주주 변경",
+    "unit": "원",
+    "rcp_no": "20260424900671",
+    "prev_ratio": 21.26,
+    "deal_amount": 60587840880.0,
+    "deal_own": 60587840880.0
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 907031,
+      "amount": 4712933076.0,
+      "period_start": "2025-12-29",
+      "period_end": "2025-12-29",
+      "purpose": "스맥 우리사주조합원에게 매각",
+      "method": "기타",
+      "held_shares": 1707851,
+      "rcp_no": "20251226000006"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 770000,
+      "amount": 5003460000.0,
+      "period_start": "2025-12-29",
+      "period_end": "2025-12-29",
+      "purpose": "전략적 제휴 및 사업협력관계 구축",
+      "method": "장외처분",
+      "held_shares": 1707851,
+      "rcp_no": "20251226000007"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "최영섭",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "신한투자증권",
+      "shares": 2427185,
+      "contract_date": "2026-05-13",
+      "maturity": "2026-11-09",
+      "ratio": 3.56,
+      "loan_amount": 4999998300.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260610000225"
+    },
+    {
+      "holder": "최영섭",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "한국증권금융",
+      "shares": 2400000,
+      "contract_date": "2025-06-02",
+      "maturity": "2026-11-25",
+      "ratio": 3.52,
+      "loan_amount": 4800000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260610000225"
+    },
+    {
+      "holder": "최영섭",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "대아인베스트먼트",
+      "shares": 2252278,
+      "contract_date": "2026-06-02",
+      "maturity": "2026-11-04",
+      "ratio": 3.3,
+      "loan_amount": 4500000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260610000225"
+    },
+    {
+      "holder": "권오혁",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "신한투자증권",
+      "shares": 134470,
+      "contract_date": "2025-12-01",
+      "maturity": "2026-06-01",
+      "ratio": 0.2,
+      "loan_amount": 500000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260610000225"
+    }
+  ]
+}

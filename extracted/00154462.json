@@ -1,0 +1,50 @@
+{
+  "corp_code": "00154462",
+  "stock_code": "002790",
+  "name": "아모레퍼시픽홀딩스",
+  "market": "KOSPI",
+  "industry": "기타 화학제품 제조업",
+  "source": {
+    "rcp_no": "20260318000825",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 1095,
+      "amount": 33561750.0,
+      "period_start": "2026-05-04",
+      "period_end": "2026-05-04",
+      "purpose": "직원에 대한 상여금으로 자기주식을 지급",
+      "method": "기타",
+      "held_shares": null,
+      "rcp_no": "20260429000005"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 1149,
+      "amount": 27863250.0,
+      "period_start": "2026-08-03",
+      "period_end": "2026-08-03",
+      "purpose": "직원에 대한 장기근속 포상으로 자기주식을 지급",
+      "method": "기타",
+      "held_shares": null,
+      "rcp_no": "20260730000281"
+    }
+  ],
+  "pledge": []
+}

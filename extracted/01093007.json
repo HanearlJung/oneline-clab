@@ -1,0 +1,38 @@
+{
+  "corp_code": "01093007",
+  "stock_code": "229640",
+  "name": "LS에코에너지",
+  "market": "KOSPI",
+  "industry": "기타 금융업",
+  "source": {
+    "rcp_no": "20260316001365",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260316",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 297303,
+      "amount": 10702908000.0,
+      "period_start": "2026-01-16",
+      "period_end": "2026-02-13",
+      "purpose": "시설자금의 조달",
+      "method": "시간외대량매매",
+      "held_shares": 297303,
+      "rcp_no": "20251217000030"
+    }
+  ],
+  "pledge": []
+}

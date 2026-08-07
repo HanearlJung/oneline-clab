@@ -1,0 +1,53 @@
+{
+  "corp_code": "00137207",
+  "stock_code": "011330",
+  "name": "유니켐",
+  "market": "KOSPI",
+  "industry": "자동차 신품 부품 제조업",
+  "source": {
+    "rcp_no": "20260325000515",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260325",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "(주)제이에이치사람들",
+    "largest_ratio": 20.62,
+    "change_date": "2025-12-01",
+    "prev_largest": "(주)제이에이치사람들외 1인",
+    "reason": "(주)제이에이치사람들과 (주)햇발 사이에 체결된 2025년 10월 30일자 주식양수도 계약체결의 이행으로 인한 최대주주 변경",
+    "unit": "원",
+    "rcp_no": "20251202800357",
+    "prev_ratio": 20.62
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 1700000,
+      "amount": 2874700000.0,
+      "period_start": "2025-08-18",
+      "period_end": "2025-08-18",
+      "purpose": "유통주식수 증가를 통한 거래 활성화 및 운영자금 확보",
+      "method": "시간외대량매매",
+      "held_shares": 1700000,
+      "rcp_no": "20250821000484"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 3770739,
+      "amount": 5000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주주가치 제고를 위한 자기주식 취득및 소각",
+      "method": null,
+      "held_shares": null,
+      "rcp_no": "20251120000095"
+    }
+  ],
+  "pledge": []
+}

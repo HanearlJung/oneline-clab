@@ -1,0 +1,59 @@
+{
+  "corp_code": "00406037",
+  "stock_code": "083660",
+  "name": "CSA 코스믹",
+  "market": "KOSDAQ",
+  "industry": "기타 화학제품 제조업",
+  "source": {
+    "rcp_no": "20260324000035",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260324",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "지앤비조합",
+    "largest_ratio": 13.16,
+    "change_date": "2025-12-24",
+    "prev_largest": "(주)브이핑크홀딩스",
+    "reason": "제3자배정 유상증자",
+    "unit": "원",
+    "rcp_no": "20251224900995",
+    "prev_ratio": 7.73,
+    "deal_amount": 4800000240.0,
+    "deal_own": 240.0,
+    "deal_debt": 4800000000.0
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 2004687,
+      "amount": 874043532.0,
+      "period_start": "2025-12-31",
+      "period_end": "2025-12-31",
+      "purpose": "운영자금 확보",
+      "method": "장외처분",
+      "held_shares": null,
+      "rcp_no": "20251231000483"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "지앤비조합",
+      "relation": "본인",
+      "contract_type": "금전소비대차계약",
+      "counterparty": "블루산업개발(주)",
+      "shares": 9523810,
+      "contract_date": "2025-12-23",
+      "maturity": "2026-12-22",
+      "ratio": 8.93,
+      "loan_amount": 4800000000.0,
+      "unit": "원",
+      "debtor": "지앤비조합",
+      "rcp_no": "20260331004328"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "corp_code": "00161125",
+  "stock_code": "018880",
+  "name": "한온시스템",
+  "market": "KOSPI",
+  "industry": "일반 목적용 기계 제조업",
+  "source": {
+    "rcp_no": "20260318000645",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 121620,
+      "amount": 484655700.0,
+      "period_start": "2025-12-29",
+      "period_end": "2025-12-29",
+      "purpose": "직원 성과보상 목적 자기주식 지급",
+      "method": "기타",
+      "held_shares": 131570,
+      "rcp_no": "20251029000118"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 121620,
+      "amount": 484655700.0,
+      "period_start": "2025-12-29",
+      "period_end": "2026-01-15",
+      "purpose": "직원 성과보상 목적 자기주식 지급",
+      "method": "기타",
+      "held_shares": 131570,
+      "rcp_no": "20251224000465"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "한앤코 오토홀딩스 유한회사",
+      "relation": "공동보유자",
+      "contract_type": "주식근질권 설정계약",
+      "counterparty": "엔에이치 투자증권(주) 외 42",
+      "shares": 146795000,
+      "contract_date": "2021-03-11",
+      "maturity": null,
+      "ratio": 14.3,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260108000470"
+    },
+    {
+      "holder": "한앤코 오토홀딩스 유한회사",
+      "relation": "공동보유자",
+      "contract_type": "주식근질권 설정계약",
+      "counterparty": "엔에이치 투자증권(주) 외 42",
+      "shares": 146795000,
+      "contract_date": "2026-03-11",
+      "maturity": null,
+      "ratio": 14.3,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260317000556"
+    }
+  ]
+}

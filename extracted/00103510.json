@@ -1,0 +1,124 @@
+{
+  "corp_code": "00103510",
+  "stock_code": "023800",
+  "name": "인지컨트롤스",
+  "market": "KOSPI",
+  "industry": "자동차 신품 부품 제조업",
+  "source": {
+    "rcp_no": "20260323001493",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260323",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "정혜승 외 3명",
+    "largest_ratio": 42.94,
+    "change_date": "2026-03-18",
+    "prev_largest": "정구용 외 4명",
+    "reason": "변경 전 최대주주 정구용 회장 사망에 따른 상속",
+    "unit": "원",
+    "rcp_no": "20260318800142",
+    "prev_ratio": 42.94
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 640500,
+      "amount": 3887835000.0,
+      "period_start": "2025-08-11",
+      "period_end": "2025-11-09",
+      "purpose": "유동성 확보",
+      "method": "시간외대량매매",
+      "held_shares": 640500,
+      "rcp_no": "20250808000498"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "(주)유텍솔루션",
+      "relation": "특수관계인",
+      "contract_type": "주식담보계약",
+      "counterparty": "하나은행",
+      "shares": 685000,
+      "contract_date": "2021-07-19",
+      "maturity": null,
+      "ratio": 4.33,
+      "loan_amount": 4800000000.0,
+      "unit": "원",
+      "debtor": "(주)유텍솔루션",
+      "rcp_no": "20260318000157"
+    },
+    {
+      "holder": "(주)유텍솔루션",
+      "relation": "특수관계인",
+      "contract_type": "주식담보계약",
+      "counterparty": "신한은행",
+      "shares": 404041,
+      "contract_date": "2025-03-25",
+      "maturity": null,
+      "ratio": 2.56,
+      "loan_amount": 3000000000.0,
+      "unit": "원",
+      "debtor": "(주)유텍솔루션",
+      "rcp_no": "20260318000157"
+    },
+    {
+      "holder": "(주)유텍솔루션",
+      "relation": "특수관계인",
+      "contract_type": "주식담보계약",
+      "counterparty": "하나은행",
+      "shares": -685000,
+      "contract_date": "2026-03-18",
+      "maturity": null,
+      "ratio": -4.33,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260318000157"
+    },
+    {
+      "holder": "(주)유텍솔루션",
+      "relation": "특수관계인",
+      "contract_type": "주식담보계약",
+      "counterparty": "신한은행",
+      "shares": -404041,
+      "contract_date": "2026-03-18",
+      "maturity": null,
+      "ratio": -2.56,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260318000157"
+    },
+    {
+      "holder": "(주)유텍솔루션",
+      "relation": "특수관계인",
+      "contract_type": "주식담보계약",
+      "counterparty": "하나은행",
+      "shares": 685000,
+      "contract_date": "2021-07-19",
+      "maturity": null,
+      "ratio": 4.33,
+      "loan_amount": 4800000000.0,
+      "unit": "원",
+      "debtor": "(주)유텍솔루션",
+      "rcp_no": "20260318000163"
+    },
+    {
+      "holder": "(주)유텍솔루션",
+      "relation": "특수관계인",
+      "contract_type": "주식담보계약",
+      "counterparty": "신한은행",
+      "shares": 404041,
+      "contract_date": "2025-03-25",
+      "maturity": null,
+      "ratio": 2.56,
+      "loan_amount": 3000000000.0,
+      "unit": "원",
+      "debtor": "(주)유텍솔루션",
+      "rcp_no": "20260318000163"
+    }
+  ]
+}

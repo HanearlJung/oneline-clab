@@ -1,0 +1,38 @@
+{
+  "corp_code": "00361008",
+  "stock_code": "082740",
+  "name": "한화엔진",
+  "market": "KOSPI",
+  "industry": "일반 목적용 기계 제조업",
+  "source": {
+    "rcp_no": "20260318000939",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 339411,
+      "amount": 15680788200.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "임직원 주식보상",
+      "method": null,
+      "held_shares": null,
+      "rcp_no": "20260714000392"
+    }
+  ],
+  "pledge": []
+}

@@ -1,0 +1,77 @@
+{
+  "corp_code": "00111704",
+  "stock_code": "042660",
+  "name": "한화오션",
+  "market": "KOSPI",
+  "industry": "선박 및 보트 건조업",
+  "source": {
+    "rcp_no": "20260317000644",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260317",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "백만원",
+    "total": 2062903,
+    "amortized_cost": 1854050,
+    "fvoci": 144799,
+    "fvtpl": 42711,
+    "short_term_deposits": 13491,
+    "cash": 778471,
+    "products": [
+      "기타금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "백만원",
+    "dbo": 788373,
+    "plan_assets": 776439,
+    "net_liability": 11934,
+    "funding_ratio": 98.5,
+    "principal_guaranteed": null,
+    "indirect_investment": null,
+    "other_assets": 712692,
+    "employer_contribution": 112227,
+    "expected_contribution": 92279,
+    "benefits_paid": 39380,
+    "service_cost": 85932,
+    "plan_type": "DB+DC",
+    "providers": []
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 37721,
+      "amount": 5107423400.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "임직원 주식보상",
+      "method": null,
+      "held_shares": null,
+      "rcp_no": "20260304001541"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 37721,
+      "amount": 5107423400.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "임직원 주식보상",
+      "method": null,
+      "held_shares": null,
+      "rcp_no": "20260305000671"
+    }
+  ],
+  "pledge": []
+}

@@ -1,0 +1,53 @@
+{
+  "corp_code": "00138260",
+  "stock_code": "009160",
+  "name": "SIMPAC",
+  "market": "KOSPI",
+  "industry": "1차 철강 제조업",
+  "source": {
+    "rcp_no": "20260318001274",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "최진식 외 5명",
+    "largest_ratio": 60.12,
+    "change_date": "2025-12-15",
+    "prev_largest": "(주)심팩홀딩스 외 6명",
+    "reason": "주식회사 SIMPAC(존속회사)과 (주)심팩홀딩스(소멸회사)간 흡수합병으로 인한 최대주주 변경",
+    "unit": "원",
+    "rcp_no": "20251215801703",
+    "prev_ratio": 60.15
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 1680000,
+      "amount": 9189600000.0,
+      "period_start": "2025-12-18",
+      "period_end": "2025-12-31",
+      "purpose": "심팩사내근로복지기금 무상출연, 임원 자사주 상여 지급",
+      "method": "기타",
+      "held_shares": 11335189,
+      "rcp_no": "20251217000399"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 1291990,
+      "amount": 5000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "임직원 등의 성과보상 재원 목적 취득",
+      "method": null,
+      "held_shares": 9655189,
+      "rcp_no": "20260629000456"
+    }
+  ],
+  "pledge": []
+}

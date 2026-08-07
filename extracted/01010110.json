@@ -1,0 +1,38 @@
+{
+  "corp_code": "01010110",
+  "stock_code": "192080",
+  "name": "더블유게임즈",
+  "market": "KOSPI",
+  "industry": "소프트웨어 개발 및 공급업",
+  "source": {
+    "rcp_no": "20260724000595",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260724",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 176352,
+      "amount": 8694235141.0,
+      "period_start": "2026-04-16",
+      "period_end": "2026-04-16",
+      "purpose": "종속회사 잔여지분 일부 취득 관련 인수대가 지급",
+      "method": "기타",
+      "held_shares": 1888017,
+      "rcp_no": "20260415000001"
+    }
+  ],
+  "pledge": []
+}

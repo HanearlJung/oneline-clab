@@ -1,0 +1,107 @@
+{
+  "corp_code": "00128546",
+  "stock_code": "000250",
+  "name": "삼천당제약",
+  "market": "KOSDAQ",
+  "industry": "의약품 제조업",
+  "source": {
+    "rcp_no": "20260602000573",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260604",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 150000,
+      "amount": 29541900000.0,
+      "period_start": "2025-09-19",
+      "period_end": "2025-09-19",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채 발행을 통한 자금 확보",
+      "method": "기타",
+      "held_shares": 200000,
+      "rcp_no": "20250827000610"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 150000,
+      "amount": 29541900000.0,
+      "period_start": "2025-09-19",
+      "period_end": "2025-09-19",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채 발행을 통한 자금 확보",
+      "method": "기타",
+      "held_shares": 200000,
+      "rcp_no": "20250919000122"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "전인석",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "하나증권",
+      "shares": 209300,
+      "contract_date": "2025-10-21",
+      "maturity": "2026-01-16",
+      "ratio": 0.89,
+      "loan_amount": 23000000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20251024000379"
+    },
+    {
+      "holder": "윤은화",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "하나증권",
+      "shares": 128310,
+      "contract_date": "2025-10-21",
+      "maturity": "2026-01-16",
+      "ratio": 0.55,
+      "loan_amount": 14100000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20251024000379"
+    },
+    {
+      "holder": "전인석",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "하나증권",
+      "shares": 209300,
+      "contract_date": "2026-07-16",
+      "maturity": "2026-10-13",
+      "ratio": 0.89,
+      "loan_amount": 23000000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260723000516"
+    },
+    {
+      "holder": "윤은화",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "하나증권",
+      "shares": 128310,
+      "contract_date": "2026-07-16",
+      "maturity": "2026-10-13",
+      "ratio": 0.55,
+      "loan_amount": 14100000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260723000516"
+    }
+  ]
+}

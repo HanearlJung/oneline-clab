@@ -1,0 +1,79 @@
+{
+  "corp_code": "00111722",
+  "stock_code": "006800",
+  "name": "미래에셋증권",
+  "market": "KOSPI",
+  "industry": "금융 지원 서비스업",
+  "source": {
+    "rcp_no": "20260515002972",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260515",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 3898635,
+      "amount": 200000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주식 소각을 통한 주주가치 제고",
+      "method": null,
+      "held_shares": 12811774,
+      "rcp_no": "20260617000479"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 3898635,
+      "amount": 200000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주식 소각을 통한 주주가치 제고",
+      "method": null,
+      "held_shares": 12811774,
+      "rcp_no": "20260617000504"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "미래에셋 캐피탈(주)",
+      "relation": "본인",
+      "contract_type": "근질권 설정계약",
+      "counterparty": "한국증권 금융",
+      "shares": 10757306,
+      "contract_date": "2015-12-28",
+      "maturity": null,
+      "ratio": 1.9,
+      "loan_amount": 40000000000.0,
+      "unit": "원",
+      "debtor": "미래에셋캐피탈(주)",
+      "rcp_no": "20251219000570"
+    },
+    {
+      "holder": "미래에셋 캐피탈(주)",
+      "relation": "본인",
+      "contract_type": "근질권 설정계약",
+      "counterparty": "한국증권 금융",
+      "shares": 10757306,
+      "contract_date": "2026-06-10",
+      "maturity": null,
+      "ratio": 1.9,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260612000478"
+    }
+  ],
+  "_fa_note": "금융자산 탭 제외 — 증권사 자기매매 자산"
+}

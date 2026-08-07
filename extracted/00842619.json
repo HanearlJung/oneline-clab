@@ -1,0 +1,53 @@
+{
+  "corp_code": "00842619",
+  "stock_code": "141080",
+  "name": "리가켐바이오",
+  "market": "KOSDAQ",
+  "industry": "자연과학 및 공학 연구개발업",
+  "source": {
+    "rcp_no": "20260323001538",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260323",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 36218,
+      "amount": 5088629000.0,
+      "period_start": "2025-10-02",
+      "period_end": "2025-10-02",
+      "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
+      "method": "기타",
+      "held_shares": 205208,
+      "rcp_no": "20251001000687"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "박세진",
+      "relation": "특수관계인",
+      "contract_type": "주식담보",
+      "counterparty": "한국투자증권",
+      "shares": 38369,
+      "contract_date": "2021-04-21",
+      "maturity": null,
+      "ratio": 0.1,
+      "loan_amount": 950000000.0,
+      "unit": "원",
+      "debtor": "박세진",
+      "rcp_no": "20260804000149"
+    }
+  ]
+}

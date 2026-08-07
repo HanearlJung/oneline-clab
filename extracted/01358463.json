@@ -1,0 +1,50 @@
+{
+  "corp_code": "01358463",
+  "stock_code": "319400",
+  "name": "현대무벡스",
+  "market": "KOSDAQ",
+  "industry": "일반 목적용 기계 제조업",
+  "source": {
+    "rcp_no": "20260318001359",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 454666,
+      "amount": 2291516640.0,
+      "period_start": "2025-11-03",
+      "period_end": "2025-11-03",
+      "purpose": "직원 성과급 등의 자기주식 지급",
+      "method": "기타",
+      "held_shares": 1684066,
+      "rcp_no": "20250807000150"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 90000,
+      "amount": 2200500000.0,
+      "period_start": "2026-09-23",
+      "period_end": "2026-09-23",
+      "purpose": "직원 성과급 등의 자기주식 지급",
+      "method": "기타",
+      "held_shares": 1229400,
+      "rcp_no": "20260806000400"
+    }
+  ],
+  "pledge": []
+}

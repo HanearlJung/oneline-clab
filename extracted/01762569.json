@@ -1,0 +1,38 @@
+{
+  "corp_code": "01762569",
+  "stock_code": "457190",
+  "name": "이수스페셜티케미컬",
+  "market": "KOSPI",
+  "industry": "기초 화학물질 제조업",
+  "source": {
+    "rcp_no": "20260319001027",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260319",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 269815,
+      "amount": 12047239750.0,
+      "period_start": "2025-09-02",
+      "period_end": "2025-10-01",
+      "purpose": "재무구조 개선 및 투자재원 확보",
+      "method": "시간외대량매매",
+      "held_shares": null,
+      "rcp_no": "20250901000516"
+    }
+  ],
+  "pledge": []
+}

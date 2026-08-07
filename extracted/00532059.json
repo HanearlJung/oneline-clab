@@ -1,0 +1,55 @@
+{
+  "corp_code": "00532059",
+  "stock_code": "114450",
+  "name": "그린생명과학",
+  "market": "KOSDAQ",
+  "industry": "기초 의약물질 제조업",
+  "source": {
+    "rcp_no": "20260319001189",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260319",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "그린케미칼㈜ 외 2인",
+    "largest_ratio": 26.96,
+    "change_date": "2026-07-22",
+    "prev_largest": "㈜관악상사 외 2인",
+    "reason": "특수관계자의 장내매수로 인한 최대주주 변경",
+    "unit": "원",
+    "rcp_no": "20260722900912",
+    "prev_ratio": 26.81,
+    "deal_amount": 61750723.0,
+    "deal_own": 61750723.0
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 162530,
+      "amount": 448582800.0,
+      "period_start": "2026-03-03",
+      "period_end": "2026-06-02",
+      "purpose": "기업 운영자금 확보 및 재무구조 개선",
+      "method": "시장을통한매도",
+      "held_shares": 162530,
+      "rcp_no": "20260303003144"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 162530,
+      "amount": 448582800.0,
+      "period_start": "2026-03-03",
+      "period_end": "2026-06-02",
+      "purpose": "기업 운영자금 확보 및 재무구조 개선",
+      "method": "시장을통한매도",
+      "held_shares": 162530,
+      "rcp_no": "20260304000513"
+    }
+  ],
+  "pledge": []
+}

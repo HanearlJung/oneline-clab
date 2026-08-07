@@ -1,0 +1,50 @@
+{
+  "corp_code": "01061327",
+  "stock_code": "214150",
+  "name": "클래시스",
+  "market": "KOSDAQ",
+  "industry": "의료용 기기 제조업",
+  "source": {
+    "rcp_no": "20260323001541",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260323",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 66287,
+      "amount": 2552911231.0,
+      "period_start": "2026-01-09",
+      "period_end": "2033-03-29",
+      "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
+      "method": "기타",
+      "held_shares": 350426,
+      "rcp_no": "20260109000629"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 66287,
+      "amount": 2552911231.0,
+      "period_start": "2026-01-09",
+      "period_end": "2033-03-29",
+      "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
+      "method": "기타",
+      "held_shares": 350426,
+      "rcp_no": "20260109000697"
+    }
+  ],
+  "pledge": []
+}

@@ -1,0 +1,95 @@
+{
+  "corp_code": "00164973",
+  "stock_code": "001450",
+  "name": "현대해상",
+  "market": "KOSPI",
+  "industry": "보험업",
+  "source": {
+    "rcp_no": "20260312001448",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260312",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 894000,
+      "amount": 27088200000.0,
+      "period_start": "2026-04-03",
+      "period_end": "2026-05-08",
+      "purpose": "임직원 대상 자기주식 지급",
+      "method": "기타",
+      "held_shares": 10985500,
+      "rcp_no": "20260320001275"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "정경선",
+      "relation": "특수관계인",
+      "contract_type": "주식 담보대출계약",
+      "counterparty": "한국증권금융(주)광주지점",
+      "shares": 406600,
+      "contract_date": "2025-08-26",
+      "maturity": null,
+      "ratio": 0.45,
+      "loan_amount": 5497.0,
+      "unit": "원",
+      "debtor": "정경선",
+      "rcp_no": "20250901000411"
+    },
+    {
+      "holder": "정몽윤",
+      "relation": "본인",
+      "contract_type": "주식 담보대출계약",
+      "counterparty": "한국증권금융(주)광주지점",
+      "shares": 1293400,
+      "contract_date": "2025-08-26",
+      "maturity": null,
+      "ratio": 1.45,
+      "loan_amount": 17503.0,
+      "unit": "원",
+      "debtor": "정경선",
+      "rcp_no": "20250901000411"
+    },
+    {
+      "holder": "정경선",
+      "relation": "특수관계인",
+      "contract_type": "주식 담보대출계약",
+      "counterparty": "한국증권금융(주) 광주지점",
+      "shares": 406600,
+      "contract_date": "2025-08-26",
+      "maturity": null,
+      "ratio": 0.48,
+      "loan_amount": 5497.0,
+      "unit": "원",
+      "debtor": "정경선",
+      "rcp_no": "20260408002633"
+    },
+    {
+      "holder": "정몽윤",
+      "relation": "본인",
+      "contract_type": "주식 담보대출계약",
+      "counterparty": "한국증권금융(주) 광주지점",
+      "shares": 1293400,
+      "contract_date": "2025-08-26",
+      "maturity": null,
+      "ratio": 1.51,
+      "loan_amount": 17503.0,
+      "unit": "원",
+      "debtor": "정경선",
+      "rcp_no": "20260408002633"
+    }
+  ]
+}

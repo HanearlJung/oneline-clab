@@ -1,0 +1,91 @@
+{
+  "corp_code": "00524421",
+  "stock_code": "095610",
+  "name": "테스",
+  "market": "KOSDAQ",
+  "industry": "특수 목적용 기계 제조업",
+  "source": {
+    "rcp_no": "20260313000585",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260313",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 300000,
+      "amount": 15666900000.0,
+      "period_start": "2025-10-30",
+      "period_end": "2025-10-30",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채 발행",
+      "method": "기타",
+      "held_shares": 1624536,
+      "rcp_no": "20251029000087"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 192900,
+      "amount": 7494165000.0,
+      "period_start": "2025-12-08",
+      "period_end": "2025-12-22",
+      "purpose": "임직원 대상 자기주식 상여 지급",
+      "method": "기타",
+      "held_shares": 916310,
+      "rcp_no": "20251208000071"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "주재영",
+      "relation": "특수관계인",
+      "contract_type": "주식담보계약",
+      "counterparty": "한국증권금융",
+      "shares": 59800,
+      "contract_date": "2026-07-14",
+      "maturity": null,
+      "ratio": 0.31,
+      "loan_amount": 1300000000.0,
+      "unit": "원",
+      "debtor": "주재영",
+      "rcp_no": "20260715000168"
+    },
+    {
+      "holder": "주재영",
+      "relation": "특수관계인",
+      "contract_type": "주식담보제공",
+      "counterparty": "용산세무서",
+      "shares": 100000,
+      "contract_date": "2023-10-16",
+      "maturity": null,
+      "ratio": 0.52,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260715000168"
+    },
+    {
+      "holder": "주재영",
+      "relation": "특수관계인",
+      "contract_type": "주식담보제공",
+      "counterparty": "용산세무서",
+      "shares": 100000,
+      "contract_date": "2024-07-12",
+      "maturity": null,
+      "ratio": 0.52,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260715000168"
+    }
+  ]
+}

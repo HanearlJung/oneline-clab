@@ -1,0 +1,2017 @@
+{
+  "meta": {
+    "generated": "2026-08-07",
+    "periodic_window": {
+      "start": "20250429",
+      "end": "20260807"
+    },
+    "event_window": {
+      "start": "20250731",
+      "end": "20260807"
+    },
+    "universe": 2639,
+    "selected": 100
+  },
+  "companies": [
+    {
+      "corp_code": "00244455",
+      "name": "케이티앤지",
+      "market": "KOSPI",
+      "stock_code": "033780",
+      "industry": "담배 제조업",
+      "market_cap": 189662.0,
+      "report": {
+        "rcp_no": "20260318001422",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 6
+    },
+    {
+      "corp_code": "00140955",
+      "name": "한솔케미칼",
+      "market": "KOSPI",
+      "stock_code": "014680",
+      "industry": "기초 화학물질 제조업",
+      "market_cap": 24234.0,
+      "report": {
+        "rcp_no": "20260318001424",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 11
+    },
+    {
+      "corp_code": "00444329",
+      "name": "위메이드",
+      "market": "KOSDAQ",
+      "stock_code": "112040",
+      "industry": "소프트웨어 개발 및 공급업",
+      "market_cap": 5456.0,
+      "report": {
+        "rcp_no": "20260319000853",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 25
+    },
+    {
+      "corp_code": "00216762",
+      "name": "한양이엔지",
+      "market": "KOSDAQ",
+      "stock_code": "045100",
+      "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+      "market_cap": 5128.0,
+      "report": {
+        "rcp_no": "20260313000818",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260313"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 8
+    },
+    {
+      "corp_code": "00488989",
+      "name": "한양디지텍",
+      "market": "KOSDAQ",
+      "stock_code": "078350",
+      "industry": "반도체 제조업",
+      "market_cap": 3140.0,
+      "report": {
+        "rcp_no": "20260316001638",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260316"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00117498",
+      "name": "스틱인베스트먼트",
+      "market": "KOSPI",
+      "stock_code": "026890",
+      "industry": "신탁업 및 집합투자업",
+      "market_cap": 3137.0,
+      "report": {
+        "rcp_no": "20260319000750",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 16
+    },
+    {
+      "corp_code": "00138260",
+      "name": "SIMPAC",
+      "market": "KOSPI",
+      "stock_code": "009160",
+      "industry": "1차 철강 제조업",
+      "market_cap": 3101.0,
+      "report": {
+        "rcp_no": "20260318001274",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "00580056",
+      "name": "스맥",
+      "market": "KOSDAQ",
+      "stock_code": "099440",
+      "industry": "특수 목적용 기계 제조업",
+      "market_cap": 2730.0,
+      "report": {
+        "rcp_no": "20260323001679",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260323"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 18
+    },
+    {
+      "corp_code": "01041828",
+      "name": "JTC",
+      "market": "KOSDAQ",
+      "stock_code": "950170",
+      "industry": "종합 소매업",
+      "market_cap": 2229.0,
+      "report": {
+        "rcp_no": "20260528000907",
+        "report_nm": "사업보고서 (2026.02)",
+        "rcept_dt": "20260528"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "00166573",
+      "name": "환인제약",
+      "market": "KOSPI",
+      "stock_code": "016580",
+      "industry": "의약품 제조업",
+      "market_cap": 1936.0,
+      "report": {
+        "rcp_no": "20260312001200",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260312"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00120872",
+      "name": "만호제강",
+      "market": "KOSPI",
+      "stock_code": "001080",
+      "industry": "1차 철강 제조업",
+      "market_cap": 1690.0,
+      "report": {
+        "rcp_no": "20250930000631",
+        "report_nm": "[기재정정] 사업보고서 (2024.06)",
+        "rcept_dt": "20250930"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 16
+    },
+    {
+      "corp_code": "00129387",
+      "name": "SP삼화",
+      "market": "KOSPI",
+      "stock_code": "000390",
+      "industry": "기타 화학제품 제조업",
+      "market_cap": 1676.0,
+      "report": {
+        "rcp_no": "20260318000462",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 11
+    },
+    {
+      "corp_code": "00105156",
+      "name": "극동유화",
+      "market": "KOSPI",
+      "stock_code": "014530",
+      "industry": "석유 정제품 제조업",
+      "market_cap": 1103.0,
+      "report": {
+        "rcp_no": "20260323001025",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260323"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 15
+    },
+    {
+      "corp_code": "00530121",
+      "name": "디에스케이",
+      "market": "KOSDAQ",
+      "stock_code": "109740",
+      "industry": "특수 목적용 기계 제조업",
+      "market_cap": 1044.0,
+      "report": {
+        "rcp_no": "20260323001333",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260323"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 16
+    },
+    {
+      "corp_code": "00119672",
+      "name": "두올",
+      "market": "KOSPI",
+      "stock_code": "016740",
+      "industry": "자동차 신품 부품 제조업",
+      "market_cap": 967.0,
+      "report": {
+        "rcp_no": "20260318001456",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 11
+    },
+    {
+      "corp_code": "00103510",
+      "name": "인지컨트롤스",
+      "market": "KOSPI",
+      "stock_code": "023800",
+      "industry": "자동차 신품 부품 제조업",
+      "market_cap": 835.0,
+      "report": {
+        "rcp_no": "20260323001493",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260323"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00115384",
+      "name": "동방아그로",
+      "market": "KOSPI",
+      "stock_code": "007590",
+      "industry": "비료, 농약 및 살균, 살충제 제조업",
+      "market_cap": 766.0,
+      "report": {
+        "rcp_no": "20260312000569",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260312"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 6
+    },
+    {
+      "corp_code": "00148595",
+      "name": "제일테크노스",
+      "market": "KOSDAQ",
+      "stock_code": "038010",
+      "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+      "market_cap": 476.0,
+      "report": {
+        "rcp_no": "20260320000688",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00532059",
+      "name": "그린생명과학",
+      "market": "KOSDAQ",
+      "stock_code": "114450",
+      "industry": "기초 의약물질 제조업",
+      "market_cap": 462.0,
+      "report": {
+        "rcp_no": "20260319001189",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "00137207",
+      "name": "유니켐",
+      "market": "KOSPI",
+      "stock_code": "011330",
+      "industry": "자동차 신품 부품 제조업",
+      "market_cap": 416.0,
+      "report": {
+        "rcp_no": "20260325000515",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260325"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 15
+    },
+    {
+      "corp_code": "00102140",
+      "name": "경인전자",
+      "market": "KOSPI",
+      "stock_code": "009140",
+      "industry": "전자부품 제조업",
+      "market_cap": 343.0,
+      "report": {
+        "rcp_no": "20260312001118",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260312"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 6
+    },
+    {
+      "corp_code": "00109268",
+      "name": "대동스틸",
+      "market": "KOSDAQ",
+      "stock_code": "048470",
+      "industry": "기타 전문 도매업",
+      "market_cap": 251.0,
+      "report": {
+        "rcp_no": "20260318000232",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "01062177",
+      "name": "제놀루션",
+      "market": "KOSDAQ",
+      "stock_code": "225220",
+      "industry": "기초 의약물질 제조업",
+      "market_cap": 251.0,
+      "report": {
+        "rcp_no": "20260319000806",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 10
+    },
+    {
+      "corp_code": "00172185",
+      "name": "남성",
+      "market": "KOSPI",
+      "stock_code": "004270",
+      "industry": "기타 전문 도매업",
+      "market_cap": 229.0,
+      "report": {
+        "rcp_no": "20260320001336",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 11
+    },
+    {
+      "corp_code": "00406037",
+      "name": "CSA 코스믹",
+      "market": "KOSDAQ",
+      "stock_code": "083660",
+      "industry": "기타 화학제품 제조업",
+      "market_cap": 218.0,
+      "report": {
+        "rcp_no": "20260324000035",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260324"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 36
+    },
+    {
+      "corp_code": "01064069",
+      "name": "토박스코리아",
+      "market": "KOSDAQ",
+      "stock_code": "215480",
+      "industry": "섬유, 의복, 신발 및 가죽제품 소매업",
+      "market_cap": 204.0,
+      "report": {
+        "rcp_no": "20260323000608",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260323"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "00122205",
+      "name": "졸스",
+      "market": "KOSDAQ",
+      "stock_code": "018700",
+      "industry": "생활용품 도매업",
+      "market_cap": 163.0,
+      "report": {
+        "rcp_no": "20260630000287",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260630"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 3,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "00126380",
+      "name": "삼성전자",
+      "market": "KOSPI",
+      "stock_code": "005930",
+      "industry": "통신 및 방송 장비 제조업",
+      "market_cap": 13475672.0,
+      "report": {
+        "rcp_no": "20260310002820",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260310"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 29
+    },
+    {
+      "corp_code": "00164779",
+      "name": "SK하이닉스",
+      "market": "KOSPI",
+      "stock_code": "000660",
+      "industry": "반도체 제조업",
+      "market_cap": 10920861.0,
+      "report": {
+        "rcp_no": "20260317000635",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260317"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 6
+    },
+    {
+      "corp_code": "00164742",
+      "name": "현대자동차",
+      "market": "KOSPI",
+      "stock_code": "005380",
+      "industry": "자동차용 엔진 및 자동차 제조업",
+      "market_cap": 819031.0,
+      "report": {
+        "rcp_no": "20260318001394",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 8
+    },
+    {
+      "corp_code": "00106641",
+      "name": "기아",
+      "market": "KOSPI",
+      "stock_code": "000270",
+      "industry": "자동차용 엔진 및 자동차 제조업",
+      "market_cap": 521592.0,
+      "report": {
+        "rcp_no": "20260312001224",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260312"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00159616",
+      "name": "두산에너빌리티",
+      "market": "KOSPI",
+      "stock_code": "034020",
+      "industry": "일반 목적용 기계 제조업",
+      "market_cap": 489389.0,
+      "report": {
+        "rcp_no": "20260320001246",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "00164788",
+      "name": "현대모비스",
+      "market": "KOSPI",
+      "stock_code": "012330",
+      "industry": "자동차 신품 부품 제조업",
+      "market_cap": 460922.0,
+      "report": {
+        "rcp_no": "20260309001878",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260309"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 8
+    },
+    {
+      "corp_code": "00413046",
+      "name": "셀트리온",
+      "market": "KOSPI",
+      "stock_code": "068270",
+      "industry": "기초 의약물질 제조업",
+      "market_cap": 453480.0,
+      "report": {
+        "rcp_no": "20260316001415",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260316"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 21
+    },
+    {
+      "corp_code": "00181712",
+      "name": "SK",
+      "market": "KOSPI",
+      "stock_code": "034730",
+      "industry": "기타 금융업",
+      "market_cap": 369039.0,
+      "report": {
+        "rcp_no": "20260318001157",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "00105855",
+      "name": "엘에스일렉트릭",
+      "market": "KOSPI",
+      "stock_code": "010120",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "market_cap": 303750.0,
+      "report": {
+        "rcp_no": "20260318001243",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00111704",
+      "name": "한화오션",
+      "market": "KOSPI",
+      "stock_code": "042660",
+      "industry": "선박 및 보트 건조업",
+      "market_cap": 277917.0,
+      "report": {
+        "rcp_no": "20260317000644",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260317"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00102858",
+      "name": "고려아연",
+      "market": "KOSPI",
+      "stock_code": "010130",
+      "industry": "1차 비철금속 제조업",
+      "market_cap": 257572.0,
+      "report": {
+        "rcp_no": "20260601001725",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260601"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 17
+    },
+    {
+      "corp_code": "00164645",
+      "name": "HMM",
+      "market": "KOSPI",
+      "stock_code": "011200",
+      "industry": "해상 운송업",
+      "market_cap": 201853.0,
+      "report": {
+        "rcp_no": "20260318001444",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "00111722",
+      "name": "미래에셋증권",
+      "market": "KOSPI",
+      "stock_code": "006800",
+      "industry": "금융 지원 서비스업",
+      "market_cap": 193330.0,
+      "report": {
+        "rcp_no": "20260515002972",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260515"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "00117212",
+      "name": "두산",
+      "market": "KOSPI",
+      "stock_code": "000150",
+      "industry": "전자부품 제조업",
+      "market_cap": 192383.0,
+      "report": {
+        "rcp_no": "20260323000945",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260323"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00362441",
+      "name": "현대오토에버",
+      "market": "KOSPI",
+      "stock_code": "307950",
+      "industry": "소프트웨어 개발 및 공급업",
+      "market_cap": 114358.0,
+      "report": {
+        "rcp_no": "20260318001324",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 3
+    },
+    {
+      "corp_code": "00536541",
+      "name": "에코프로",
+      "market": "KOSDAQ",
+      "stock_code": "086520",
+      "industry": "기타 금융업",
+      "market_cap": 113509.0,
+      "report": {
+        "rcp_no": "20260318001612",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 35
+    },
+    {
+      "corp_code": "00760971",
+      "name": "크래프톤",
+      "market": "KOSPI",
+      "stock_code": "259960",
+      "industry": "소프트웨어 개발 및 공급업",
+      "market_cap": 106117.0,
+      "report": {
+        "rcp_no": "20260515002689",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260515"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 25
+    },
+    {
+      "corp_code": "00159102",
+      "name": "DB손해보험",
+      "market": "KOSPI",
+      "stock_code": "005830",
+      "industry": "보험업",
+      "market_cap": 104670.0,
+      "report": {
+        "rcp_no": "20260331003904",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260331"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 12
+    },
+    {
+      "corp_code": "01160363",
+      "name": "에코프로비엠",
+      "market": "KOSDAQ",
+      "stock_code": "247540",
+      "industry": "일차전지 및 이차전지 제조업",
+      "market_cap": 100276.0,
+      "report": {
+        "rcp_no": "20260318001622",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 29
+    },
+    {
+      "corp_code": "00126955",
+      "name": "삼양식품",
+      "market": "KOSPI",
+      "stock_code": "003230",
+      "industry": "기타 식품 제조업",
+      "market_cap": 94142.0,
+      "report": {
+        "rcp_no": "20260318001082",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 7
+    },
+    {
+      "corp_code": "00583424",
+      "name": "아모레퍼시픽",
+      "market": "KOSPI",
+      "stock_code": "090430",
+      "industry": "기타 화학제품 제조업",
+      "market_cap": 81298.0,
+      "report": {
+        "rcp_no": "20260318000785",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 13
+    },
+    {
+      "corp_code": "01204056",
+      "name": "하이브",
+      "market": "KOSPI",
+      "stock_code": "352820",
+      "industry": "오디오물 출판 및 원판 녹음업",
+      "market_cap": 79660.0,
+      "report": {
+        "rcp_no": "20260320000802",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 18
+    },
+    {
+      "corp_code": "00296290",
+      "name": "키움증권",
+      "market": "KOSPI",
+      "stock_code": "039490",
+      "industry": "금융 지원 서비스업",
+      "market_cap": 77894.0,
+      "report": {
+        "rcp_no": "20260317000838",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260317"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 3
+    },
+    {
+      "corp_code": "01032486",
+      "name": "두산밥캣",
+      "market": "KOSPI",
+      "stock_code": "241560",
+      "industry": "특수 목적용 기계 제조업",
+      "market_cap": 61966.0,
+      "report": {
+        "rcp_no": "20260319001265",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 7
+    },
+    {
+      "corp_code": "00160588",
+      "name": "한화",
+      "market": "KOSPI",
+      "stock_code": "000880",
+      "industry": "기타 화학제품 제조업",
+      "market_cap": 61003.0,
+      "report": {
+        "rcp_no": "20260331003871",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260331"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 14
+    },
+    {
+      "corp_code": "00162461",
+      "name": "한화솔루션",
+      "market": "KOSPI",
+      "stock_code": "009830",
+      "industry": "기초 화학물질 제조업",
+      "market_cap": 52255.0,
+      "report": {
+        "rcp_no": "20260325001401",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260325"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 7
+    },
+    {
+      "corp_code": "00828497",
+      "name": "한미약품",
+      "market": "KOSPI",
+      "stock_code": "128940",
+      "industry": "의약품 제조업",
+      "market_cap": 50091.0,
+      "report": {
+        "rcp_no": "20260320001130",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00842619",
+      "name": "리가켐바이오",
+      "market": "KOSDAQ",
+      "stock_code": "141080",
+      "industry": "자연과학 및 공학 연구개발업",
+      "market_cap": 41055.0,
+      "report": {
+        "rcp_no": "20260323001538",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260323"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00139889",
+      "name": "SKC",
+      "market": "KOSPI",
+      "stock_code": "011790",
+      "industry": "기타 화학제품 제조업",
+      "market_cap": 39913.0,
+      "report": {
+        "rcp_no": "20260610000521",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260610"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 10
+    },
+    {
+      "corp_code": "01095722",
+      "name": "심텍",
+      "market": "KOSDAQ",
+      "stock_code": "222800",
+      "industry": "전자부품 제조업",
+      "market_cap": 39712.0,
+      "report": {
+        "rcp_no": "20260317000641",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260317"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00160843",
+      "name": "DB하이텍",
+      "market": "KOSPI",
+      "stock_code": "000990",
+      "industry": "반도체 제조업",
+      "market_cap": 39029.0,
+      "report": {
+        "rcp_no": "20260601001661",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260601"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "00128546",
+      "name": "삼천당제약",
+      "market": "KOSDAQ",
+      "stock_code": "000250",
+      "industry": "의약품 제조업",
+      "market_cap": 38728.0,
+      "report": {
+        "rcp_no": "20260602000573",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260604"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "00161125",
+      "name": "한온시스템",
+      "market": "KOSPI",
+      "stock_code": "018880",
+      "industry": "일반 목적용 기계 제조업",
+      "market_cap": 38011.0,
+      "report": {
+        "rcp_no": "20260318000645",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00361008",
+      "name": "한화엔진",
+      "market": "KOSPI",
+      "stock_code": "082740",
+      "industry": "일반 목적용 기계 제조업",
+      "market_cap": 37048.0,
+      "report": {
+        "rcp_no": "20260318000939",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 3
+    },
+    {
+      "corp_code": "00888347",
+      "name": "휴젤",
+      "market": "KOSDAQ",
+      "stock_code": "145020",
+      "industry": "기초 의약물질 제조업",
+      "market_cap": 34917.0,
+      "report": {
+        "rcp_no": "20260320000349",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "00164973",
+      "name": "현대해상",
+      "market": "KOSPI",
+      "stock_code": "001450",
+      "industry": "보험업",
+      "market_cap": 34880.0,
+      "report": {
+        "rcp_no": "20260312001448",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260312"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 3
+    },
+    {
+      "corp_code": "00398701",
+      "name": "엘앤에프",
+      "market": "KOSPI",
+      "stock_code": "066970",
+      "industry": "일차전지 및 이차전지 제조업",
+      "market_cap": 34249.0,
+      "report": {
+        "rcp_no": "20260423000699",
+        "report_nm": "[첨부정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260423"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 16
+    },
+    {
+      "corp_code": "00946030",
+      "name": "로보티즈",
+      "market": "KOSDAQ",
+      "stock_code": "108490",
+      "industry": "특수 목적용 기계 제조업",
+      "market_cap": 34234.0,
+      "report": {
+        "rcp_no": "20260708000478",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260708"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "01649204",
+      "name": "달바글로벌",
+      "market": "KOSPI",
+      "stock_code": "483650",
+      "industry": "기타 화학제품 제조업",
+      "market_cap": 30860.0,
+      "report": {
+        "rcp_no": "20260407001978",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260407"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 12
+    },
+    {
+      "corp_code": "00161426",
+      "name": "한미사이언스",
+      "market": "KOSPI",
+      "stock_code": "008930",
+      "industry": "기타 금융업",
+      "market_cap": 30149.0,
+      "report": {
+        "rcp_no": "20260320001158",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 37
+    },
+    {
+      "corp_code": "01061327",
+      "name": "클래시스",
+      "market": "KOSDAQ",
+      "stock_code": "214150",
+      "industry": "의료용 기기 제조업",
+      "market_cap": 29715.0,
+      "report": {
+        "rcp_no": "20260323001541",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260323"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 7
+    },
+    {
+      "corp_code": "01288827",
+      "name": "HPSP",
+      "market": "KOSDAQ",
+      "stock_code": "403870",
+      "industry": "특수 목적용 기계 제조업",
+      "market_cap": 29463.0,
+      "report": {
+        "rcp_no": "20260319000776",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "01327746",
+      "name": "보로노이",
+      "market": "KOSDAQ",
+      "stock_code": "310210",
+      "industry": "자연과학 및 공학 연구개발업",
+      "market_cap": 29048.0,
+      "report": {
+        "rcp_no": "20260320000892",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 21
+    },
+    {
+      "corp_code": "01319899",
+      "name": "SK바이오사이언스",
+      "market": "KOSPI",
+      "stock_code": "302440",
+      "industry": "기초 의약물질 제조업",
+      "market_cap": 28303.0,
+      "report": {
+        "rcp_no": "20260313000936",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260313"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "01358463",
+      "name": "현대무벡스",
+      "market": "KOSDAQ",
+      "stock_code": "319400",
+      "industry": "일반 목적용 기계 제조업",
+      "market_cap": 26953.0,
+      "report": {
+        "rcp_no": "20260318001359",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 8
+    },
+    {
+      "corp_code": "00144395",
+      "name": "동서",
+      "market": "KOSPI",
+      "stock_code": "026960",
+      "industry": "음·식료품 및 담배 도매업",
+      "market_cap": 26296.0,
+      "report": {
+        "rcp_no": "20260312000207",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260312"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "00524421",
+      "name": "테스",
+      "market": "KOSDAQ",
+      "stock_code": "095610",
+      "industry": "특수 목적용 기계 제조업",
+      "market_cap": 25187.0,
+      "report": {
+        "rcp_no": "20260313000585",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260313"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 6
+    },
+    {
+      "corp_code": "00195229",
+      "name": "미스토홀딩스",
+      "market": "KOSPI",
+      "stock_code": "081660",
+      "industry": "생활용품 도매업",
+      "market_cap": 25063.0,
+      "report": {
+        "rcp_no": "20260318000916",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 17
+    },
+    {
+      "corp_code": "00112332",
+      "name": "미래에셋생명",
+      "market": "KOSPI",
+      "stock_code": "085620",
+      "industry": "보험업",
+      "market_cap": 22981.0,
+      "report": {
+        "rcp_no": "20260721001043",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260721"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 6
+    },
+    {
+      "corp_code": "00428251",
+      "name": "현대백화점",
+      "market": "KOSPI",
+      "stock_code": "069960",
+      "industry": "종합 소매업",
+      "market_cap": 22945.0,
+      "report": {
+        "rcp_no": "20260318001314",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 8
+    },
+    {
+      "corp_code": "00372226",
+      "name": "티에스이",
+      "market": "KOSDAQ",
+      "stock_code": "131290",
+      "industry": "측정, 시험, 항해, 제어 및 기타 정밀기기 제조업; 광학기기 제외",
+      "market_cap": 22897.0,
+      "report": {
+        "rcp_no": "20260318000738",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 8
+    },
+    {
+      "corp_code": "00838005",
+      "name": "서진시스템",
+      "market": "KOSDAQ",
+      "stock_code": "178320",
+      "industry": "기타 전기장비 제조업",
+      "market_cap": 22596.0,
+      "report": {
+        "rcp_no": "20260323001543",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260323"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 57
+    },
+    {
+      "corp_code": "00872984",
+      "name": "이마트",
+      "market": "KOSPI",
+      "stock_code": "139480",
+      "industry": "종합 소매업",
+      "market_cap": 22463.0,
+      "report": {
+        "rcp_no": "20260318001024",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 6
+    },
+    {
+      "corp_code": "01152470",
+      "name": "펄어비스",
+      "market": "KOSDAQ",
+      "stock_code": "263750",
+      "industry": "소프트웨어 개발 및 공급업",
+      "market_cap": 22121.0,
+      "report": {
+        "rcp_no": "20260319001336",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 3
+    },
+    {
+      "corp_code": "00105280",
+      "name": "현대지에프홀딩스",
+      "market": "KOSPI",
+      "stock_code": "005440",
+      "industry": "기타 금융업",
+      "market_cap": 21696.0,
+      "report": {
+        "rcp_no": "20260319000764",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 3
+    },
+    {
+      "corp_code": "00579999",
+      "name": "고영",
+      "market": "KOSDAQ",
+      "stock_code": "098460",
+      "industry": "특수 목적용 기계 제조업",
+      "market_cap": 21177.0,
+      "report": {
+        "rcp_no": "20260312000804",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260312"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 14
+    },
+    {
+      "corp_code": "00154462",
+      "name": "아모레퍼시픽홀딩스",
+      "market": "KOSPI",
+      "stock_code": "002790",
+      "industry": "기타 화학제품 제조업",
+      "market_cap": 20414.0,
+      "report": {
+        "rcp_no": "20260318000825",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 12
+    },
+    {
+      "corp_code": "00144164",
+      "name": "SK가스",
+      "market": "KOSPI",
+      "stock_code": "018670",
+      "industry": "기타 전문 도매업",
+      "market_cap": 20366.0,
+      "report": {
+        "rcp_no": "20260320000815",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "01762569",
+      "name": "이수스페셜티케미컬",
+      "market": "KOSPI",
+      "stock_code": "457190",
+      "industry": "기초 화학물질 제조업",
+      "market_cap": 18766.0,
+      "report": {
+        "rcp_no": "20260319001027",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 9
+    },
+    {
+      "corp_code": "00670340",
+      "name": "씨에스윈드",
+      "market": "KOSPI",
+      "stock_code": "112610",
+      "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+      "market_cap": 17817.0,
+      "report": {
+        "rcp_no": "20260318001110",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 18
+    },
+    {
+      "corp_code": "00535676",
+      "name": "테크윙",
+      "market": "KOSDAQ",
+      "stock_code": "089030",
+      "industry": "특수 목적용 기계 제조업",
+      "market_cap": 17526.0,
+      "report": {
+        "rcp_no": "20260623000173",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260623"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "01181515",
+      "name": "엘앤씨바이오",
+      "market": "KOSDAQ",
+      "stock_code": "290650",
+      "industry": "의약품 제조업",
+      "market_cap": 17207.0,
+      "report": {
+        "rcp_no": "20260324000006",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260324"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 8
+    },
+    {
+      "corp_code": "00544577",
+      "name": "브이엠",
+      "market": "KOSDAQ",
+      "stock_code": "089970",
+      "industry": "특수 목적용 기계 제조업",
+      "market_cap": 16902.0,
+      "report": {
+        "rcp_no": "20260320000666",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260320"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": false
+      },
+      "event_count": 2,
+      "disclosure_count": 5
+    },
+    {
+      "corp_code": "00165680",
+      "name": "호텔신라",
+      "market": "KOSPI",
+      "stock_code": "008770",
+      "industry": "기타 상품 전문 소매업",
+      "market_cap": 16818.0,
+      "report": {
+        "rcp_no": "20260311004398",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260311"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 3
+    },
+    {
+      "corp_code": "00225742",
+      "name": "LS마린솔루션",
+      "market": "KOSDAQ",
+      "stock_code": "060370",
+      "industry": "전기 및 통신 공사업",
+      "market_cap": 16246.0,
+      "report": {
+        "rcp_no": "20260316000800",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260316"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 7
+    },
+    {
+      "corp_code": "00131780",
+      "name": "SK네트웍스",
+      "market": "KOSPI",
+      "stock_code": "001740",
+      "industry": "기타 전문 도매업",
+      "market_cap": 15506.0,
+      "report": {
+        "rcp_no": "20260318001112",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "00788773",
+      "name": "씨젠",
+      "market": "KOSDAQ",
+      "stock_code": "096530",
+      "industry": "의료용품 및 기타 의약 관련제품 제조업",
+      "market_cap": 15231.0,
+      "report": {
+        "rcp_no": "20260515001029",
+        "report_nm": "[기재정정] 사업보고서 (2024.12)",
+        "rcept_dt": "20260515"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 8
+    },
+    {
+      "corp_code": "01310269",
+      "name": "IPARK현대산업개발",
+      "market": "KOSPI",
+      "stock_code": "294870",
+      "industry": "건물 건설업",
+      "market_cap": 15008.0,
+      "report": {
+        "rcp_no": "20260318001249",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "00983271",
+      "name": "NHN",
+      "market": "KOSPI",
+      "stock_code": "181710",
+      "industry": "소프트웨어 개발 및 공급업",
+      "market_cap": 14496.0,
+      "report": {
+        "rcp_no": "20260318001525",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260318"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "01093007",
+      "name": "LS에코에너지",
+      "market": "KOSPI",
+      "stock_code": "229640",
+      "industry": "기타 금융업",
+      "market_cap": 14363.0,
+      "report": {
+        "rcp_no": "20260316001365",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260316"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 3
+    },
+    {
+      "corp_code": "00177816",
+      "name": "대주전자재료",
+      "market": "KOSDAQ",
+      "stock_code": "078600",
+      "industry": "전자부품 제조업",
+      "market_cap": 13936.0,
+      "report": {
+        "rcp_no": "20260319000004",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "00263654",
+      "name": "오스코텍",
+      "market": "KOSDAQ",
+      "stock_code": "039200",
+      "industry": "의약품 제조업",
+      "market_cap": 13741.0,
+      "report": {
+        "rcp_no": "20260319001005",
+        "report_nm": "사업보고서 (2025.12)",
+        "rcept_dt": "20260319"
+      },
+      "events": {
+        "owner_change": true,
+        "pledge": true,
+        "treasury": false
+      },
+      "event_count": 2,
+      "disclosure_count": 4
+    },
+    {
+      "corp_code": "01010110",
+      "name": "더블유게임즈",
+      "market": "KOSPI",
+      "stock_code": "192080",
+      "industry": "소프트웨어 개발 및 공급업",
+      "market_cap": 13561.0,
+      "report": {
+        "rcp_no": "20260724000595",
+        "report_nm": "[기재정정] 사업보고서 (2025.12)",
+        "rcept_dt": "20260724"
+      },
+      "events": {
+        "owner_change": false,
+        "pledge": true,
+        "treasury": true
+      },
+      "event_count": 2,
+      "disclosure_count": 2
+    }
+  ]
+}

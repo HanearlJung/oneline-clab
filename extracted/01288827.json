@@ -1,0 +1,50 @@
+{
+  "corp_code": "01288827",
+  "stock_code": "403870",
+  "name": "HPSP",
+  "market": "KOSDAQ",
+  "industry": "특수 목적용 기계 제조업",
+  "source": {
+    "rcp_no": "20260319000776",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260319",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 86969,
+      "amount": 4461509700.0,
+      "period_start": "2026-05-13",
+      "period_end": "2026-06-30",
+      "purpose": "임직원 대상 주식보상제도 (주식매수선택권, RSU)에 따른 자기주식 교부",
+      "method": "장외처분",
+      "held_shares": 1032720,
+      "rcp_no": "20260513000628"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 4587,
+      "amount": 232102200.0,
+      "period_start": "2026-06-25",
+      "period_end": "2026-07-25",
+      "purpose": "임직원 대상 주식보상제도 (스톡옵션, RSU)에 따른 자기주식 교부",
+      "method": "장외처분",
+      "held_shares": 945751,
+      "rcp_no": "20260625000469"
+    }
+  ],
+  "pledge": []
+}

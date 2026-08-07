@@ -1,0 +1,53 @@
+{
+  "corp_code": "00105156",
+  "stock_code": "014530",
+  "name": "극동유화",
+  "market": "KOSPI",
+  "industry": "석유 정제품 제조업",
+  "source": {
+    "rcp_no": "20260323001025",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260323",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "장선우 외 8명",
+    "largest_ratio": 42.17,
+    "change_date": "2025-11-21",
+    "prev_largest": "장홍선 외 6명",
+    "reason": "특수관계인 간의 주식거래로 인한 최대주주의 변경",
+    "unit": "원",
+    "rcp_no": "20251124800312",
+    "prev_ratio": 42.17
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 900000,
+      "amount": 2862900000.0,
+      "period_start": "2025-11-19",
+      "period_end": "2025-11-19",
+      "purpose": "재무구조 개선 및 투자재원 확보",
+      "method": "시간외대량매매",
+      "held_shares": 1200000,
+      "rcp_no": "20251118000166"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 300000,
+      "amount": 1015500000.0,
+      "period_start": "2025-12-09",
+      "period_end": "2025-12-19",
+      "purpose": "임직원에 대한 성과급 지급",
+      "method": "기타",
+      "held_shares": 300000,
+      "rcp_no": "20251208000240"
+    }
+  ],
+  "pledge": []
+}

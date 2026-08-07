@@ -1,0 +1,65 @@
+{
+  "corp_code": "00872984",
+  "stock_code": "139480",
+  "name": "이마트",
+  "market": "KOSPI",
+  "industry": "종합 소매업",
+  "source": {
+    "rcp_no": "20260318001024",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 524319,
+      "amount": 52304490483.0,
+      "period_start": "2026-07-23",
+      "period_end": "2026-07-23",
+      "purpose": "소규모 주식교환 절차 진행",
+      "method": "기타",
+      "held_shares": 795824,
+      "rcp_no": "20260608000434"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 232447,
+      "amount": 23188215379.0,
+      "period_start": "2026-07-23",
+      "period_end": "2026-07-23",
+      "purpose": "소규모 주식교환 절차 진행",
+      "method": "기타",
+      "held_shares": 795824,
+      "rcp_no": "20260716000502"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "정용진",
+      "relation": "본인",
+      "contract_type": "담보 계약",
+      "counterparty": "한국증권금융",
+      "shares": 5172911,
+      "contract_date": "2026-02-11",
+      "maturity": "2027-02-11",
+      "ratio": 18.75,
+      "loan_amount": 270000000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260213002519"
+    }
+  ]
+}

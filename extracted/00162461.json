@@ -1,0 +1,62 @@
+{
+  "corp_code": "00162461",
+  "stock_code": "009830",
+  "name": "한화솔루션",
+  "market": "KOSPI",
+  "industry": "기초 화학물질 제조업",
+  "source": {
+    "rcp_no": "20260325001401",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260325",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "백만원",
+    "total": 6954031,
+    "amortized_cost": 5775056,
+    "fvoci": 77620,
+    "fvtpl": 1091213,
+    "short_term_deposits": 685520,
+    "cash": 2470461,
+    "products": [
+      "기타금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 160221,
+      "amount": 4366022250.0,
+      "period_start": "2026-01-22",
+      "period_end": "2026-02-04",
+      "purpose": "주식기준보상(RSU제도)에 따른 주식의 지급",
+      "method": "장외처분",
+      "held_shares": 2378668,
+      "rcp_no": "20260122000309"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 160221,
+      "amount": 4366022250.0,
+      "period_start": "2026-01-22",
+      "period_end": "2026-02-04",
+      "purpose": "주식기준보상(RSU제도)에 따른 주식의 지급",
+      "method": "장외처분",
+      "held_shares": 2378668,
+      "rcp_no": "20260127000338"
+    }
+  ],
+  "pledge": []
+}

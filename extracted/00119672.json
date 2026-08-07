@@ -1,0 +1,56 @@
+{
+  "corp_code": "00119672",
+  "stock_code": "016740",
+  "name": "두올",
+  "market": "KOSPI",
+  "industry": "자동차 신품 부품 제조업",
+  "source": {
+    "rcp_no": "20260318001456",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "모트렉스이에프엠 주식회사 외 1인",
+    "largest_ratio": 63.23,
+    "change_date": "2026-07-31",
+    "prev_largest": "(주)IHC 외 5인",
+    "reason": "최대주주 변경을 수반하는 주식매매계약",
+    "unit": "원",
+    "rcp_no": "20260731800717",
+    "prev_ratio": 48.61
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 286740,
+      "amount": 1053769500.0,
+      "period_start": "2026-07-09",
+      "period_end": "2026-07-09",
+      "purpose": "임직원 대상 RSU계약에 따른 자기주식 지급",
+      "method": "기타",
+      "held_shares": 313050,
+      "rcp_no": "20260708000354"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "정재열",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "미래에셋증권",
+      "shares": 58651,
+      "contract_date": "2026-07-24",
+      "maturity": "2026-10-22",
+      "ratio": 0.2,
+      "loan_amount": 99998200.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260731000615"
+    }
+  ]
+}

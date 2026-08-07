@@ -1,0 +1,43 @@
+{
+  "corp_code": "01062177",
+  "stock_code": "225220",
+  "name": "제놀루션",
+  "market": "KOSDAQ",
+  "industry": "기초 의약물질 제조업",
+  "source": {
+    "rcp_no": "20260319000806",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260319",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "김기옥외10",
+    "largest_ratio": 26.2,
+    "change_date": "2026-02-19",
+    "prev_largest": "호일바이오메드외10",
+    "reason": "특별관계자간 주식 양수도",
+    "unit": "원",
+    "rcp_no": "20260219901034",
+    "prev_ratio": 26.2,
+    "deal_amount": 1473256296.0,
+    "deal_own": 1473256296.0
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 10545,
+      "amount": 19423890.0,
+      "period_start": "2026-02-20",
+      "period_end": "2026-02-20",
+      "purpose": "임직원에 대한 상여금 지급",
+      "method": "기타",
+      "held_shares": 1123451,
+      "rcp_no": "20260212001432"
+    }
+  ],
+  "pledge": []
+}

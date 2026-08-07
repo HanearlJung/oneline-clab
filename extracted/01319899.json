@@ -1,0 +1,38 @@
+{
+  "corp_code": "01319899",
+  "stock_code": "302440",
+  "name": "SK바이오사이언스",
+  "market": "KOSPI",
+  "industry": "기초 의약물질 제조업",
+  "source": {
+    "rcp_no": "20260313000936",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260313",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 391254,
+      "amount": 17136925200.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "임직원 보상",
+      "method": null,
+      "held_shares": null,
+      "rcp_no": "20260428000715"
+    }
+  ],
+  "pledge": []
+}

@@ -1,0 +1,78 @@
+{
+  "corp_code": "00106641",
+  "stock_code": "000270",
+  "name": "기아",
+  "market": "KOSPI",
+  "industry": null,
+  "source": {
+    "rcp_no": "20260312001224",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260312",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "백만원",
+    "total": 32461501,
+    "amortized_cost": 31229021,
+    "fvoci": 724669,
+    "fvtpl": 385433,
+    "short_term_deposits": 8007854,
+    "cash": 13998106,
+    "products": [
+      "장단기금융상품",
+      "기타금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 2163918,
+      "amount": 251447271600.0,
+      "period_start": "2025-11-28",
+      "period_end": "2025-11-28",
+      "purpose": "2025년 임금협상에 따른 회사주식 지급",
+      "method": "기타",
+      "held_shares": 6973925,
+      "rcp_no": "20251031000189"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 53599,
+      "amount": 9138629500.0,
+      "period_start": "2026-04-01",
+      "period_end": "2026-04-01",
+      "purpose": "임원 대상 자기주식 지급",
+      "method": "기타",
+      "held_shares": 1810273,
+      "rcp_no": "20260320001182"
+    }
+  ],
+  "pledge": [],
+  "pension": {
+    "unit": "백만원",
+    "dbo": 3647617,
+    "plan_assets": 3785356,
+    "net_liability": -137739,
+    "funding_ratio": 103.8,
+    "principal_guaranteed": 3785356,
+    "indirect_investment": 0,
+    "other_assets": 0,
+    "employer_contribution": 342800,
+    "expected_contribution": null,
+    "benefits_paid": 284971,
+    "service_cost": 284334,
+    "plan_type": "DB",
+    "providers": []
+  }
+}

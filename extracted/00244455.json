@@ -1,0 +1,84 @@
+{
+  "corp_code": "00244455",
+  "stock_code": "033780",
+  "name": "케이티앤지",
+  "market": "KOSPI",
+  "industry": null,
+  "source": {
+    "rcp_no": "20260318001422",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "백만원",
+    "total": 5369937,
+    "amortized_cost": 4782338,
+    "fvoci": 187911,
+    "fvtpl": 394723,
+    "short_term_deposits": 2017841,
+    "products": [
+      "정기예금",
+      "CD",
+      "회사채",
+      "장기예치금",
+      "특정금전신탁",
+      "MMF",
+      "수익증권"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "백만원",
+    "dbo": 589322,
+    "plan_assets": 586856,
+    "net_liability": 2466,
+    "funding_ratio": 99.6,
+    "principal_guaranteed": 586856,
+    "indirect_investment": 0,
+    "other_assets": 0,
+    "employer_contribution": 64361,
+    "expected_contribution": 17478,
+    "benefits_paid": 101621,
+    "service_cost": 52856,
+    "plan_type": "DB"
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "중소기업은행",
+    "largest_ratio": 8.06,
+    "change_date": "2025-12-31",
+    "prev_largest": "국민연금공단",
+    "reason": "국민연금공단의 소유주식수 감소",
+    "unit": "원",
+    "rcp_no": "20260122800431",
+    "prev_ratio": 7.74
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 1823281,
+      "amount": 260000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주주가치제고 및 주식소각",
+      "method": null,
+      "held_shares": 14168821,
+      "rcp_no": "20250923000289"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 22812,
+      "amount": 4026318000.0,
+      "period_start": "2026-02-25",
+      "period_end": "2026-02-27",
+      "purpose": "사장·사내이사의 단기성과급 및 경영임원 보상 중 일부를 자기주식으로 지급",
+      "method": "기타",
+      "held_shares": 10868821,
+      "rcp_no": "20260224004024"
+    }
+  ],
+  "pledge": []
+}

@@ -1,0 +1,65 @@
+{
+  "corp_code": "00164788",
+  "stock_code": "012330",
+  "name": "현대모비스",
+  "market": "KOSPI",
+  "industry": null,
+  "source": {
+    "rcp_no": "20260309001878",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260309",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 3800,
+      "amount": 1653000000.0,
+      "period_start": "2026-02-12",
+      "period_end": "2026-02-12",
+      "purpose": "임원 대상 성과급 자기주식 지급",
+      "method": "기타",
+      "held_shares": 1555800,
+      "rcp_no": "20260210000755"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 1129943,
+      "amount": 500000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주주가치 제고를 목적으로 자기주식 취득 및 소각",
+      "method": null,
+      "held_shares": 1552000,
+      "rcp_no": "20260424000517"
+    }
+  ],
+  "pledge": [],
+  "pension": {
+    "unit": "백만원",
+    "dbo": 1217433,
+    "plan_assets": 1344453,
+    "net_liability": -127142,
+    "funding_ratio": 110.4,
+    "principal_guaranteed": 1344453,
+    "indirect_investment": 0,
+    "other_assets": 0,
+    "employer_contribution": 213779,
+    "expected_contribution": null,
+    "benefits_paid": 74403,
+    "service_cost": 158731,
+    "plan_type": "DB+DC",
+    "providers": []
+  }
+}

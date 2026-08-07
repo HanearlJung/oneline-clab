@@ -1,0 +1,80 @@
+{
+  "corp_code": "00144395",
+  "stock_code": "026960",
+  "name": "동서",
+  "market": "KOSPI",
+  "industry": "음·식료품 및 담배 도매업",
+  "source": {
+    "rcp_no": "20260312000207",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260312",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 3397,
+      "amount": 96304950.0,
+      "period_start": "2025-12-17",
+      "period_end": "2025-12-30",
+      "purpose": "회사의 경영상 목적 달성",
+      "method": "시장을통한매도",
+      "held_shares": 1024080,
+      "rcp_no": "20251216000338"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "김현준",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "한국증권금융",
+      "shares": 135000,
+      "contract_date": "2025-08-18",
+      "maturity": null,
+      "ratio": 0.14,
+      "loan_amount": 2000000000.0,
+      "unit": "원",
+      "debtor": "김현준",
+      "rcp_no": "20260320001018"
+    },
+    {
+      "holder": "최은성",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "대신증권",
+      "shares": 6570,
+      "contract_date": "2023-07-18",
+      "maturity": null,
+      "ratio": 0.0,
+      "loan_amount": 18140000.0,
+      "unit": "원",
+      "debtor": "최은성",
+      "rcp_no": "20260320001018"
+    },
+    {
+      "holder": "최은성",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "대신증권",
+      "shares": 1472,
+      "contract_date": "2023-07-19",
+      "maturity": null,
+      "ratio": 0.0,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260320001018"
+    }
+  ]
+}

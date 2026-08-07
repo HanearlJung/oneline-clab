@@ -1,0 +1,151 @@
+{
+  "corp_code": "01181515",
+  "stock_code": "290650",
+  "name": "엘앤씨바이오",
+  "market": "KOSDAQ",
+  "industry": "의약품 제조업",
+  "source": {
+    "rcp_no": "20260324000006",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260324",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 70000,
+      "amount": 2500470000.0,
+      "period_start": "2025-12-18",
+      "period_end": "2029-11-27",
+      "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
+      "method": "기타",
+      "held_shares": 302240,
+      "rcp_no": "20251218000425"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "이환철",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "한국증권금융",
+      "shares": 1900000,
+      "contract_date": "2026-04-14",
+      "maturity": "2027-04-14",
+      "ratio": 7.65,
+      "loan_amount": 17000000000.0,
+      "unit": "원",
+      "debtor": "이환철",
+      "rcp_no": "20260430001843"
+    },
+    {
+      "holder": "이환철",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "교보증권",
+      "shares": 52577,
+      "contract_date": "2026-03-23",
+      "maturity": "2026-06-22",
+      "ratio": 0.21,
+      "loan_amount": 1000000000.0,
+      "unit": "원",
+      "debtor": "이환철",
+      "rcp_no": "20260430001843"
+    },
+    {
+      "holder": "이환철",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "교보증권",
+      "shares": 77701,
+      "contract_date": "2026-03-23",
+      "maturity": "2026-06-22",
+      "ratio": 0.31,
+      "loan_amount": 1000000000.0,
+      "unit": "원",
+      "debtor": "이환철",
+      "rcp_no": "20260430001843"
+    },
+    {
+      "holder": "이환철",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "교보증권",
+      "shares": 928075,
+      "contract_date": "2026-03-23",
+      "maturity": "2026-06-22",
+      "ratio": 3.74,
+      "loan_amount": 8000000000.0,
+      "unit": "원",
+      "debtor": "이환철",
+      "rcp_no": "20260430001843"
+    },
+    {
+      "holder": "이환철",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "한국증권금융",
+      "shares": 1900000,
+      "contract_date": "2026-04-14",
+      "maturity": "2027-04-14",
+      "ratio": 7.04,
+      "loan_amount": 17000000000.0,
+      "unit": "원",
+      "debtor": "이환철",
+      "rcp_no": "20260623000309"
+    },
+    {
+      "holder": "이환철",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "교보증권",
+      "shares": 52577,
+      "contract_date": "2026-06-22",
+      "maturity": "2026-09-21",
+      "ratio": 0.19,
+      "loan_amount": 1000000000.0,
+      "unit": "원",
+      "debtor": "이환철",
+      "rcp_no": "20260623000309"
+    },
+    {
+      "holder": "이환철",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "교보증권",
+      "shares": 77701,
+      "contract_date": "2026-06-22",
+      "maturity": "2026-09-21",
+      "ratio": 0.29,
+      "loan_amount": 1000000000.0,
+      "unit": "원",
+      "debtor": "이환철",
+      "rcp_no": "20260623000309"
+    },
+    {
+      "holder": "이환철",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "교보증권",
+      "shares": 928075,
+      "contract_date": "2026-06-22",
+      "maturity": "2026-09-21",
+      "ratio": 3.44,
+      "loan_amount": 8000000000.0,
+      "unit": "원",
+      "debtor": "이환철",
+      "rcp_no": "20260623000309"
+    }
+  ]
+}

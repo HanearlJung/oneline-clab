@@ -1,0 +1,78 @@
+{
+  "corp_code": "00760971",
+  "stock_code": "259960",
+  "name": "크래프톤",
+  "market": "KOSPI",
+  "industry": "소프트웨어 개발 및 공급업",
+  "source": {
+    "rcp_no": "20260515002689",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260515",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "천원",
+    "total": 5241848026,
+    "amortized_cost": 2239463022,
+    "fvoci": 197197414,
+    "fvtpl": 2771628277,
+    "short_term_deposits": 304020405,
+    "cash": 596725776,
+    "products": [
+      "당기손익-공정가치측정금융자산",
+      "기타금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "천원",
+    "dbo": 96073122,
+    "plan_assets": 99258875,
+    "net_liability": -3185753,
+    "funding_ratio": 103.3,
+    "principal_guaranteed": null,
+    "indirect_investment": null,
+    "other_assets": null,
+    "employer_contribution": 1990245,
+    "expected_contribution": null,
+    "benefits_paid": 6280535,
+    "service_cost": 10247200,
+    "plan_type": "DB+DC",
+    "providers": []
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 22368,
+      "amount": 6207120000.0,
+      "period_start": "2026-06-01",
+      "period_end": "2026-06-01",
+      "purpose": "임직원 대상 RSU에 따른 자기주식 지급",
+      "method": "기타",
+      "held_shares": 672276,
+      "rcp_no": "20260430001031"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 409836,
+      "amount": 99999984000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "자기주식 취득 및 소각을 통한 주주가치 제고",
+      "method": null,
+      "held_shares": 1062846,
+      "rcp_no": "20260729000354"
+    }
+  ],
+  "pledge": []
+}

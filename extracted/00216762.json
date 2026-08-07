@@ -1,0 +1,68 @@
+{
+  "corp_code": "00216762",
+  "stock_code": "045100",
+  "name": "한양이엔지",
+  "market": "KOSDAQ",
+  "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+  "source": {
+    "rcp_no": "20260313000818",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260313",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "김윤상 외 6명",
+    "largest_ratio": 46.53,
+    "change_date": "2026-01-27",
+    "prev_largest": "김형육 외 6명",
+    "reason": "주식관리신탁 계약에 따른 최대주주 변경",
+    "unit": "원",
+    "rcp_no": "20260127900802",
+    "prev_ratio": 46.53
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 783018,
+      "amount": 24845161140.0,
+      "period_start": "2026-03-03",
+      "period_end": "2026-03-03",
+      "purpose": "투자 및 운영자금 확보",
+      "method": "시간외대량매매",
+      "held_shares": 1705786,
+      "rcp_no": "20260227008128"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "김윤상",
+      "relation": "본인",
+      "contract_type": "신탁계약",
+      "counterparty": "특수관계인",
+      "shares": 3484294,
+      "contract_date": "2026-01-27",
+      "maturity": null,
+      "ratio": 19.91,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260728000233"
+    },
+    {
+      "holder": "김윤상",
+      "relation": "본인",
+      "contract_type": "신탁계약",
+      "counterparty": "특수관계인",
+      "shares": 3484294,
+      "contract_date": "2026-01-27",
+      "maturity": null,
+      "ratio": 19.91,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260728000349"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "corp_code": "01204056",
+  "stock_code": "352820",
+  "name": "하이브",
+  "market": "KOSPI",
+  "industry": "오디오물 출판 및 원판 녹음업",
+  "source": {
+    "rcp_no": "20260320000802",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260320",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "천원",
+    "total": 2493743385,
+    "amortized_cost": 2132944007,
+    "fvoci": 303072859,
+    "fvtpl": 57033836,
+    "short_term_deposits": 1314471520,
+    "cash": 534914956,
+    "products": [
+      "기타금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "천원",
+    "dbo": 56406961,
+    "plan_assets": 63042720,
+    "net_liability": -6635759,
+    "funding_ratio": 111.8,
+    "principal_guaranteed": 485667,
+    "indirect_investment": 62557053,
+    "other_assets": 0,
+    "employer_contribution": 10420468,
+    "expected_contribution": null,
+    "benefits_paid": 5401803,
+    "service_cost": 15630725,
+    "plan_type": "DB+DC",
+    "providers": []
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 101619,
+      "amount": 30384122035.0,
+      "period_start": "2026-04-03",
+      "period_end": "2026-04-30",
+      "purpose": "회사 및 계열회사 임직원 보상",
+      "method": "시간외대량매매",
+      "held_shares": 93837,
+      "rcp_no": "20260401004974"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 192126,
+      "amount": null,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "임직원 등의 성과보상 재원 목적 취득",
+      "method": null,
+      "held_shares": 93837,
+      "rcp_no": "20260519000290"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "방시혁",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "NH농협은행",
+      "shares": 640000,
+      "contract_date": "2026-03-31",
+      "maturity": "2027-03-31",
+      "ratio": 1.48,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260521000501"
+    },
+    {
+      "holder": "방시혁",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "NH농협은행",
+      "shares": 640000,
+      "contract_date": "2026-05-31",
+      "maturity": "2027-05-31",
+      "ratio": 1.48,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260601001585"
+    }
+  ]
+}

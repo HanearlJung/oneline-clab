@@ -1,0 +1,71 @@
+{
+  "corp_code": "01041828",
+  "stock_code": "950170",
+  "name": "JTC",
+  "market": "KOSDAQ",
+  "industry": "종합 소매업",
+  "source": {
+    "rcp_no": "20260528000907",
+    "report_nm": "사업보고서 (2026.02)",
+    "rcept_dt": "20260528",
+    "as_of": "2026-02-28"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "유한회사 유벤투스홀딩스투자목적회사",
+    "largest_ratio": 40.33,
+    "change_date": "2025-09-12",
+    "prev_largest": "구철모",
+    "reason": "콜옵션 행사에 따른 공개매수(2025.07.28~2025.09.10) 응모 및 대금지급에 따른 최대주주 변경",
+    "unit": "원",
+    "rcp_no": "20250912900506",
+    "prev_ratio": 40.33,
+    "deal_amount": 89915903000.0,
+    "deal_own": 19000000000.0,
+    "deal_debt": 70915903000.0
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 4021448,
+      "amount": 15000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "- 주가안정 - 주주가치 제고를 목적으로 자기주식 취득 후 소각",
+      "method": null,
+      "held_shares": null,
+      "rcp_no": "20260119000184"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 2421307,
+      "amount": 10000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "- 주가안정 - 주주가치 제고를 목적으로 자기주식 취득 후 소각",
+      "method": null,
+      "held_shares": 2973233,
+      "rcp_no": "20260430001425"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "유한회사 유벤투스홀딩스 투자목적회사",
+      "relation": "본인",
+      "contract_type": "주식 근질권 계약",
+      "counterparty": "NH투자증권(주)",
+      "shares": 20867000,
+      "contract_date": "2025-07-25",
+      "maturity": null,
+      "ratio": 40.33,
+      "loan_amount": 75900000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20250912000493"
+    }
+  ]
+}

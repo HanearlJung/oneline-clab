@@ -1,0 +1,4782 @@
+{
+  "meta": {
+    "baseDate": "2026-08-07",
+    "companyCount": 100,
+    "generated": "2026-08-07 10:35"
+  },
+  "tabs": [
+    {
+      "key": "investment",
+      "title": "금융상품 운용",
+      "desc": "저수익 예치자금·운용상품 유치 영업",
+      "upcoming": "갈아탈 수 있는 자금 규모가 가장 큰 영업 건입니다.",
+      "upcomingBadge": "운용 자금 큰 순",
+      "metricLabel": "영업 가능 자금",
+      "timeColumn": {
+        "label": "자금 성격",
+        "mode": "range"
+      },
+      "sortOptions": [
+        [
+          "amount",
+          "자금 큰 순"
+        ],
+        [
+          "company",
+          "기업명 순"
+        ]
+      ],
+      "sortDefault": "amount",
+      "filters": [
+        {
+          "label": "영업 가능 자금",
+          "field": "amount",
+          "type": "min",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "1000",
+              "1,000억 이상"
+            ],
+            [
+              "5000",
+              "5,000억 이상"
+            ],
+            [
+              "10000",
+              "1조 이상"
+            ]
+          ]
+        },
+        {
+          "label": "자금 성격",
+          "field": "situation",
+          "type": "eq",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "예치자금 편중",
+              "예치자금 편중"
+            ],
+            [
+              "운용상품 보유",
+              "운용상품 보유"
+            ],
+            [
+              "운용 여력",
+              "운용 여력"
+            ]
+          ]
+        }
+      ],
+      "coverage": {
+        "covered": 19,
+        "total": 100
+      },
+      "rows": [
+        {
+          "name": "고려아연",
+          "code": "010130",
+          "market": "KOSPI",
+          "industry": "1차 비철금속 제조업",
+          "rcpNo": "20260601001725",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260601001725",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 1.5조원 보유",
+          "detail": "단기예치 1,494억원 · 수익증권류 1.4조원 · 전략지분(FVOCI) 4,543억원",
+          "amount": 15212.4,
+          "metricText": "1.5조원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 1.4조원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "기아",
+          "code": "000270",
+          "market": "KOSPI",
+          "industry": "자동차용 엔진 및 자동차 제조업",
+          "rcpNo": "20260312001224",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001224",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 8.4조원 보유",
+          "detail": "단기예치 8.0조원 · 수익증권류 3,854억원 · 전략지분(FVOCI) 7,247억원",
+          "amount": 83932.8,
+          "metricText": "8.4조원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 8.0조원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "한화오션",
+          "code": "042660",
+          "market": "KOSPI",
+          "industry": "선박 및 보트 건조업",
+          "rcpNo": "20260317000644",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000644",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 562억원 보유",
+          "detail": "단기예치 135억원 · 수익증권류 427억원 · 전략지분(FVOCI) 1,448억원",
+          "amount": 562.0,
+          "metricText": "562억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 427억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "두산",
+          "code": "000150",
+          "market": "KOSPI",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20260323000945",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323000945",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 9,529억원 보유",
+          "detail": "단기예치 2,127억원 · 수익증권류 7,402억원 · 전략지분(FVOCI) 1,123억원",
+          "amount": 9528.8,
+          "metricText": "9,529억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 7,402억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "삼성전자",
+          "code": "005930",
+          "market": "KOSPI",
+          "industry": "통신 및 방송 장비 제조업",
+          "rcpNo": "20260310002820",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002820",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 75.7조원 보유",
+          "detail": "단기예치 74.0조원 · 수익증권류 1.6조원 · 전략지분(FVOCI) 22.1조원",
+          "amount": 756746.6000000001,
+          "metricText": "75.7조원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 74.0조원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "삼양식품",
+          "code": "003230",
+          "market": "KOSPI",
+          "industry": "기타 식품 제조업",
+          "rcpNo": "20260318001082",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001082",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 904억원 보유",
+          "detail": "단기예치 559억원 · 수익증권류 346억원 · 전략지분(FVOCI) 49억원",
+          "amount": 904.5,
+          "metricText": "904억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 559억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "두산에너빌리티",
+          "code": "034020",
+          "market": "KOSPI",
+          "industry": "일반 목적용 기계 제조업",
+          "rcpNo": "20260320001246",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320001246",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 5,921억원 보유",
+          "detail": "단기예치 1,316억원 · 수익증권류 4,606억원 · 전략지분(FVOCI) 1,016억원",
+          "amount": 5921.4,
+          "metricText": "5,921억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 4,606억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "한화솔루션",
+          "code": "009830",
+          "market": "KOSPI",
+          "industry": "기초 화학물질 제조업",
+          "rcpNo": "20260325001401",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325001401",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 1.8조원 보유",
+          "detail": "단기예치 6,855억원 · 수익증권류 1.1조원 · 전략지분(FVOCI) 776억원",
+          "amount": 17767.3,
+          "metricText": "1.8조원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 1.1조원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "HMM",
+          "code": "011200",
+          "market": "KOSPI",
+          "industry": "해상 운송업",
+          "rcpNo": "20260318001444",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001444",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 11.6조원 보유",
+          "detail": "단기예치 10.9조원 · 수익증권류 6,696억원 · 전략지분(FVOCI) 6,132억원",
+          "amount": 115856.0,
+          "metricText": "11.6조원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 10.9조원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "현대자동차",
+          "code": "005380",
+          "market": "KOSPI",
+          "industry": "자동차용 엔진 및 자동차 제조업",
+          "rcpNo": "20260318001394",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001394",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 9.4조원 보유",
+          "detail": "단기예치 6.1조원 · 수익증권류 3.3조원 · 전략지분(FVOCI) 4.2조원",
+          "amount": 94130.0,
+          "metricText": "9.4조원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 6.1조원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "SK하이닉스",
+          "code": "000660",
+          "market": "KOSPI",
+          "industry": "반도체 제조업",
+          "rcpNo": "20260317000635",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 34.8조원 보유",
+          "detail": "단기예치 14.7조원 · 수익증권류 20.1조원 · 전략지분(FVOCI) 1.3조원",
+          "amount": 347881.5,
+          "metricText": "34.8조원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 20.1조원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "SK",
+          "code": "034730",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20260318001157",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001157",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 12.4조원 보유",
+          "detail": "단기예치 3.6조원 · 수익증권류 8.8조원 · 전략지분(FVOCI) 6.1조원",
+          "amount": 123570.7,
+          "metricText": "12.4조원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 8.8조원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "케이티앤지",
+          "code": "033780",
+          "market": "KOSPI",
+          "industry": "담배 제조업",
+          "rcpNo": "20260318001422",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001422",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 2.4조원 보유",
+          "detail": "단기예치 2.0조원 · 수익증권류 3,947억원 · 전략지분(FVOCI) 1,879억원",
+          "amount": 24125.600000000002,
+          "metricText": "2.4조원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 2.0조원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "셀트리온",
+          "code": "068270",
+          "market": "KOSPI",
+          "industry": "기초 의약물질 제조업",
+          "rcpNo": "20260316001415",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001415",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 1,693억원 보유",
+          "detail": "단기예치 1,203억원 · 수익증권류 490억원 · 전략지분(FVOCI) 124억원",
+          "amount": 1693.2,
+          "metricText": "1,693억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 1,203억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "아모레퍼시픽",
+          "code": "090430",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260318000785",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000785",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 6,084억원 보유",
+          "detail": "단기예치 1,388억원 · 수익증권류 4,696억원 · 전략지분(FVOCI) 7억원",
+          "amount": 6084.3,
+          "metricText": "6,084억원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 4,696억원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "크래프톤",
+          "code": "259960",
+          "market": "KOSPI",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260515002689",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002689",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 3.1조원 보유",
+          "detail": "단기예치 3,040억원 · 수익증권류 2.8조원 · 전략지분(FVOCI) 1,972억원",
+          "amount": 30756.5,
+          "metricText": "3.1조원",
+          "ratio": null,
+          "situation": "운용상품 보유",
+          "dateValue": null,
+          "timeText": "운용상품 보유",
+          "action": "기보유 운용상품 2.8조원 운용사 교체·추가 제안",
+          "chips": [
+            "금융자산",
+            "운용상품 보유"
+          ]
+        },
+        {
+          "name": "한미약품",
+          "code": "128940",
+          "market": "KOSPI",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260320001130",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320001130",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 2,182억원 보유",
+          "detail": "단기예치 2,070억원 · 수익증권류 112억원 · 전략지분(FVOCI) 46억원",
+          "amount": 2182.5,
+          "metricText": "2,182억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 2,070억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "에코프로비엠",
+          "code": "247540",
+          "market": "KOSDAQ",
+          "industry": "일차전지 및 이차전지 제조업",
+          "rcpNo": "20260318001622",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001622",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 443억원 보유",
+          "detail": "단기예치 271억원 · 수익증권류 172억원",
+          "amount": 443.2,
+          "metricText": "443억원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 271억원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        },
+        {
+          "name": "하이브",
+          "code": "352820",
+          "market": "KOSPI",
+          "industry": "오디오물 출판 및 원판 녹음업",
+          "rcpNo": "20260320000802",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000802",
+          "asOf": "2025-12-31",
+          "reason": "운용 가능 자금 1.4조원 보유",
+          "detail": "단기예치 1.3조원 · 수익증권류 570억원 · 전략지분(FVOCI) 3,031억원",
+          "amount": 13715.0,
+          "metricText": "1.4조원",
+          "ratio": null,
+          "situation": "예치자금 편중",
+          "dateValue": null,
+          "timeText": "예치자금 편중",
+          "action": "단기 예치자금 1.3조원 채권형·ELS 수익형 전환 제안",
+          "chips": [
+            "금융자산",
+            "예치자금 편중"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pension",
+      "title": "퇴직연금",
+      "desc": "적립금 운용 물량 기반 연금 영업",
+      "upcoming": "가져올 수 있는 적립금 물량이 가장 큰 영업 건입니다.",
+      "upcomingBadge": "운용 물량 큰 순",
+      "metricLabel": "영업 가능 물량",
+      "timeColumn": {
+        "label": "영업 상황",
+        "mode": "none"
+      },
+      "sortOptions": [
+        [
+          "amount",
+          "물량 큰 순"
+        ],
+        [
+          "ratio",
+          "적립률 낮은 순"
+        ],
+        [
+          "company",
+          "기업명 순"
+        ]
+      ],
+      "sortDefault": "amount",
+      "filters": [
+        {
+          "label": "영업 가능 물량",
+          "field": "amount",
+          "type": "min",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "1000",
+              "1,000억 이상"
+            ],
+            [
+              "5000",
+              "5,000억 이상"
+            ],
+            [
+              "10000",
+              "1조 이상"
+            ]
+          ]
+        },
+        {
+          "label": "영업 상황",
+          "field": "situation",
+          "type": "eq",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "추가적립 필요",
+              "추가적립 필요"
+            ],
+            [
+              "원금보장형 편중",
+              "원금보장형 편중"
+            ],
+            [
+              "운용기관 경쟁",
+              "운용기관 경쟁"
+            ]
+          ]
+        }
+      ],
+      "coverage": {
+        "covered": 19,
+        "total": 100
+      },
+      "rows": [
+        {
+          "name": "고려아연",
+          "code": "010130",
+          "market": "KOSPI",
+          "industry": "1차 비철금속 제조업",
+          "rcpNo": "20260601001725",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260601001725",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 4,485억원 운용 중",
+          "detail": "원금보장형 4,484억원(100.0%) · 실적배당형 없음 · 차기 기여금 400억원 유입 예정",
+          "amount": 4483.5,
+          "metricText": "4,484억원",
+          "ratio": 110.7,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 110.7%",
+          "action": "원금보장형 4,484억원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "엘에스일렉트릭",
+          "code": "010120",
+          "market": "KOSPI",
+          "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+          "rcpNo": "20260318001243",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001243",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 2,873억원 운용 중",
+          "detail": "원금보장형 2,873억원(100.0%) · 실적배당형 없음 · 당기 기여금 241억원 신규 유입",
+          "amount": 2873.0,
+          "metricText": "2,873억원",
+          "ratio": 110.8,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 110.8%",
+          "action": "원금보장형 2,873억원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "기아",
+          "code": "000270",
+          "market": "KOSPI",
+          "industry": "자동차용 엔진 및 자동차 제조업",
+          "rcpNo": "20260312001224",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001224",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 3.8조원 운용 중",
+          "detail": "원금보장형 3.8조원(100.0%) · 실적배당형 없음 · 당기 기여금 3,428억원 신규 유입",
+          "amount": 37853.6,
+          "metricText": "3.8조원",
+          "ratio": 103.8,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 103.8%",
+          "action": "원금보장형 3.8조원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "한화오션",
+          "code": "042660",
+          "market": "KOSPI",
+          "industry": "선박 및 보트 건조업",
+          "rcpNo": "20260317000644",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000644",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 7,764억원 운용 중",
+          "detail": "차기 기여금 923억원 유입 예정",
+          "amount": 7764.4,
+          "metricText": "7,764억원",
+          "ratio": 98.5,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 98.5%",
+          "action": "적립금 7,764억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "두산",
+          "code": "000150",
+          "market": "KOSPI",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20260323000945",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323000945",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 1.6조원 운용 중",
+          "detail": "원금보장형 1.1조원(68.8%) · 간접투자 4,862억원 · 차기 기여금 4,577억원 유입 예정",
+          "amount": 10713.5,
+          "metricText": "1.1조원",
+          "ratio": 71.8,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 71.8%",
+          "action": "적립 부족분 해소 + 신규 적립금 1.1조원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
+          "name": "삼성전자",
+          "code": "005930",
+          "market": "KOSPI",
+          "industry": "통신 및 방송 장비 제조업",
+          "rcpNo": "20260310002820",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002820",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 20.6조원 운용 중",
+          "detail": "원금보장형 16.0조원(77.6%) · 간접투자 4.5조원 · 당기 기여금 2.3조원 신규 유입",
+          "amount": 159655.8,
+          "metricText": "16.0조원",
+          "ratio": 122.0,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 122.0%",
+          "action": "원금보장형 16.0조원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "삼양식품",
+          "code": "003230",
+          "market": "KOSPI",
+          "industry": "기타 식품 제조업",
+          "rcpNo": "20260318001082",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001082",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 770억원 운용 중",
+          "detail": "원금보장형 70억원(9.1%) · 간접투자 700억원 · 차기 기여금 151억원 유입 예정",
+          "amount": 70.2,
+          "metricText": "70억원",
+          "ratio": 108.6,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 108.6%",
+          "action": "적립금 70억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "두산에너빌리티",
+          "code": "034020",
+          "market": "KOSPI",
+          "industry": "일반 목적용 기계 제조업",
+          "rcpNo": "20260320001246",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320001246",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 1.3조원 운용 중",
+          "detail": "차기 기여금 4,141억원 유입 예정",
+          "amount": 12951.4,
+          "metricText": "1.3조원",
+          "ratio": 69.9,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 69.9%",
+          "action": "적립 부족분 해소 + 신규 적립금 1.3조원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
+          "name": "HMM",
+          "code": "011200",
+          "market": "KOSPI",
+          "industry": "해상 운송업",
+          "rcpNo": "20260318001444",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001444",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 1,673억원 운용 중",
+          "detail": "원금보장형 1,621억원(96.9%) · 실적배당형 없음 · 차기 기여금 69억원 유입 예정",
+          "amount": 1620.8,
+          "metricText": "1,621억원",
+          "ratio": 97.0,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 97.0%",
+          "action": "원금보장형 1,621억원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "현대자동차",
+          "code": "005380",
+          "market": "KOSPI",
+          "industry": "자동차용 엔진 및 자동차 제조업",
+          "rcpNo": "20260318001394",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001394",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 7.6조원 운용 중",
+          "detail": "원금보장형 7.6조원(100.0%) · 실적배당형 없음 · 차기 기여금 7,815억원 유입 예정",
+          "amount": 76014.0,
+          "metricText": "7.6조원",
+          "ratio": 102.2,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 102.2%",
+          "action": "원금보장형 7.6조원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "SK하이닉스",
+          "code": "000660",
+          "market": "KOSPI",
+          "industry": "반도체 제조업",
+          "rcpNo": "20260317000635",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000635",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 4.9조원 운용 중",
+          "detail": "원금보장형 4.8조원(97.8%) · 실적배당형 없음 · 차기 기여금 8,487억원 유입 예정 · 현 수탁 미래에셋생명보험",
+          "amount": 48253.1,
+          "metricText": "4.8조원",
+          "ratio": 143.1,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 143.1%",
+          "action": "원금보장형 4.8조원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "현대모비스",
+          "code": "012330",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20260309001878",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309001878",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 1.3조원 운용 중",
+          "detail": "원금보장형 1.3조원(100.0%) · 실적배당형 없음 · 당기 기여금 2,138억원 신규 유입",
+          "amount": 13444.5,
+          "metricText": "1.3조원",
+          "ratio": 110.4,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 110.4%",
+          "action": "원금보장형 1.3조원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "SK",
+          "code": "034730",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20260318001157",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001157",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 4.0조원 운용 중",
+          "detail": "원금보장형 2.7조원(66.6%) · 간접투자 1.3조원 · 당기 기여금 5,570억원 신규 유입",
+          "amount": 26720.7,
+          "metricText": "2.7조원",
+          "ratio": 111.4,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 111.4%",
+          "action": "원금보장형 2.7조원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "케이티앤지",
+          "code": "033780",
+          "market": "KOSPI",
+          "industry": "담배 제조업",
+          "rcpNo": "20260318001422",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001422",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 5,869억원 운용 중",
+          "detail": "원금보장형 5,869억원(100.0%) · 실적배당형 없음 · 차기 기여금 175억원 유입 예정",
+          "amount": 5868.6,
+          "metricText": "5,869억원",
+          "ratio": 99.6,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 99.6%",
+          "action": "원금보장형 5,869억원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "에코프로",
+          "code": "086520",
+          "market": "KOSDAQ",
+          "industry": "기타 금융업",
+          "rcpNo": "20260318001612",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001612",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 1,375억원 운용 중",
+          "detail": "원금보장형 1,140억원(83.0%) · 간접투자 234억원 · 차기 기여금 585억원 유입 예정",
+          "amount": 1140.4,
+          "metricText": "1,140억원",
+          "ratio": 83.8,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 83.8%",
+          "action": "적립 부족분 해소 + 신규 적립금 1,140억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
+          "name": "아모레퍼시픽",
+          "code": "090430",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260318000785",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000785",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 6,174억원 운용 중",
+          "detail": "원금보장형 6,174억원(100.0%) · 실적배당형 없음 · 차기 기여금 493억원 유입 예정",
+          "amount": 6173.7,
+          "metricText": "6,174억원",
+          "ratio": 128.4,
+          "situation": "원금보장형 편중",
+          "dateValue": null,
+          "timeText": "원금보장형 편중 · 적립률 128.4%",
+          "action": "원금보장형 6,174억원 실적배당형 전환 제안",
+          "chips": [
+            "퇴직연금",
+            "원금보장형 편중"
+          ]
+        },
+        {
+          "name": "크래프톤",
+          "code": "259960",
+          "market": "KOSPI",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260515002689",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002689",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 993억원 운용 중",
+          "detail": "당기 기여금 20억원 신규 유입",
+          "amount": 992.6,
+          "metricText": "993억원",
+          "ratio": 103.3,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 103.3%",
+          "action": "적립금 993억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        },
+        {
+          "name": "에코프로비엠",
+          "code": "247540",
+          "market": "KOSDAQ",
+          "industry": "일차전지 및 이차전지 제조업",
+          "rcpNo": "20260318001622",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001622",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 730억원 운용 중",
+          "detail": "원금보장형 730억원(100.0%) · 실적배당형 없음 · 차기 기여금 261억원 유입 예정",
+          "amount": 730.5,
+          "metricText": "730억원",
+          "ratio": 87.9,
+          "situation": "추가적립 필요",
+          "dateValue": null,
+          "timeText": "추가적립 필요 · 적립률 87.9%",
+          "action": "적립 부족분 해소 + 신규 적립금 730억원 운용기관 제안",
+          "chips": [
+            "퇴직연금",
+            "추가적립 필요"
+          ]
+        },
+        {
+          "name": "하이브",
+          "code": "352820",
+          "market": "KOSPI",
+          "industry": "오디오물 출판 및 원판 녹음업",
+          "rcpNo": "20260320000802",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000802",
+          "asOf": "2025-12-31",
+          "reason": "퇴직연금 적립금 630억원 운용 중",
+          "detail": "원금보장형 5억원(0.8%) · 간접투자 626억원 · 당기 기여금 104억원 신규 유입",
+          "amount": 4.9,
+          "metricText": "5억원",
+          "ratio": 111.8,
+          "situation": "운용기관 경쟁",
+          "dateValue": null,
+          "timeText": "운용기관 경쟁 · 적립률 111.8%",
+          "action": "적립금 5억원 운용기관 교체·추가 제안",
+          "chips": [
+            "퇴직연금",
+            "운용기관 경쟁"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "blockdeal",
+      "title": "자사주 처분",
+      "desc": "자사주 처분 물량 블록딜 영업",
+      "upcoming": "처분 예정일이 가장 가까운 자사주 영업 건입니다.",
+      "upcomingBadge": "예정일 빠른 순",
+      "metricLabel": "처분 규모",
+      "timeColumn": {
+        "label": "처분 예정일 / D-day",
+        "mode": "dday"
+      },
+      "sortOptions": [
+        [
+          "date",
+          "예정일 빠른 순"
+        ],
+        [
+          "amount",
+          "규모 큰 순"
+        ],
+        [
+          "company",
+          "기업명 순"
+        ]
+      ],
+      "sortDefault": "date",
+      "filters": [
+        {
+          "label": "이벤트 유형",
+          "field": "eventType",
+          "type": "eq",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "처분",
+              "처분"
+            ],
+            [
+              "취득",
+              "취득"
+            ]
+          ]
+        },
+        {
+          "label": "예정 시점",
+          "field": "dateValue",
+          "type": "withinMonths",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "3",
+              "3개월 이내"
+            ],
+            [
+              "6",
+              "6개월 이내"
+            ],
+            [
+              "12",
+              "12개월 이내"
+            ]
+          ]
+        }
+      ],
+      "coverage": {
+        "covered": 80,
+        "total": 100
+      },
+      "rows": [
+        {
+          "name": "경인전자",
+          "code": "009140",
+          "market": "KOSPI",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20260204000383",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260204000383",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 18억원 처분 여력",
+          "detail": "268,260주 보유 · 최근 처분 2026-02-13",
+          "amount": 18.4,
+          "metricText": "18억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 18억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "고려아연",
+          "code": "010130",
+          "market": "KOSPI",
+          "industry": "1차 비철금속 제조업",
+          "rcpNo": "20250919000329",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250919000329",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 1.4조원 처분 여력",
+          "detail": "1,165,588주 보유 · 최근 처분 2025-09-26",
+          "amount": 14383.4,
+          "metricText": "1.4조원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 1.4조원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "인지컨트롤스",
+          "code": "023800",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20250808000498",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250808000498",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 12억원 처분 여력",
+          "detail": "640,500주 보유 · 최근 처분 2025-11-09",
+          "amount": 11.8,
+          "metricText": "12억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 12억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "극동유화",
+          "code": "014530",
+          "market": "KOSPI",
+          "industry": "석유 정제품 제조업",
+          "rcpNo": "20251208000240",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251208000240",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 148억원 처분 여력",
+          "detail": "1,200,000주 보유 · 최근 처분 2025-12-19",
+          "amount": 147.9,
+          "metricText": "148억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 148억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "엘에스일렉트릭",
+          "code": "010120",
+          "market": "KOSPI",
+          "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+          "rcpNo": "20260715000510",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260715000510",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 61억원 예정",
+          "detail": "32,520주 · 기타 · 보유 자사주 1,214,650주 · 직원 주식보상",
+          "amount": 61.0,
+          "metricText": "61억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2026-08-14",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "기아",
+          "code": "000270",
+          "market": "KOSPI",
+          "industry": "자동차용 엔진 및 자동차 제조업",
+          "rcpNo": "20260320001182",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320001182",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 9,317억원 처분 여력",
+          "detail": "6,973,925주 보유 · 최근 처분 2026-04-01",
+          "amount": 9317.2,
+          "metricText": "9,317억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 9,317억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "대동스틸",
+          "code": "048470",
+          "market": "KOSDAQ",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260115000402",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260115000402",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 9억원 처분 여력",
+          "detail": "713,457주 보유 · 최근 처분 2026-04-15",
+          "amount": 9.3,
+          "metricText": "9억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 9억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "미래에셋증권",
+          "code": "006800",
+          "market": "KOSPI",
+          "industry": "금융 지원 서비스업",
+          "rcpNo": "20260617000479",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260617000479",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 4,426억원 처분 여력",
+          "detail": "12,811,774주 보유",
+          "amount": 4426.5,
+          "metricText": "4,426억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "취득",
+          "action": "보유 자사주 4,426억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "미래에셋생명",
+          "code": "085620",
+          "market": "KOSPI",
+          "industry": "보험업",
+          "rcpNo": "20260304001680",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260304001680",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 2,499억원 처분 여력",
+          "detail": "14,700,000주 보유 · 최근 처분 2026-03-06",
+          "amount": 2499.0,
+          "metricText": "2,499억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 2,499억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "동방아그로",
+          "code": "007590",
+          "market": "KOSPI",
+          "industry": "비료, 농약 및 살균, 살충제 제조업",
+          "rcpNo": "20251222000346",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251222000346",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 464억원 처분 여력",
+          "detail": "1,211,886주 보유 · 최근 처분 2025-12-24",
+          "amount": 464.5,
+          "metricText": "464억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 464억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "두산",
+          "code": "000150",
+          "market": "KOSPI",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20260210000849",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260210000849",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 2.9조원 처분 여력",
+          "detail": "2,437,320주 보유 · 최근 처분 2026-02-25",
+          "amount": 28955.4,
+          "metricText": "2.9조원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 2.9조원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "스틱인베스트먼트",
+          "code": "026890",
+          "market": "KOSPI",
+          "industry": "신탁업 및 집합투자업",
+          "rcpNo": "20260211000303",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260211000303",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 241억원 처분 여력",
+          "detail": "4,031,000주 보유 · 최근 처분 2026-02-13",
+          "amount": 240.7,
+          "metricText": "241억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 241억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "두올",
+          "code": "016740",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20260708000354",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260708000354",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 330억원 처분 여력",
+          "detail": "313,050주 보유 · 최근 처분 2026-07-09",
+          "amount": 329.8,
+          "metricText": "330억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 330억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "만호제강",
+          "code": "001080",
+          "market": "KOSPI",
+          "industry": "1차 철강 제조업",
+          "rcpNo": "20250925000534",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250925000534",
+          "asOf": "2024-06-30",
+          "reason": "보유 자사주 102억원 처분 여력",
+          "detail": "748,503주 보유",
+          "amount": 102.0,
+          "metricText": "102억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "취득",
+          "action": "보유 자사주 102억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "삼성전자",
+          "code": "005930",
+          "market": "KOSPI",
+          "industry": "통신 및 방송 장비 제조업",
+          "rcpNo": "20260713000395",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260713000395",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 18.9조원 처분 여력",
+          "detail": "82,086,705주 보유 · 최근 처분 2026-07-13",
+          "amount": 189209.9,
+          "metricText": "18.9조원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 18.9조원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "삼양식품",
+          "code": "003230",
+          "market": "KOSPI",
+          "industry": "기타 식품 제조업",
+          "rcpNo": "20251119000286",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251119000286",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 74억원 처분 여력",
+          "detail": "74,478주 보유 · 최근 처분 2025-11-28",
+          "amount": 73.8,
+          "metricText": "74억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 74억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "삼천당제약",
+          "code": "000250",
+          "market": "KOSDAQ",
+          "industry": "의약품 제조업",
+          "rcpNo": "20250827000610",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250827000610",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 330억원 처분 여력",
+          "detail": "200,000주 보유 · 최근 처분 2025-09-19",
+          "amount": 330.2,
+          "metricText": "330억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 330억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "SP삼화",
+          "code": "000390",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20251128001922",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251128001922",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 400억원 처분 여력",
+          "detail": "2,388,642주 보유 · 최근 처분 2025-12-08",
+          "amount": 400.3,
+          "metricText": "400억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 400억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "SK네트웍스",
+          "code": "001740",
+          "market": "KOSPI",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260429000001",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260429000001",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 1,454억원 처분 여력",
+          "detail": "18,810,789주 보유 · 최근 처분 2026-04-29",
+          "amount": 1454.1,
+          "metricText": "1,454억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 1,454억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "유니켐",
+          "code": "011330",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20250821000484",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250821000484",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 643억원 처분 여력",
+          "detail": "1,700,000주 보유 · 최근 처분 2025-08-18",
+          "amount": 643.2,
+          "metricText": "643억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 643억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "SIMPAC",
+          "code": "009160",
+          "market": "KOSPI",
+          "industry": "1차 철강 제조업",
+          "rcpNo": "20251217000399",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251217000399",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 891억원 처분 여력",
+          "detail": "11,335,189주 보유 · 최근 처분 2025-12-31",
+          "amount": 890.9,
+          "metricText": "891억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 891억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "SKC",
+          "code": "011790",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20250811000549",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250811000549",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 351억원 처분 여력",
+          "detail": "1,292,917주 보유 · 최근 처분 2025-08-26",
+          "amount": 351.3,
+          "metricText": "351억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 351억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "한솔케미칼",
+          "code": "014680",
+          "market": "KOSPI",
+          "industry": "기초 화학물질 제조업",
+          "rcpNo": "20260518000335",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260518000335",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 93억원 예정",
+          "detail": "110,000주 · 기타 · 보유 자사주 467,296주 · 주식매수선택권(자기주식 교부형) 최초행사 예정에 따라 동일 주주총회 부여물량 전체 공시",
+          "amount": 92.6,
+          "metricText": "93억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2029-12-31",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "SK가스",
+          "code": "018670",
+          "market": "KOSPI",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260123000504",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260123000504",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 532억원 처분 여력",
+          "detail": "242,050주 보유 · 최근 처분 2026-02-28",
+          "amount": 532.5,
+          "metricText": "532억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 532억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "동서",
+          "code": "026960",
+          "market": "KOSPI",
+          "industry": "음·식료품 및 담배 도매업",
+          "rcpNo": "20251216000338",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251216000338",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 2,079억원 처분 여력",
+          "detail": "1,024,080주 보유 · 최근 처분 2025-12-30",
+          "amount": 2078.9,
+          "metricText": "2,079억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 2,079억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "제일테크노스",
+          "code": "038010",
+          "market": "KOSDAQ",
+          "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+          "rcpNo": "20250911000394",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250911000394",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 17억원 처분 여력",
+          "detail": "684,000주 보유 · 최근 처분 2025-09-19",
+          "amount": 17.2,
+          "metricText": "17억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 17억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "DB손해보험",
+          "code": "005830",
+          "market": "KOSPI",
+          "industry": "보험업",
+          "rcpNo": "20251222000527",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251222000527",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 1.7조원 처분 여력",
+          "detail": "10,754,871주 보유 · 최근 처분 2025-12-26",
+          "amount": 17186.3,
+          "metricText": "1.7조원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 1.7조원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "DB하이텍",
+          "code": "000990",
+          "market": "KOSPI",
+          "industry": "반도체 제조업",
+          "rcpNo": "20260120000357",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260120000357",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 711억원 처분 여력",
+          "detail": "2,220,000주 보유 · 최근 처분 2026-01-30",
+          "amount": 711.1,
+          "metricText": "711억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 711억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "한온시스템",
+          "code": "018880",
+          "market": "KOSPI",
+          "industry": "일반 목적용 기계 제조업",
+          "rcpNo": "20251224000465",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251224000465",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 16억원 처분 여력",
+          "detail": "131,570주 보유 · 최근 처분 2026-01-15",
+          "amount": 16.4,
+          "metricText": "16억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 16억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "한미사이언스",
+          "code": "008930",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20260728000479",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260728000479",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 14억원 예정",
+          "detail": "40,844주 · 기타 · 임직원에 대한 생산성 장려금(PI) 및 중대 성과 기여 인센티브 자기주식 지급",
+          "amount": 14.5,
+          "metricText": "14억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2026-08-28",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "한화솔루션",
+          "code": "009830",
+          "market": "KOSPI",
+          "industry": "기초 화학물질 제조업",
+          "rcpNo": "20260122000309",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260122000309",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 723억원 처분 여력",
+          "detail": "2,378,668주 보유 · 최근 처분 2026-02-04",
+          "amount": 723.1,
+          "metricText": "723억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 723억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "현대자동차",
+          "code": "005380",
+          "market": "KOSPI",
+          "industry": "자동차용 엔진 및 자동차 제조업",
+          "rcpNo": "20260723000599",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260723000599",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 9,367억원 처분 여력",
+          "detail": "2,341,700주 보유 · 최근 처분 2026-07-31",
+          "amount": 9366.8,
+          "metricText": "9,367억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 9,367억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "SK하이닉스",
+          "code": "000660",
+          "market": "KOSPI",
+          "industry": "반도체 제조업",
+          "rcpNo": "20260513000549",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000549",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 142억원 예정",
+          "detail": "114,209주 · 기타 · 보유 자사주 1,642,984주 · 주식매수선택권의 최초행사에 따른 동일 주주총회 부여물량 전체 공시",
+          "amount": 141.9,
+          "metricText": "142억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2027-03-30",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "현대모비스",
+          "code": "012330",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20260210000755",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260210000755",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 7,904억원 처분 여력",
+          "detail": "1,555,800주 보유 · 최근 처분 2026-02-12",
+          "amount": 7903.5,
+          "metricText": "7,904억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 7,904억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "현대해상",
+          "code": "001450",
+          "market": "KOSPI",
+          "industry": "보험업",
+          "rcpNo": "20260320001275",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320001275",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 3,832억원 처분 여력",
+          "detail": "10,985,500주 보유 · 최근 처분 2026-05-08",
+          "amount": 3831.7,
+          "metricText": "3,832억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 3,832억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "호텔신라",
+          "code": "008770",
+          "market": "KOSPI",
+          "industry": "기타 상품 전문 소매업",
+          "rcpNo": "20260706000509",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260706000509",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 915억원 처분 여력",
+          "detail": "2,135,000주 보유 · 최근 처분 2024-07-05",
+          "amount": 914.8,
+          "metricText": "915억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 915억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "환인제약",
+          "code": "016580",
+          "market": "KOSPI",
+          "industry": "의약품 제조업",
+          "rcpNo": "20251218000442",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251218000442",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 71억원 처분 여력",
+          "detail": "2,333,000주 보유 · 최근 처분 2025-12-19",
+          "amount": 70.7,
+          "metricText": "71억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 71억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "남성",
+          "code": "004270",
+          "market": "KOSPI",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260416000501",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260416000501",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 112억원 처분 여력",
+          "detail": "488,967주 보유 · 최근 처분 2025-12-29",
+          "amount": 112.1,
+          "metricText": "112억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 112억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "대주전자재료",
+          "code": "078600",
+          "market": "KOSDAQ",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20251203000257",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251203000257",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 198억원 처분 여력",
+          "detail": "492,790주 보유 · 최근 처분 2025-12-04",
+          "amount": 197.6,
+          "metricText": "198억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 198억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "SK",
+          "code": "034730",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20260512000680",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512000680",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 3.6조원 처분 여력",
+          "detail": "7,000,583주 보유 · 최근 처분 2026-06-12",
+          "amount": 35633.0,
+          "metricText": "3.6조원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 3.6조원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "미스토홀딩스",
+          "code": "081660",
+          "market": "KOSPI",
+          "industry": "생활용품 도매업",
+          "rcpNo": "20260330001327",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260330001327",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 117억원 처분 여력",
+          "detail": "443,988주 보유",
+          "amount": 117.2,
+          "metricText": "117억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "취득",
+          "action": "보유 자사주 117억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "한양이엔지",
+          "code": "045100",
+          "market": "KOSDAQ",
+          "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+          "rcpNo": "20260227008128",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260227008128",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 500억원 처분 여력",
+          "detail": "1,705,786주 보유 · 최근 처분 2026-03-03",
+          "amount": 499.8,
+          "metricText": "500억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 500억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "LS마린솔루션",
+          "code": "060370",
+          "market": "KOSDAQ",
+          "industry": "전기 및 통신 공사업",
+          "rcpNo": "20251208000359",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251208000359",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 419억원 처분 여력",
+          "detail": "1,345,875주 보유 · 최근 처분 2025-12-17",
+          "amount": 418.6,
+          "metricText": "419억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 419억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "케이티앤지",
+          "code": "033780",
+          "market": "KOSPI",
+          "industry": "담배 제조업",
+          "rcpNo": "20260224004024",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260224004024",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 2.6조원 처분 여력",
+          "detail": "14,168,821주 보유 · 최근 처분 2026-02-27",
+          "amount": 25886.4,
+          "metricText": "2.6조원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 2.6조원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "티에스이",
+          "code": "131290",
+          "market": "KOSDAQ",
+          "industry": "측정, 시험, 항해, 제어 및 기타 정밀기기 제조업; 광학기기 제외",
+          "rcpNo": "20251015000285",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251015000285",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 571억원 처분 여력",
+          "detail": "275,909주 보유 · 최근 처분 2025-10-16",
+          "amount": 571.1,
+          "metricText": "571억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 571억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "엘앤에프",
+          "code": "066970",
+          "market": "KOSPI",
+          "industry": "일차전지 및 이차전지 제조업",
+          "rcpNo": "20260212001688",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260212001688",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 218억원 처분 여력",
+          "detail": "198,030주 보유 · 최근 처분 2026-02-13",
+          "amount": 218.0,
+          "metricText": "218억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 218억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "현대백화점",
+          "code": "069960",
+          "market": "KOSPI",
+          "industry": "종합 소매업",
+          "rcpNo": "20260211000385",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260211000385",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 829억원 처분 여력",
+          "detail": "778,808주 보유",
+          "amount": 828.7,
+          "metricText": "829억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "취득",
+          "action": "보유 자사주 829억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "위메이드",
+          "code": "112040",
+          "market": "KOSDAQ",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260721000875",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260721000875",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 0억원 예정",
+          "detail": "700주 · 기타 · 보유 자사주 144,402주 · 주식매수선택권 행사에 따른 자기주식 교부",
+          "amount": 0.1,
+          "metricText": "0억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2026-12-17",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "한양디지텍",
+          "code": "078350",
+          "market": "KOSDAQ",
+          "industry": "반도체 제조업",
+          "rcpNo": "20260223003970",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260223003970",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 136억원 처분 여력",
+          "detail": "661,509주 보유 · 최근 처분 2026-02-24",
+          "amount": 136.3,
+          "metricText": "136억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 136억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "테스",
+          "code": "095610",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20251208000071",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251208000071",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 2,114억원 처분 여력",
+          "detail": "1,624,536주 보유 · 최근 처분 2025-12-22",
+          "amount": 2113.5,
+          "metricText": "2,114억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 2,114억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "디에스케이",
+          "code": "109740",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20251223000254",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251223000254",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 27억원 처분 여력",
+          "detail": "666,266주 보유 · 최근 처분 2025-12-23",
+          "amount": 27.1,
+          "metricText": "27억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 27억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "그린생명과학",
+          "code": "114450",
+          "market": "KOSDAQ",
+          "industry": "기초 의약물질 제조업",
+          "rcpNo": "20260303003144",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260303003144",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 4억원 처분 여력",
+          "detail": "162,530주 보유 · 최근 처분 2026-06-02",
+          "amount": 3.8,
+          "metricText": "4억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 4억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "테크윙",
+          "code": "089030",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20251002000526",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251002000526",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 763억원 처분 여력",
+          "detail": "1,613,171주 보유 · 최근 처분 2025-10-20",
+          "amount": 763.0,
+          "metricText": "763억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 763억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "에코프로",
+          "code": "086520",
+          "market": "KOSDAQ",
+          "industry": "기타 금융업",
+          "rcpNo": "20251021000285",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251021000285",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 122억원 처분 여력",
+          "detail": "146,515주 보유 · 최근 처분 2026-01-21",
+          "amount": 122.5,
+          "metricText": "122억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 122억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "고영",
+          "code": "098460",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260513000772",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513000772",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 186억원 예정",
+          "detail": "450,542주 · 시간외대량매매 · 보유 자사주 2,493,005주 · 신사업 확대 및 신기술 도입을 위한 경영상 활용 목적",
+          "amount": 186.5,
+          "metricText": "186억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2026-08-13",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "186억원 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "스맥",
+          "code": "099440",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20251226000006",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251226000006",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 68억원 처분 여력",
+          "detail": "1,707,851주 보유 · 최근 처분 2025-12-29",
+          "amount": 68.3,
+          "metricText": "68억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 68억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "아모레퍼시픽",
+          "code": "090430",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260730000286",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260730000286",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 34억원 예정",
+          "detail": "28,317주 · 기타 · 보유 자사주 128,603주 · 임직원에 대한 상여금으로 자기주식을 지급",
+          "amount": 34.5,
+          "metricText": "34억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2026-08-25",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "씨에스윈드",
+          "code": "112610",
+          "market": "KOSPI",
+          "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+          "rcpNo": "20260403002591",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260403002591",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 310억원 처분 여력",
+          "detail": "732,723주 보유 · 최근 처분 2026-04-13",
+          "amount": 309.6,
+          "metricText": "310억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 310억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "크래프톤",
+          "code": "259960",
+          "market": "KOSPI",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260430001031",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260430001031",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 2,444억원 처분 여력",
+          "detail": "1,062,846주 보유 · 최근 처분 2026-06-01",
+          "amount": 2444.5,
+          "metricText": "2,444억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 2,444억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "씨젠",
+          "code": "096530",
+          "market": "KOSDAQ",
+          "industry": "의료용품 및 기타 의약 관련제품 제조업",
+          "rcpNo": "20260506000422",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260506000422",
+          "asOf": "2024-12-31",
+          "reason": "보유 자사주 1,314억원 처분 여력",
+          "detail": "6,665,024주 보유 · 최근 처분 2026-06-05",
+          "amount": 1314.3,
+          "metricText": "1,314억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 1,314억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "한미약품",
+          "code": "128940",
+          "market": "KOSPI",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260728000463",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260728000463",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 41억원 예정",
+          "detail": "10,402주 · 기타 · - 임직원에 대한 생산성 장려금(PI) 자기주식 지급(RSA) - 중대 성과 기여 인센티브 자기주식 지급(RSU)",
+          "amount": 40.6,
+          "metricText": "41억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2026-08-28",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "리가켐바이오",
+          "code": "141080",
+          "market": "KOSDAQ",
+          "industry": "자연과학 및 공학 연구개발업",
+          "rcpNo": "20251001000687",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251001000687",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 228억원 처분 여력",
+          "detail": "205,208주 보유 · 최근 처분 2025-10-02",
+          "amount": 227.6,
+          "metricText": "228억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 228억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "이마트",
+          "code": "139480",
+          "market": "KOSPI",
+          "industry": "종합 소매업",
+          "rcpNo": "20260608000434",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260608000434",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 648억원 처분 여력",
+          "detail": "795,824주 보유 · 최근 처분 2026-07-23",
+          "amount": 647.8,
+          "metricText": "648억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 648억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "휴젤",
+          "code": "145020",
+          "market": "KOSDAQ",
+          "industry": "기초 의약물질 제조업",
+          "rcpNo": "20251104000314",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251104000314",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 5억원 예정",
+          "detail": "2,000주 · 기타 · 보유 자사주 1,500,400주 · 주식매수선택권 행사에 따른 자기주식 교부",
+          "amount": 5.3,
+          "metricText": "5억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2027-02-14",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "로보티즈",
+          "code": "108490",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260123000377",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260123000377",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 366억원 처분 여력",
+          "detail": "156,646주 보유 · 최근 처분 2026-01-30",
+          "amount": 365.8,
+          "metricText": "366억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 366억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "NHN",
+          "code": "181710",
+          "market": "KOSPI",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20251023000338",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251023000338",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 935억원 처분 여력",
+          "detail": "2,500,233주 보유",
+          "amount": 935.1,
+          "metricText": "935억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "취득",
+          "action": "보유 자사주 935억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "더블유게임즈",
+          "code": "192080",
+          "market": "KOSPI",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260415000001",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260415000001",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 429억원 처분 여력",
+          "detail": "1,888,017주 보유 · 최근 처분 2026-04-16",
+          "amount": 428.6,
+          "metricText": "429억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 429억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "두산밥캣",
+          "code": "241560",
+          "market": "KOSPI",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260211000987",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260211000987",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 111억원 처분 여력",
+          "detail": "142,263주 보유 · 최근 처분 2026-02-25",
+          "amount": 110.7,
+          "metricText": "111억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 111억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "JTC",
+          "code": "950170",
+          "market": "KOSDAQ",
+          "industry": "종합 소매업",
+          "rcpNo": "20260119000184",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260119000184",
+          "asOf": "2026-02-28",
+          "reason": "보유 자사주 299억원 처분 여력",
+          "detail": "2,973,233주 보유",
+          "amount": 299.1,
+          "metricText": "299억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "취득",
+          "action": "보유 자사주 299억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "클래시스",
+          "code": "214150",
+          "market": "KOSDAQ",
+          "industry": "의료용 기기 제조업",
+          "rcpNo": "20260109000629",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260109000629",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 26억원 예정",
+          "detail": "66,287주 · 기타 · 보유 자사주 350,426주 · 주식매수선택권 행사에 따른 자기주식 교부",
+          "amount": 25.5,
+          "metricText": "26억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2033-03-29",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "제놀루션",
+          "code": "225220",
+          "market": "KOSDAQ",
+          "industry": "기초 의약물질 제조업",
+          "rcpNo": "20260212001432",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260212001432",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 21억원 처분 여력",
+          "detail": "1,123,451주 보유 · 최근 처분 2026-02-20",
+          "amount": 21.2,
+          "metricText": "21억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 21억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "토박스코리아",
+          "code": "215480",
+          "market": "KOSDAQ",
+          "industry": "섬유, 의복, 신발 및 가죽제품 소매업",
+          "rcpNo": "20260109000030",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260109000030",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 3억원 처분 여력",
+          "detail": "139,475주 보유",
+          "amount": 2.7,
+          "metricText": "3억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "취득",
+          "action": "보유 자사주 3억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "LS에코에너지",
+          "code": "229640",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20251217000030",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251217000030",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 119억원 처분 여력",
+          "detail": "297,303주 보유 · 최근 처분 2026-02-13",
+          "amount": 119.1,
+          "metricText": "119억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 119억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "펄어비스",
+          "code": "263750",
+          "market": "KOSDAQ",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260310003117",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310003117",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 156억원 예정",
+          "detail": "320,000주 · 기타 · 보유 자사주 2,828,445주 · 주식매수선택권 행사에 따른 자기주식 교부",
+          "amount": 155.8,
+          "metricText": "156억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2033-06-13",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "에코프로비엠",
+          "code": "247540",
+          "market": "KOSDAQ",
+          "industry": "일차전지 및 이차전지 제조업",
+          "rcpNo": "20251118000105",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251118000105",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 74억원 처분 여력",
+          "detail": "71,865주 보유 · 최근 처분 2026-02-27",
+          "amount": 73.7,
+          "metricText": "74억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 74억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "엘앤씨바이오",
+          "code": "290650",
+          "market": "KOSDAQ",
+          "industry": "의약품 제조업",
+          "rcpNo": "20251218000425",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251218000425",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 25억원 예정",
+          "detail": "70,000주 · 기타 · 보유 자사주 302,240주 · 주식매수선택권 행사에 따른 자기주식 교부",
+          "amount": 25.0,
+          "metricText": "25억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2029-11-27",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "하이브",
+          "code": "352820",
+          "market": "KOSPI",
+          "industry": "오디오물 출판 및 원판 녹음업",
+          "rcpNo": "20260401004974",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260401004974",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 99억원 처분 여력",
+          "detail": "93,837주 보유 · 최근 처분 2026-04-30",
+          "amount": 98.7,
+          "metricText": "99억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 99억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "HPSP",
+          "code": "403870",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260625000469",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260625000469",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 370억원 처분 여력",
+          "detail": "1,032,720주 보유 · 최근 처분 2026-07-25",
+          "amount": 369.7,
+          "metricText": "370억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "처분",
+          "action": "보유 자사주 370억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "IPARK현대산업개발",
+          "code": "294870",
+          "market": "KOSPI",
+          "industry": "건물 건설업",
+          "rcpNo": "20251120000540",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251120000540",
+          "asOf": "2025-12-31",
+          "reason": "보유 자사주 4,191억원 처분 여력",
+          "detail": "3,127,352주 보유",
+          "amount": 4190.7,
+          "metricText": "4,191억원",
+          "ratio": null,
+          "situation": "보유 물량",
+          "dateValue": null,
+          "timeText": "예정 공시 없음",
+          "eventType": "취득",
+          "action": "보유 자사주 4,191억원 처분·소각 방안 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        },
+        {
+          "name": "현대무벡스",
+          "code": "319400",
+          "market": "KOSDAQ",
+          "industry": "일반 목적용 기계 제조업",
+          "rcpNo": "20260806000400",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260806000400",
+          "asOf": "2025-12-31",
+          "reason": "자사주 처분 22억원 예정",
+          "detail": "90,000주 · 기타 · 보유 자사주 1,684,066주 · 직원 성과급 등의 자기주식 지급",
+          "amount": 22.0,
+          "metricText": "22억원",
+          "ratio": null,
+          "situation": "처분 예정",
+          "dateValue": "2026-09-23",
+          "timeText": null,
+          "eventType": "처분",
+          "action": "처분 방식 검토 및 블록딜 주관 제안",
+          "chips": [
+            "자사주"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "pledge",
+      "title": "주식담보대출",
+      "desc": "대주주·특수관계인 담보대출 영업",
+      "upcoming": "담보계약 만기가 가장 가까운 영업 건입니다.",
+      "upcomingBadge": "만기 빠른 순",
+      "metricLabel": "대출금액",
+      "timeColumn": {
+        "label": "계약 만기 / D-day",
+        "mode": "dday"
+      },
+      "sortOptions": [
+        [
+          "date",
+          "만기 빠른 순"
+        ],
+        [
+          "amount",
+          "금액 큰 순"
+        ],
+        [
+          "company",
+          "기업명 순"
+        ]
+      ],
+      "sortDefault": "date",
+      "filters": [
+        {
+          "label": "대출금액",
+          "field": "amount",
+          "type": "min",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "100",
+              "100억 이상"
+            ],
+            [
+              "500",
+              "500억 이상"
+            ],
+            [
+              "1000",
+              "1,000억 이상"
+            ]
+          ]
+        },
+        {
+          "label": "만기 시점",
+          "field": "dateValue",
+          "type": "withinMonths",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "3",
+              "3개월 이내"
+            ],
+            [
+              "6",
+              "6개월 이내"
+            ],
+            [
+              "12",
+              "12개월 이내"
+            ]
+          ]
+        }
+      ],
+      "coverage": {
+        "covered": 55,
+        "total": 100
+      },
+      "rows": [
+        {
+          "name": "고려아연",
+          "code": "010130",
+          "market": "KOSPI",
+          "industry": "1차 비철금속 제조업",
+          "rcpNo": "20260520000264",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520000264",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 7.1조원",
+          "detail": "계약 26건 · 담보주식 3,520,278주 · 평가액 4.3조원 · 차입처 KB증권㈜, ㈜하나은행, 티케이지태광㈜, 하나증권㈜ 외 · 보유자 김록희, 유미개발㈜ 외",
+          "amount": 71421.2,
+          "metricText": "7.1조원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 26,
+          "dateValue": "2026-08-31",
+          "timeText": null,
+          "action": "만기 도래 담보대출 7.1조원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "인지컨트롤스",
+          "code": "023800",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20260318000157",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000157",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 156억원",
+          "detail": "계약 6건 · 담보주식 1,089,041주 · 평가액 20억원 · 차입처 신한은행, 하나은행 · 보유자 (주)유텍솔루션",
+          "amount": 156.0,
+          "metricText": "156억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 6,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "미래에셋증권",
+          "code": "006800",
+          "market": "KOSPI",
+          "industry": "금융 지원 서비스업",
+          "rcpNo": "20251219000570",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251219000570",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 400억원",
+          "detail": "계약 2건 · 담보주식 21,514,612주 · 평가액 7,433억원 · 차입처 한국증권 금융 · 보유자 미래에셋 캐피탈(주)",
+          "amount": 400.0,
+          "metricText": "400억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 2,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "두산",
+          "code": "000150",
+          "market": "KOSPI",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20260305000993",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260305000993",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 21건",
+          "detail": "계약 21건 · 담보주식 838,105주 · 평가액 9,957억원 · 차입처 하나증권(주), 하나증권㈜ 외 · 보유자 박상수, 박석원 외",
+          "amount": 9956.7,
+          "metricText": "담보가치 9,957억원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 21,
+          "dateValue": "2026-08-24",
+          "timeText": null,
+          "action": "만기 도래 담보대출 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "두올",
+          "code": "016740",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20260731000615",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260731000615",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1억원",
+          "detail": "계약 1건 · 담보주식 58,651주 · 평가액 62억원 · 차입처 미래에셋증권 · 보유자 정재열",
+          "amount": 1.0,
+          "metricText": "1억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 1,
+          "dateValue": "2026-10-22",
+          "timeText": null,
+          "action": "만기 도래 담보대출 1억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "삼성전자",
+          "code": "005930",
+          "market": "KOSPI",
+          "industry": "통신 및 방송 장비 제조업",
+          "rcpNo": "20260724000625",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260724000625",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 4.7조원",
+          "detail": "계약 32건 · 담보주식 81,494,000주 · 평가액 18.8조원 · 차입처 BNK투자증권, 대신증권 외 · 보유자 이서현, 홍라희",
+          "amount": 47056.0,
+          "metricText": "4.7조원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 32,
+          "dateValue": "2026-10-02",
+          "timeText": null,
+          "action": "만기 도래 담보대출 4.7조원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "삼양식품",
+          "code": "003230",
+          "market": "KOSPI",
+          "industry": "기타 식품 제조업",
+          "rcpNo": "20260604000508",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260604000508",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 3,500억원",
+          "detail": "계약 15건 · 담보주식 821,463주 · 평가액 814억원 · 차입처 IBK투자증권, 산업은행 외 · 보유자 김정수, 삼양라운드스퀘어(주) 외",
+          "amount": 3500.0,
+          "metricText": "3,500억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 15,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "삼천당제약",
+          "code": "000250",
+          "market": "KOSDAQ",
+          "industry": "의약품 제조업",
+          "rcpNo": "20251024000379",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251024000379",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 742억원",
+          "detail": "계약 4건 · 담보주식 675,220주 · 평가액 1,115억원 · 차입처 하나증권 · 보유자 윤은화, 전인석",
+          "amount": 742.0,
+          "metricText": "742억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 4,
+          "dateValue": "2026-10-13",
+          "timeText": null,
+          "action": "만기 도래 담보대출 742억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "SP삼화",
+          "code": "000390",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260331001897",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331001897",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 3건",
+          "detail": "계약 3건 · 담보주식 4,200,000주 · 평가액 704억원 · 차입처 한국증권금융 · 보유자 김현정",
+          "amount": 703.9,
+          "metricText": "담보가치 704억원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 3,
+          "dateValue": "2027-02-23",
+          "timeText": null,
+          "action": "만기 도래 담보대출 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "SK네트웍스",
+          "code": "001740",
+          "market": "KOSPI",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260507000629",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507000629",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 49억원",
+          "detail": "계약 2건 · 담보주식 1,399,999주 · 평가액 108억원 · 차입처 대신증권 · 보유자 최성환",
+          "amount": 48.7,
+          "metricText": "49억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 2,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "한솔케미칼",
+          "code": "014680",
+          "market": "KOSPI",
+          "industry": "기초 화학물질 제조업",
+          "rcpNo": "20260421000442",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260421000442",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 253억원",
+          "detail": "계약 17건 · 담보주식 2,410,734주 · 평가액 1,157억원 · 차입처 농협은행, 삼성증권 외 · 보유자 조동혁, 조연주 외",
+          "amount": 253.0,
+          "metricText": "253억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 17,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "SK가스",
+          "code": "018670",
+          "market": "KOSPI",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20251119000211",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251119000211",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1,900억원",
+          "detail": "계약 12건 · 담보주식 2,828,200주 · 평가액 6,222억원 · 차입처 한국증권금융(주), 한국증권금융㈜ · 보유자 에스케이디스커버리(주), 에스케이디스커버리㈜",
+          "amount": 1900.0,
+          "metricText": "1,900억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 12,
+          "dateValue": "2026-08-13",
+          "timeText": null,
+          "action": "만기 도래 담보대출 1,900억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "동서",
+          "code": "026960",
+          "market": "KOSPI",
+          "industry": "음·식료품 및 담배 도매업",
+          "rcpNo": "20260320001018",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320001018",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 20억원",
+          "detail": "계약 3건 · 담보주식 143,042주 · 평가액 290억원 · 차입처 대신증권, 한국증권금융 · 보유자 김현준, 최은성",
+          "amount": 20.2,
+          "metricText": "20억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 3,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "제일테크노스",
+          "code": "038010",
+          "market": "KOSDAQ",
+          "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+          "rcpNo": "20260403003096",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260403003096",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 0억원",
+          "detail": "계약 3건 · 담보주식 1,546,955주 · 평가액 39억원 · 차입처 대구은행, 포항세무서 · 보유자 나주영, 나채민",
+          "amount": 0.4,
+          "metricText": "0억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 3,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "DB손해보험",
+          "code": "005830",
+          "market": "KOSPI",
+          "industry": "보험업",
+          "rcpNo": "20260521000640",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000640",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 32건",
+          "detail": "계약 32건 · 담보주식 13,471,734주 · 평가액 2.2조원 · 차입처 IBK투자증권, 광주은행 외 · 보유자 김남호, 김주원 외",
+          "amount": 21527.8,
+          "metricText": "담보가치 2.2조원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 32,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "두산에너빌리티",
+          "code": "034020",
+          "market": "KOSPI",
+          "industry": "일반 목적용 기계 제조업",
+          "rcpNo": "20260609000428",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260609000428",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 27건",
+          "detail": "계약 27건 · 담보주식 91,836,088주 · 평가액 7.0조원 · 차입처 (주)KB국민은행, (주)신한은행 외 · 보유자 (주)두산",
+          "amount": 70162.8,
+          "metricText": "담보가치 7.0조원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 27,
+          "dateValue": "2026-09-28",
+          "timeText": null,
+          "action": "만기 도래 담보대출 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "한화",
+          "code": "000880",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260723000608",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260723000608",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 2,220억원",
+          "detail": "계약 14건 · 담보주식 7,930,236주 · 평가액 6,590억원 · 차입처 국민은행, 우리은행 외 · 보유자 김동관, 김동원 외",
+          "amount": 2220.0,
+          "metricText": "2,220억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 14,
+          "dateValue": "2026-11-27",
+          "timeText": null,
+          "action": "만기 도래 담보대출 2,220억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "DB하이텍",
+          "code": "000990",
+          "market": "KOSPI",
+          "industry": "반도체 제조업",
+          "rcpNo": "20260522000520",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522000520",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 14건",
+          "detail": "계약 14건 · 담보주식 18,292,020주 · 평가액 5,859억원 · 차입처 농협은행, 수협은행 외 · 보유자 (주)DB Inc., 김준기",
+          "amount": 5858.9,
+          "metricText": "담보가치 5,859억원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 14,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "한온시스템",
+          "code": "018880",
+          "market": "KOSPI",
+          "industry": "일반 목적용 기계 제조업",
+          "rcpNo": "20260108000470",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260108000470",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 2건",
+          "detail": "계약 2건 · 담보주식 293,590,000주 · 평가액 3.7조원 · 차입처 엔에이치 투자증권(주) 외 42 · 보유자 한앤코 오토홀딩스 유한회사",
+          "amount": 36625.4,
+          "metricText": "담보가치 3.7조원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 2,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "한미사이언스",
+          "code": "008930",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20260710000645",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710000645",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1,142억원",
+          "detail": "계약 44건 · 담보주식 16,177,912주 · 평가액 1.7조원 · 차입처 NH투자증권 주식회사, 대신증권 외 · 보유자 김희준, 임성아 외",
+          "amount": 1142.2,
+          "metricText": "1,142억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 44,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "현대해상",
+          "code": "001450",
+          "market": "KOSPI",
+          "industry": "보험업",
+          "rcpNo": "20250901000411",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250901000411",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 4건",
+          "detail": "계약 4건 · 담보주식 3,400,000주 · 평가액 1,186억원 · 차입처 한국증권금융(주) 광주지점, 한국증권금융(주)광주지점 · 보유자 정경선, 정몽윤",
+          "amount": 1185.9,
+          "metricText": "담보가치 1,186억원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 4,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "환인제약",
+          "code": "016580",
+          "market": "KOSPI",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260511000215",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511000215",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 1건",
+          "detail": "계약 1건 · 담보주식 450,000주 · 평가액 14억원 · 차입처 역삼세무서 · 보유자 이원범",
+          "amount": 13.6,
+          "metricText": "담보가치 14억원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 1,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "대주전자재료",
+          "code": "078600",
+          "market": "KOSDAQ",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20250731000456",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250731000456",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 5건",
+          "detail": "계약 5건 · 차입처 양천세무서 · 보유자 송여림, 송태림 외",
+          "amount": null,
+          "metricText": "미공시",
+          "ratio": null,
+          "situation": "규모 미공시",
+          "contractCount": 5,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "SK",
+          "code": "034730",
+          "market": "KOSPI",
+          "industry": "기타 금융업",
+          "rcpNo": "20260413002952",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260413002952",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1.1조원",
+          "detail": "계약 19건 · 담보주식 8,929,480주 · 평가액 4.5조원 · 차입처 BNK증권, 교보증권 외 · 보유자 CLAIR JAEYUN KOH, 최기원 외",
+          "amount": 10724.0,
+          "metricText": "1.1조원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 19,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "미스토홀딩스",
+          "code": "081660",
+          "market": "KOSPI",
+          "industry": "생활용품 도매업",
+          "rcpNo": "20260617000383",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260617000383",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 5,480억원",
+          "detail": "계약 16건 · 담보주식 33,454,000주 · 평가액 8,832억원 · 차입처 국민은행, 하나은행 외 · 보유자 (주)피에몬테",
+          "amount": 5480.0,
+          "metricText": "5,480억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 16,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "한양이엔지",
+          "code": "045100",
+          "market": "KOSDAQ",
+          "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+          "rcpNo": "20260728000233",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260728000233",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 2건",
+          "detail": "계약 2건 · 담보주식 6,968,588주 · 평가액 2,042억원 · 차입처 특수관계인 · 보유자 김윤상",
+          "amount": 2041.8,
+          "metricText": "담보가치 2,042억원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 2,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "오스코텍",
+          "code": "039200",
+          "market": "KOSDAQ",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260723000322",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260723000322",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 23억원",
+          "detail": "계약 3건 · 담보주식 393,531주 · 평가액 344억원 · 차입처 대신증권, 아이엠증권 · 보유자 김성연",
+          "amount": 23.0,
+          "metricText": "23억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 3,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "엘앤에프",
+          "code": "066970",
+          "market": "KOSPI",
+          "industry": "일차전지 및 이차전지 제조업",
+          "rcpNo": "20260722000471",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000471",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1,526억원",
+          "detail": "계약 19건 · 담보주식 6,033,275주 · 평가액 6,643억원 · 차입처 KB증권, NH투자증권 외 · 보유자 ㈜새로닉스, 허제홍",
+          "amount": 1526.0,
+          "metricText": "1,526억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 19,
+          "dateValue": "2026-08-18",
+          "timeText": null,
+          "action": "만기 도래 담보대출 1,526억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "CSA 코스믹",
+          "code": "083660",
+          "market": "KOSDAQ",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260331004328",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260331004328",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 48억원",
+          "detail": "계약 1건 · 담보주식 9,523,810주 · 평가액 292억원 · 차입처 블루산업개발(주) · 보유자 지앤비조합",
+          "amount": 48.0,
+          "metricText": "48억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 1,
+          "dateValue": "2026-12-22",
+          "timeText": null,
+          "action": "만기 도래 담보대출 48억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "셀트리온",
+          "code": "068270",
+          "market": "KOSPI",
+          "industry": "기초 의약물질 제조업",
+          "rcpNo": "20260702000598",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260702000598",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 3.0조원",
+          "detail": "계약 88건 · 담보주식 44,087,679주 · 평가액 8.6조원 · 차입처 BNK투자증권, KB증권 외 · 보유자 (주)셀트리온 스킨큐어, (주)셀트리온 홀딩스 외",
+          "amount": 30343.8,
+          "metricText": "3.0조원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 88,
+          "dateValue": "2026-08-15",
+          "timeText": null,
+          "action": "만기 도래 담보대출 3.0조원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "현대백화점",
+          "code": "069960",
+          "market": "KOSPI",
+          "industry": "종합 소매업",
+          "rcpNo": "20260624000332",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260624000332",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 70억원",
+          "detail": "계약 2건 · 담보주식 200,000주 · 평가액 213억원 · 차입처 KEB하나은행 · 보유자 (주)현대에이앤아이",
+          "amount": 70.0,
+          "metricText": "70억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 2,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "위메이드",
+          "code": "112040",
+          "market": "KOSDAQ",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260706000473",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260706000473",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 560억원",
+          "detail": "계약 13건 · 담보주식 12,345,965주 · 평가액 1,984억원 · 차입처 기업은행, 기타 개인 외 · 보유자 네오펄스(주), 박관호",
+          "amount": 560.0,
+          "metricText": "560억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 13,
+          "dateValue": "2026-08-10",
+          "timeText": null,
+          "action": "만기 도래 담보대출 560억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "테스",
+          "code": "095610",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260715000168",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260715000168",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 13억원",
+          "detail": "계약 3건 · 담보주식 259,800주 · 평가액 338억원 · 차입처 용산세무서, 한국증권금융 · 보유자 주재영",
+          "amount": 13.0,
+          "metricText": "13억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 3,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "테크윙",
+          "code": "089030",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20250825000091",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250825000091",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1,040억원",
+          "detail": "계약 24건 · 담보주식 6,587,122주 · 평가액 3,116억원 · 차입처 IBK투자증권, KB증권 외 · 보유자 (주)다솜테크, (주)트루텍 외",
+          "amount": 1040.0,
+          "metricText": "1,040억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 24,
+          "dateValue": "2026-08-24",
+          "timeText": null,
+          "action": "만기 도래 담보대출 1,040억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "에코프로",
+          "code": "086520",
+          "market": "KOSDAQ",
+          "industry": "기타 금융업",
+          "rcpNo": "20260713000457",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260713000457",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 7,548억원",
+          "detail": "계약 97건 · 담보주식 15,629,171주 · 평가액 1.3조원 · 차입처 KB증권, iM증권 외 · 보유자 데이지파트너스, 이동채 외",
+          "amount": 7548.3,
+          "metricText": "7,548억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 97,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "고영",
+          "code": "098460",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260723000436",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260723000436",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1,060억원",
+          "detail": "계약 8건 · 담보주식 6,598,870주 · 평가액 2,049억원 · 차입처 국민은행, 신한은행 외 · 보유자 (주)고영홀딩스",
+          "amount": 1060.0,
+          "metricText": "1,060억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 8,
+          "dateValue": "2027-07-15",
+          "timeText": null,
+          "action": "만기 도래 담보대출 1,060억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "스맥",
+          "code": "099440",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260610000225",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260610000225",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 148억원",
+          "detail": "계약 4건 · 담보주식 7,213,933주 · 평가액 289억원 · 차입처 대아인베스트먼트, 신한투자증권 외 · 보유자 권오혁, 최영섭",
+          "amount": 148.0,
+          "metricText": "148억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 4,
+          "dateValue": "2026-11-04",
+          "timeText": null,
+          "action": "만기 도래 담보대출 148억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "아모레퍼시픽",
+          "code": "090430",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260522000377",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522000377",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1,166억원",
+          "detail": "계약 2건 · 담보주식 3,336,000주 · 평가액 1,037억원 · 차입처 한국증권금융(주) · 보유자 서경배",
+          "amount": 1166.0,
+          "metricText": "1,166억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 2,
+          "dateValue": "2027-05-23",
+          "timeText": null,
+          "action": "만기 도래 담보대출 1,166억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "씨에스윈드",
+          "code": "112610",
+          "market": "KOSPI",
+          "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+          "rcpNo": "20260720000277",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260720000277",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1,087억원",
+          "detail": "계약 22건 · 담보주식 6,016,538주 · 평가액 2,542억원 · 차입처 한국증권금융 · 보유자 김성권, 김승연 외",
+          "amount": 1087.0,
+          "metricText": "1,087억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 22,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "씨젠",
+          "code": "096530",
+          "market": "KOSDAQ",
+          "industry": "의료용품 및 기타 의약 관련제품 제조업",
+          "rcpNo": "20260122000322",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260122000322",
+          "asOf": "2024-12-31",
+          "reason": "대주주 주식담보대출 788억원",
+          "detail": "계약 156건 · 담보주식 5,907,666주 · 평가액 1,165억원 · 차입처 IBK기업은행, 교보증권 외 · 보유자 박혜진, 안정숙 외",
+          "amount": 787.8,
+          "metricText": "788억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 156,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "한미약품",
+          "code": "128940",
+          "market": "KOSPI",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260121000020",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260121000020",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 3,890억원",
+          "detail": "계약 13건 · 담보주식 2,494,263주 · 평가액 9,753억원 · 차입처 NH투자증권, 국민은행 외 · 보유자 신동국, 한미사이언스(주)",
+          "amount": 3890.5,
+          "metricText": "3,890억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 13,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "서진시스템",
+          "code": "178320",
+          "market": "KOSDAQ",
+          "industry": "기타 전기장비 제조업",
+          "rcpNo": "20260716000812",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260716000812",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1,458억원",
+          "detail": "계약 16건 · 담보주식 9,728,256주 · 평가액 3,454억원 · 차입처 KB증권, NH투자증권 외 · 보유자 고용호, 스틱세콰이아홀딩스 유한회사 외",
+          "amount": 1458.0,
+          "metricText": "1,458억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 16,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "리가켐바이오",
+          "code": "141080",
+          "market": "KOSDAQ",
+          "industry": "자연과학 및 공학 연구개발업",
+          "rcpNo": "20260804000149",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260804000149",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 10억원",
+          "detail": "계약 1건 · 담보주식 38,369주 · 평가액 43억원 · 차입처 한국투자증권 · 보유자 박세진",
+          "amount": 9.5,
+          "metricText": "10억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 1,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "이마트",
+          "code": "139480",
+          "market": "KOSPI",
+          "industry": "종합 소매업",
+          "rcpNo": "20260213002519",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260213002519",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 2,700억원",
+          "detail": "계약 1건 · 담보주식 5,172,911주 · 평가액 4,211억원 · 차입처 한국증권금융 · 보유자 정용진",
+          "amount": 2700.0,
+          "metricText": "2,700억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 1,
+          "dateValue": "2027-02-11",
+          "timeText": null,
+          "action": "만기 도래 담보대출 2,700억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "휴젤",
+          "code": "145020",
+          "market": "KOSDAQ",
+          "industry": "기초 의약물질 제조업",
+          "rcpNo": "20260702000319",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260702000319",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 1.5조원",
+          "detail": "계약 4건 · 담보주식 11,133,582주 · 평가액 3.1조원 · 차입처 삼성증권 주식회사, 에프엔헤베 주식회사 · 보유자 Aphrodite Acquisition Holdings LLC",
+          "amount": 15300.0,
+          "metricText": "1.5조원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 4,
+          "dateValue": "2029-06-17",
+          "timeText": null,
+          "action": "만기 도래 담보대출 1.5조원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "NHN",
+          "code": "181710",
+          "market": "KOSPI",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20251001000754",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251001000754",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 2건",
+          "detail": "계약 2건 · 담보주식 12,000,000주 · 평가액 4,488억원 · 차입처 하나은행 등 · 보유자 이준호",
+          "amount": 4488.0,
+          "metricText": "담보가치 4,488억원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 2,
+          "dateValue": "2026-12-13",
+          "timeText": null,
+          "action": "만기 도래 담보대출 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "두산밥캣",
+          "code": "241560",
+          "market": "KOSPI",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260722000548",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000548",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 2.2조원",
+          "detail": "계약 13건 · 담보주식 50,160,000주 · 평가액 3.9조원 · 차입처 (주)우리은행, (주)하나은행 외 · 보유자 두산에너빌리티(주)",
+          "amount": 21800.0,
+          "metricText": "2.2조원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 13,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "JTC",
+          "code": "950170",
+          "market": "KOSDAQ",
+          "industry": "종합 소매업",
+          "rcpNo": "20250912000493",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250912000493",
+          "asOf": "2026-02-28",
+          "reason": "대주주 주식담보대출 759억원",
+          "detail": "계약 1건 · 담보주식 20,867,000주 · 평가액 2,099억원 · 차입처 NH투자증권(주) · 보유자 유한회사 유벤투스홀딩스 투자목적회사",
+          "amount": 759.0,
+          "metricText": "759억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 1,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "토박스코리아",
+          "code": "215480",
+          "market": "KOSDAQ",
+          "industry": "섬유, 의복, 신발 및 가죽제품 소매업",
+          "rcpNo": "20260727000264",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260727000264",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 3건",
+          "detail": "계약 3건 · 담보주식 1,750,000주 · 평가액 33억원 · 차입처 (주)꿈비, 이선근 · 보유자 (주)꿈비, 이선근",
+          "amount": 33.3,
+          "metricText": "담보가치 33억원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 3,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "펄어비스",
+          "code": "263750",
+          "market": "KOSDAQ",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20251224000644",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251224000644",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 60억원",
+          "detail": "계약 6건 · 담보주식 286,801주 · 평가액 101억원 · 차입처 펄어비스, 한국증권금융 · 보유자 김권호, 김대일",
+          "amount": 60.0,
+          "metricText": "60억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 6,
+          "dateValue": "2026-11-28",
+          "timeText": null,
+          "action": "만기 도래 담보대출 60억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "에코프로비엠",
+          "code": "247540",
+          "market": "KOSDAQ",
+          "industry": "일차전지 및 이차전지 제조업",
+          "rcpNo": "20260708000072",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260708000072",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 7,875억원",
+          "detail": "계약 49건 · 담보주식 25,084,669주 · 평가액 2.6조원 · 차입처 BNK투자증권, KB은행 외 · 보유자 데이지파트너스, 에코프로",
+          "amount": 7874.6,
+          "metricText": "7,875억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 49,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "엘앤씨바이오",
+          "code": "290650",
+          "market": "KOSDAQ",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260430001843",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260430001843",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 540억원",
+          "detail": "계약 8건 · 담보주식 5,916,706주 · 평가액 3,775억원 · 차입처 교보증권, 한국증권금융 · 보유자 이환철",
+          "amount": 540.0,
+          "metricText": "540억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 8,
+          "dateValue": "2026-09-21",
+          "timeText": null,
+          "action": "만기 도래 담보대출 540억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "하이브",
+          "code": "352820",
+          "market": "KOSPI",
+          "industry": "오디오물 출판 및 원판 녹음업",
+          "rcpNo": "20260521000501",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000501",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보 계약 2건",
+          "detail": "계약 2건 · 담보주식 1,280,000주 · 평가액 1,346억원 · 차입처 NH농협은행 · 보유자 방시혁",
+          "amount": 1345.9,
+          "metricText": "담보가치 1,346억원",
+          "ratio": null,
+          "situation": "대출금액 미공시",
+          "contractCount": 2,
+          "dateValue": "2027-03-31",
+          "timeText": null,
+          "action": "만기 도래 담보대출 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "보로노이",
+          "code": "310210",
+          "market": "KOSDAQ",
+          "industry": "자연과학 및 공학 연구개발업",
+          "rcpNo": "20260622000243",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260622000243",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 900억원",
+          "detail": "계약 8건 · 담보주식 4,199,910주 · 평가액 6,615억원 · 차입처 메리츠증권, 유안타증권 외 · 보유자 김현태",
+          "amount": 900.0,
+          "metricText": "900억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 8,
+          "dateValue": "2026-08-21",
+          "timeText": null,
+          "action": "만기 도래 담보대출 900억원 리파이낸싱 제안",
+          "chips": [
+            "주식담보"
+          ]
+        },
+        {
+          "name": "달바글로벌",
+          "code": "483650",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260529002316",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260529002316",
+          "asOf": "2025-12-31",
+          "reason": "대주주 주식담보대출 87억원",
+          "detail": "계약 2건 · 담보주식 74,906주 · 평가액 185억원 · 차입처 IBK증권, 한국증권금융 · 보유자 양세훈, 유명한",
+          "amount": 87.0,
+          "metricText": "87억원",
+          "ratio": null,
+          "situation": "대출금액 공시",
+          "contractCount": 2,
+          "dateValue": null,
+          "timeText": "만기 미공시",
+          "action": "담보대출 신규·증액 또는 연장 조건 제안",
+          "chips": [
+            "주식담보"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "employee",
+      "title": "임직원 주식보상",
+      "desc": "주식 지급·행사 시점 기반 임직원 자산관리",
+      "upcoming": "행사 시작이 가장 가까운 임직원 자산관리 건입니다.",
+      "upcomingBadge": "행사일 빠른 순",
+      "metricLabel": "미행사 수량",
+      "timeColumn": {
+        "label": "행사 시작일 / D-day",
+        "mode": "dday"
+      },
+      "sortOptions": [
+        [
+          "date",
+          "행사일 빠른 순"
+        ],
+        [
+          "company",
+          "기업명 순"
+        ]
+      ],
+      "sortDefault": "date",
+      "filters": [
+        {
+          "label": "보상 유형",
+          "field": "compType",
+          "type": "eq",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "스톡옵션",
+              "스톡옵션"
+            ],
+            [
+              "RSU",
+              "RSU"
+            ],
+            [
+              "RSA",
+              "RSA"
+            ],
+            [
+              "PSU",
+              "PSU"
+            ]
+          ]
+        }
+      ],
+      "coverage": {
+        "covered": 0,
+        "total": 100
+      },
+      "rows": []
+    },
+    {
+      "key": "wealth",
+      "title": "대주주 자금운용",
+      "desc": "지분 매각대금 운용 영업",
+      "upcoming": "최대주주 변경으로 현금 유입 가능성이 최근 발생한 건입니다.",
+      "upcomingBadge": "최근 발생 순",
+      "metricLabel": "변경 후 지분",
+      "timeColumn": {
+        "label": "발생 후 경과",
+        "mode": "elapsed"
+      },
+      "sortOptions": [
+        [
+          "date",
+          "최근 발생 순"
+        ],
+        [
+          "company",
+          "기업명 순"
+        ]
+      ],
+      "sortDefault": "date",
+      "filters": [
+        {
+          "label": "발생 시점",
+          "field": "dateValue",
+          "type": "withinMonths",
+          "options": [
+            [
+              "",
+              "전체"
+            ],
+            [
+              "3",
+              "최근 3개월"
+            ],
+            [
+              "6",
+              "최근 6개월"
+            ],
+            [
+              "12",
+              "최근 12개월"
+            ]
+          ]
+        }
+      ],
+      "coverage": {
+        "covered": 27,
+        "total": 100
+      },
+      "rows": [
+        {
+          "name": "경인전자",
+          "code": "009140",
+          "market": "KOSPI",
+          "industry": "전자부품 제조업",
+          "rcpNo": "20260312001118",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001118",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 175억원 유입 추정",
+          "detail": "김성은외3명 → 주식회사 케이일레븐파트너스외3명 · 지분 50.98% · 특수관계인간 주식 취득 및 처분",
+          "amount": 174.9,
+          "metricText": "175억원",
+          "ratio": 50.98,
+          "dateValue": "2026-06-15",
+          "timeText": null,
+          "action": "매각대금 175억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "인지컨트롤스",
+          "code": "023800",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20260323001493",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001493",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 358억원 유입 추정",
+          "detail": "정구용 외 4명 → 정혜승 외 3명 · 지분 42.94% · 변경 전 최대주주 정구용 회장 사망에 따른 상속",
+          "amount": 358.5,
+          "metricText": "358억원",
+          "ratio": 42.94,
+          "dateValue": "2026-03-18",
+          "timeText": null,
+          "action": "매각대금 358억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "극동유화",
+          "code": "014530",
+          "market": "KOSPI",
+          "industry": "석유 정제품 제조업",
+          "rcpNo": "20260323001025",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001025",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 465억원 유입 추정",
+          "detail": "장홍선 외 6명 → 장선우 외 8명 · 지분 42.17% · 특수관계인 간의 주식거래로 인한 최대주주의 변경",
+          "amount": 465.1,
+          "metricText": "465억원",
+          "ratio": 42.17,
+          "dateValue": "2025-11-21",
+          "timeText": null,
+          "action": "매각대금 465억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "대동스틸",
+          "code": "048470",
+          "market": "KOSDAQ",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260318000232",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000232",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 104억원 유입 추정",
+          "detail": "임형기 외 3명 · 지분 41.44% · 최대주주 임형기 별세에 따른 변경",
+          "amount": 104.0,
+          "metricText": "104억원",
+          "ratio": 41.44,
+          "dateValue": "2026-05-31",
+          "timeText": null,
+          "action": "매각대금 104억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "동방아그로",
+          "code": "007590",
+          "market": "KOSPI",
+          "industry": "비료, 농약 및 살균, 살충제 제조업",
+          "rcpNo": "20260312000569",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000569",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 262억원 유입 추정",
+          "detail": "염병만외 2명 → 염병진외 8명 · 지분 34.21% · 최대주주의 지분 증여 증여자 염병만(1,060,000주) 수증자 염수진(220,000주) 염지영(220,000주) 장기훈(160,000주) 정현준(160,000주) 장천익(150,000주) 정경훈(150,000주) 합계(1,060,000주)",
+          "amount": 262.0,
+          "metricText": "262억원",
+          "ratio": 34.21,
+          "dateValue": "2026-04-08",
+          "timeText": null,
+          "action": "매각대금 262억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "스틱인베스트먼트",
+          "code": "026890",
+          "market": "KOSPI",
+          "industry": "신탁업 및 집합투자업",
+          "rcpNo": "20260319000750",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000750",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 578억원 유입 추정",
+          "detail": "도용환외 10인 → The Miri Strategic Emerging Markets Fund LP · 지분 18.42% · 도용환과 The Miri Strategic Emerging Markets Fund LP 사이에 체결된 2026년 1월 20일자 주식매매계약의 거래 종결로 인한 최대주주 변경",
+          "amount": 577.8,
+          "metricText": "578억원",
+          "ratio": 18.42,
+          "dateValue": "2026-03-04",
+          "timeText": null,
+          "action": "매각대금 578억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "두올",
+          "code": "016740",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20260318001456",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001456",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 470억원 유입 추정",
+          "detail": "(주)IHC 외 5인 → 모트렉스이에프엠 주식회사 외 1인 · 지분 48.61% · 최대주주 변경을 수반하는 주식매매계약",
+          "amount": 470.1,
+          "metricText": "470억원",
+          "ratio": 48.61,
+          "dateValue": "2026-07-31",
+          "timeText": null,
+          "action": "매각대금 470억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "만호제강",
+          "code": "001080",
+          "market": "KOSPI",
+          "industry": "1차 철강 제조업",
+          "rcpNo": "20250930000631",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20250930000631",
+          "asOf": "2024-06-30",
+          "reason": "최대주주 변경 — 매각대금 425억원 유입 추정",
+          "detail": "김상환 외 8명 → 엠에이치그룹홀딩스 외 1명 · 지분 25.14% · 계약에 의한 매도",
+          "amount": 424.9,
+          "metricText": "425억원",
+          "ratio": 25.14,
+          "dateValue": "2026-01-30",
+          "timeText": null,
+          "action": "매각대금 425억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "졸스",
+          "code": "018700",
+          "market": "KOSDAQ",
+          "industry": "생활용품 도매업",
+          "rcpNo": "20260630000287",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260630000287",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 80억원 유입 추정",
+          "detail": "(주)바른손이앤에이 외 2명 → (주)지피클럽외 1명 · 지분 34.86% · 제3자배정 유상증자 납입을 통한 최대주주 변경",
+          "amount": 80.0,
+          "metricText": "80억원",
+          "ratio": 34.86,
+          "dateValue": "2026-07-28",
+          "timeText": null,
+          "action": "매각대금 80억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "SP삼화",
+          "code": "000390",
+          "market": "KOSPI",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260318000462",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000462",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 459억원 유입 추정",
+          "detail": "김장연 외 4명 → 김현정 외 3명 · 지분 27.39% · 변경 전 최대주주 김장연 회장 사망에 따른 상속",
+          "amount": 459.1,
+          "metricText": "459억원",
+          "ratio": 27.39,
+          "dateValue": "2025-12-29",
+          "timeText": null,
+          "action": "매각대금 459억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "유니켐",
+          "code": "011330",
+          "market": "KOSPI",
+          "industry": "자동차 신품 부품 제조업",
+          "rcpNo": "20260325000515",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325000515",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 86억원 유입 추정",
+          "detail": "(주)제이에이치사람들외 1인 → (주)제이에이치사람들 · 지분 20.62% · (주)제이에이치사람들과 (주)햇발 사이에 체결된 2025년 10월 30일자 주식양수도 계약체결의 이행으로 인한 최대주주 변경",
+          "amount": 85.8,
+          "metricText": "86억원",
+          "ratio": 20.62,
+          "dateValue": "2025-12-01",
+          "timeText": null,
+          "action": "매각대금 86억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "SIMPAC",
+          "code": "009160",
+          "market": "KOSPI",
+          "industry": "1차 철강 제조업",
+          "rcpNo": "20260318001274",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001274",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 1,865억원 유입 추정",
+          "detail": "(주)심팩홀딩스 외 6명 → 최진식 외 5명 · 지분 60.15% · 주식회사 SIMPAC(존속회사)과 (주)심팩홀딩스(소멸회사)간 흡수합병으로 인한 최대주주 변경",
+          "amount": 1865.3,
+          "metricText": "1,865억원",
+          "ratio": 60.15,
+          "dateValue": "2025-12-15",
+          "timeText": null,
+          "action": "매각대금 1,865억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "제일테크노스",
+          "code": "038010",
+          "market": "KOSDAQ",
+          "industry": "구조용 금속제품, 탱크 및 증기발생기 제조업",
+          "rcpNo": "20260320000688",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000688",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 214억원 유입 추정",
+          "detail": "나주영외 5인 → 나채민외 6인 · 지분 44.92% · 기존 최대주주의 증여/수증에 따른 최대주주변경 - 증여자 : 나주영 (1,850,000주) - 수증자 : 나채민 (1,850,000주)",
+          "amount": 213.8,
+          "metricText": "214억원",
+          "ratio": 44.92,
+          "dateValue": "2026-04-01",
+          "timeText": null,
+          "action": "매각대금 214억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "환인제약",
+          "code": "016580",
+          "market": "KOSPI",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260312001200",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001200",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 450억원 유입 추정",
+          "detail": "이광식 외 1명 → 이원범 외 1명 · 지분 23.27% · 기존 최대주주와 특수관계인간 증여/수증에 따른 최대주주의 변경 - 증여자:이광식 1,860,000 - 수증자:이원범 1,860,000",
+          "amount": 450.5,
+          "metricText": "450억원",
+          "ratio": 23.27,
+          "dateValue": "2025-10-30",
+          "timeText": null,
+          "action": "매각대금 450억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "남성",
+          "code": "004270",
+          "market": "KOSPI",
+          "industry": "기타 전문 도매업",
+          "rcpNo": "20260320001336",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320001336",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 86억원 유입 추정",
+          "detail": "윤남철 외 8인 → 윤성호 외 8인 · 지분 37.72% · 증여에 따른 최대주주 변경",
+          "amount": 86.4,
+          "metricText": "86억원",
+          "ratio": 37.72,
+          "dateValue": "2026-04-10",
+          "timeText": null,
+          "action": "매각대금 86억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "한양이엔지",
+          "code": "045100",
+          "market": "KOSDAQ",
+          "industry": "건축기술, 엔지니어링 및 관련 기술 서비스업",
+          "rcpNo": "20260313000818",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313000818",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 2,386억원 유입 추정",
+          "detail": "김형육 외 6명 → 김윤상 외 6명 · 지분 46.53% · 주식관리신탁 계약에 따른 최대주주 변경",
+          "amount": 2386.1,
+          "metricText": "2,386억원",
+          "ratio": 46.53,
+          "dateValue": "2026-01-27",
+          "timeText": null,
+          "action": "매각대금 2,386억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "오스코텍",
+          "code": "039200",
+          "market": "KOSDAQ",
+          "industry": "의약품 제조업",
+          "rcpNo": "20260319001005",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319001005",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 1,711억원 유입 추정",
+          "detail": "김정근 → 김성연 외 1인 · 지분 12.45% · 최대주주 사망에 따른 상속 개시",
+          "amount": 1710.8,
+          "metricText": "1,711억원",
+          "ratio": 12.45,
+          "dateValue": "2026-02-05",
+          "timeText": null,
+          "action": "매각대금 1,711억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "CSA 코스믹",
+          "code": "083660",
+          "market": "KOSDAQ",
+          "industry": "기타 화학제품 제조업",
+          "rcpNo": "20260324000035",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000035",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 48억원 유입 추정",
+          "detail": "(주)브이핑크홀딩스 → 지앤비조합 · 지분 7.73% · 차입 48억원 · 제3자배정 유상증자",
+          "amount": 48.0,
+          "metricText": "48억원",
+          "ratio": 7.73,
+          "dateValue": "2025-12-24",
+          "timeText": null,
+          "action": "매각대금 48억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "위메이드",
+          "code": "112040",
+          "market": "KOSDAQ",
+          "industry": "소프트웨어 개발 및 공급업",
+          "rcpNo": "20260319000853",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000853",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 9,200억원 유입 추정",
+          "detail": "박관호 → 네오펄스㈜ · 지분 40.25% · 최대주주 변경을 수반하는 주식양수도 계약 체결",
+          "amount": 9200.0,
+          "metricText": "9,200억원",
+          "ratio": 40.25,
+          "dateValue": "2026-10-30",
+          "timeText": null,
+          "action": "매각대금 9,200억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "한양디지텍",
+          "code": "078350",
+          "market": "KOSDAQ",
+          "industry": "반도체 제조업",
+          "rcpNo": "20260316001638",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001638",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 1,687억원 유입 추정",
+          "detail": "김형육 외 6인 → 김윤상 외 5인 · 지분 53.74% · 최대주주 김형육 별세에 따른 변경",
+          "amount": 1687.4,
+          "metricText": "1,687억원",
+          "ratio": 53.74,
+          "dateValue": "2026-07-20",
+          "timeText": null,
+          "action": "매각대금 1,687억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "디에스케이",
+          "code": "109740",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260323001333",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001333",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 824억원 유입 추정",
+          "detail": "㈜시너지이노베이션외 2인 → 윤진파트너스㈜외 5인 · 지분 25.4% · 최대주주 변경을 수반하는 주식양수도 계약 체결",
+          "amount": 823.5,
+          "metricText": "824억원",
+          "ratio": 25.4,
+          "dateValue": "2026-09-09",
+          "timeText": null,
+          "action": "매각대금 824억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "그린생명과학",
+          "code": "114450",
+          "market": "KOSDAQ",
+          "industry": "기초 의약물질 제조업",
+          "rcpNo": "20260319001189",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319001189",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 1억원 유입 추정",
+          "detail": "㈜관악상사 외 2인 → 그린케미칼㈜ 외 2인 · 지분 26.81% · 특수관계자의 장내매수로 인한 최대주주 변경",
+          "amount": 0.6,
+          "metricText": "1억원",
+          "ratio": 26.81,
+          "dateValue": "2026-07-22",
+          "timeText": null,
+          "action": "매각대금 1억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "브이엠",
+          "code": "089970",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260320000666",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000666",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 1,893억원 유입 추정",
+          "detail": "김남헌 外 5인 → 최우형 外 2인 · 지분 11.2% · 기존 최대주주의 시간외매매에 따른 최대주주 변경",
+          "amount": 1893.0,
+          "metricText": "1,893억원",
+          "ratio": 11.2,
+          "dateValue": "2025-09-22",
+          "timeText": null,
+          "action": "매각대금 1,893억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "스맥",
+          "code": "099440",
+          "market": "KOSDAQ",
+          "industry": "특수 목적용 기계 제조업",
+          "rcpNo": "20260323001679",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001679",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 606억원 유입 추정",
+          "detail": "(주)SNT홀딩스 외 1인 → SNT모티브(주) 외 1인 · 지분 21.26% · 특수관계인 간의 시간외대량매매에 따른 최대주주 변경",
+          "amount": 605.9,
+          "metricText": "606억원",
+          "ratio": 21.26,
+          "dateValue": "2026-04-24",
+          "timeText": null,
+          "action": "매각대금 606억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "JTC",
+          "code": "950170",
+          "market": "KOSDAQ",
+          "industry": "종합 소매업",
+          "rcpNo": "20260528000907",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260528000907",
+          "asOf": "2026-02-28",
+          "reason": "최대주주 변경 — 매각대금 899억원 유입 추정",
+          "detail": "구철모 → 유한회사 유벤투스홀딩스투자목적회사 · 지분 40.33% · 차입 709억원 · 콜옵션 행사에 따른 공개매수(2025.07.28~2025.09.10) 응모 및 대금지급에 따른 최대주주 변경",
+          "amount": 899.2,
+          "metricText": "899억원",
+          "ratio": 40.33,
+          "dateValue": "2025-09-12",
+          "timeText": null,
+          "action": "매각대금 899억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "제놀루션",
+          "code": "225220",
+          "market": "KOSDAQ",
+          "industry": "기초 의약물질 제조업",
+          "rcpNo": "20260319000806",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000806",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 15억원 유입 추정",
+          "detail": "호일바이오메드외10 → 김기옥외10 · 지분 26.2% · 특별관계자간 주식 양수도",
+          "amount": 14.7,
+          "metricText": "15억원",
+          "ratio": 26.2,
+          "dateValue": "2026-02-19",
+          "timeText": null,
+          "action": "매각대금 15억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        },
+        {
+          "name": "토박스코리아",
+          "code": "215480",
+          "market": "KOSDAQ",
+          "industry": "섬유, 의복, 신발 및 가죽제품 소매업",
+          "rcpNo": "20260323000608",
+          "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323000608",
+          "asOf": "2025-12-31",
+          "reason": "최대주주 변경 — 매각대금 100억원 유입 추정",
+          "detail": "이선근 외 7인 → (주)꿈비 외 2인 · 지분 17.35% · 주식매매계약 이행에 따른 변경",
+          "amount": 99.7,
+          "metricText": "100억원",
+          "ratio": 17.35,
+          "dateValue": "2026-07-23",
+          "timeText": null,
+          "action": "매각대금 100억원 랩·신탁·채권형 운용 제안",
+          "chips": [
+            "대주주변경"
+          ]
+        }
+      ]
+    }
+  ]
+}

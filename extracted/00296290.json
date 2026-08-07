@@ -1,0 +1,26 @@
+{
+  "corp_code": "00296290",
+  "stock_code": "039490",
+  "name": "키움증권",
+  "market": "KOSPI",
+  "industry": "금융 지원 서비스업",
+  "source": {
+    "rcp_no": "20260317000838",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260317",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [],
+  "pledge": [],
+  "_fa_note": "금융자산 탭 제외 — 증권사 자기매매 자산"
+}

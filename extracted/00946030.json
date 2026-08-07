@@ -1,0 +1,50 @@
+{
+  "corp_code": "00946030",
+  "stock_code": "108490",
+  "name": "로보티즈",
+  "market": "KOSDAQ",
+  "industry": "특수 목적용 기계 제조업",
+  "source": {
+    "rcp_no": "20260708000478",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260708",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 97646,
+      "amount": 26315597000.0,
+      "period_start": "2026-01-06",
+      "period_end": "2026-01-08",
+      "purpose": "경영상의 재원확보",
+      "method": "시간외대량매매",
+      "held_shares": 156646,
+      "rcp_no": "20260105000433"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 42000,
+      "amount": 10311000000.0,
+      "period_start": "2026-01-26",
+      "period_end": "2026-01-30",
+      "purpose": "임직원 성과보상용 자기주식 교부",
+      "method": "기타",
+      "held_shares": 59000,
+      "rcp_no": "20260123000377"
+    }
+  ],
+  "pledge": []
+}

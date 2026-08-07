@@ -1,0 +1,41 @@
+{
+  "corp_code": "00488989",
+  "stock_code": "078350",
+  "name": "한양디지텍",
+  "market": "KOSDAQ",
+  "industry": "반도체 제조업",
+  "source": {
+    "rcp_no": "20260316001638",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260316",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "김윤상 외 5인",
+    "largest_ratio": 53.74,
+    "change_date": "2026-07-20",
+    "prev_largest": "김형육 외 6인",
+    "reason": "최대주주 김형육 별세에 따른 변경",
+    "unit": "원",
+    "rcp_no": "20260720900585",
+    "prev_ratio": 53.74
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 661509,
+      "amount": 17115883866.0,
+      "period_start": "2026-02-24",
+      "period_end": "2026-02-24",
+      "purpose": "투자 및 운영자금 확보",
+      "method": "시간외대량매매",
+      "held_shares": 661509,
+      "rcp_no": "20260223003970"
+    }
+  ],
+  "pledge": []
+}

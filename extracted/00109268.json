@@ -1,0 +1,53 @@
+{
+  "corp_code": "00109268",
+  "stock_code": "048470",
+  "name": "대동스틸",
+  "market": "KOSDAQ",
+  "industry": "기타 전문 도매업",
+  "source": {
+    "rcp_no": "20260318000232",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": "2026-05-31",
+    "prev_largest": "임형기 외 3명",
+    "reason": "최대주주 임형기 별세에 따른 변경",
+    "unit": "원",
+    "rcp_no": "20260601900524",
+    "prev_ratio": 41.44
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 363457,
+      "amount": 992601067.0,
+      "period_start": "2026-01-16",
+      "period_end": "2026-04-15",
+      "purpose": "신규투자 및 운영자금 조달",
+      "method": "시간외대량매매",
+      "held_shares": 713457,
+      "rcp_no": "20260115000402"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 363457,
+      "amount": 992964524.0,
+      "period_start": "2026-01-16",
+      "period_end": "2026-04-15",
+      "purpose": "신규투자 및 운영자금 조달",
+      "method": "시간외대량매매",
+      "held_shares": 713457,
+      "rcp_no": "20260115000431"
+    }
+  ],
+  "pledge": []
+}

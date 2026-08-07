@@ -1,0 +1,38 @@
+{
+  "corp_code": "00165680",
+  "stock_code": "008770",
+  "name": "호텔신라",
+  "market": "KOSPI",
+  "industry": "기타 상품 전문 소매업",
+  "source": {
+    "rcp_no": "20260311004398",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260311",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 2128569,
+      "amount": 132397000000.0,
+      "period_start": "2024-07-05",
+      "period_end": "2024-07-05",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채 발행",
+      "method": "기타",
+      "held_shares": 2135000,
+      "rcp_no": "20260706000509"
+    }
+  ],
+  "pledge": []
+}

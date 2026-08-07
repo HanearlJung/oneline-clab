@@ -1,0 +1,53 @@
+{
+  "corp_code": "00117498",
+  "stock_code": "026890",
+  "name": "스틱인베스트먼트",
+  "market": "KOSPI",
+  "industry": "신탁업 및 집합투자업",
+  "source": {
+    "rcp_no": "20260319000750",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260319",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "The Miri Strategic Emerging Markets Fund LP",
+    "largest_ratio": 24.97,
+    "change_date": "2026-03-04",
+    "prev_largest": "도용환외 10인",
+    "reason": "도용환과 The Miri Strategic Emerging Markets Fund LP 사이에 체결된 2026년 1월 20일자 주식매매계약의 거래 종결로 인한 최대주주 변경",
+    "unit": "원",
+    "rcp_no": "20260304800680",
+    "prev_ratio": 18.42
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 9381,
+      "amount": 93997620.0,
+      "period_start": "2025-08-25",
+      "period_end": "2025-08-29",
+      "purpose": "임원 상여금 지급",
+      "method": "기타",
+      "held_shares": 4031000,
+      "rcp_no": "20250822000372"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 25890,
+      "amount": 311715600.0,
+      "period_start": "2026-02-11",
+      "period_end": "2026-02-13",
+      "purpose": "임원 성과급 지급",
+      "method": "기타",
+      "held_shares": 4021619,
+      "rcp_no": "20260211000303"
+    }
+  ],
+  "pledge": []
+}

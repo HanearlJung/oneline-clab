@@ -1,0 +1,53 @@
+{
+  "corp_code": "00115384",
+  "stock_code": "007590",
+  "name": "동방아그로",
+  "market": "KOSPI",
+  "industry": "비료, 농약 및 살균, 살충제 제조업",
+  "source": {
+    "rcp_no": "20260312000569",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260312",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "염병진외 8명",
+    "largest_ratio": 34.21,
+    "change_date": "2026-04-08",
+    "prev_largest": "염병만외 2명",
+    "reason": "최대주주의 지분 증여 증여자 염병만(1,060,000주) 수증자 염수진(220,000주) 염지영(220,000주) 장기훈(160,000주) 정현준(160,000주) 장천익(150,000주) 정경훈(150,000주) 합계(1,060,000주)",
+    "unit": "원",
+    "rcp_no": "20260408800949",
+    "prev_ratio": 34.21
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 1000000,
+      "amount": 6906000000.0,
+      "period_start": "2025-08-19",
+      "period_end": "2025-08-19",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채 발행",
+      "method": "기타",
+      "held_shares": 1211886,
+      "rcp_no": "20250811000534"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 211886,
+      "amount": 1315812060.0,
+      "period_start": "2025-12-23",
+      "period_end": "2025-12-24",
+      "purpose": "임직원 상여금",
+      "method": "기타",
+      "held_shares": 211886,
+      "rcp_no": "20251222000346"
+    }
+  ],
+  "pledge": []
+}

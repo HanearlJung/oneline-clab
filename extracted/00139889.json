@@ -1,0 +1,38 @@
+{
+  "corp_code": "00139889",
+  "stock_code": "011790",
+  "name": "SKC",
+  "market": "KOSPI",
+  "industry": "기타 화학제품 제조업",
+  "source": {
+    "rcp_no": "20260610000521",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260610",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 1089666,
+      "amount": 125000000000.0,
+      "period_start": "2025-08-26",
+      "period_end": "2025-08-26",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채 발행",
+      "method": "기타",
+      "held_shares": 1292917,
+      "rcp_no": "20250811000549"
+    }
+  ],
+  "pledge": []
+}

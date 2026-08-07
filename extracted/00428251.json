@@ -1,0 +1,67 @@
+{
+  "corp_code": "00428251",
+  "stock_code": "069960",
+  "name": "현대백화점",
+  "market": "KOSPI",
+  "industry": "종합 소매업",
+  "source": {
+    "rcp_no": "20260318001314",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 194085,
+      "amount": 21000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주주환원정책을 통한 주주가치 제고",
+      "method": null,
+      "held_shares": 778808,
+      "rcp_no": "20260211000385"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "(주)현대에이앤아이",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "KEB하나은행",
+      "shares": 100000,
+      "contract_date": "2025-08-01",
+      "maturity": null,
+      "ratio": 0.46,
+      "loan_amount": 3500000000.0,
+      "unit": "원",
+      "debtor": "(주)현대에이앤아이",
+      "rcp_no": "20260624000332"
+    },
+    {
+      "holder": "(주)현대에이앤아이",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "KEB하나은행",
+      "shares": 100000,
+      "contract_date": "2025-08-01",
+      "maturity": null,
+      "ratio": 0.46,
+      "loan_amount": 3500000000.0,
+      "unit": "원",
+      "debtor": "(주)현대에이앤아이",
+      "rcp_no": "20260703000455"
+    }
+  ]
+}

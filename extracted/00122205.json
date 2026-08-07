@@ -1,0 +1,30 @@
+{
+  "corp_code": "00122205",
+  "stock_code": "018700",
+  "name": "졸스",
+  "market": "KOSDAQ",
+  "industry": "생활용품 도매업",
+  "source": {
+    "rcp_no": "20260630000287",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260630",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "(주)지피클럽외 1명",
+    "largest_ratio": 32.7,
+    "change_date": "2026-07-28",
+    "prev_largest": "(주)바른손이앤에이 외 2명",
+    "reason": "제3자배정 유상증자 납입을 통한 최대주주 변경",
+    "unit": "원",
+    "rcp_no": "20260728900445",
+    "prev_ratio": 34.86,
+    "deal_amount": 8000000030.0,
+    "deal_own": 8000000030.0
+  },
+  "treasury": [],
+  "pledge": []
+}

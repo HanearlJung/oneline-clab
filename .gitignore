@@ -1,0 +1,9 @@
+raw/
+slices/
+compact/
+api/
+data/cache/
+*.log
+__pycache__/
+*.pyc
+.env

@@ -1,0 +1,123 @@
+{
+  "corp_code": "01152470",
+  "stock_code": "263750",
+  "name": "펄어비스",
+  "market": "KOSDAQ",
+  "industry": "소프트웨어 개발 및 공급업",
+  "source": {
+    "rcp_no": "20260319001336",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260319",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 320000,
+      "amount": 15584000000.0,
+      "period_start": "2026-03-11",
+      "period_end": "2033-06-13",
+      "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
+      "method": "기타",
+      "held_shares": 2828445,
+      "rcp_no": "20260310003117"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "김대일",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "한국증권금융",
+      "shares": 100000,
+      "contract_date": "2025-12-21",
+      "maturity": "2026-12-21",
+      "ratio": 0.16,
+      "loan_amount": 1500000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20251224000644"
+    },
+    {
+      "holder": "김권호",
+      "relation": "특수관계인",
+      "contract_type": "주식담보대출",
+      "counterparty": "펄어비스",
+      "shares": 14249,
+      "contract_date": "2025-11-20",
+      "maturity": "2026-11-28",
+      "ratio": 0.02,
+      "loan_amount": 500000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20251224000644"
+    },
+    {
+      "holder": "김권호",
+      "relation": "특수관계인",
+      "contract_type": "주식담보대출",
+      "counterparty": "펄어비스",
+      "shares": 37351,
+      "contract_date": "2025-01-22",
+      "maturity": "2026-01-21",
+      "ratio": 0.06,
+      "loan_amount": 1000000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20251224000644"
+    },
+    {
+      "holder": "김대일",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "한국증권금융",
+      "shares": 100000,
+      "contract_date": "2025-12-21",
+      "maturity": "2026-12-21",
+      "ratio": 0.16,
+      "loan_amount": 1500000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260630000989"
+    },
+    {
+      "holder": "김권호",
+      "relation": "특수관계인",
+      "contract_type": "주식담보대출",
+      "counterparty": "펄어비스",
+      "shares": 14249,
+      "contract_date": "2025-11-20",
+      "maturity": "2026-11-28",
+      "ratio": 0.02,
+      "loan_amount": 500000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260630000989"
+    },
+    {
+      "holder": "김권호",
+      "relation": "특수관계인",
+      "contract_type": "주식담보대출",
+      "counterparty": "펄어비스",
+      "shares": 20952,
+      "contract_date": "2026-01-22",
+      "maturity": "2027-01-21",
+      "ratio": 0.03,
+      "loan_amount": 1000000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260630000989"
+    }
+  ]
+}

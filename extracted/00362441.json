@@ -1,0 +1,50 @@
+{
+  "corp_code": "00362441",
+  "stock_code": "307950",
+  "name": "현대오토에버",
+  "market": "KOSPI",
+  "industry": "소프트웨어 개발 및 공급업",
+  "source": {
+    "rcp_no": "20260318001324",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 866,
+      "amount": 374545000.0,
+      "period_start": "2026-02-27",
+      "period_end": "2026-02-27",
+      "purpose": "- 주식매수청구권 행사로 취득한 자기주식의 기한 내 처분(자본시장법제165조의5) - 합병시 발생한 단주의 처분(유통주식물량 확대를 통한 거래량 활성화)",
+      "method": "시장을통한매도",
+      "held_shares": null,
+      "rcp_no": "20260225004242"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 866,
+      "amount": 374545000.0,
+      "period_start": "2026-02-27",
+      "period_end": "2026-02-27",
+      "purpose": "- 주식매수청구권 행사로 취득한 자기주식의 기한 내 처분(자본시장법제165조의5) - 합병시 발생한 단주의 처분(유통주식물량 확대를 통한 거래량 활성화)",
+      "method": "시장을통한매도",
+      "held_shares": null,
+      "rcp_no": "20260226006513"
+    }
+  ],
+  "pledge": []
+}

@@ -1,0 +1,67 @@
+{
+  "corp_code": "00166573",
+  "stock_code": "016580",
+  "name": "환인제약",
+  "market": "KOSPI",
+  "industry": "의약품 제조업",
+  "source": {
+    "rcp_no": "20260312001200",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260312",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "이원범 외 1명",
+    "largest_ratio": 23.27,
+    "change_date": "2025-10-30",
+    "prev_largest": "이광식 외 1명",
+    "reason": "기존 최대주주와 특수관계인간 증여/수증에 따른 최대주주의 변경 - 증여자:이광식 1,860,000 - 수증자:이원범 1,860,000",
+    "unit": "원",
+    "rcp_no": "20251030800491",
+    "prev_ratio": 23.27
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 1316880,
+      "amount": 15447002400.0,
+      "period_start": "2025-12-12",
+      "period_end": "2025-12-12",
+      "purpose": "전략적 제휴를 통한 지속적인 사업 협력관계 구축",
+      "method": "장외처분",
+      "held_shares": 2333000,
+      "rcp_no": "20251211000435"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 900000,
+      "amount": 10395000000.0,
+      "period_start": "2025-12-19",
+      "period_end": "2025-12-19",
+      "purpose": "전략적 제휴를 통한 사업 시너지 창출 및 협력관계 구축",
+      "method": "장외처분",
+      "held_shares": 1016120,
+      "rcp_no": "20251218000442"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "이원범",
+      "relation": "본인",
+      "contract_type": "담보제공(질권)",
+      "counterparty": "역삼세무서",
+      "shares": 450000,
+      "contract_date": "2026-05-06",
+      "maturity": null,
+      "ratio": 2.42,
+      "loan_amount": null,
+      "unit": "원",
+      "rcp_no": "20260511000215"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "corp_code": "00131780",
+  "stock_code": "001740",
+  "name": "SK네트웍스",
+  "market": "KOSPI",
+  "industry": "기타 전문 도매업",
+  "source": {
+    "rcp_no": "20260318001112",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 5932,
+      "amount": 30134560.0,
+      "period_start": "2026-02-10",
+      "period_end": "2026-02-10",
+      "purpose": "임원에 대한 상여금 지급",
+      "method": "기타",
+      "held_shares": 18810789,
+      "rcp_no": "20260209000377"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 21353,
+      "amount": 120430920.0,
+      "period_start": "2026-04-29",
+      "period_end": "2026-04-29",
+      "purpose": "임원 장기성과급 및 사외이사 보수 지급",
+      "method": "기타",
+      "held_shares": 6641747,
+      "rcp_no": "20260429000001"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "최성환",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "대신증권",
+      "shares": 700000,
+      "contract_date": "2026-02-19",
+      "maturity": null,
+      "ratio": 0.35,
+      "loan_amount": 2099000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260507000629"
+    },
+    {
+      "holder": "최성환",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "대신증권",
+      "shares": 699999,
+      "contract_date": "2026-02-19",
+      "maturity": null,
+      "ratio": 0.35,
+      "loan_amount": 2769000000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260723000537"
+    }
+  ]
+}

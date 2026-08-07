@@ -1,0 +1,96 @@
+{
+  "corp_code": "00129387",
+  "stock_code": "000390",
+  "name": "SP삼화",
+  "market": "KOSPI",
+  "industry": "기타 화학제품 제조업",
+  "source": {
+    "rcp_no": "20260318000462",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "김현정 외 3명",
+    "largest_ratio": 27.39,
+    "change_date": "2025-12-29",
+    "prev_largest": "김장연 외 4명",
+    "reason": "변경 전 최대주주 김장연 회장 사망에 따른 상속",
+    "unit": "원",
+    "rcp_no": "20260102800376",
+    "prev_ratio": 27.39
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 1008642,
+      "amount": 6916300303.0,
+      "period_start": "2025-12-08",
+      "period_end": "2025-12-08",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채의 발행을 통한 시설자금 투자",
+      "method": "기타",
+      "held_shares": 2388642,
+      "rcp_no": "20251128001922"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 1008642,
+      "amount": 6916300303.0,
+      "period_start": "2025-12-08",
+      "period_end": "2025-12-08",
+      "purpose": "자기주식을 교환대상으로 하는 교환사채의 발행을 통한 시설자금 투자",
+      "method": "기타",
+      "held_shares": 2388642,
+      "rcp_no": "20251203000229"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "김현정",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "한국증권금융",
+      "shares": 1200000,
+      "contract_date": "2026-02-23",
+      "maturity": "2027-02-23",
+      "ratio": 4.41,
+      "loan_amount": 3000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260331001897"
+    },
+    {
+      "holder": "김현정",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "한국증권금융",
+      "shares": 1200000,
+      "contract_date": "2026-02-23",
+      "maturity": "2027-02-23",
+      "ratio": 4.41,
+      "loan_amount": 3000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260529000880"
+    },
+    {
+      "holder": "김현정",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "한국증권금융",
+      "shares": 1800000,
+      "contract_date": "2026-05-26",
+      "maturity": "2027-02-23",
+      "ratio": 6.62,
+      "loan_amount": 5000.0,
+      "unit": "원",
+      "debtor": "-",
+      "rcp_no": "20260529000880"
+    }
+  ]
+}

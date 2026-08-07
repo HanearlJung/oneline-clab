@@ -1,0 +1,50 @@
+{
+  "corp_code": "01310269",
+  "stock_code": "294870",
+  "name": "IPARK현대산업개발",
+  "market": "KOSPI",
+  "industry": "건물 건설업",
+  "source": {
+    "rcp_no": "20260318001249",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 1070090,
+      "amount": 20000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주주가치 제고",
+      "method": null,
+      "held_shares": 2156830,
+      "rcp_no": "20251120000540"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 1545595,
+      "amount": 30000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주주가치 제고를 위한 자기주식 취득 및 소각",
+      "method": null,
+      "held_shares": 3127352,
+      "rcp_no": "20260723000604"
+    }
+  ],
+  "pledge": []
+}

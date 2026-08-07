@@ -1,0 +1,67 @@
+{
+  "corp_code": "01649204",
+  "stock_code": "483650",
+  "name": "달바글로벌",
+  "market": "KOSPI",
+  "industry": "기타 화학제품 제조업",
+  "source": {
+    "rcp_no": "20260407001978",
+    "report_nm": "[기재정정] 사업보고서 (2025.12)",
+    "rcept_dt": "20260407",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 15707,
+      "amount": 2943491800.0,
+      "period_start": "2026-06-05",
+      "period_end": "2026-06-25",
+      "purpose": "대표이사 자기주식 상여 지급",
+      "method": "기타",
+      "held_shares": null,
+      "rcp_no": "20260604000651"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "유명한",
+      "relation": "특수관계인",
+      "contract_type": "주식담보대출",
+      "counterparty": "한국증권금융",
+      "shares": 70200,
+      "contract_date": "2026-05-27",
+      "maturity": null,
+      "ratio": 0.56,
+      "loan_amount": 8000000000.0,
+      "unit": "원",
+      "debtor": "한국증권금융",
+      "rcp_no": "20260529002316"
+    },
+    {
+      "holder": "양세훈",
+      "relation": "특수관계인",
+      "contract_type": "주식담보대출",
+      "counterparty": "IBK증권",
+      "shares": 4706,
+      "contract_date": "2026-05-22",
+      "maturity": null,
+      "ratio": 0.04,
+      "loan_amount": 700000000.0,
+      "unit": "원",
+      "debtor": "IBK증권",
+      "rcp_no": "20260529002316"
+    }
+  ]
+}

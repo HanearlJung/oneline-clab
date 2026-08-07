@@ -1,0 +1,53 @@
+{
+  "corp_code": "00120872",
+  "stock_code": "001080",
+  "name": "만호제강",
+  "market": "KOSPI",
+  "industry": "1차 철강 제조업",
+  "source": {
+    "rcp_no": "20250930000631",
+    "report_nm": "[기재정정] 사업보고서 (2024.06)",
+    "rcept_dt": "20250930",
+    "as_of": "2024-06-30"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "엠에이치그룹홀딩스 외 1명",
+    "largest_ratio": 25.14,
+    "change_date": "2026-01-30",
+    "prev_largest": "김상환 외 8명",
+    "reason": "계약에 의한 매도",
+    "unit": "원",
+    "rcp_no": "20260130801106",
+    "prev_ratio": 25.14
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 733138,
+      "amount": 25000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주주가치 제고를 위한 자기주식 취득 및 소각",
+      "method": null,
+      "held_shares": 748503,
+      "rcp_no": "20250925000534"
+    },
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 733138,
+      "amount": 25000000000.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주주가치 제고를 위한 자기주식 취득 및 소각",
+      "method": null,
+      "held_shares": 748503,
+      "rcp_no": "20250925000602"
+    }
+  ],
+  "pledge": []
+}

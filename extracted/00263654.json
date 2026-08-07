@@ -1,0 +1,71 @@
+{
+  "corp_code": "00263654",
+  "stock_code": "039200",
+  "name": "오스코텍",
+  "market": "KOSDAQ",
+  "industry": "의약품 제조업",
+  "source": {
+    "rcp_no": "20260319001005",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260319",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "김성연 외 1인",
+    "largest_ratio": 12.45,
+    "change_date": "2026-02-05",
+    "prev_largest": "김정근",
+    "reason": "최대주주 사망에 따른 상속 개시",
+    "unit": "원",
+    "rcp_no": "20260723901022",
+    "prev_ratio": 12.45
+  },
+  "treasury": [],
+  "pledge": [
+    {
+      "holder": "김성연",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "아이엠증권",
+      "shares": 134049,
+      "contract_date": "2026-07-15",
+      "maturity": null,
+      "ratio": 0.35,
+      "loan_amount": 1000000000.0,
+      "unit": "원",
+      "debtor": "김성연",
+      "rcp_no": "20260723000322"
+    },
+    {
+      "holder": "김성연",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "대신증권",
+      "shares": 159681,
+      "contract_date": "2026-07-15",
+      "maturity": null,
+      "ratio": 0.42,
+      "loan_amount": 800000000.0,
+      "unit": "원",
+      "debtor": "김성연",
+      "rcp_no": "20260723000322"
+    },
+    {
+      "holder": "김성연",
+      "relation": "본인",
+      "contract_type": "담보계약",
+      "counterparty": "대신증권",
+      "shares": 99801,
+      "contract_date": "2026-07-15",
+      "maturity": null,
+      "ratio": 0.26,
+      "loan_amount": 500000000.0,
+      "unit": "원",
+      "debtor": "김성연",
+      "rcp_no": "20260723000322"
+    }
+  ]
+}

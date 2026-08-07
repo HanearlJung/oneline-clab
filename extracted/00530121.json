@@ -1,0 +1,53 @@
+{
+  "corp_code": "00530121",
+  "stock_code": "109740",
+  "name": "디에스케이",
+  "market": "KOSDAQ",
+  "industry": "특수 목적용 기계 제조업",
+  "source": {
+    "rcp_no": "20260323001333",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260323",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": "윤진파트너스㈜외 5인",
+    "largest_ratio": 25.4,
+    "change_date": "2026-09-09",
+    "prev_largest": "㈜시너지이노베이션외 2인",
+    "reason": "최대주주 변경을 수반하는 주식양수도 계약 체결",
+    "deal_amount": 82346364000.0,
+    "unit": "원",
+    "rcp_no": "20260804900915"
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 4700,
+      "amount": 32096300.0,
+      "period_start": "2025-09-24",
+      "period_end": "2025-09-24",
+      "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
+      "method": "기타",
+      "held_shares": 666266,
+      "rcp_no": "20250924000348"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 4400,
+      "amount": 30047600.0,
+      "period_start": "2025-12-23",
+      "period_end": "2025-12-23",
+      "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
+      "method": "기타",
+      "held_shares": 661566,
+      "rcp_no": "20251223000254"
+    }
+  ],
+  "pledge": []
+}

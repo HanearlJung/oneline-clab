@@ -1,0 +1,13 @@
+{
+  "snapshotDate": "2026-08-06",
+  "snapshotDateDisplay": "2026.08.06",
+  "companyCount": 100,
+  "rowCount": 600,
+  "dataMode": "demo_seed",
+  "dataModeLabel": "데모 시드",
+  "topMeta": "데모 시드 100개사 · 기준일 2026.08.06",
+  "heroNote": "※ 현재는 실공시 추출 전 단계로, UI와 데이터 스키마를 검증하기 위한 시드 데이터입니다.",
+  "sourceSummary": "현재 원문 링크는 공통 DART 홈으로 연결됩니다. 실공시 스냅샷을 만들면 행별 rcept_no 링크로 교체됩니다.",
+  "nextAction": "다음 단계는 최신 공시를 목적별로 연결하고, 시드 문구를 실제 수치·이벤트 날짜로 교체하는 것입니다.",
+  "generatedAt": "2026-08-06T00:00:00+09:00"
+}

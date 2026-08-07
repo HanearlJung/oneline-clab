@@ -1,0 +1,107 @@
+{
+  "corp_code": "00583424",
+  "stock_code": "090430",
+  "name": "아모레퍼시픽",
+  "market": "KOSPI",
+  "industry": "기타 화학제품 제조업",
+  "source": {
+    "rcp_no": "20260318000785",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "백만원",
+    "total": 1579393,
+    "amortized_cost": 1099325,
+    "fvoci": 717,
+    "fvtpl": 469654,
+    "short_term_deposits": 138777,
+    "cash": 524558,
+    "products": [
+      "금융기관예치금",
+      "채무증권"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "백만원",
+    "dbo": 481004,
+    "plan_assets": 617371,
+    "net_liability": -136367,
+    "funding_ratio": 128.4,
+    "principal_guaranteed": 617371,
+    "indirect_investment": 0,
+    "other_assets": 0,
+    "employer_contribution": 71330,
+    "expected_contribution": 49267,
+    "benefits_paid": 45527,
+    "service_cost": 39762,
+    "plan_type": "DB+DC",
+    "providers": []
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 11119,
+      "amount": 1676745200.0,
+      "period_start": "2026-05-04",
+      "period_end": "2026-05-04",
+      "purpose": "직원에 대한 상여금으로 자기주식을 지급",
+      "method": "기타",
+      "held_shares": 128603,
+      "rcp_no": "20260429000004"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 28317,
+      "amount": 3451842300.0,
+      "period_start": "2026-08-03",
+      "period_end": "2026-08-25",
+      "purpose": "임직원에 대한 상여금으로 자기주식을 지급",
+      "method": "기타",
+      "held_shares": 117484,
+      "rcp_no": "20260730000286"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "서경배",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "한국증권금융(주)",
+      "shares": 1668000,
+      "contract_date": "2026-05-18",
+      "maturity": "2027-05-23",
+      "ratio": 2.85,
+      "loan_amount": 58300000000.0,
+      "unit": "원",
+      "debtor": "서경배",
+      "rcp_no": "20260522000377"
+    },
+    {
+      "holder": "서경배",
+      "relation": "특수관계인",
+      "contract_type": "담보계약",
+      "counterparty": "한국증권금융(주)",
+      "shares": 1668000,
+      "contract_date": "2026-05-18",
+      "maturity": "2027-05-23",
+      "ratio": 2.85,
+      "loan_amount": 58300000000.0,
+      "unit": "원",
+      "debtor": "서경배",
+      "rcp_no": "20260715000474"
+    }
+  ]
+}

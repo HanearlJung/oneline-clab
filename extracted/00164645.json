@@ -1,0 +1,66 @@
+{
+  "corp_code": "00164645",
+  "stock_code": "011200",
+  "name": "HMM",
+  "market": "KOSPI",
+  "industry": "해상 운송업",
+  "source": {
+    "rcp_no": "20260318001444",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "백만원",
+    "total": 15588068,
+    "amortized_cost": 14305192,
+    "fvoci": 613248,
+    "fvtpl": 669628,
+    "short_term_deposits": 10915971,
+    "cash": 1760767,
+    "products": [
+      "기타금융자산",
+      "당기손익인식금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "백만원",
+    "dbo": 172369,
+    "plan_assets": 167267,
+    "net_liability": 5102,
+    "funding_ratio": 97.0,
+    "principal_guaranteed": 162083,
+    "indirect_investment": 0,
+    "other_assets": 5184,
+    "employer_contribution": 19012,
+    "expected_contribution": 6884,
+    "benefits_paid": 23430,
+    "service_cost": 19995,
+    "plan_type": "DB",
+    "providers": []
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "취득",
+      "unit": "원",
+      "shares": 81801526,
+      "amount": 2143199981200.0,
+      "period_start": null,
+      "period_end": null,
+      "purpose": "주주환원을 통한 주주가치 제고",
+      "method": null,
+      "held_shares": null,
+      "rcp_no": "20250814003240"
+    }
+  ],
+  "pledge": []
+}

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>법인영업 타깃 발굴</title>
+  <style>
+    :root{
+      --bg:#f5f7fb; --panel:#fff; --text:#152033; --muted:#6b7280;
+      --line:#e5e9f0; --primary:#2457d6; --primary-soft:#edf3ff;
+      --navy:#101827; --green:#087a55; --green-soft:#eaf8f2;
+      --orange:#b45309; --orange-soft:#fff5e8; --red:#b42318;
+      --red-soft:#fff0ee; --shadow:0 10px 28px rgba(16,24,39,.07);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;background:var(--bg);color:var(--text);
+      font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",
+      Roboto,"Noto Sans KR",Arial,sans-serif;line-height:1.45;
+    }
+    button,input,select{font:inherit}
+    .topbar{
+      height:66px;background:var(--navy);color:#fff;padding:0 28px;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .brand{display:flex;align-items:center;gap:11px}
+    .logo{
+      width:34px;height:34px;border-radius:9px;background:#3f6ff0;
+      display:grid;place-items:center;font-weight:800;
+    }
+    .brand-title{font-size:17px;font-weight:750}
+    .brand-sub{font-size:11px;color:#aeb8c7;margin-top:2px}
+    .top-meta{font-size:12px;color:#c9d2df}
+    .page{width:min(1460px,calc(100% - 40px));margin:24px auto 42px}
+    .hero{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:16px}
+    .hero h1{margin:0;font-size:25px;letter-spacing:-.5px}
+    .hero p{margin:6px 0 0;color:var(--muted);font-size:14px}
+    .demo{font-size:12px;color:var(--muted)}
+    .status-panel{padding:16px 20px;margin-bottom:16px}
+    .status-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+    .status-title{font-size:16px;font-weight:800}
+    .status-note{font-size:12px;color:var(--muted);max-width:720px}
+    .status-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:14px}
+    .status-card{border:1px solid var(--line);border-radius:12px;padding:13px;background:#fcfdff}
+    .status-kicker{font-size:11px;color:var(--muted);font-weight:700}
+    .status-value{font-size:14px;font-weight:800;margin-top:6px}
+    .status-copy{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.5}
+    .panel{
+      background:var(--panel);border:1px solid var(--line);border-radius:14px;
+      box-shadow:var(--shadow);
+    }
+    .purpose-panel{padding:20px;margin-bottom:16px}
+    .section-label{font-size:12px;font-weight:750;color:#4b5563;margin-bottom:9px}
+    .purpose-row{
+      display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;
+    }
+    .purpose-btn{
+      min-height:76px;border:1px solid #d9dee7;background:#fff;border-radius:11px;
+      padding:12px 13px;text-align:left;cursor:pointer;transition:.15s ease;
+    }
+    .purpose-btn:hover{border-color:#9bb6f6;transform:translateY(-1px)}
+    .purpose-btn.active{
+      border-color:var(--primary);background:var(--primary-soft);
+      box-shadow:0 0 0 2px rgba(36,87,214,.08);
+    }
+    .purpose-title{font-size:14px;font-weight:780}
+    .purpose-desc{font-size:11px;color:var(--muted);margin-top:5px}
+
+    .upcoming-panel{padding:20px;margin-bottom:16px}
+    .upcoming-head{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:14px;
+      margin-bottom:13px;
+    }
+    .upcoming-title{font-size:17px;font-weight:800}
+    .upcoming-sub{font-size:12px;color:var(--muted);margin-top:3px}
+    .upcoming-badge{
+      background:var(--red-soft);color:var(--red);font-size:11px;font-weight:800;
+      padding:6px 9px;border-radius:999px;white-space:nowrap;
+    }
+    .upcoming-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .deal-card{
+      border:1px solid var(--line);border-radius:12px;padding:15px;background:#fff;
+      position:relative;overflow:hidden;
+    }
+    .deal-card:first-child{border-color:#a9bff7;background:#fbfdff}
+    .deal-rank{
+      position:absolute;right:12px;top:12px;width:25px;height:25px;border-radius:50%;
+      background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;
+      font-size:11px;font-weight:850;
+    }
+    .deal-company{font-size:15px;font-weight:850;padding-right:34px}
+    .deal-meta{font-size:11px;color:var(--muted);margin-top:2px}
+    .deal-reason{font-size:13px;font-weight:730;margin-top:13px}
+    .deal-detail{font-size:11px;color:var(--muted);margin-top:4px;min-height:33px}
+    .deal-bottom{
+      display:flex;align-items:flex-end;justify-content:space-between;gap:10px;
+      margin-top:13px;padding-top:12px;border-top:1px solid #edf0f4;
+    }
+    .deal-date-label{font-size:10px;color:var(--muted)}
+    .deal-date{font-size:13px;font-weight:850;color:var(--red);margin-top:2px}
+    .deal-right{display:flex;flex-direction:column;align-items:flex-end;gap:9px}
+    .deal-action{font-size:11px;color:#173f9f;font-weight:750;text-align:right;max-width:220px}
+    .deal-source{
+      display:inline-flex;align-items:center;justify-content:center;height:30px;
+      padding:0 11px;border:1px solid #bfd0fa;border-radius:7px;color:var(--primary);
+      background:#fff;text-decoration:none;font-size:11px;font-weight:800;white-space:nowrap;
+    }
+    .deal-source:hover{background:var(--primary-soft)}
+    .deal-source.is-disabled,.source.is-disabled{
+      border-color:#d5dbe4;background:#f4f6f8;color:#9aa3af;cursor:not-allowed;
+    }
+
+    .filter-panel{padding:16px 20px;margin-bottom:16px}
+    .filter-header{
+      display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;
+    }
+    .filter-title{font-size:13px;font-weight:800}
+    .filter-guide{font-size:11px;color:var(--muted)}
+    .filter-grid{
+      display:grid;grid-template-columns:1.15fr .85fr 1fr 1fr 1fr;gap:10px;align-items:end;
+    }
+    .field label{display:block;font-size:11px;font-weight:700;color:#4b5563;margin:0 0 6px 2px}
+    input,select{
+      width:100%;height:40px;border:1px solid #d5dbe4;border-radius:8px;
+      padding:0 11px;background:#fff;color:var(--text);outline:none;
+    }
+    input:focus,select:focus{border-color:#7297ef;box-shadow:0 0 0 3px rgba(36,87,214,.09)}
+
+    .result-panel{overflow:hidden}
+    .result-head{
+      min-height:67px;padding:13px 18px;border-bottom:1px solid var(--line);
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    }
+    .result-title{font-size:16px;font-weight:780}
+    .result-title span{color:var(--primary)}
+    .result-sub{font-size:12px;color:var(--muted);margin-top:3px}
+    .head-actions{display:flex;gap:8px;align-items:center}
+    .head-actions select{width:178px;height:38px}
+    .btn{
+      height:38px;border:0;border-radius:8px;padding:0 15px;font-weight:750;
+      cursor:pointer;white-space:nowrap;
+    }
+    .btn-dark{background:var(--navy);color:#fff}
+    .table-wrap{overflow:auto;max-height:610px}
+    table{width:100%;border-collapse:separate;border-spacing:0;min-width:1180px;font-size:13px}
+    th{
+      position:sticky;top:0;z-index:2;background:#f8fafc;color:#4b5563;
+      font-size:11px;font-weight:780;text-align:left;padding:11px 13px;
+      border-bottom:1px solid var(--line);white-space:nowrap;
+    }
+    td{padding:13px;border-bottom:1px solid #edf0f4;vertical-align:top}
+    tbody tr:hover{background:#fafcff}
+    .company{font-weight:800;white-space:nowrap}
+    .company-sub{font-size:11px;color:var(--muted);margin-top:3px}
+    .reason{font-weight:680;max-width:310px}
+    .reason-detail{font-size:11px;color:var(--muted);margin-top:4px;white-space:normal}
+    .action{max-width:300px;white-space:normal}
+    .action strong{color:#173f9f}
+    .metric{font-weight:800;white-space:nowrap}
+    .date{white-space:nowrap}
+    .chips{display:flex;gap:5px;flex-wrap:wrap;max-width:230px}
+    .chip{
+      display:inline-flex;align-items:center;border-radius:999px;padding:4px 7px;
+      font-size:10px;font-weight:750;background:#eef2f7;color:#4b5563;white-space:nowrap;
+    }
+    .chip.blue{background:var(--primary-soft);color:var(--primary)}
+    .chip.green{background:var(--green-soft);color:var(--green)}
+    .chip.orange{background:var(--orange-soft);color:var(--orange)}
+    .source{
+      display:inline-flex;align-items:center;justify-content:center;height:29px;
+      padding:0 9px;border:1px solid #bfd0fa;border-radius:7px;color:var(--primary);
+      text-decoration:none;font-size:11px;font-weight:750;white-space:nowrap;
+    }
+    .empty{padding:70px 20px;text-align:center;color:var(--muted)}
+    .foot{font-size:11px;color:var(--muted);text-align:right;margin-top:9px}
+    @media(max-width:1200px){
+      .purpose-row{grid-template-columns:repeat(3,1fr)}
+      .upcoming-grid{grid-template-columns:1fr}
+      .filter-grid{grid-template-columns:repeat(2,1fr)}
+      .hero{align-items:flex-start;flex-direction:column;gap:8px}
+      .status-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:760px){
+      .status-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">O</div>
+      <div>
+        <div class="brand-title">법인영업 타깃 발굴</div>
+        <div class="brand-sub">공시 데이터 기반 영업 대상 기업 조회</div>
+      </div>
+    </div>
+    <div class="top-meta" id="topMeta">데이터 로딩 중...</div>
+  </header>
+
+  <main class="page">
+    <div class="hero">
+      <div>
+        <h1>어떤 영업을 할지 선택하세요</h1>
+        <p>선택하는 즉시 가장 먼저 접촉해야 할 영업건부터 보여줍니다.</p>
+      </div>
+      <div class="demo" id="heroNote">데이터 로딩 중...</div>
+    </div>
+
+    <section class="panel status-panel">
+      <div class="status-top">
+        <div>
+          <div class="status-title">실데이터 전환 준비 상태</div>
+          <div class="status-note">이 화면은 정적 JSON을 읽는 GitHub Pages 구조로 바뀌어 있습니다. 지금 보이는 값은 시드 데이터이며, 같은 스키마에 실제 최신 공시 스냅샷만 넣으면 바로 실서비스형 데모로 전환됩니다.</div>
+        </div>
+      </div>
+      <div class="status-grid">
+        <div class="status-card">
+          <div class="status-kicker">데이터 모드</div>
+          <div class="status-value" id="statusMode">-</div>
+          <div class="status-copy">시드/실공시 상태를 구분해 표시합니다.</div>
+        </div>
+        <div class="status-card">
+          <div class="status-kicker">커버리지</div>
+          <div class="status-value" id="statusCoverage">-</div>
+          <div class="status-copy">기업 수와 영업 타깃 행 수를 함께 확인합니다.</div>
+        </div>
+        <div class="status-card">
+          <div class="status-kicker">다음 단계</div>
+          <div class="status-value" id="statusNext">-</div>
+          <div class="status-copy">실공시 스냅샷으로 바꾸기 위한 즉시 실행 항목입니다.</div>
+        </div>
+        <div class="status-card">
+          <div class="status-kicker">공시 링크</div>
+          <div class="status-value" id="statusSource">-</div>
+          <div class="status-copy">실공시 전환 시 행별 `rcept_no` 링크로 바뀝니다.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel purpose-panel">
+      <div class="section-label">영업 목적</div>
+      <div class="purpose-row" id="purposeRow"></div>
+    </section>
+
+    <section class="panel upcoming-panel">
+      <div class="upcoming-head">
+        <div>
+          <div class="upcoming-title" id="upcomingTitle">가장 먼저 접촉할 영업건</div>
+          <div class="upcoming-sub" id="upcomingSub"></div>
+        </div>
+        <div class="upcoming-badge">권장 영업일 빠른 순</div>
+      </div>
+      <div class="upcoming-grid" id="upcomingGrid"></div>
+    </section>
+
+    <section class="panel filter-panel">
+      <div class="filter-header">
+        <div class="filter-title">결과 좁히기</div>
+        <div class="filter-guide">선택 사항 · 조건을 바꾸면 즉시 반영됩니다.</div>
+      </div>
+      <div class="filter-grid">
+        <div class="field">
+          <label>기업명</label>
+          <input id="companySearch" placeholder="기업명 검색" />
+        </div>
+        <div class="field">
+          <label>시장</label>
+          <select id="market">
+            <option value="">전체</option>
+            <option value="KOSPI">코스피</option>
+            <option value="KOSDAQ">코스닥</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>업종</label>
+          <select id="industry"></select>
+        </div>
+        <div class="field">
+          <label id="filter1Label"></label>
+          <select id="filter1"></select>
+        </div>
+        <div class="field">
+          <label id="filter2Label"></label>
+          <select id="filter2"></select>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel result-panel">
+      <div class="result-head">
+        <div>
+          <div class="result-title">전체 대상 기업 <span id="count">0</span>개</div>
+          <div class="result-sub" id="resultSub"></div>
+        </div>
+        <div class="head-actions">
+          <select id="sort">
+            <option value="priority">권장 영업일 빠른 순</option>
+            <option value="amount">관련 규모 큰 순</option>
+            <option value="company">기업명 순</option>
+          </select>
+          <button class="btn btn-dark" id="download">CSV 다운로드</button>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>기업</th>
+              <th>왜 대상인가</th>
+              <th>관련 규모</th>
+              <th>권장 영업일 / D-day</th>
+              <th>제안 방향</th>
+              <th>활용 데이터</th>
+              <th>공시</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="foot">영업 목적을 선택하면 임박한 건을 먼저 확인합니다. 실공시 스냅샷이 연결되면 각 행은 최신 공시 원문 링크를 가집니다.</div>
+  </main>
+
+<script>
+const PURPOSES = {
+  investment: {
+    title:"금융상품 운용",
+    desc:"보유 금융상품의 만기·처분 자금 재투자",
+    upcoming:"만기 또는 처분 예정일이 가장 가까운 금융상품 운용 건입니다.",
+    filter1:{label:"금융자산 규모",options:[["","전체"],["1000","1,000억 이상"],["5000","5,000억 이상"],["10000","1조 이상"]]},
+    filter2:{label:"만기·처분 시점",options:[["","전체"],["3","3개월 이내"],["6","6개월 이내"],["12","12개월 이내"]]}
+  },
+  pension: {
+    title:"퇴직연금",
+    desc:"DB 부채·적립금 규모 기반 운용 영업",
+    upcoming:"적립률이 낮거나 적립금 규모가 커 우선 접촉할 퇴직연금 영업 건입니다.",
+    filter1:{label:"확정급여채무",options:[["","전체"],["1000","1,000억 이상"],["5000","5,000억 이상"],["10000","1조 이상"]]},
+    filter2:{label:"적립률",options:[["","전체"],["80","80% 미만"],["90","90% 미만"],["100","100% 미만"]]}
+  },
+  blockdeal: {
+    title:"블록딜",
+    desc:"자사주 처분·보호예수 해제 물량 영업",
+    upcoming:"자사주 처분 또는 보호예수 해제가 가장 가까운 블록딜 영업 건입니다.",
+    filter1:{label:"이벤트 유형",options:[["","전체"],["자사주 처분","자사주 처분"],["보호예수 해제","보호예수 해제"]]},
+    filter2:{label:"이벤트 시점",options:[["","전체"],["3","3개월 이내"],["6","6개월 이내"],["12","12개월 이내"]]}
+  },
+  pledge: {
+    title:"주식담보대출",
+    desc:"대주주·특수관계인 담보대출 영업",
+    upcoming:"대출 만기가 가장 가까운 대주주·특수관계인 주식담보대출 건입니다.",
+    filter1:{label:"대출금액",options:[["","전체"],["100","100억 이상"],["500","500억 이상"],["1000","1,000억 이상"]]},
+    filter2:{label:"대출 만기",options:[["","전체"],["3","3개월 이내"],["6","6개월 이내"],["12","12개월 이내"]]}
+  },
+  employee: {
+    title:"임직원 주식보상",
+    desc:"주식 지급·행사 시점 기반 임직원 자산관리",
+    upcoming:"주식보상 지급 또는 행사가 가장 가까운 임직원 자산관리 건입니다.",
+    filter1:{label:"보상 유형",options:[["","전체"],["RSU","RSU"],["RSA","RSA"],["스톡옵션","스톡옵션"],["PSU","PSU"]]},
+    filter2:{label:"지급·행사 시점",options:[["","전체"],["3","3개월 이내"],["6","6개월 이내"],["12","12개월 이내"]]}
+  },
+  wealth: {
+    title:"대주주·퇴직임원 자금운용",
+    desc:"지분 매각대금·퇴직금 운용 영업",
+    upcoming:"대주주 변경 또는 임원 퇴임으로 현금 유입 가능성이 최근 발생한 건입니다.",
+    filter1:{label:"자금 발생 이벤트",options:[["","전체"],["대주주 변경","대주주 변경"],["임원 퇴임","임원 퇴임"]]},
+    filter2:{label:"이벤트 발생 시점",options:[["","전체"],["3","최근 3개월"],["6","최근 6개월"],["12","최근 12개월"]]}
+  }
+};
+const chipMap={
+  "금융자산":"blue","투자이력":"green","주식담보":"orange","자사주":"blue",
+  "보호예수":"orange","퇴직연금":"green","주식보상":"blue","대주주변경":"orange","임원퇴임":"green"
+};
+
+function eok(v){
+  if(v>=10000){const j=v/10000;return (Number.isInteger(j)?j.toFixed(0):j.toFixed(1))+"조원"}
+  return v.toLocaleString("ko-KR")+"억원";
+}
+let active="investment";
+let rows=[];
+let allRows=[];
+let metadata={};
+
+const el={
+  topMeta:document.getElementById("topMeta"),
+  heroNote:document.getElementById("heroNote"),
+  statusMode:document.getElementById("statusMode"),
+  statusCoverage:document.getElementById("statusCoverage"),
+  statusNext:document.getElementById("statusNext"),
+  statusSource:document.getElementById("statusSource"),
+  purposeRow:document.getElementById("purposeRow"),
+  upcomingSub:document.getElementById("upcomingSub"),
+  upcomingGrid:document.getElementById("upcomingGrid"),
+  companySearch:document.getElementById("companySearch"),
+  market:document.getElementById("market"),
+  industry:document.getElementById("industry"),
+  filter1Label:document.getElementById("filter1Label"),
+  filter1:document.getElementById("filter1"),
+  filter2Label:document.getElementById("filter2Label"),
+  filter2:document.getElementById("filter2"),
+  count:document.getElementById("count"),
+  resultSub:document.getElementById("resultSub"),
+  tbody:document.getElementById("tbody"),
+  sort:document.getElementById("sort")
+};
+
+function escapeHtml(value){
+  return String(value ?? "")
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#39;");
+}
+
+function sourceFor(row){
+  if(row.viewerUrl) return {viewerUrl:row.viewerUrl,rceptNo:row.rceptNo||null};
+  if(Array.isArray(row.sourceReports) && row.sourceReports.length) return row.sourceReports[0];
+  return null;
+}
+
+function renderSource(className,row){
+  const source=sourceFor(row);
+  if(!source || !source.viewerUrl){
+    return `<span class="${className} is-disabled">원문 준비중</span>`;
+  }
+  return `<a class="${className}" href="${escapeHtml(source.viewerUrl)}" target="_blank" rel="noopener">원문 보기</a>`;
+}
+
+function updateHeader(){
+  const companyCount = new Set(allRows.map(row=>row.companyId||row.name)).size;
+  const rowCount = allRows.length;
+  el.topMeta.textContent = metadata.topMeta || `${companyCount}개사 · 기준일 ${metadata.snapshotDateDisplay || "2026.08.06"}`;
+  el.heroNote.textContent = metadata.heroNote || "※ 정적 스냅샷 데이터";
+  el.statusMode.textContent = metadata.dataModeLabel || metadata.dataMode || "-";
+  el.statusCoverage.textContent = `${companyCount}개사 / ${rowCount.toLocaleString("ko-KR")}행`;
+  el.statusNext.textContent = metadata.nextAction || "-";
+  el.statusSource.textContent = metadata.sourceSummary || "-";
+}
+
+function init(){
+  const industries=[...new Set(allRows.map(x=>x.industry).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"ko"));
+  el.industry.innerHTML='<option value="">전체</option>'+industries
+    .map(x=>`<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join("");
+  updateHeader();
+  renderPurpose();
+  setPurpose(active);
+}
+function renderPurpose(){
+  el.purposeRow.innerHTML=Object.entries(PURPOSES).map(([k,p])=>`
+    <button class="purpose-btn ${k===active?"active":""}" data-key="${k}">
+      <div class="purpose-title">${p.title}</div>
+      <div class="purpose-desc">${p.desc}</div>
+    </button>`).join("");
+  document.querySelectorAll(".purpose-btn").forEach(b=>b.onclick=()=>setPurpose(b.dataset.key));
+}
+function optionsHtml(options){return options.map(([v,t])=>`<option value="${v}">${t}</option>`).join("")}
+function setPurpose(key){
+  active=key;
+  el.companySearch.value="";
+  el.market.value="";
+  el.industry.value="";
+  renderPurpose();
+  const p=PURPOSES[key];
+  el.upcomingSub.textContent=p.upcoming;
+  el.filter1Label.textContent=p.filter1.label;
+  el.filter1.innerHTML=optionsHtml(p.filter1.options);
+  el.filter2Label.textContent=p.filter2.label;
+  el.filter2.innerHTML=optionsHtml(p.filter2.options);
+  el.sort.value="priority";
+  apply();
+}
+function apply(){
+  let data=allRows.filter(row=>row.purpose===active);
+  const q=el.companySearch.value.trim().toLowerCase();
+  const market=el.market.value, industry=el.industry.value;
+  const f1=el.filter1.value, f2=el.filter2.value;
+
+  data=data.filter(r=>
+    (!q||r.name.toLowerCase().includes(q))&&
+    (!market||r.market===market)&&
+    (!industry||r.industry===industry)
+  );
+
+  if(active==="investment"){
+    const min=Number(f1||0), months=Number(f2||0);
+    data=data.filter(r=>r.amount>=min&&(!months||r.months<=months));
+  }else if(active==="pension"){
+    const min=Number(f1||0), max=Number(f2||0);
+    data=data.filter(r=>r.amount>=min&&(!max||r.rate<max));
+  }else if(active==="blockdeal"){
+    const type=f1, months=Number(f2||0);
+    data=data.filter(r=>(!type||r.eventType===type)&&(!months||r.months<=months));
+  }else if(active==="pledge"){
+    const min=Number(f1||0), months=Number(f2||0);
+    data=data.filter(r=>r.amount>=min&&(!months||r.months<=months));
+  }else if(active==="employee"){
+    const type=f1, months=Number(f2||0);
+    data=data.filter(r=>(!type||r.compType===type)&&(!months||r.months<=months));
+  }else{
+    const type=f1, months=Number(f2||0);
+    data=data.filter(r=>(!type||r.changeType===type)&&(!months||r.months<=months));
+  }
+
+  const sort=el.sort.value;
+  if(sort==="priority") data.sort((a,b)=>(a.dateTs||0)-(b.dateTs||0) || (b.amount||0)-(a.amount||0));
+  if(sort==="amount") data.sort((a,b)=>(b.amount||0)-(a.amount||0));
+  if(sort==="company") data.sort((a,b)=>a.name.localeCompare(b.name,"ko"));
+
+  rows=data;
+  renderUpcoming();
+  renderTable();
+}
+function metric(r){
+  if(r.metricDisplay) return r.metricDisplay;
+  if(active==="employee") return r.qty.toLocaleString("ko-KR")+"주";
+  if(typeof r.amount==="number") return eok(r.amount);
+  return "-";
+}
+function renderUpcoming(){
+  const top=[...rows].sort((a,b)=>(a.dateTs||0)-(b.dateTs||0) || (b.amount||0)-(a.amount||0)).slice(0,3);
+  if(!top.length){
+    el.upcomingGrid.innerHTML='<div class="empty" style="grid-column:1/-1;padding:35px 20px">조건에 맞는 임박 영업건이 없습니다.</div>';
+    return;
+  }
+  el.upcomingGrid.innerHTML=top.map((r,i)=>`
+    <article class="deal-card">
+      <div class="deal-rank">${i+1}</div>
+      <div class="deal-company">${escapeHtml(r.name)}</div>
+      <div class="deal-meta">${escapeHtml(r.market)} · ${escapeHtml(r.industry)}</div>
+      <div class="deal-reason">${escapeHtml(r.reason)}</div>
+      <div class="deal-detail">${escapeHtml(r.detail)}</div>
+      <div class="deal-bottom">
+        <div>
+          <div class="deal-date-label">권장 영업일 / D-day</div>
+          <div class="deal-date">${escapeHtml(r.timing)}</div>
+        </div>
+        <div class="deal-right">
+          <div class="deal-action">${escapeHtml(r.action)}</div>
+          ${renderSource("deal-source",r)}
+        </div>
+      </div>
+    </article>`).join("");
+}
+function renderTable(){
+  el.count.textContent=rows.length.toLocaleString("ko-KR");
+  const snapshot=metadata.snapshotDateDisplay||"2026.08.06";
+  el.resultSub.textContent=`${PURPOSES[active].title} 영업에 바로 활용할 수 있는 대상과 근거입니다. 기준 스냅샷 ${snapshot}.`;
+  if(!rows.length){
+    el.tbody.innerHTML='<tr><td colspan="7"><div class="empty">조건에 맞는 기업이 없습니다.</div></td></tr>';
+    return;
+  }
+  el.tbody.innerHTML=rows.map(r=>`
+    <tr>
+      <td>
+        <div class="company">${escapeHtml(r.name)}</div>
+        <div class="company-sub">${escapeHtml(r.market)} · ${escapeHtml(r.industry)}</div>
+      </td>
+      <td>
+        <div class="reason">${escapeHtml(r.reason)}</div>
+        <div class="reason-detail">${escapeHtml(r.detail)}</div>
+      </td>
+      <td class="metric">${metric(r)}</td>
+      <td class="date">${escapeHtml(r.timing)}</td>
+      <td class="action"><strong>${escapeHtml(r.action)}</strong></td>
+      <td><div class="chips">${(r.chips||[]).map(c=>`<span class="chip ${chipMap[c]||""}">${escapeHtml(c)}</span>`).join("")}</div></td>
+      <td>${renderSource("source",r)}</td>
+    </tr>`).join("");
+}
+function download(){
+  const headers=["기업명","시장","업종","왜 대상인가","상세 근거","관련 규모","권장 영업일 / D-day","제안 방향","활용 데이터"];
+  const csv=[headers,...rows.map(r=>[
+    r.name,r.market,r.industry,r.reason,r.detail,metric(r),r.timing,r.action,r.chips.join("|")
+  ])].map(row=>row.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(",")).join("\n");
+  const blob=new Blob(["\ufeff"+csv],{type:"text/csv;charset=utf-8"});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement("a");
+  a.href=url;a.download=`${PURPOSES[active].title}_영업대상.csv`;a.click();
+  URL.revokeObjectURL(url);
+}
+
+["input","change"].forEach(evt=>{
+  el.companySearch.addEventListener(evt,apply);
+});
+[el.market,el.industry,el.filter1,el.filter2,el.sort].forEach(x=>x.addEventListener("change",apply));
+document.getElementById("download").onclick=download;
+
+async function loadJson(path){
+  const response = await fetch(path,{cache:"no-store"});
+  if(!response.ok) throw new Error(`${path} 로드 실패`);
+  return response.json();
+}
+
+async function loadFirstAvailable(paths){
+  for(const path of paths){
+    try{
+      return await loadJson(path);
+    }catch(_error){
+      continue;
+    }
+  }
+  throw new Error(`로드 가능한 파일이 없습니다: ${paths.join(", ")}`);
+}
+
+async function loadOptionalJson(path){
+  try{
+    return await loadJson(path);
+  }catch(_error){
+    return null;
+  }
+}
+
+function mergeRows(baseRows,enrichedRows){
+  const enrichedById = new Map((enrichedRows || []).map(row => [row.id, row]));
+  return (baseRows || []).map(row => {
+    const enriched = enrichedById.get(row.id);
+    return enriched ? {...row, ...enriched} : row;
+  });
+}
+
+async function bootstrap(){
+  try{
+    const [baseMeta,baseTargets,enrichedMeta,enrichedTargets] = await Promise.all([
+      loadJson("./data/metadata.json"),
+      loadJson("./data/targets.json"),
+      loadOptionalJson("./data/metadata_enriched.json"),
+      loadOptionalJson("./data/targets_enriched.json")
+    ]);
+    metadata = {...baseMeta, ...(enrichedMeta || {})};
+    allRows = mergeRows(
+      Array.isArray(baseTargets) ? baseTargets : [],
+      Array.isArray(enrichedTargets) ? enrichedTargets : []
+    );
+    init();
+  }catch(error){
+    console.error(error);
+    el.topMeta.textContent = "데이터 로드 실패";
+    el.heroNote.textContent = "정적 JSON 파일을 읽지 못했습니다.";
+    el.statusMode.textContent = "오류";
+    el.statusCoverage.textContent = "-";
+    el.statusNext.textContent = "docs/data/*.json 생성 여부 확인";
+    el.statusSource.textContent = "스크립트 실행 필요";
+    el.upcomingGrid.innerHTML='<div class="empty" style="grid-column:1/-1;padding:35px 20px">데이터를 불러오지 못했습니다.</div>';
+    el.tbody.innerHTML='<tr><td colspan="7"><div class="empty">docs/data/targets.json 을 확인해주세요.</div></td></tr>';
+  }
+}
+
+bootstrap();
+</script>
+</body>
+</html>

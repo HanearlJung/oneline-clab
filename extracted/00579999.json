@@ -1,0 +1,163 @@
+{
+  "corp_code": "00579999",
+  "stock_code": "098460",
+  "name": "고영",
+  "market": "KOSDAQ",
+  "industry": "특수 목적용 기계 제조업",
+  "source": {
+    "rcp_no": "20260312000804",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260312",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 450542,
+      "amount": 18652438800.0,
+      "period_start": "2026-05-14",
+      "period_end": "2026-08-13",
+      "purpose": "신사업 확대 및 신기술 도입을 위한 경영상 활용 목적",
+      "method": "시간외대량매매",
+      "held_shares": 2493005,
+      "rcp_no": "20260513000772"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 450542,
+      "amount": 18652438800.0,
+      "period_start": "2026-05-14",
+      "period_end": "2026-08-13",
+      "purpose": "신사업 확대 및 신기술 도입을 위한 경영상 활용 목적",
+      "method": "시간외대량매매",
+      "held_shares": 2493005,
+      "rcp_no": "20260514000691"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "(주)고영홀딩스",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "국민은행",
+      "shares": 600000,
+      "contract_date": "2026-07-17",
+      "maturity": "2027-07-17",
+      "ratio": 0.88,
+      "loan_amount": 10000000000.0,
+      "unit": "원",
+      "debtor": "(주)고영홀딩스",
+      "rcp_no": "20260723000436"
+    },
+    {
+      "holder": "(주)고영홀딩스",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "하나은행",
+      "shares": 1000000,
+      "contract_date": "2026-07-15",
+      "maturity": "2027-07-15",
+      "ratio": 1.47,
+      "loan_amount": 23000000000.0,
+      "unit": "원",
+      "debtor": "(주)고영홀딩스",
+      "rcp_no": "20260723000436"
+    },
+    {
+      "holder": "(주)고영홀딩스",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "국민은행",
+      "shares": 930000,
+      "contract_date": "2025-07-31",
+      "maturity": "2026-07-31",
+      "ratio": 1.36,
+      "loan_amount": 10000000000.0,
+      "unit": "원",
+      "debtor": "(주)고영홀딩스",
+      "rcp_no": "20260723000436"
+    },
+    {
+      "holder": "(주)고영홀딩스",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "신한은행",
+      "shares": 934435,
+      "contract_date": "2025-07-28",
+      "maturity": "2026-07-28",
+      "ratio": 1.37,
+      "loan_amount": 10000000000.0,
+      "unit": "원",
+      "debtor": "(주)고영홀딩스",
+      "rcp_no": "20260723000436"
+    },
+    {
+      "holder": "(주)고영홀딩스",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "국민은행",
+      "shares": 600000,
+      "contract_date": "2026-07-17",
+      "maturity": "2027-07-17",
+      "ratio": 0.88,
+      "loan_amount": 10000000000.0,
+      "unit": "원",
+      "debtor": "(주)고영홀딩스",
+      "rcp_no": "20260804000498"
+    },
+    {
+      "holder": "(주)고영홀딩스",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "하나은행",
+      "shares": 1000000,
+      "contract_date": "2026-07-15",
+      "maturity": "2027-07-15",
+      "ratio": 1.47,
+      "loan_amount": 23000000000.0,
+      "unit": "원",
+      "debtor": "(주)고영홀딩스",
+      "rcp_no": "20260804000498"
+    },
+    {
+      "holder": "(주)고영홀딩스",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "국민은행",
+      "shares": 600000,
+      "contract_date": "2026-07-31",
+      "maturity": "2027-07-31",
+      "ratio": 0.88,
+      "loan_amount": 10000000000.0,
+      "unit": "원",
+      "debtor": "(주)고영홀딩스",
+      "rcp_no": "20260804000498"
+    },
+    {
+      "holder": "(주)고영홀딩스",
+      "relation": "본인",
+      "contract_type": "주식담보대출",
+      "counterparty": "신한은행",
+      "shares": 934435,
+      "contract_date": "2026-07-28",
+      "maturity": "2027-07-28",
+      "ratio": 1.37,
+      "loan_amount": 10000000000.0,
+      "unit": "원",
+      "debtor": "(주)고영홀딩스",
+      "rcp_no": "20260804000498"
+    }
+  ]
+}

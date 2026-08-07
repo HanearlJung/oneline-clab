@@ -1,0 +1,107 @@
+{
+  "corp_code": "00888347",
+  "stock_code": "145020",
+  "name": "휴젤",
+  "market": "KOSDAQ",
+  "industry": "기초 의약물질 제조업",
+  "source": {
+    "rcp_no": "20260320000349",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260320",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": null,
+  "pension": null,
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 2000,
+      "amount": 526000000.0,
+      "period_start": "2025-11-12",
+      "period_end": "2027-02-14",
+      "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
+      "method": "기타",
+      "held_shares": 1500400,
+      "rcp_no": "20251104000314"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 15643,
+      "amount": 2041896433.0,
+      "period_start": "2026-08-21",
+      "period_end": "2029-03-30",
+      "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
+      "method": "기타",
+      "held_shares": 1498400,
+      "rcp_no": "20260806000359"
+    }
+  ],
+  "pledge": [
+    {
+      "holder": "Aphrodite Acquisition Holdings LLC",
+      "relation": "본인",
+      "contract_type": "주식근질권설정계약",
+      "counterparty": "삼성증권 주식회사, 에프엔헤베 주식회사",
+      "shares": 5355651,
+      "contract_date": "2026-06-17",
+      "maturity": "2029-06-17",
+      "ratio": 42.79,
+      "loan_amount": 675000000000.0,
+      "unit": "원",
+      "debtor": "Aphrodite Acquisition Holdings LLC",
+      "rcp_no": "20260702000319"
+    },
+    {
+      "holder": "Aphrodite Acquisition Holdings LLC",
+      "relation": "본인",
+      "contract_type": "전환사채근질권설정계약",
+      "counterparty": "삼성증권 주식회사, 에프엔헤베 주식회사",
+      "shares": 211140,
+      "contract_date": "2026-06-17",
+      "maturity": "2029-06-17",
+      "ratio": 1.69,
+      "loan_amount": 90000000000.0,
+      "unit": "원",
+      "debtor": "Aphrodite Acquisition Holdings LLC",
+      "rcp_no": "20260702000319"
+    },
+    {
+      "holder": "Aphrodite Acquisition Holdings LLC",
+      "relation": "본인",
+      "contract_type": "주식근질권설정계약",
+      "counterparty": "삼성증권 주식회사, 에프엔헤베 주식회사",
+      "shares": 5355651,
+      "contract_date": "2026-06-17",
+      "maturity": "2029-06-17",
+      "ratio": 42.79,
+      "loan_amount": 675000000000.0,
+      "unit": "원",
+      "debtor": "Aphrodite Acquisition Holdings LLC",
+      "rcp_no": "20260804000276"
+    },
+    {
+      "holder": "Aphrodite Acquisition Holdings LLC",
+      "relation": "본인",
+      "contract_type": "전환사채근질권설정계약",
+      "counterparty": "삼성증권 주식회사, 에프엔헤베 주식회사",
+      "shares": 211140,
+      "contract_date": "2026-07-28",
+      "maturity": "2029-06-17",
+      "ratio": 1.69,
+      "loan_amount": 90000000000.0,
+      "unit": "원",
+      "debtor": "Aphrodite Acquisition Holdings LLC",
+      "rcp_no": "20260804000276"
+    }
+  ]
+}

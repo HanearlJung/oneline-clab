@@ -1,0 +1,1002 @@
+[
+  {
+    "companyId": "seed-001",
+    "name": "삼성전자",
+    "market": "KOSDAQ",
+    "industry": "전기전자",
+    "seedRank": 1,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-002",
+    "name": "SK하이닉스",
+    "market": "KOSPI",
+    "industry": "반도체",
+    "seedRank": 2,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-003",
+    "name": "현대자동차",
+    "market": "KOSPI",
+    "industry": "자동차",
+    "seedRank": 3,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-004",
+    "name": "기아",
+    "market": "KOSPI",
+    "industry": "인터넷",
+    "seedRank": 4,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-005",
+    "name": "NAVER",
+    "market": "KOSPI",
+    "industry": "바이오",
+    "seedRank": 5,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-006",
+    "name": "카카오",
+    "market": "KOSDAQ",
+    "industry": "철강",
+    "seedRank": 6,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-007",
+    "name": "LG에너지솔루션",
+    "market": "KOSPI",
+    "industry": "금융",
+    "seedRank": 7,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-008",
+    "name": "삼성바이오로직스",
+    "market": "KOSPI",
+    "industry": "화학",
+    "seedRank": 8,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-009",
+    "name": "셀트리온",
+    "market": "KOSPI",
+    "industry": "통신",
+    "seedRank": 9,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-010",
+    "name": "POSCO홀딩스",
+    "market": "KOSPI",
+    "industry": "게임",
+    "seedRank": 10,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-011",
+    "name": "KB금융",
+    "market": "KOSDAQ",
+    "industry": "미디어",
+    "seedRank": 11,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-012",
+    "name": "신한지주",
+    "market": "KOSPI",
+    "industry": "식품",
+    "seedRank": 12,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-013",
+    "name": "하나금융지주",
+    "market": "KOSPI",
+    "industry": "유통",
+    "seedRank": 13,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-014",
+    "name": "우리금융지주",
+    "market": "KOSPI",
+    "industry": "화장품",
+    "seedRank": 14,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-015",
+    "name": "삼성생명",
+    "market": "KOSPI",
+    "industry": "제약",
+    "seedRank": 15,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-016",
+    "name": "삼성화재",
+    "market": "KOSDAQ",
+    "industry": "조선",
+    "seedRank": 16,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-017",
+    "name": "LG화학",
+    "market": "KOSPI",
+    "industry": "항공",
+    "seedRank": 17,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-018",
+    "name": "삼성SDI",
+    "market": "KOSPI",
+    "industry": "호텔·레저",
+    "seedRank": 18,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-019",
+    "name": "LG전자",
+    "market": "KOSPI",
+    "industry": "패션",
+    "seedRank": 19,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-020",
+    "name": "현대모비스",
+    "market": "KOSPI",
+    "industry": "전력기기",
+    "seedRank": 20,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-021",
+    "name": "한화에어로스페이스",
+    "market": "KOSDAQ",
+    "industry": "건설",
+    "seedRank": 21,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-022",
+    "name": "두산에너빌리티",
+    "market": "KOSPI",
+    "industry": "에너지",
+    "seedRank": 22,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-023",
+    "name": "한국전력",
+    "market": "KOSPI",
+    "industry": "전기전자",
+    "seedRank": 23,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-024",
+    "name": "HMM",
+    "market": "KOSPI",
+    "industry": "반도체",
+    "seedRank": 24,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-025",
+    "name": "KT",
+    "market": "KOSPI",
+    "industry": "자동차",
+    "seedRank": 25,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-026",
+    "name": "SK텔레콤",
+    "market": "KOSDAQ",
+    "industry": "인터넷",
+    "seedRank": 26,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-027",
+    "name": "크래프톤",
+    "market": "KOSPI",
+    "industry": "바이오",
+    "seedRank": 27,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-028",
+    "name": "넷마블",
+    "market": "KOSPI",
+    "industry": "철강",
+    "seedRank": 28,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-029",
+    "name": "엔씨소프트",
+    "market": "KOSPI",
+    "industry": "금융",
+    "seedRank": 29,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-030",
+    "name": "카카오게임즈",
+    "market": "KOSPI",
+    "industry": "화학",
+    "seedRank": 30,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-031",
+    "name": "하이브",
+    "market": "KOSDAQ",
+    "industry": "통신",
+    "seedRank": 31,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-032",
+    "name": "JYP Ent.",
+    "market": "KOSPI",
+    "industry": "게임",
+    "seedRank": 32,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-033",
+    "name": "에스엠",
+    "market": "KOSPI",
+    "industry": "미디어",
+    "seedRank": 33,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-034",
+    "name": "CJ ENM",
+    "market": "KOSPI",
+    "industry": "식품",
+    "seedRank": 34,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-035",
+    "name": "CJ제일제당",
+    "market": "KOSPI",
+    "industry": "유통",
+    "seedRank": 35,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-036",
+    "name": "오리온",
+    "market": "KOSDAQ",
+    "industry": "화장품",
+    "seedRank": 36,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-037",
+    "name": "농심",
+    "market": "KOSPI",
+    "industry": "제약",
+    "seedRank": 37,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-038",
+    "name": "오뚜기",
+    "market": "KOSPI",
+    "industry": "조선",
+    "seedRank": 38,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-039",
+    "name": "이마트",
+    "market": "KOSPI",
+    "industry": "항공",
+    "seedRank": 39,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-040",
+    "name": "신세계",
+    "market": "KOSPI",
+    "industry": "호텔·레저",
+    "seedRank": 40,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-041",
+    "name": "롯데쇼핑",
+    "market": "KOSDAQ",
+    "industry": "패션",
+    "seedRank": 41,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-042",
+    "name": "아모레퍼시픽",
+    "market": "KOSPI",
+    "industry": "전력기기",
+    "seedRank": 42,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-043",
+    "name": "LG생활건강",
+    "market": "KOSPI",
+    "industry": "건설",
+    "seedRank": 43,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-044",
+    "name": "코스맥스",
+    "market": "KOSPI",
+    "industry": "에너지",
+    "seedRank": 44,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-045",
+    "name": "한국콜마",
+    "market": "KOSPI",
+    "industry": "전기전자",
+    "seedRank": 45,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-046",
+    "name": "유한양행",
+    "market": "KOSDAQ",
+    "industry": "반도체",
+    "seedRank": 46,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-047",
+    "name": "한미약품",
+    "market": "KOSPI",
+    "industry": "자동차",
+    "seedRank": 47,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-048",
+    "name": "대웅제약",
+    "market": "KOSPI",
+    "industry": "인터넷",
+    "seedRank": 48,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-049",
+    "name": "녹십자",
+    "market": "KOSPI",
+    "industry": "바이오",
+    "seedRank": 49,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-050",
+    "name": "SK바이오팜",
+    "market": "KOSPI",
+    "industry": "철강",
+    "seedRank": 50,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-051",
+    "name": "삼성E&A",
+    "market": "KOSDAQ",
+    "industry": "금융",
+    "seedRank": 51,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-052",
+    "name": "HD현대중공업",
+    "market": "KOSPI",
+    "industry": "화학",
+    "seedRank": 52,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-053",
+    "name": "HD한국조선해양",
+    "market": "KOSPI",
+    "industry": "통신",
+    "seedRank": 53,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-054",
+    "name": "한화오션",
+    "market": "KOSPI",
+    "industry": "게임",
+    "seedRank": 54,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-055",
+    "name": "현대로템",
+    "market": "KOSPI",
+    "industry": "미디어",
+    "seedRank": 55,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-056",
+    "name": "한국항공우주",
+    "market": "KOSDAQ",
+    "industry": "식품",
+    "seedRank": 56,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-057",
+    "name": "대한항공",
+    "market": "KOSPI",
+    "industry": "유통",
+    "seedRank": 57,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-058",
+    "name": "아시아나항공",
+    "market": "KOSPI",
+    "industry": "화장품",
+    "seedRank": 58,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-059",
+    "name": "제주항공",
+    "market": "KOSPI",
+    "industry": "제약",
+    "seedRank": 59,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-060",
+    "name": "호텔신라",
+    "market": "KOSPI",
+    "industry": "조선",
+    "seedRank": 60,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-061",
+    "name": "강원랜드",
+    "market": "KOSDAQ",
+    "industry": "항공",
+    "seedRank": 61,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-062",
+    "name": "파라다이스",
+    "market": "KOSPI",
+    "industry": "호텔·레저",
+    "seedRank": 62,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-063",
+    "name": "GS리테일",
+    "market": "KOSPI",
+    "industry": "패션",
+    "seedRank": 63,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-064",
+    "name": "BGF리테일",
+    "market": "KOSPI",
+    "industry": "전력기기",
+    "seedRank": 64,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-065",
+    "name": "현대백화점",
+    "market": "KOSPI",
+    "industry": "건설",
+    "seedRank": 65,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-066",
+    "name": "F&F",
+    "market": "KOSDAQ",
+    "industry": "에너지",
+    "seedRank": 66,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-067",
+    "name": "휠라홀딩스",
+    "market": "KOSPI",
+    "industry": "전기전자",
+    "seedRank": 67,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-068",
+    "name": "한섬",
+    "market": "KOSPI",
+    "industry": "반도체",
+    "seedRank": 68,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-069",
+    "name": "영원무역",
+    "market": "KOSPI",
+    "industry": "자동차",
+    "seedRank": 69,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-070",
+    "name": "LS ELECTRIC",
+    "market": "KOSPI",
+    "industry": "인터넷",
+    "seedRank": 70,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-071",
+    "name": "효성중공업",
+    "market": "KOSDAQ",
+    "industry": "바이오",
+    "seedRank": 71,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-072",
+    "name": "대한전선",
+    "market": "KOSPI",
+    "industry": "철강",
+    "seedRank": 72,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-073",
+    "name": "일진전기",
+    "market": "KOSPI",
+    "industry": "금융",
+    "seedRank": 73,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-074",
+    "name": "두산밥캣",
+    "market": "KOSPI",
+    "industry": "화학",
+    "seedRank": 74,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-075",
+    "name": "현대건설",
+    "market": "KOSPI",
+    "industry": "통신",
+    "seedRank": 75,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-076",
+    "name": "DL이앤씨",
+    "market": "KOSDAQ",
+    "industry": "게임",
+    "seedRank": 76,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-077",
+    "name": "GS건설",
+    "market": "KOSPI",
+    "industry": "미디어",
+    "seedRank": 77,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-078",
+    "name": "대우건설",
+    "market": "KOSPI",
+    "industry": "식품",
+    "seedRank": 78,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-079",
+    "name": "삼성물산",
+    "market": "KOSPI",
+    "industry": "유통",
+    "seedRank": 79,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-080",
+    "name": "SK이노베이션",
+    "market": "KOSPI",
+    "industry": "화장품",
+    "seedRank": 80,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-081",
+    "name": "S-Oil",
+    "market": "KOSDAQ",
+    "industry": "제약",
+    "seedRank": 81,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-082",
+    "name": "GS",
+    "market": "KOSPI",
+    "industry": "조선",
+    "seedRank": 82,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-083",
+    "name": "롯데케미칼",
+    "market": "KOSPI",
+    "industry": "항공",
+    "seedRank": 83,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-084",
+    "name": "금호석유",
+    "market": "KOSPI",
+    "industry": "호텔·레저",
+    "seedRank": 84,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-085",
+    "name": "코오롱인더",
+    "market": "KOSPI",
+    "industry": "패션",
+    "seedRank": 85,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-086",
+    "name": "한화솔루션",
+    "market": "KOSDAQ",
+    "industry": "전력기기",
+    "seedRank": 86,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-087",
+    "name": "OCI홀딩스",
+    "market": "KOSPI",
+    "industry": "건설",
+    "seedRank": 87,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-088",
+    "name": "풍산",
+    "market": "KOSPI",
+    "industry": "에너지",
+    "seedRank": 88,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-089",
+    "name": "고려아연",
+    "market": "KOSPI",
+    "industry": "전기전자",
+    "seedRank": 89,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-090",
+    "name": "삼성증권",
+    "market": "KOSPI",
+    "industry": "반도체",
+    "seedRank": 90,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-091",
+    "name": "미래에셋증권",
+    "market": "KOSDAQ",
+    "industry": "자동차",
+    "seedRank": 91,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-092",
+    "name": "NH투자증권",
+    "market": "KOSPI",
+    "industry": "인터넷",
+    "seedRank": 92,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-093",
+    "name": "한국금융지주",
+    "market": "KOSPI",
+    "industry": "바이오",
+    "seedRank": 93,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-094",
+    "name": "키움증권",
+    "market": "KOSPI",
+    "industry": "철강",
+    "seedRank": 94,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-095",
+    "name": "DB손해보험",
+    "market": "KOSPI",
+    "industry": "금융",
+    "seedRank": 95,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-096",
+    "name": "현대해상",
+    "market": "KOSDAQ",
+    "industry": "화학",
+    "seedRank": 96,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-097",
+    "name": "메리츠금융지주",
+    "market": "KOSPI",
+    "industry": "통신",
+    "seedRank": 97,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-098",
+    "name": "카카오뱅크",
+    "market": "KOSPI",
+    "industry": "게임",
+    "seedRank": 98,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-099",
+    "name": "기업은행",
+    "market": "KOSPI",
+    "industry": "미디어",
+    "seedRank": 99,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  },
+  {
+    "companyId": "seed-100",
+    "name": "에코프로비엠",
+    "market": "KOSPI",
+    "industry": "식품",
+    "seedRank": 100,
+    "corpCode": null,
+    "stockCode": null,
+    "snapshotDate": "2026-08-06"
+  }
+]

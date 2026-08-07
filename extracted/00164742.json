@@ -1,0 +1,79 @@
+{
+  "corp_code": "00164742",
+  "stock_code": "005380",
+  "name": "현대자동차",
+  "market": "KOSPI",
+  "industry": null,
+  "source": {
+    "rcp_no": "20260318001394",
+    "report_nm": "사업보고서 (2025.12)",
+    "rcept_dt": "20260318",
+    "as_of": "2025-12-31"
+  },
+  "financial_assets": {
+    "unit": "백만원",
+    "total": 182408055,
+    "amortized_cost": 173796927,
+    "fvoci": 4216611,
+    "fvtpl": 3271124,
+    "short_term_deposits": 6141882,
+    "cash": 18360566,
+    "excluded_finance_receivables": 134350592,
+    "products": [
+      "장단기금융상품",
+      "기타금융자산"
+    ],
+    "maturity_buckets": []
+  },
+  "stock_comp": null,
+  "shareholders": {
+    "largest": null,
+    "largest_ratio": null,
+    "change_date": null,
+    "prev_largest": null,
+    "reason": null
+  },
+  "treasury": [
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 50458,
+      "amount": 25279458000.0,
+      "period_start": "2026-04-01",
+      "period_end": "2026-04-01",
+      "purpose": "임원 대상 자기주식 지급",
+      "method": "장외처분",
+      "held_shares": 2006508,
+      "rcp_no": "20260326001343"
+    },
+    {
+      "event_type": "처분",
+      "unit": "원",
+      "shares": 2747,
+      "amount": 1148246000.0,
+      "period_start": "2026-07-31",
+      "period_end": "2026-07-31",
+      "purpose": "임원 주식 보상 지급",
+      "method": "기타",
+      "held_shares": 2341700,
+      "rcp_no": "20260723000599"
+    }
+  ],
+  "pledge": [],
+  "pension": {
+    "unit": "백만원",
+    "dbo": 7440949,
+    "plan_assets": 7602257,
+    "net_liability": -161308,
+    "funding_ratio": 102.2,
+    "principal_guaranteed": 7601401,
+    "indirect_investment": 0,
+    "other_assets": 856,
+    "employer_contribution": 856213,
+    "expected_contribution": 781460,
+    "benefits_paid": 701828,
+    "service_cost": 637599,
+    "plan_type": "DB+DC",
+    "providers": []
+  }
+}
