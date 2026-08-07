@@ -10,8 +10,35 @@
     "rcept_dt": "20260323",
     "as_of": "2025-12-31"
   },
-  "financial_assets": null,
-  "pension": null,
+  "financial_assets": {
+    "unit": "원",
+    "total": 142989668932,
+    "amortized_cost": 134787577198,
+    "fvoci": 5356058914,
+    "fvtpl": 2846032820,
+    "short_term_deposits": 14000000,
+    "cash": 30852958086,
+    "products": [
+      "장기금융상품"
+    ],
+    "maturity_buckets": []
+  },
+  "pension": {
+    "unit": "원",
+    "dbo": 13260894709,
+    "plan_assets": 13463747110,
+    "net_liability": -202852401,
+    "funding_ratio": 101.5,
+    "principal_guaranteed": null,
+    "indirect_investment": null,
+    "other_assets": null,
+    "employer_contribution": null,
+    "expected_contribution": null,
+    "benefits_paid": null,
+    "service_cost": null,
+    "plan_type": "DB",
+    "providers": []
+  },
   "stock_comp": null,
   "shareholders": {
     "largest": "장선우 외 8명",
