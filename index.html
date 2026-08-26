@@ -52,7 +52,7 @@
 
   .drawer{position:fixed;inset:0;background:rgba(16,24,39,.42);display:none;z-index:40}
   .drawer.on{display:block}
-  .sheet{position:absolute;right:0;top:0;bottom:0;width:min(760px,94vw);background:#fff;overflow:auto;
+  .sheet{position:absolute;right:0;top:0;bottom:0;width:min(1280px,96vw);background:#fff;overflow-y:auto;overflow-x:hidden;
     box-shadow:-14px 0 40px rgba(16,24,39,.18)}
   .sheet-head{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);
     padding:18px 22px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;z-index:1}
@@ -63,16 +63,21 @@
   .blk{margin-bottom:22px}
   .blk-t{font-size:13px;font-weight:800;margin-bottom:9px;display:flex;align-items:center;gap:8px}
   .tl{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#fbfcfe}
-  .tl-row{display:grid;grid-template-columns:16px 92px 1fr 96px;gap:9px;align-items:center;
+  .tl-row{display:grid;grid-template-columns:16px 100px 1fr 110px;gap:11px;align-items:center;
     padding:6px 0;font-size:12px;border-bottom:1px solid #eef1f6}
   .tl-row:last-child{border-bottom:0}
   .dot{width:9px;height:9px;border-radius:50%}
   .dot.lk{background:var(--primary)} .dot.ln{background:var(--orange)}
   .tl-bar{height:7px;border-radius:4px;background:#e8edf5;position:relative}
   .tl-bar i{position:absolute;top:0;bottom:0;width:7px;border-radius:4px}
-  .mini{width:100%;border-collapse:collapse;font-size:12px}
-  .mini th{position:static;background:#f8fafc;padding:7px 9px;font-size:11px}
-  .mini td{padding:7px 9px;border-bottom:1px solid #f1f4f8}
+  .mini{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+  .mini th{position:static;background:#f8fafc;padding:7px 8px;font-size:11px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .mini td{padding:7px 8px;border-bottom:1px solid #f1f4f8;
+    overflow-wrap:anywhere;word-break:break-word;vertical-align:top}
+  .mini .n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .mini col.w-nm{width:15%} .mini col.w-ty{width:9%} .mini col.w-org{width:20%}
+  .mini col.w-num{width:12%} .mini col.w-dt{width:11%} .mini col.w-dd{width:9%} .mini col.w-src{width:8%}
   .src{display:inline-flex;align-items:center;justify-content:center;height:25px;padding:0 8px;
     border:1px solid #bfd0fa;border-radius:6px;color:var(--primary);text-decoration:none;font-size:11px;font-weight:750}
   @media(max-width:1200px){.grid{grid-template-columns:repeat(3,1fr)}.sum{grid-template-columns:repeat(2,1fr)}}
@@ -281,22 +286,28 @@ function open(c) {
           : '<div class="tl" style="color:var(--muted);font-size:12px">일정이 확보된 건이 없습니다.</div>'}
       </div>
       <div class="blk"><div class="blk-t">보호예수 <span class="badge">${c.lockups.length}건</span>${mk ? '<span class="mock">샘플</span>' : ""}</div>
-        ${c.lockups.length ? `<table class="mini"><thead><tr><th>대상자</th><th>구분</th><th style="text-align:right">수량</th>
-          <th style="text-align:right">평가금액</th><th>해제일</th><th style="text-align:right">D-day</th><th>수탁</th></tr></thead>
+        ${c.lockups.length ? `<table class="mini">
+          <colgroup><col class="w-nm"><col class="w-ty"><col class="w-num"><col class="w-num">
+            <col class="w-dt"><col class="w-dd"><col class="w-org"></colgroup>
+          <thead><tr><th>대상자</th><th>구분</th><th class="n">수량</th>
+          <th class="n">평가금액</th><th>해제일</th><th class="n">D-day</th><th>수탁 증권사</th></tr></thead>
           <tbody>${c.lockups.map(x => `<tr><td>${x.holder_name}</td><td>${x.holder_type}</td>
-          <td style="text-align:right">${x.lockup_qty.toLocaleString("ko-KR")}</td>
-          <td style="text-align:right">${eok(x.lockup_value)}</td><td>${fd(x.release_date)}</td>
-          <td style="text-align:right">${ddCell(dd(x.release_date))}</td>
+          <td class="n">${x.lockup_qty.toLocaleString("ko-KR")}</td>
+          <td class="n">${eok(x.lockup_value)}</td><td>${fd(x.release_date)}</td>
+          <td class="n">${ddCell(dd(x.release_date))}</td>
           <td>${x.custody_broker ? x.custody_broker + (x.custody_broker_src === "추정" ? "(추정)" : "") : NA}</td></tr>`).join("")}</tbody></table>`
           : '<div class="tl" style="color:var(--muted);font-size:12px">해당 없음</div>'}
       </div>
       <div class="blk"><div class="blk-t">주식담보대출 <span class="badge">${c.loans.length}건</span></div>
-        ${c.loans.length ? `<table class="mini"><thead><tr><th>차주</th><th>관계</th><th>기관</th>
-          <th style="text-align:right">금액</th><th style="text-align:right">지분율</th><th>만기</th><th style="text-align:right">D-day</th><th>공시</th></tr></thead>
+        ${c.loans.length ? `<table class="mini">
+          <colgroup><col class="w-nm"><col class="w-ty"><col class="w-org"><col class="w-num">
+            <col class="w-dd"><col class="w-dt"><col class="w-dd"><col class="w-src"></colgroup>
+          <thead><tr><th>차주</th><th>관계</th><th>기관</th>
+          <th class="n">금액</th><th class="n">지분율</th><th>만기</th><th class="n">D-day</th><th>공시</th></tr></thead>
           <tbody>${c.loans.map(x => `<tr><td>${x.borrower_name || NA}</td><td>${x.borrower_type || NA}</td>
-          <td>${x.lender || NA}</td><td style="text-align:right">${x.loan_amount ? eok(x.loan_amount) : NA}</td>
-          <td style="text-align:right">${x.pledged_ratio != null ? x.pledged_ratio + "%" : NA}</td>
-          <td>${fd(x.maturity_date) || NA}</td><td style="text-align:right">${ddCell(dd(x.maturity_date))}</td>
+          <td>${x.lender || NA}</td><td class="n">${x.loan_amount ? eok(x.loan_amount) : NA}</td>
+          <td class="n">${x.pledged_ratio != null ? x.pledged_ratio + "%" : NA}</td>
+          <td>${fd(x.maturity_date) || NA}</td><td class="n">${ddCell(dd(x.maturity_date))}</td>
           <td><a class="src" href="${x.source_url}" target="_blank" rel="noopener">원문</a></td></tr>`).join("")}</tbody></table>`
           : '<div class="tl" style="color:var(--muted);font-size:12px">해당 없음</div>'}
       </div>
