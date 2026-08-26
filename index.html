@@ -115,7 +115,7 @@
 
   <section class="panel bar">
     <div class="grid">
-      <div class="field"><label>기업 · 대상자</label><input id="q" placeholder="기업명 또는 이름" /></div>
+      <div class="field"><label>기업 · 대상자</label><input id="fq" name="fq" placeholder="기업명 또는 이름" autocomplete="off" spellcheck="false" /></div>
       <div class="field"><label id="fOrgLabel">기관</label><select id="fOrg"></select></div>
       <div class="field"><label>시점</label><select id="fWhen">
         <option value="upcoming">예정분(미래)</option><option value="7">7일 이내</option>
@@ -256,7 +256,7 @@ function summary() {
 
 function apply() {
   const K = KINDS[kind];
-  const q = el("q").value.trim().toLowerCase();
+  const q = el("fq").value.trim().toLowerCase();
   const O = el("fOrg").value, W = el("fWhen").value, T = el("fType").value, A = el("fAmt").value;
   const src = kind === "lockup" ? D.lockups : D.loans;
   rows = src.filter(x => {
@@ -372,19 +372,6 @@ function closeD() { el("drawer").classList.remove("on"); }
 el("drawer").onclick = e => { if (e.target.id === "drawer") closeD(); };
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeD(); });
 
-function csv() {
-  const h = ["기업명", "종목코드", "업종", "락업해제일", "락업D-day", "락업금액(원)", "수탁증권사", "수탁근거",
-             "대출만기", "대출D-day", "대출금액(원)", "대출기관", "담보지분율(%)", "락업건수", "대출건수"];
-  const b = rows.map(c => [c.name, c.stock_code, c.industry,
-    c.lk?.release_date || "미상", c.lk ? dd(c.lk.release_date) : "미상", c.lk?.lockup_value ?? "",
-    c.lk?.custody_broker || "미상", c.lk?.custody_broker_src || "",
-    c.ln?.maturity_date || "미상", c.ln ? dd(c.ln.maturity_date) : "미상", c.ln?.loan_amount ?? "",
-    c.ln?.lender || "미상", c.ln?.pledged_ratio ?? "", c.lkAll, c.lnAll]);
-  const t = [h, ...b].map(r => r.map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(",")).join("\n");
-  const u = URL.createObjectURL(new Blob(["﻿" + t], { type: "text/csv;charset=utf-8" }));
-  const a = document.createElement("a"); a.href = u; a.download = `통합조망_${D.meta.baseDate}.csv`; a.click();
-  URL.revokeObjectURL(u);
-}
 
 async function init() {
   try {
@@ -401,7 +388,7 @@ async function init() {
   el("foot").textContent = `출처 ${D.meta.source} · 생성 ${D.meta.generated}`
 ;
   setup(); summary(); apply();
-  el("q").addEventListener("input", apply);
+  el("fq").addEventListener("input", apply);
   ["fOrg", "fWhen", "fType", "fAmt"].forEach(id => el(id).addEventListener("change", apply));
   el("csv").onclick = csv;
 }
