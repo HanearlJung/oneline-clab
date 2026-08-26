@@ -6,9 +6,7 @@
 <title>증권사 점유율 — 보호예수 · 담보대출</title>
 <link rel="stylesheet" href="assets/base.css" />
 <style>
-  .hero{display:flex;justify-content:space-between;align-items:flex-end;margin:4px 0 18px;gap:20px}
-  .hero h1{margin:0;font-size:27px;letter-spacing:-.6px}
-  .hero p{margin:8px 0 0;color:var(--muted);font-size:14px}
+  .hero{display:flex;justify-content:flex-end;margin:2px 0 16px}
   .ctl{display:flex;gap:8px;align-items:center}
   .seg{display:flex;border:1px solid #d9dee7;border-radius:9px;overflow:hidden;background:#fff}
   .seg button{border:0;background:#fff;height:36px;padding:0 15px;font-size:12px;font-weight:750;color:#4b5563;cursor:pointer}
@@ -44,11 +42,8 @@
   .basis{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--muted);
     margin-top:16px;padding-top:14px;border-top:1px solid #f1f4f8}
   .basis b{color:var(--text)}
-  .note{display:flex;gap:12px;align-items:flex-start;padding:16px 20px;border-radius:12px;
-    background:var(--orange-soft);border:1px solid #f5dcb8;font-size:13px;color:#7c4a06;line-height:1.6}
-  .note b{color:#5c3703}
-  .mockbar{display:flex;gap:10px;align-items:center;padding:11px 16px;border-radius:10px;
-    background:#fff3d6;border:1px solid #f0dba6;font-size:12px;font-weight:730;color:#8a5d00;margin-bottom:14px}
+  .mock{font-size:10px;color:#9a6b00;background:#fff3d6;border-radius:4px;
+    padding:2px 6px;margin-left:8px;font-weight:800;vertical-align:2px}
   @media(max-width:1100px){.two{grid-template-columns:1fr}}
 </style>
 </head>
@@ -66,10 +61,6 @@
 
 <main class="page">
   <div class="hero">
-    <div>
-      <h1>어느 증권사가 얼마나 들고 있나</h1>
-      <p id="heroSub"></p>
-    </div>
     <div class="ctl">
       <div class="seg" id="modeSeg">
         <button data-m="cnt" class="on">건수 기준</button>
@@ -79,13 +70,10 @@
     </div>
   </div>
 
-  <div id="mockBar"></div>
-
   <div class="two">
     <section class="panel card">
       <div class="card-h">
-        <div><div class="card-t">보호예수 수탁</div>
-          <div class="card-s">대표주관사가 의무보유를 전담하는 구조에서 산출</div></div>
+        <div class="card-t">보호예수 수탁 M/S<span id="lkMock"></span></div>
         <div class="badge blue" id="lkTag"></div>
       </div>
       <div class="tot" id="lkTot"></div>
@@ -95,8 +83,7 @@
 
     <section class="panel card">
       <div class="card-h">
-        <div><div class="card-t">주식담보대출</div>
-          <div class="card-s">대주주·특수관계인 담보대출을 실행한 기관</div></div>
+        <div class="card-t">담보대출 M/S</div>
         <div class="badge orange" id="lnTag"></div>
       </div>
       <div class="tot" id="lnTot"></div>
@@ -105,7 +92,6 @@
     </section>
   </div>
 
-  <section class="note" id="note"></section>
   <div class="foot" id="foot"></div>
 </main>
 
@@ -172,14 +158,6 @@ function render() {
     `<div>기관 미상 <b>${ln.unknown.cnt}건</b> — 분모 제외</div>
      <div>복수기관 계약 <b>${ln.multi_lender_cnt}건</b> — 균등 분할</div>`;
 
-  const mLk = lk ? lk.rows.findIndex(r => r.broker === ME) : -1;
-  const mLn = ln.rows.findIndex(r => r.lender === ME);
-  const p = [];
-  if (mLk >= 0) p.push(`보호예수 수탁 ${lk.rows[mLk][mode === "cnt" ? "cnt_ms" : "amt_ms"].toFixed(1)}% (${mLk + 1}위)`);
-  if (mLn >= 0) p.push(`담보대출 ${ln.rows[mLn][mode === "cnt" ? "cnt_ms" : "balance_ms"].toFixed(1)}% (${mLn + 1}위)`);
-  el("heroSub").textContent = p.length
-    ? `삼성증권 — ${p.join(" · ")}. 두 시장 모두 상위권과 격차가 큽니다.`
-    : "삼성증권 해당 건이 집계 대상에 없습니다.";
 }
 
 async function init() {
@@ -194,12 +172,7 @@ async function init() {
   }
   el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)}`;
   if (D.lockup_status.state === "mock")
-    el("mockBar").innerHTML =
-      `<div class="mockbar">⚠ 보호예수 점유율은 <b style="margin:0 3px">화면 검증용 샘플</b>입니다. 담보대출은 실제 공시 데이터입니다.</div>`;
-  el("note").innerHTML = `<div>ℹ</div><div>
-    <b>기관이 확인되지 않은 건은 분모에서 제외했습니다.</b> 미상을 특정 기관에 배분하면 점유율이 왜곡됩니다.
-    보호예수 수탁은 공시에 기재된 건과, 대표주관사가 의무보유를 전담하는 구조에 따라 추정한 건을 구분해 집계하며
-    상단 토글로 추정을 제외하고 볼 수 있습니다.</div>`;
+    el("lkMock").innerHTML = '<span class="mock">샘플</span>';
   el("foot").textContent = `출처 ${D.meta.source} · 생성 ${D.meta.generated}`;
 
   document.querySelectorAll("#modeSeg button").forEach(b => b.onclick = () => {
