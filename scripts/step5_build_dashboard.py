@@ -165,6 +165,43 @@ def main():
     callable_co = len({x["corp_name"] for x in active})
     unknown_mat = [x for x in loans if not x["maturity_date"]]
 
+    # ---- 보호예수. 실데이터 연결 전까지 mock 을 쓴다(화면에 명시)
+    lk_path = ROOT / "data" / "lockup_mock.json"
+    lockups = json.loads(lk_path.read_text(encoding="utf-8")) if lk_path.exists() else []
+    is_mock = bool(lockups) and lockups[0].get("is_mock")
+    for x in lockups:
+        x["is_active"] = x["release_date"] >= base_s
+
+    def lk_within(days):
+        rows = [x for x in lockups if x["is_active"]
+                and (datetime.fromisoformat(x["release_date"]).date() - base).days <= days]
+        return {"cnt": len(rows), "amount": sum(x["lockup_value"] or 0 for x in rows)}
+
+    def build_ms_lockup(rows, include_est=True):
+        agg = defaultdict(lambda: {"cnt": 0, "amt": 0, "est": 0})
+        unknown = {"cnt": 0, "amt": 0}
+        for x in rows:
+            b, src = x.get("custody_broker"), x.get("custody_broker_src")
+            if not b or (src == "추정" and not include_est):
+                unknown["cnt"] += 1
+                unknown["amt"] += x["lockup_value"] or 0
+                continue
+            a = agg[b]
+            a["cnt"] += 1
+            a["amt"] += x["lockup_value"] or 0
+            if src == "추정":
+                a["est"] += 1
+        tc = sum(a["cnt"] for a in agg.values()) or 1
+        ta = sum(a["amt"] for a in agg.values()) or 1
+        out = [{"broker": k, "cnt": v["cnt"], "amt": v["amt"], "est_cnt": v["est"],
+                "cnt_ms": round(v["cnt"] / tc * 100, 1),
+                "amt_ms": round(v["amt"] / ta * 100, 1)} for k, v in agg.items()]
+        out.sort(key=lambda x: -x["cnt"])
+        return {"rows": out, "unknown": unknown, "total": {"cnt": tc, "amt": ta}}
+
+    basis = {k: sum(1 for x in lockups if x.get("custody_broker_src") == k)
+             for k in ("기재", "추정", "미상")}
+
     data = {
         "meta": {
             "baseDate": base_s,
@@ -182,20 +219,35 @@ def main():
                 "d7": within(7), "d30": within(30), "d90": within(90),
                 "balance": sum(x["loan_amount"] or 0 for x in active),
             },
-            "lockup": None,   # 데이터 미확보. 화면에서 상태를 명시한다
+            "lockup": {
+                "total_cnt": len(lockups),
+                "total_co": len({x["corp_name"] for x in lockups}),
+                "active_cnt": sum(1 for x in lockups if x["is_active"]),
+                "active_co": len({x["corp_name"] for x in lockups if x["is_active"]}),
+                "d1": lk_within(1), "d7": lk_within(7), "d30": lk_within(30),
+                "amount": sum(x["lockup_value"] or 0 for x in lockups if x["is_active"]),
+            } if lockups else None,
         },
         "ms_loan": build_ms(loans),
-        "ms_lockup": None,
+        "ms_lockup": build_ms_lockup(lockups) if lockups else None,
+        "ms_lockup_strict": build_ms_lockup(lockups, include_est=False) if lockups else None,
+        "lockup_basis": basis,
         "loans": sorted(loans, key=lambda x: (x["maturity_date"] or "9999", -(x["loan_amount"] or 0))),
-        "lockups": [],
+        "lockups": sorted(lockups, key=lambda x: (x["release_date"], -(x["lockup_value"] or 0))),
         "lockup_status": {
-            "state": "pending",
-            "note": "보호예수 데이터 미확보 — 증권신고서·투자설명서 '의무보유' 섹션 수집 필요",
+            "state": "mock" if is_mock else ("ok" if lockups else "pending"),
+            "note": ("화면 검증용 샘플 데이터입니다. 실공시 연결 시 교체됩니다."
+                     if is_mock else "증권신고서·투자설명서 '의무보유' 섹션"),
         },
     }
     out = ROOT / "data" / "dashboard.json"
     out.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
+    lk = data["kpi"]["lockup"]
+    if lk:
+        print(f"  보호예수 {lk['total_cnt']}건 / {lk['total_co']}개사"
+              f" (해제 예정 {lk['active_cnt']}건) — {data['lockup_status']['state']}")
+        print(f"  수탁기관 {len(data['ms_lockup']['rows'])}곳 · 미상 {data['ms_lockup']['unknown']['cnt']}건")
     k = data["kpi"]["loan"]
     print(f"dashboard.json 저장 — {out.stat().st_size//1024}KB")
     print(f"  중복 제거 {removed}건 (같은 계약의 반복 보고)")

@@ -3,79 +3,63 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>락업·담보대출 현황 — 임원 보고</title>
+<title>증권사 점유율 — 보호예수 · 담보대출</title>
 <link rel="stylesheet" href="assets/base.css" />
 <style>
   .hero{display:flex;justify-content:space-between;align-items:flex-end;margin:4px 0 18px;gap:20px}
-  .hero h1{margin:0;font-size:26px;letter-spacing:-.5px}
-  .hero p{margin:7px 0 0;color:var(--muted);font-size:14px}
+  .hero h1{margin:0;font-size:27px;letter-spacing:-.6px}
+  .hero p{margin:8px 0 0;color:var(--muted);font-size:14px}
+  .ctl{display:flex;gap:8px;align-items:center}
+  .seg{display:flex;border:1px solid #d9dee7;border-radius:9px;overflow:hidden;background:#fff}
+  .seg button{border:0;background:#fff;height:36px;padding:0 15px;font-size:12px;font-weight:750;color:#4b5563;cursor:pointer}
+  .seg button.on{background:var(--primary);color:#fff}
+  .chk{display:flex;align-items:center;gap:7px;height:36px;padding:0 13px;border:1px solid #d9dee7;
+    border-radius:9px;background:#fff;font-size:12px;font-weight:730;color:#4b5563;cursor:pointer}
 
-  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
-  .kpi{padding:20px 22px}
-  .kpi-label{font-size:12px;font-weight:750;color:#4b5563}
-  .kpi-value{font-size:34px;font-weight:850;letter-spacing:-1px;margin-top:8px;line-height:1.1}
-  .kpi-value .unit{font-size:17px;font-weight:750;margin-left:3px}
-  .kpi-sub{font-size:12px;color:var(--muted);margin-top:9px;min-height:18px}
-  .kpi.accent{background:linear-gradient(180deg,#fbfdff,#fff);border-color:#a9bff7}
-  .kpi.accent .kpi-value{color:var(--primary)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+  .card{padding:22px 24px}
+  .card-h{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:4px}
+  .card-t{font-size:17px;font-weight:800}
+  .card-s{font-size:12px;color:var(--muted);margin-top:4px}
+  .tot{display:flex;gap:20px;margin:14px 0 16px;padding:13px 16px;background:#f8fafc;border-radius:10px}
+  .tot div{font-size:12px;color:var(--muted)}
+  .tot b{display:block;font-size:19px;font-weight:850;color:var(--text);margin-top:3px;letter-spacing:-.4px}
 
-  .split{display:grid;grid-template-columns:1.25fr .95fr;gap:16px;margin-bottom:16px}
-  .card-pad{padding:20px 22px}
+  .row{display:grid;grid-template-columns:24px 1fr 118px 66px 62px;gap:11px;align-items:center;
+    padding:9px 0;border-bottom:1px solid #f1f4f8}
+  .row:last-of-type{border-bottom:0}
+  .rk{color:var(--muted);font-size:11px;font-weight:800;text-align:right}
+  .nm{font-weight:740;font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .nm small{color:var(--muted);font-weight:600;margin-left:5px;font-size:10px}
+  .bar{height:9px;border-radius:5px;background:#e8edf5;overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:5px;background:var(--primary)}
+  .pct{text-align:right;font-weight:850;font-variant-numeric:tabular-nums;font-size:14px}
+  .cn{text-align:right;color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
+  .row.me{background:#fff8ec;margin:0 -12px;padding:11px 12px;border-radius:9px;border-bottom:0}
+  .row.me .bar i{background:var(--orange)}
+  .row.me .nm,.row.me .pct{color:var(--orange)}
+  .row.unk{border-top:2px solid var(--line);margin-top:8px;padding-top:12px;color:var(--muted)}
+  .row.unk .nm{font-weight:700;color:var(--muted)}
 
-  .deal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .deal-card{border:1px solid var(--line);border-radius:12px;padding:15px;position:relative}
-  .deal-card:first-child{border-color:#a9bff7;background:#fbfdff}
-  .deal-rank{position:absolute;right:12px;top:12px;width:24px;height:24px;border-radius:50%;
-    background:var(--primary-soft);color:var(--primary);display:grid;place-items:center;font-size:11px;font-weight:850}
-  .deal-co{font-size:15px;font-weight:850;padding-right:32px}
-  .deal-meta{font-size:11px;color:var(--muted);margin-top:2px}
-  .deal-amt{font-size:20px;font-weight:850;margin-top:12px}
-  .deal-line{font-size:12px;color:var(--muted);margin-top:4px}
-  .deal-bot{display:flex;align-items:center;justify-content:space-between;
-    margin-top:13px;padding-top:11px;border-top:1px solid #edf0f4}
-  .deal-dday{font-size:15px;font-weight:850;color:var(--red)}
-
-  .ms-row{display:grid;grid-template-columns:22px 1fr 62px 58px;gap:10px;align-items:center;
-    padding:7px 0;border-bottom:1px solid #f1f4f8;font-size:13px}
-  .ms-row:last-child{border-bottom:0}
-  .ms-rank{color:var(--muted);font-size:11px;font-weight:750;text-align:right}
-  .ms-name{font-weight:730;display:flex;align-items:center;gap:7px;min-width:0}
-  .ms-name span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .ms-bar{height:6px;border-radius:3px;background:#e8edf5;overflow:hidden;margin-top:5px}
-  .ms-bar i{display:block;height:100%;background:var(--primary);border-radius:3px}
-  .ms-pct{text-align:right;font-weight:800;font-variant-numeric:tabular-nums}
-  .ms-cnt{text-align:right;color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
-  .ms-row.mine{background:#fff8ec;margin:0 -10px;padding:8px 10px;border-radius:8px}
-  .ms-row.mine .ms-bar i{background:var(--orange)}
-  .ms-row.mine .ms-name{color:var(--orange)}
-
-  .note{display:flex;gap:12px;align-items:flex-start;padding:15px 18px;border-radius:12px;
-    background:var(--orange-soft);border:1px solid #f5dcb8;font-size:13px;color:#7c4a06;line-height:1.55}
-  .note b{color:#5c3703}
-  .basis{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--muted);margin-top:14px}
+  .basis{display:flex;gap:16px;flex-wrap:wrap;font-size:11px;color:var(--muted);
+    margin-top:16px;padding-top:14px;border-top:1px solid #f1f4f8}
   .basis b{color:var(--text)}
-  .pending{border:1px dashed #cbd4e1;background:#fafbfd;border-radius:12px;padding:22px;text-align:center}
-  .pending-t{font-size:14px;font-weight:800;color:#4b5563}
-  .pending-s{font-size:12px;color:var(--muted);margin-top:6px}
-  @media(max-width:1180px){
-    .kpi-row{grid-template-columns:repeat(2,1fr)}
-    .split{grid-template-columns:1fr}
-    .deal{grid-template-columns:1fr}
-  }
+  .note{display:flex;gap:12px;align-items:flex-start;padding:16px 20px;border-radius:12px;
+    background:var(--orange-soft);border:1px solid #f5dcb8;font-size:13px;color:#7c4a06;line-height:1.6}
+  .note b{color:#5c3703}
+  .mockbar{display:flex;gap:10px;align-items:center;padding:11px 16px;border-radius:10px;
+    background:#fff3d6;border:1px solid #f0dba6;font-size:12px;font-weight:730;color:#8a5d00;margin-bottom:14px}
+  @media(max-width:1100px){.two{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <header class="topbar">
-  <div class="brand">
-    <div class="logo">O</div>
-    <div>
-      <div class="brand-title">락업·담보대출 현황</div>
-      <div class="brand-sub">DART 공시 기반 · 삼성증권 C-Lab</div>
-    </div>
-  </div>
+  <div class="brand"><div class="logo">O</div>
+    <div><div class="brand-title">증권사 점유율</div>
+      <div class="brand-sub">보호예수 수탁 · 주식담보대출</div></div></div>
   <nav class="nav">
-    <a href="exec.html" class="on">임원 보고</a>
-    <a href="desk.html">영업 실무</a>
+    <a href="index.html">통합 조망</a>
+    <a href="exec.html" class="on">증권사 점유율</a>
   </nav>
   <div class="top-meta" id="topMeta">불러오는 중…</div>
 </header>
@@ -83,172 +67,148 @@
 <main class="page">
   <div class="hero">
     <div>
-      <h1>지금 움직여야 하는 물량</h1>
+      <h1>어느 증권사가 얼마나 들고 있나</h1>
       <p id="heroSub"></p>
     </div>
-    <div class="badge blue" id="basisBadge"></div>
-  </div>
-
-  <section class="kpi-row" id="kpiRow"></section>
-
-  <div class="split">
-    <section class="panel card-pad">
-      <div class="sec-head">
-        <div>
-          <div class="sec-title">만기 임박 담보대출</div>
-          <div class="sec-sub">만기가 확보된 건만 표시합니다. 대환 제안이 가능한 대상입니다.</div>
-        </div>
-        <div class="badge red">만기 빠른 순</div>
+    <div class="ctl">
+      <div class="seg" id="modeSeg">
+        <button data-m="cnt" class="on">건수 기준</button>
+        <button data-m="amt">금액 기준</button>
       </div>
-      <div class="deal" id="dealGrid"></div>
-    </section>
-
-    <section class="panel card-pad">
-      <div class="sec-head">
-        <div>
-          <div class="sec-title">대출기관 점유율</div>
-          <div class="sec-sub">담보대출을 실행한 기관 기준</div>
-        </div>
-        <div class="badge" id="msMode">건수 기준</div>
-      </div>
-      <div id="msList"></div>
-      <div class="basis" id="msBasis"></div>
-    </section>
-  </div>
-
-  <section class="panel card-pad" style="margin-bottom:16px">
-    <div class="sec-head">
-      <div>
-        <div class="sec-title">보호예수 (락업)</div>
-        <div class="sec-sub">상장 후 의무보유 해제 일정 — 수탁 증권사별 점유율 산출 대상</div>
-      </div>
+      <label class="chk"><input type="checkbox" id="estOn" checked /> 추정 포함</label>
     </div>
-    <div class="pending" id="lockupBox"></div>
-  </section>
+  </div>
 
-  <section class="note" id="dataNote"></section>
+  <div id="mockBar"></div>
+
+  <div class="two">
+    <section class="panel card">
+      <div class="card-h">
+        <div><div class="card-t">보호예수 수탁</div>
+          <div class="card-s">대표주관사가 의무보유를 전담하는 구조에서 산출</div></div>
+        <div class="badge blue" id="lkTag"></div>
+      </div>
+      <div class="tot" id="lkTot"></div>
+      <div id="lkList"></div>
+      <div class="basis" id="lkBasis"></div>
+    </section>
+
+    <section class="panel card">
+      <div class="card-h">
+        <div><div class="card-t">주식담보대출</div>
+          <div class="card-s">대주주·특수관계인 담보대출을 실행한 기관</div></div>
+        <div class="badge orange" id="lnTag"></div>
+      </div>
+      <div class="tot" id="lnTot"></div>
+      <div id="lnList"></div>
+      <div class="basis" id="lnBasis"></div>
+    </section>
+  </div>
+
+  <section class="note" id="note"></section>
   <div class="foot" id="foot"></div>
 </main>
 
 <script>
 const el = id => document.getElementById(id);
-const won = v => v == null ? null : v / 1e8;
-const eok = v => {
-  if (v == null) return null;
-  const a = won(v);
+const eok = v => { if (v == null) return null; const a = v / 1e8;
   if (a >= 10000) { const j = a / 10000; return (Number.isInteger(j) ? j.toFixed(0) : j.toFixed(1)) + "조"; }
-  return Math.round(a).toLocaleString("ko-KR") + "억";
-};
-const fmtDate = s => s ? s.replaceAll("-", ".") : "";
-let D = null;
+  return Math.round(a).toLocaleString("ko-KR") + "억"; };
+const fd = s => s ? s.replaceAll("-", ".") : "";
+const ME = "삼성증권";
+let D = null, mode = "cnt", est = true;
 
-function dday(s, base) {
-  return Math.ceil((new Date(s + "T00:00:00") - new Date(base + "T00:00:00")) / 86400000);
-}
-
-function kpis() {
-  const k = D.kpi.loan, ms = D.ms_loan;
-  const mine = ms.rows.findIndex(r => r.lender === "삼성증권");
-  const m = mine >= 0 ? ms.rows[mine] : null;
-  const cards = [
-    { label: "30일 내 만기 도래", value: k.d30.cnt, unit: "건",
-      sub: `${eok(k.d30.amount)}원 · 7일 내 ${k.d7.cnt}건`, accent: true },
-    { label: "대환 제안 가능", value: k.callable_co, unit: "개사",
-      sub: `계약 ${k.callable_cnt}건 · 잔액 ${eok(k.balance)}원` },
-    { label: "전체 담보대출", value: k.total_co, unit: "개사",
-      sub: `계약 ${k.total_cnt.toLocaleString("ko-KR")}건 · 기관 ${ms.rows.length}곳` },
-    { label: "삼성증권 점유율", value: m ? m.cnt_ms.toFixed(1) : "—", unit: m ? "%" : "",
-      sub: m ? `${ms.rows.length}개 기관 중 ${mine + 1}위 · ${m.cnt}건` : "해당 건 없음" },
-  ];
-  el("kpiRow").innerHTML = cards.map(c => `
-    <div class="panel kpi ${c.accent ? "accent" : ""}">
-      <div class="kpi-label">${c.label}</div>
-      <div class="kpi-value">${typeof c.value === "number" ? c.value.toLocaleString("ko-KR") : c.value}<span class="unit">${c.unit}</span></div>
-      <div class="kpi-sub">${c.sub}</div>
-    </div>`).join("");
-}
-
-function deals() {
-  const base = D.meta.baseDate;
-  const rows = D.loans.filter(x => x.is_active).slice(0, 3);
-  if (!rows.length) { el("dealGrid").innerHTML = '<div class="empty">만기가 확보된 건이 없습니다.</div>'; return; }
-  el("dealGrid").innerHTML = rows.map((r, i) => {
-    const d = dday(r.maturity_date, base);
-    return `<article class="deal-card">
-      <div class="deal-rank">${i + 1}</div>
-      <div class="deal-co">${r.corp_name}</div>
-      <div class="deal-meta">${r.borrower_name} · ${r.borrower_type || ""}</div>
-      <div class="deal-amt">${r.loan_amount ? eok(r.loan_amount) + "원" : '<span class="na">금액 미상</span>'}</div>
-      <div class="deal-line">${r.lender || '<span class="na">기관 미상</span>'}${r.pledged_ratio ? " · 담보 " + r.pledged_ratio + "%" : ""}</div>
-      <div class="deal-bot">
-        <div style="font-size:11px;color:var(--muted)">만기 ${fmtDate(r.maturity_date)}</div>
-        <div class="deal-dday">${d <= 0 ? "D-DAY" : "D-" + d}</div>
-      </div>
-    </article>`;
-  }).join("");
-}
-
-function msList() {
-  const ms = D.ms_loan, top = ms.rows.slice(0, 8);
-  const mine = ms.rows.findIndex(r => r.lender === "삼성증권");
+function list(rows, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEst) {
+  const pctKey = mode === "cnt" ? keyPct : keyAmtPct;
+  const top = rows.slice(0, 10);
+  const mi = rows.findIndex(r => r[nameKey] === ME);
   const show = [...top];
-  if (mine >= 8) show.push(ms.rows[mine]);
-  const max = top[0]?.cnt_ms || 1;
-  el("msList").innerHTML = show.map(r => {
-    const rank = ms.rows.indexOf(r) + 1;
-    const me = r.lender === "삼성증권";
-    return `<div class="ms-row ${me ? "mine" : ""}">
-      <div class="ms-rank">${rank}</div>
-      <div class="ms-name"><span>${r.lender}</span>
-        <div class="ms-bar" style="flex:1"><i style="width:${(r.cnt_ms / max * 100).toFixed(1)}%"></i></div></div>
-      <div class="ms-pct">${r.cnt_ms.toFixed(1)}%</div>
-      <div class="ms-cnt">${r.cnt}건</div>
+  if (mi >= 10) show.push(rows[mi]);
+  const max = Math.max(...top.map(r => r[pctKey]), 1);
+  const body = show.map(r => {
+    const rank = rows.indexOf(r) + 1, me = r[nameKey] === ME;
+    const estN = showEst && r.est_cnt ? `<small>추정 ${r.est_cnt}</small>` : "";
+    return `<div class="row ${me ? "me" : ""}">
+      <div class="rk">${rank}</div>
+      <div class="nm">${r[nameKey]}${estN}</div>
+      <div class="bar"><i style="width:${(r[pctKey] / max * 100).toFixed(1)}%"></i></div>
+      <div class="pct">${r[pctKey].toFixed(1)}%</div>
+      <div class="cn">${mode === "cnt" ? r[keyCnt] + "건" : eok(r[keyAmt])}</div>
     </div>`;
   }).join("");
-
-  const u = ms.unknown;
-  el("msBasis").innerHTML = `
-    <div>집계 대상 <b>${ms.total.cnt.toLocaleString("ko-KR")}건</b></div>
-    <div>기관 미상 <b>${u.cnt}건</b> — 분모 제외</div>
-    <div>복수기관 계약 <b>${ms.multi_lender_cnt}건</b> — 균등 분할</div>`;
+  const u = unknown.cnt ? `<div class="row unk">
+      <div class="rk">—</div><div class="nm">기관 미상</div>
+      <div class="bar"></div><div class="pct">—</div>
+      <div class="cn">${unknown.cnt}건</div></div>` : "";
+  return body + u;
 }
 
-function lockup() {
-  const s = D.lockup_status;
-  el("lockupBox").innerHTML = `
-    <div class="pending-t">데이터 수집 예정</div>
-    <div class="pending-s">${s.note}</div>
-    <div class="pending-s" style="margin-top:10px">수집이 끝나면 해제 일정과 <b>수탁 증권사별 점유율</b>이 이 자리에 표시됩니다.</div>`;
-}
+function render() {
+  const lkSrc = est ? D.ms_lockup : D.ms_lockup_strict;
+  const lk = lkSrc, ln = D.ms_loan;
 
-function note() {
-  const k = D.kpi.loan;
-  const pct = Math.round(k.unknown_maturity_cnt / k.total_cnt * 100);
-  el("dataNote").innerHTML = `
-    <div>⚠</div>
-    <div><b>만기가 확보된 건만 대환 대상으로 셉니다.</b>
-    전체 ${k.total_cnt.toLocaleString("ko-KR")}건 중 ${k.unknown_maturity_cnt.toLocaleString("ko-KR")}건(${pct}%)은
-    공시에 만기가 기재되지 않았습니다. 만기·금리·담보유지비율은 공시자 재량 기재 항목이라
-    모든 계약에 나타나지 않습니다. 화면 숫자는 <b>만기가 확인된 ${k.callable_cnt}건</b> 기준입니다.</div>`;
+  if (lk) {
+    el("lkTag").textContent = `${lk.rows.length}개사`;
+    el("lkTot").innerHTML =
+      `<div>집계 건수<b>${lk.total.cnt.toLocaleString("ko-KR")}건</b></div>
+       <div>평가금액<b>${eok(lk.total.amt)}원</b></div>
+       <div>해제 예정<b>${D.kpi.lockup.active_cnt}건</b></div>`;
+    el("lkList").innerHTML = list(lk.rows, lk.unknown, "cnt", "cnt_ms", "amt", "amt_ms", "broker", true);
+    const b = D.lockup_basis;
+    el("lkBasis").innerHTML =
+      `<div>수탁 근거 — 공시 기재 <b>${b.기재}건</b> · 주관사 추정 <b>${b.추정}건</b> · 미상 <b>${b.미상}건</b></div>
+       <div>${est ? "추정 포함 집계" : "공시 기재분만 집계"}</div>`;
+  } else {
+    el("lkList").innerHTML = '<div class="empty">보호예수 데이터가 없습니다.</div>';
+  }
+
+  el("lnTag").textContent = `${ln.rows.length}개사`;
+  el("lnTot").innerHTML =
+    `<div>집계 건수<b>${ln.total.cnt.toLocaleString("ko-KR")}건</b></div>
+     <div>대출 잔액<b>${eok(ln.total.balance)}원</b></div>
+     <div>담보 평가액<b>${eok(ln.total.collateral)}원</b></div>`;
+  el("lnList").innerHTML = list(ln.rows, ln.unknown, "cnt", "cnt_ms", "balance", "balance_ms", "lender", false);
+  el("lnBasis").innerHTML =
+    `<div>기관 미상 <b>${ln.unknown.cnt}건</b> — 분모 제외</div>
+     <div>복수기관 계약 <b>${ln.multi_lender_cnt}건</b> — 균등 분할</div>`;
+
+  const mLk = lk ? lk.rows.findIndex(r => r.broker === ME) : -1;
+  const mLn = ln.rows.findIndex(r => r.lender === ME);
+  const p = [];
+  if (mLk >= 0) p.push(`보호예수 수탁 ${lk.rows[mLk][mode === "cnt" ? "cnt_ms" : "amt_ms"].toFixed(1)}% (${mLk + 1}위)`);
+  if (mLn >= 0) p.push(`담보대출 ${ln.rows[mLn][mode === "cnt" ? "cnt_ms" : "balance_ms"].toFixed(1)}% (${mLn + 1}위)`);
+  el("heroSub").textContent = p.length
+    ? `삼성증권 — ${p.join(" · ")}. 두 시장 모두 상위권과 격차가 큽니다.`
+    : "삼성증권 해당 건이 집계 대상에 없습니다.";
 }
 
 async function init() {
   try {
-    const res = await fetch("data/dashboard.json", { cache: "no-store" });
-    if (!res.ok) throw new Error("dashboard.json " + res.status);
-    D = await res.json();
+    const r = await fetch("data/dashboard.json", { cache: "no-store" });
+    if (!r.ok) throw new Error("dashboard.json " + r.status);
+    D = await r.json();
   } catch (e) {
     el("topMeta").textContent = "데이터 로드 실패";
-    el("kpiRow").innerHTML = `<div class="empty" style="grid-column:1/-1">데이터를 불러오지 못했습니다. (${e.message})</div>`;
+    el("lkList").innerHTML = `<div class="empty">데이터를 불러오지 못했습니다. (${e.message})</div>`;
     return;
   }
-  const k = D.kpi.loan;
-  el("topMeta").innerHTML = `기준일 ${fmtDate(D.meta.baseDate)}`;
-  el("heroSub").textContent =
-    `담보대출 ${k.total_co}개사 중 만기가 확보된 ${k.callable_co}개사가 대환 제안 대상입니다.`;
-  el("basisBadge").textContent = `출처 ${D.meta.source}`;
-  kpis(); deals(); msList(); lockup(); note();
-  el("foot").textContent = `생성 ${D.meta.generated} · 모든 수치는 공시 원문에서 추출한 값입니다`;
+  el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)}`;
+  if (D.lockup_status.state === "mock")
+    el("mockBar").innerHTML =
+      `<div class="mockbar">⚠ 보호예수 점유율은 <b style="margin:0 3px">화면 검증용 샘플</b>입니다. 담보대출은 실제 공시 데이터입니다.</div>`;
+  el("note").innerHTML = `<div>ℹ</div><div>
+    <b>기관이 확인되지 않은 건은 분모에서 제외했습니다.</b> 미상을 특정 기관에 배분하면 점유율이 왜곡됩니다.
+    보호예수 수탁은 공시에 기재된 건과, 대표주관사가 의무보유를 전담하는 구조에 따라 추정한 건을 구분해 집계하며
+    상단 토글로 추정을 제외하고 볼 수 있습니다.</div>`;
+  el("foot").textContent = `출처 ${D.meta.source} · 생성 ${D.meta.generated}`;
+
+  document.querySelectorAll("#modeSeg button").forEach(b => b.onclick = () => {
+    mode = b.dataset.m;
+    document.querySelectorAll("#modeSeg button").forEach(x => x.classList.toggle("on", x === b));
+    render();
+  });
+  el("estOn").onchange = e => { est = e.target.checked; render(); };
+  render();
 }
 init();
 </script>

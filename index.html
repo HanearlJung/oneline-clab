@@ -1,3 +1,346 @@
-<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=exec.html"><title>이동 중…</title></head>
-<body><p>임원 보고 화면으로 이동합니다. <a href="exec.html">바로가기</a></p></body></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>통합 조망 — 락업·담보대출</title>
+<link rel="stylesheet" href="assets/base.css" />
+<style>
+  .sum{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:14px;overflow:hidden}
+  .sum-i{padding:16px 20px;border-right:1px solid var(--line)}
+  .sum-i:last-child{border-right:0}
+  .sum-l{font-size:11px;font-weight:750;color:#4b5563}
+  .sum-v{font-size:26px;font-weight:850;letter-spacing:-.6px;margin-top:5px;line-height:1.15}
+  .sum-v .u{font-size:14px;font-weight:750;margin-left:2px}
+  .sum-s{font-size:11px;color:var(--muted);margin-top:5px}
+  .sum-i.hot .sum-v{color:var(--red)}
+
+  .bar{padding:13px 18px;margin-bottom:12px}
+  .grid{display:grid;grid-template-columns:1.1fr .9fr .9fr .9fr .8fr .8fr;gap:9px;align-items:end}
+  .field label{display:block;font-size:11px;font-weight:700;color:#4b5563;margin:0 0 5px 2px}
+  input,select{width:100%;height:36px;border:1px solid #d5dbe4;border-radius:8px;padding:0 10px;background:#fff;color:var(--text);outline:none}
+  input:focus,select:focus{border-color:#7297ef;box-shadow:0 0 0 3px rgba(36,87,214,.09)}
+
+  .head{min-height:58px;padding:11px 18px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .h-title{font-size:16px;font-weight:780}
+  .h-title span{color:var(--primary)}
+  .h-sub{font-size:12px;color:var(--muted);margin-top:2px}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .tab{height:33px;padding:0 12px;border:1px solid #d9dee7;background:#fff;border-radius:8px;
+    font-size:12px;font-weight:750;cursor:pointer;color:#4b5563}
+  .tab.on{border-color:var(--primary);background:var(--primary-soft);color:var(--primary)}
+  .btn{height:34px;border:0;border-radius:8px;padding:0 13px;font-weight:750;cursor:pointer;white-space:nowrap}
+  .btn-dark{background:var(--navy);color:#fff}
+
+  .wrap{overflow:auto;max-height:640px}
+  table{width:100%;border-collapse:separate;border-spacing:0;min-width:1240px;font-size:13px}
+  th{position:sticky;top:0;z-index:2;background:#f8fafc;color:#4b5563;font-size:11px;font-weight:780;
+    text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);white-space:nowrap}
+  th.num,td.num{text-align:right}
+  th.lk{background:#f2f7ff} th.ln{background:#fff8f0}
+  td{padding:10px 11px;border-bottom:1px solid #edf0f4;vertical-align:middle}
+  td.lk{background:#fbfdff} td.ln{background:#fffdfa}
+  tbody tr{cursor:pointer} tbody tr:hover td{background:#f6f9ff}
+  .co{font-weight:800;white-space:nowrap}
+  .co-sub{font-size:11px;color:var(--muted);margin-top:2px}
+  .num{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .dd{font-weight:800;white-space:nowrap;font-size:12px}
+  .dd.soon{color:var(--red)} .dd.warn{color:var(--orange)}
+  .plus{font-size:10px;color:var(--primary);font-weight:750;margin-left:4px}
+  .mock{font-size:9px;color:#9a6b00;background:#fff3d6;border-radius:4px;padding:1px 4px;margin-left:5px;font-weight:800}
+
+  .drawer{position:fixed;inset:0;background:rgba(16,24,39,.42);display:none;z-index:40}
+  .drawer.on{display:block}
+  .sheet{position:absolute;right:0;top:0;bottom:0;width:min(760px,94vw);background:#fff;overflow:auto;
+    box-shadow:-14px 0 40px rgba(16,24,39,.18)}
+  .sheet-head{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);
+    padding:18px 22px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;z-index:1}
+  .sheet-co{font-size:20px;font-weight:850}
+  .sheet-meta{font-size:12px;color:var(--muted);margin-top:4px}
+  .x{border:0;background:#eef2f7;width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:16px;color:#4b5563}
+  .sheet-body{padding:18px 22px 40px}
+  .blk{margin-bottom:22px}
+  .blk-t{font-size:13px;font-weight:800;margin-bottom:9px;display:flex;align-items:center;gap:8px}
+  .tl{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#fbfcfe}
+  .tl-row{display:grid;grid-template-columns:16px 92px 1fr 96px;gap:9px;align-items:center;
+    padding:6px 0;font-size:12px;border-bottom:1px solid #eef1f6}
+  .tl-row:last-child{border-bottom:0}
+  .dot{width:9px;height:9px;border-radius:50%}
+  .dot.lk{background:var(--primary)} .dot.ln{background:var(--orange)}
+  .tl-bar{height:7px;border-radius:4px;background:#e8edf5;position:relative}
+  .tl-bar i{position:absolute;top:0;bottom:0;width:7px;border-radius:4px}
+  .mini{width:100%;border-collapse:collapse;font-size:12px}
+  .mini th{position:static;background:#f8fafc;padding:7px 9px;font-size:11px}
+  .mini td{padding:7px 9px;border-bottom:1px solid #f1f4f8}
+  .src{display:inline-flex;align-items:center;justify-content:center;height:25px;padding:0 8px;
+    border:1px solid #bfd0fa;border-radius:6px;color:var(--primary);text-decoration:none;font-size:11px;font-weight:750}
+  @media(max-width:1200px){.grid{grid-template-columns:repeat(3,1fr)}.sum{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="logo">O</div>
+    <div><div class="brand-title">통합 조망</div>
+      <div class="brand-sub">보호예수 해제 · 담보대출 만기</div></div></div>
+  <nav class="nav">
+    <a href="index.html" class="on">통합 조망</a>
+    <a href="exec.html">증권사 점유율</a>
+  </nav>
+  <div class="top-meta" id="topMeta">불러오는 중…</div>
+</header>
+
+<main class="page">
+  <section class="panel sum" id="sumBar"></section>
+
+  <section class="panel bar">
+    <div class="grid">
+      <div class="field"><label>기업 · 대상자</label><input id="q" placeholder="기업명 또는 이름" /></div>
+      <div class="field"><label>구분</label><select id="fKind">
+        <option value="">락업 + 대출</option><option value="lockup">보호예수만</option><option value="loan">담보대출만</option>
+      </select></div>
+      <div class="field"><label>기관</label><select id="fOrg"></select></div>
+      <div class="field"><label>시점</label><select id="fWhen">
+        <option value="upcoming">예정분(미래)</option><option value="7">7일 이내</option>
+        <option value="30">30일 이내</option><option value="90">90일 이내</option>
+        <option value="unknown">일정 미상</option><option value="all">전체</option>
+      </select></div>
+      <div class="field"><label>대상자 유형</label><select id="fType"></select></div>
+      <div class="field"><label>금액</label><select id="fAmt">
+        <option value="">전체</option><option value="10">10억 이상</option>
+        <option value="100">100억 이상</option><option value="500">500억 이상</option>
+      </select></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="head">
+      <div><div class="h-title"><span id="cnt">0</span>건<span id="badges"></span></div>
+        <div class="h-sub">행을 클릭하면 기업 상세가 열립니다.</div></div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <div class="tabs" id="tabs"></div>
+        <button class="btn btn-dark" id="csv">CSV</button>
+      </div>
+    </div>
+    <div class="wrap">
+      <table>
+        <thead><tr>
+          <th>기업</th>
+          <th class="lk">락업 해제일</th><th class="lk num">D-day</th><th class="lk num">락업 금액</th><th class="lk">수탁 증권사</th>
+          <th class="ln">대출 만기</th><th class="ln num">D-day</th><th class="ln num">대출 금액</th><th class="ln">대출기관</th><th class="ln num">담보지분율</th>
+        </tr></thead>
+        <tbody id="tb"></tbody>
+      </table>
+    </div>
+  </section>
+  <div class="foot" id="foot"></div>
+</main>
+
+<div class="drawer" id="drawer"><div class="sheet" id="sheet"></div></div>
+
+<script>
+const el = id => document.getElementById(id);
+const eok = v => { if (v == null) return null; const a = v / 1e8;
+  if (a >= 10000) { const j = a / 10000; return (Number.isInteger(j) ? j.toFixed(0) : j.toFixed(1)) + "조"; }
+  if (a < 1) return Math.round(v / 1e4).toLocaleString("ko-KR") + "만"; return Math.round(a).toLocaleString("ko-KR") + "억"; };
+const fd = s => s ? s.replaceAll("-", ".") : "";
+const NA = '<span class="na">미상</span>';
+let D = null, COS = [], rows = [], sortKey = "lockup";
+const SORTS = [["lockup", "락업 만기순"], ["loan", "대출 만기순"], ["amount", "금액순"], ["org", "기관순"]];
+const dd = s => s ? Math.ceil((new Date(s + "T00:00:00") - new Date(D.meta.baseDate + "T00:00:00")) / 86400000) : null;
+const ddCell = k => k == null ? NA : k < 0 ? `<span class="na">${-k}일 경과</span>`
+  : `<span class="dd ${k <= 7 ? "soon" : k <= 30 ? "warn" : ""}">D-${k}</span>`;
+
+/* 기업 단위로 묶되, 락업·대출 각각 가장 임박한 건을 대표로 세운다.
+   스펙의 컬럼 구성(기업 1행에 락업+대출)을 지키면서 정렬 축이 깨지지 않게 하는 방식이다. */
+function buildCompanies() {
+  const m = new Map();
+  const get = n => { if (!m.has(n)) m.set(n, { name: n, lockups: [], loans: [] }); return m.get(n); };
+  D.lockups.forEach(x => get(x.corp_name).lockups.push(x));
+  D.loans.forEach(x => get(x.corp_name).loans.push(x));
+  return [...m.values()].map(c => {
+    const meta = c.lockups[0] || c.loans[0];
+    const lkU = c.lockups.filter(x => x.is_active).sort((a, b) => a.release_date.localeCompare(b.release_date));
+    const lnU = c.loans.filter(x => x.is_active).sort((a, b) => a.maturity_date.localeCompare(b.maturity_date));
+    return { ...c,
+      stock_code: meta.stock_code, industry: meta.industry, market_cap: meta.market_cap,
+      lk: lkU[0] || null, lkMore: Math.max(0, lkU.length - 1), lkAll: c.lockups.length,
+      ln: lnU[0] || null, lnMore: Math.max(0, lnU.length - 1), lnAll: c.loans.length,
+      amount: Math.max(lkU[0]?.lockup_value || 0, lnU[0]?.loan_amount || 0) };
+  });
+}
+
+function setup() {
+  el("tabs").innerHTML = SORTS.map(([k, t]) =>
+    `<button class="tab ${k === sortKey ? "on" : ""}" data-k="${k}">${t}</button>`).join("");
+  document.querySelectorAll(".tab").forEach(b => b.onclick = () => { sortKey = b.dataset.k; setup(); apply(); });
+  const orgs = [...new Set([...D.lockups.map(x => x.custody_broker), ...D.loans.map(x => x.lender)].filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b, "ko"));
+  el("fOrg").innerHTML = '<option value="">전체</option>' + orgs.map(x => `<option>${x}</option>`).join("");
+  const ts = [...new Set([...D.lockups.map(x => x.holder_type), ...D.loans.map(x => x.borrower_type)].filter(Boolean))].sort();
+  el("fType").innerHTML = '<option value="">전체</option>' + ts.map(x => `<option>${x}</option>`).join("");
+}
+
+function summary() {
+  const L = D.kpi.lockup, N = D.kpi.loan, mk = D.lockup_status.state === "mock";
+  el("sumBar").innerHTML = `
+    <div class="sum-i hot"><div class="sum-l">오늘·내일 락업 해제${mk ? '<span class="mock">샘플</span>' : ""}</div>
+      <div class="sum-v">${L ? L.d1.cnt : 0}<span class="u">건</span></div>
+      <div class="sum-s">${L ? eok(L.d1.amount) + "원 · 7일 내 " + L.d7.cnt + "건" : "—"}</div></div>
+    <div class="sum-i"><div class="sum-l">30일 내 락업 해제${mk ? '<span class="mock">샘플</span>' : ""}</div>
+      <div class="sum-v">${L ? L.d30.cnt : 0}<span class="u">건</span></div>
+      <div class="sum-s">${L ? eok(L.d30.amount) + "원" : "—"}</div></div>
+    <div class="sum-i hot"><div class="sum-l">이번 주 대출 만기</div>
+      <div class="sum-v">${N.d7.cnt}<span class="u">건</span></div>
+      <div class="sum-s">${eok(N.d7.amount)}원 · 30일 내 ${N.d30.cnt}건</div></div>
+    <div class="sum-i"><div class="sum-l">대환 제안 가능</div>
+      <div class="sum-v">${N.callable_co}<span class="u">개사</span></div>
+      <div class="sum-s">계약 ${N.callable_cnt}건 · 만기 미상 ${N.unknown_maturity_cnt}건 제외</div></div>`;
+}
+
+function apply() {
+  const q = el("q").value.trim().toLowerCase();
+  const K = el("fKind").value, O = el("fOrg").value, W = el("fWhen").value,
+        T = el("fType").value, A = el("fAmt").value;
+  const okDate = (d, act) => {
+    if (W === "all") return true;
+    if (W === "unknown") return !d;
+    if (!act) return false;
+    if (W === "upcoming") return true;
+    const k = dd(d); return k != null && k <= +W;
+  };
+  rows = COS.filter(c => {
+    if (q && !(c.name.toLowerCase().includes(q) ||
+        c.lockups.some(x => (x.holder_name || "").toLowerCase().includes(q)) ||
+        c.loans.some(x => (x.borrower_name || "").toLowerCase().includes(q)))) return false;
+    const lkOk = K !== "loan" && c.lockups.some(x =>
+      (!O || x.custody_broker === O) && (!T || x.holder_type === T) &&
+      (!A || (x.lockup_value || 0) / 1e8 >= +A) && okDate(x.release_date, x.is_active));
+    const lnOk = K !== "lockup" && c.loans.some(x =>
+      (!O || x.lender === O) && (!T || x.borrower_type === T) &&
+      (!A || (x.loan_amount || 0) / 1e8 >= +A) && okDate(x.maturity_date, x.is_active));
+    return lkOk || lnOk;
+  });
+  const nk = v => v == null ? 1e9 : v < 0 ? 1e6 - v : v;
+  rows.sort((a, b) => {
+    if (sortKey === "amount") return b.amount - a.amount;
+    if (sortKey === "org") return (a.lk?.custody_broker || a.ln?.lender || "힣")
+      .localeCompare(b.lk?.custody_broker || b.ln?.lender || "힣", "ko");
+    if (sortKey === "loan") return nk(dd(a.ln?.maturity_date)) - nk(dd(b.ln?.maturity_date));
+    return nk(dd(a.lk?.release_date)) - nk(dd(b.lk?.release_date));
+  });
+  render();
+}
+
+function render() {
+  el("cnt").textContent = rows.length.toLocaleString("ko-KR");
+  const lk = rows.filter(c => c.lk).length, ln = rows.filter(c => c.ln).length;
+  el("badges").innerHTML =
+    `<span class="badge blue" style="margin-left:8px">락업 예정 ${lk}개사</span>` +
+    `<span class="badge orange" style="margin-left:6px">대출 만기 ${ln}개사</span>`;
+  if (!rows.length) { el("tb").innerHTML = '<tr><td colspan="10"><div class="empty">조건에 맞는 기업이 없습니다.</div></td></tr>'; return; }
+  el("tb").innerHTML = rows.map((c, i) => {
+    const a = c.lk, b = c.ln;
+    return `<tr data-i="${i}">
+      <td><div class="co">${c.name}</div><div class="co-sub">${c.stock_code || ""}${c.industry ? " · " + c.industry : ""}</div></td>
+      <td class="lk">${a ? fd(a.release_date) + (c.lkMore ? `<span class="plus">+${c.lkMore}</span>` : "") : NA}</td>
+      <td class="lk num">${a ? ddCell(dd(a.release_date)) : NA}</td>
+      <td class="lk num">${a?.lockup_value ? eok(a.lockup_value) : NA}</td>
+      <td class="lk">${a ? (a.custody_broker ? a.custody_broker + (a.custody_broker_src === "추정" ? "(추정)" : "") : NA) : NA}</td>
+      <td class="ln">${b ? fd(b.maturity_date) + (c.lnMore ? `<span class="plus">+${c.lnMore}</span>` : "") : NA}</td>
+      <td class="ln num">${b ? ddCell(dd(b.maturity_date)) : NA}</td>
+      <td class="ln num">${b?.loan_amount ? eok(b.loan_amount) : NA}</td>
+      <td class="ln">${b?.lender || NA}</td>
+      <td class="ln num">${b?.pledged_ratio != null ? b.pledged_ratio + "%" : NA}</td>
+    </tr>`;
+  }).join("");
+  document.querySelectorAll("#tb tr[data-i]").forEach(tr => tr.onclick = () => open(rows[+tr.dataset.i]));
+}
+
+function open(c) {
+  const ev = [
+    ...c.lockups.map(x => ({ t: "lk", d: x.release_date, v: x.lockup_value, who: x.holder_name, org: x.custody_broker })),
+    ...c.loans.map(x => ({ t: "ln", d: x.maturity_date, v: x.loan_amount, who: x.borrower_name, org: x.lender })),
+  ].filter(x => x.d).sort((a, b) => a.d.localeCompare(b.d));
+  const lo = ev[0]?.d, hi = ev[ev.length - 1]?.d;
+  const pos = d => (!lo || lo === hi) ? 50 : Math.max(0, Math.min(100, (new Date(d) - new Date(lo)) / (new Date(hi) - new Date(lo)) * 100));
+  const mk = D.lockup_status.state === "mock";
+  el("sheet").innerHTML = `
+    <div class="sheet-head">
+      <div><div class="sheet-co">${c.name}</div>
+        <div class="sheet-meta">${c.stock_code || ""}${c.industry ? " · " + c.industry : ""}${
+          c.market_cap ? " · 시총 " + (c.market_cap >= 10000 ? (c.market_cap / 10000).toFixed(1) + "조" : Math.round(c.market_cap).toLocaleString("ko-KR") + "억") : ""}</div></div>
+      <button class="x" onclick="closeD()">✕</button></div>
+    <div class="sheet-body">
+      <div class="blk"><div class="blk-t">일정 타임라인 <span class="badge">${ev.length}건</span>
+        <span class="badge blue">락업</span><span class="badge orange">대출</span></div>
+        ${ev.length ? `<div class="tl">${ev.map(x => `<div class="tl-row">
+          <div class="dot ${x.t}"></div><div>${fd(x.d)}</div>
+          <div class="tl-bar"><i class="" style="left:calc(${pos(x.d)}% - 3px);background:${x.t === "lk" ? "var(--primary)" : "var(--orange)"}"></i></div>
+          <div style="text-align:right;font-weight:750">${x.v ? eok(x.v) : "—"}</div></div>`).join("")}</div>`
+          : '<div class="tl" style="color:var(--muted);font-size:12px">일정이 확보된 건이 없습니다.</div>'}
+      </div>
+      <div class="blk"><div class="blk-t">보호예수 <span class="badge">${c.lockups.length}건</span>${mk ? '<span class="mock">샘플</span>' : ""}</div>
+        ${c.lockups.length ? `<table class="mini"><thead><tr><th>대상자</th><th>구분</th><th style="text-align:right">수량</th>
+          <th style="text-align:right">평가금액</th><th>해제일</th><th style="text-align:right">D-day</th><th>수탁</th></tr></thead>
+          <tbody>${c.lockups.map(x => `<tr><td>${x.holder_name}</td><td>${x.holder_type}</td>
+          <td style="text-align:right">${x.lockup_qty.toLocaleString("ko-KR")}</td>
+          <td style="text-align:right">${eok(x.lockup_value)}</td><td>${fd(x.release_date)}</td>
+          <td style="text-align:right">${ddCell(dd(x.release_date))}</td>
+          <td>${x.custody_broker ? x.custody_broker + (x.custody_broker_src === "추정" ? "(추정)" : "") : NA}</td></tr>`).join("")}</tbody></table>`
+          : '<div class="tl" style="color:var(--muted);font-size:12px">해당 없음</div>'}
+      </div>
+      <div class="blk"><div class="blk-t">주식담보대출 <span class="badge">${c.loans.length}건</span></div>
+        ${c.loans.length ? `<table class="mini"><thead><tr><th>차주</th><th>관계</th><th>기관</th>
+          <th style="text-align:right">금액</th><th style="text-align:right">지분율</th><th>만기</th><th style="text-align:right">D-day</th><th>공시</th></tr></thead>
+          <tbody>${c.loans.map(x => `<tr><td>${x.borrower_name || NA}</td><td>${x.borrower_type || NA}</td>
+          <td>${x.lender || NA}</td><td style="text-align:right">${x.loan_amount ? eok(x.loan_amount) : NA}</td>
+          <td style="text-align:right">${x.pledged_ratio != null ? x.pledged_ratio + "%" : NA}</td>
+          <td>${fd(x.maturity_date) || NA}</td><td style="text-align:right">${ddCell(dd(x.maturity_date))}</td>
+          <td><a class="src" href="${x.source_url}" target="_blank" rel="noopener">원문</a></td></tr>`).join("")}</tbody></table>`
+          : '<div class="tl" style="color:var(--muted);font-size:12px">해당 없음</div>'}
+      </div>
+    </div>`;
+  el("drawer").classList.add("on");
+}
+function closeD() { el("drawer").classList.remove("on"); }
+el("drawer").onclick = e => { if (e.target.id === "drawer") closeD(); };
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeD(); });
+
+function csv() {
+  const h = ["기업명", "종목코드", "업종", "락업해제일", "락업D-day", "락업금액(원)", "수탁증권사", "수탁근거",
+             "대출만기", "대출D-day", "대출금액(원)", "대출기관", "담보지분율(%)", "락업건수", "대출건수"];
+  const b = rows.map(c => [c.name, c.stock_code, c.industry,
+    c.lk?.release_date || "미상", c.lk ? dd(c.lk.release_date) : "미상", c.lk?.lockup_value ?? "",
+    c.lk?.custody_broker || "미상", c.lk?.custody_broker_src || "",
+    c.ln?.maturity_date || "미상", c.ln ? dd(c.ln.maturity_date) : "미상", c.ln?.loan_amount ?? "",
+    c.ln?.lender || "미상", c.ln?.pledged_ratio ?? "", c.lkAll, c.lnAll]);
+  const t = [h, ...b].map(r => r.map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(",")).join("\n");
+  const u = URL.createObjectURL(new Blob(["﻿" + t], { type: "text/csv;charset=utf-8" }));
+  const a = document.createElement("a"); a.href = u; a.download = `통합조망_${D.meta.baseDate}.csv`; a.click();
+  URL.revokeObjectURL(u);
+}
+
+async function init() {
+  try {
+    const r = await fetch("data/dashboard.json", { cache: "no-store" });
+    if (!r.ok) throw new Error("dashboard.json " + r.status);
+    D = await r.json();
+  } catch (e) {
+    el("topMeta").textContent = "데이터 로드 실패";
+    el("tb").innerHTML = `<tr><td colspan="10"><div class="empty">데이터를 불러오지 못했습니다. (${e.message})</div></td></tr>`;
+    return;
+  }
+  COS = buildCompanies();
+  el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)}`;
+  el("foot").textContent = `출처 ${D.meta.source} · 생성 ${D.meta.generated}`
+    + (D.lockup_status.state === "mock" ? ` · 보호예수는 ${D.lockup_status.note}` : "");
+  setup(); summary(); apply();
+  el("q").addEventListener("input", apply);
+  ["fKind", "fOrg", "fWhen", "fType", "fAmt"].forEach(id => el(id).addEventListener("change", apply));
+  el("csv").onclick = csv;
+}
+init();
+</script>
+</body>
+</html>
