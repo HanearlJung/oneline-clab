@@ -155,7 +155,24 @@ const eok = v => { if (v == null) return null; const a = v / 1e8;
   if (a < 1) return Math.round(v / 1e4).toLocaleString("ko-KR") + "만"; return Math.round(a).toLocaleString("ko-KR") + "억"; };
 const fd = s => s ? s.replaceAll("-", ".") : "";
 const NA = '<span class="na">미상</span>';
-let D = null, COS = [], rows = [], sortKey = "lockup";
+let D = null, COS = [], rows = [];
+const dd = s => s ? Math.ceil((new Date(s + "T00:00:00") - new Date(D.meta.baseDate + "T00:00:00")) / 86400000) : null;
+const ddCell = k => k == null ? NA : k < 0 ? `<span class="na">${-k}일 경과</span>`
+  : `<span class="dd ${k <= 7 ? "soon" : k <= 30 ? "warn" : ""}">D-${k}</span>`;
+
+/* 기업 상세 패널용 — 한 기업의 락업·대출을 묶어 둔다.
+   목록은 탭별 이벤트 단위라 별개다. */
+function buildCompanies() {
+  const m = new Map();
+  const get = n => { if (!m.has(n)) m.set(n, { name: n, lockups: [], loans: [] }); return m.get(n); };
+  D.lockups.forEach(x => get(x.corp_name).lockups.push(x));
+  D.loans.forEach(x => get(x.corp_name).loans.push(x));
+  return [...m.values()].map(c => {
+    const meta = c.lockups[0] || c.loans[0];
+    return { ...c, stock_code: meta.stock_code, industry: meta.industry, market_cap: meta.market_cap };
+  });
+}
+
 const KINDS = {
   lockup: {
     label: "보호예수 해제", unit: "건",
