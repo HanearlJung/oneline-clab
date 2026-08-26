@@ -49,62 +49,73 @@
   /* ── 다크 테마 (임원 보고 화면 전용) ─────────────────────────── */
   body{
     background:
-      radial-gradient(1200px 600px at 12% -10%, #16233c 0%, transparent 60%),
-      radial-gradient(900px 500px at 100% 0%, #131d34 0%, transparent 55%),
-      #090e19;
-    color:#e6ecf7;
+      radial-gradient(1100px 520px at 15% -12%, #1a1a1d 0%, transparent 62%),
+      radial-gradient(900px 460px at 100% -6%, #161618 0%, transparent 58%),
+      #0a0a0b;
+    color:#f0f0f2;
   }
-  .topbar{background:#060b14;border-bottom:1px solid #1a2438}
-  .brand-sub{color:#7d8ba4}
-  .top-meta{color:#8b98b0}
-  .nav a{color:#8b98b0}
+  .topbar{background:#08080a;border-bottom:1px solid #232326}
+  .logo{background:linear-gradient(145deg,#3a3a3f,#232327);color:#e8e8ea;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.10)}
+  .brand-title{color:#f4f4f6}
+  .brand-sub{color:#7e7e88}
+  .top-meta{color:#8a8a93}
+  .nav a{color:#8a8a93}
   .nav a:hover{background:rgba(255,255,255,.06);color:#fff}
-  .nav a.on{background:#3b6cf0;color:#fff}
+  .nav a.on{background:#2c2c31;color:#fff;box-shadow:inset 0 0 0 1px #3a3a40}
 
-  .hero h1{color:#f2f6ff}
-  .seg{background:#111a2c;border-color:#25314a}
-  .seg button{background:transparent;color:#9aa7bd}
-  .seg button:hover{color:#dbe4f5}
-  .seg button.on{background:#3b6cf0;color:#fff}
-  .chk{background:#111a2c;border-color:#25314a;color:#9aa7bd}
-  .chk input{accent-color:#3b6cf0}
+  .hero h1{color:#fafafa}
+  .seg{background:#141416;border-color:#2b2b30}
+  .seg button{background:transparent;color:#8f8f99}
+  .seg button:hover{color:#e4e4e8}
+  .seg button.on{background:#ececed;color:#111113}
+  .chk{background:#141416;border-color:#2b2b30;color:#8f8f99}
+  .chk input{accent-color:#c9a227}
 
   .panel{
-    background:linear-gradient(180deg,#141d31 0%,#111927 100%);
-    border:1px solid #222d45;
-    box-shadow:0 24px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.03);
+    background:linear-gradient(180deg,#151517 0%,#111113 100%);
+    border:1px solid #26262b;
+    box-shadow:0 28px 70px rgba(0,0,0,.62), inset 0 1px 0 rgba(255,255,255,.035);
   }
-  .card-t{color:#f2f6ff}
-  .card-s{color:#8291ab}
+  .card-t{color:#fafafa;letter-spacing:-.3px}
+  .card-s{color:#83838d}
 
-  .tot{background:#0e1626;border:1px solid #1e2941}
-  .tot div{color:#8291ab}
-  .tot b{color:#f2f6ff}
+  .tot{background:#0e0e10;border:1px solid #232327}
+  .tot div{color:#83838d}
+  .tot b{color:#fafafa}
 
-  .row{border-bottom:1px solid #1b2439}
-  .rk{color:#6c7b96}
-  .nm{color:#dde5f4}
-  .nm small{color:#7385a1}
-  .bar{background:#1a2540}
-  .bar i{background:linear-gradient(90deg,#3b6cf0,#63a0ff);box-shadow:0 0 14px rgba(80,140,255,.45)}
-  .pct{color:#f2f6ff}
-  .cn{color:#7d8ca6}
+  .row{border-bottom:1px solid #1e1e22}
+  .rk{color:#6a6a74}
+  .nm{color:#e2e2e6}
+  .nm small{color:#7b7b85}
+  .bar{background:#212126}
+  .bar i{background:linear-gradient(90deg,#6f6f7a,#c8c8cf)}
+  .pct{color:#fafafa}
+  .cn{color:#7b7b85}
 
-  .row.me{background:rgba(245,178,60,.10);box-shadow:inset 0 0 0 1px rgba(245,178,60,.28)}
-  .row.me .bar i{background:linear-gradient(90deg,#e08c1e,#f5b23c);box-shadow:0 0 16px rgba(245,178,60,.55)}
-  .row.me .nm,.row.me .pct{color:#f5b23c}
-  .row.me .cn{color:#c79a55}
-  .row.unk{border-top:1px solid #232f49;color:#6c7b96}
-  .row.unk .nm{color:#6c7b96}
-  .row.unk .bar{background:#151e33}
+  /* 자사 행은 금색으로. 무채색 막대 사이에서 확실히 도드라진다 */
+  .row.me{background:rgba(201,162,39,.09);box-shadow:inset 0 0 0 1px rgba(201,162,39,.30)}
+  .row.me .bar{background:#2a2418}
+  .row.me .bar i{background:linear-gradient(90deg,#a8801c,#e8c86a);
+    box-shadow:0 0 14px rgba(232,200,106,.35)}
+  .row.me .nm,.row.me .pct{color:#e8c86a}
+  .row.me .cn{color:#b39a5e}
 
-  .badge{background:#1a2440;color:#9aa7bd}
-  .badge.blue{background:rgba(59,108,240,.18);color:#7fa8ff}
-  .badge.orange{background:rgba(245,178,60,.16);color:#f0b45c}
-  .basis{border-top:1px solid #1b2439;color:#7d8ca6}
-  .basis b{color:#dde5f4}
-  .foot{color:#66748e}
-  .empty{color:#7d8ca6}
+  .row.gap{border-bottom:1px solid #1e1e22;opacity:.55}
+  .row.gap .rk{letter-spacing:2px;color:#5e5e68}
+  .row.gap .nm{color:#6a6a74;font-size:11px;font-weight:650}
+
+  .row.unk{border-top:1px solid #2a2a2f;color:#6a6a74}
+  .row.unk .nm{color:#6a6a74}
+  .row.unk .bar{background:#1a1a1e}
+
+  .badge{background:#1f1f24;color:#9a9aa4}
+  .badge.blue{background:rgba(255,255,255,.07);color:#c6c6ce}
+  .badge.orange{background:rgba(201,162,39,.14);color:#dcbc63}
+  .basis{border-top:1px solid #1e1e22;color:#7b7b85}
+  .basis b{color:#e2e2e6}
+  .foot{color:#63636d}
+  .empty{color:#7b7b85}
 
   @media(max-width:1100px){.two{grid-template-columns:1fr}}
 </style>
@@ -171,11 +182,18 @@ function list(rows, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEst
   const pctKey = mode === "cnt" ? keyPct : keyAmtPct;
   const top = rows.slice(0, 10);
   const mi = rows.findIndex(r => r[nameKey] === ME);
-  const show = [...top];
-  if (mi >= 10) show.push(rows[mi]);
+  // 상위 10위 밖의 자사 행을 끌어올릴 때, 사이가 비었다는 걸 표시해야 한다
+  const items = top.map(r => ({ t: "r", r }));
+  if (mi >= 10) {
+    items.push({ t: "gap", n: mi - 10 });
+    items.push({ t: "r", r: rows[mi] });
+  }
   const max = Math.max(...top.map(r => r[pctKey]), 1);
-  const body = show.map(r => {
-    const rank = rows.indexOf(r) + 1, me = r[nameKey] === ME;
+  const body = items.map(it => {
+    if (it.t === "gap") return `<div class="row gap">
+      <div class="rk">⋯</div><div class="nm">${it.n}개 기관 생략</div>
+      <div></div><div></div><div></div></div>`;
+    const r = it.r, rank = rows.indexOf(r) + 1, me = r[nameKey] === ME;
     const estN = showEst && r.est_cnt ? `<small>추정 ${r.est_cnt}</small>` : "";
     return `<div class="row ${me ? "me" : ""}">
       <div class="rk">${rank}</div>
