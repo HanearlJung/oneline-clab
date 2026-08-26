@@ -238,12 +238,12 @@ function setup() {
 }
 
 function summary() {
-  const L = D.kpi.lockup, N = D.kpi.loan, mk = D.lockup_status.state === "mock";
+  const L = D.kpi.lockup, N = D.kpi.loan;
   el("sumBar").innerHTML = `
-    <div class="sum-i hot"><div class="sum-l">오늘·내일 락업 해제${mk ? '<span class="mock">샘플</span>' : ""}</div>
+    <div class="sum-i hot"><div class="sum-l">오늘·내일 락업 해제</div>
       <div class="sum-v">${L ? L.d1.cnt : 0}<span class="u">건</span></div>
       <div class="sum-s">${L ? eok(L.d1.amount) + "원 · 7일 내 " + L.d7.cnt + "건" : "—"}</div></div>
-    <div class="sum-i"><div class="sum-l">30일 내 락업 해제${mk ? '<span class="mock">샘플</span>' : ""}</div>
+    <div class="sum-i"><div class="sum-l">30일 내 락업 해제</div>
       <div class="sum-v">${L ? L.d30.cnt : 0}<span class="u">건</span></div>
       <div class="sum-s">${L ? eok(L.d30.amount) + "원" : "—"}</div></div>
     <div class="sum-i hot"><div class="sum-l">이번 주 대출 만기</div>
@@ -285,10 +285,9 @@ function render() {
   const K = KINDS[kind];
   el("cnt").textContent = rows.length.toLocaleString("ko-KR");
   const co = new Set(rows.map(x => x.corp_name)).size;
-  const mk = kind === "lockup" && D.lockup_status.state === "mock";
   el("badges").innerHTML =
     `<span class="badge ${kind === "lockup" ? "blue" : "orange"}" style="margin-left:8px">${co}개사</span>`
-    + (mk ? '<span class="mock" style="margin-left:6px">샘플</span>' : "");
+    ;
   el("th").innerHTML = "<tr>" + K.cols.map(c =>
     `<th class="${c[2] === "num" ? "num " : ""}${kind === "lockup" ? "lk" : "ln"}">${c[0]}</th>`).join("") + "</tr>";
   if (!rows.length) {
@@ -324,7 +323,6 @@ function open(c) {
   ].filter(x => x.d).sort((a, b) => a.d.localeCompare(b.d));
   const lo = ev[0]?.d, hi = ev[ev.length - 1]?.d;
   const pos = d => (!lo || lo === hi) ? 50 : Math.max(0, Math.min(100, (new Date(d) - new Date(lo)) / (new Date(hi) - new Date(lo)) * 100));
-  const mk = D.lockup_status.state === "mock";
   el("sheet").innerHTML = `
     <div class="sheet-head">
       <div><div class="sheet-co">${c.name}</div>
@@ -340,7 +338,7 @@ function open(c) {
           <div style="text-align:right;font-weight:750">${x.v ? eok(x.v) : "—"}</div></div>`).join("")}</div>`
           : '<div class="tl" style="color:var(--muted);font-size:12px">일정이 확보된 건이 없습니다.</div>'}
       </div>
-      <div class="blk"><div class="blk-t">보호예수 <span class="badge">${c.lockups.length}건</span>${mk ? '<span class="mock">샘플</span>' : ""}</div>
+      <div class="blk"><div class="blk-t">보호예수 <span class="badge">${c.lockups.length}건</span></div>
         ${c.lockups.length ? `<table class="mini">
           <colgroup><col class="w-nm"><col class="w-ty"><col class="w-num"><col class="w-num">
             <col class="w-dt"><col class="w-dd"><col class="w-org"></colgroup>
@@ -401,7 +399,7 @@ async function init() {
   COS = buildCompanies();
   el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)}`;
   el("foot").textContent = `출처 ${D.meta.source} · 생성 ${D.meta.generated}`
-    + (D.lockup_status.state === "mock" ? ` · 보호예수는 ${D.lockup_status.note}` : "");
+;
   setup(); summary(); apply();
   el("q").addEventListener("input", apply);
   ["fOrg", "fWhen", "fType", "fAmt"].forEach(id => el(id).addEventListener("change", apply));

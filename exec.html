@@ -45,6 +45,67 @@
   .basis b{color:var(--text)}
   .mock{font-size:10px;color:#9a6b00;background:#fff3d6;border-radius:4px;
     padding:2px 6px;margin-left:8px;font-weight:800;vertical-align:2px}
+
+  /* ── 다크 테마 (임원 보고 화면 전용) ─────────────────────────── */
+  body{
+    background:
+      radial-gradient(1200px 600px at 12% -10%, #16233c 0%, transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, #131d34 0%, transparent 55%),
+      #090e19;
+    color:#e6ecf7;
+  }
+  .topbar{background:#060b14;border-bottom:1px solid #1a2438}
+  .brand-sub{color:#7d8ba4}
+  .top-meta{color:#8b98b0}
+  .nav a{color:#8b98b0}
+  .nav a:hover{background:rgba(255,255,255,.06);color:#fff}
+  .nav a.on{background:#3b6cf0;color:#fff}
+
+  .hero h1{color:#f2f6ff}
+  .seg{background:#111a2c;border-color:#25314a}
+  .seg button{background:transparent;color:#9aa7bd}
+  .seg button:hover{color:#dbe4f5}
+  .seg button.on{background:#3b6cf0;color:#fff}
+  .chk{background:#111a2c;border-color:#25314a;color:#9aa7bd}
+  .chk input{accent-color:#3b6cf0}
+
+  .panel{
+    background:linear-gradient(180deg,#141d31 0%,#111927 100%);
+    border:1px solid #222d45;
+    box-shadow:0 24px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.03);
+  }
+  .card-t{color:#f2f6ff}
+  .card-s{color:#8291ab}
+
+  .tot{background:#0e1626;border:1px solid #1e2941}
+  .tot div{color:#8291ab}
+  .tot b{color:#f2f6ff}
+
+  .row{border-bottom:1px solid #1b2439}
+  .rk{color:#6c7b96}
+  .nm{color:#dde5f4}
+  .nm small{color:#7385a1}
+  .bar{background:#1a2540}
+  .bar i{background:linear-gradient(90deg,#3b6cf0,#63a0ff);box-shadow:0 0 14px rgba(80,140,255,.45)}
+  .pct{color:#f2f6ff}
+  .cn{color:#7d8ca6}
+
+  .row.me{background:rgba(245,178,60,.10);box-shadow:inset 0 0 0 1px rgba(245,178,60,.28)}
+  .row.me .bar i{background:linear-gradient(90deg,#e08c1e,#f5b23c);box-shadow:0 0 16px rgba(245,178,60,.55)}
+  .row.me .nm,.row.me .pct{color:#f5b23c}
+  .row.me .cn{color:#c79a55}
+  .row.unk{border-top:1px solid #232f49;color:#6c7b96}
+  .row.unk .nm{color:#6c7b96}
+  .row.unk .bar{background:#151e33}
+
+  .badge{background:#1a2440;color:#9aa7bd}
+  .badge.blue{background:rgba(59,108,240,.18);color:#7fa8ff}
+  .badge.orange{background:rgba(245,178,60,.16);color:#f0b45c}
+  .basis{border-top:1px solid #1b2439;color:#7d8ca6}
+  .basis b{color:#dde5f4}
+  .foot{color:#66748e}
+  .empty{color:#7d8ca6}
+
   @media(max-width:1100px){.two{grid-template-columns:1fr}}
 </style>
 </head>
@@ -75,7 +136,7 @@
   <div class="two">
     <section class="panel card">
       <div class="card-h">
-        <div class="card-t">보호예수 수탁 M/S<span id="lkMock"></span></div>
+        <div class="card-t">보호예수 수탁 M/S</div>
         <div class="badge blue" id="lkTag"></div>
       </div>
       <div class="tot" id="lkTot"></div>
@@ -173,8 +234,6 @@ async function init() {
     return;
   }
   el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)}`;
-  if (D.lockup_status.state === "mock")
-    el("lkMock").innerHTML = '<span class="mock">샘플</span>';
   el("foot").textContent = `출처 ${D.meta.source} · 생성 ${D.meta.generated}`;
 
   document.querySelectorAll("#modeSeg button").forEach(b => b.onclick = () => {
