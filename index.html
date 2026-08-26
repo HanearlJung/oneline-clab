@@ -50,10 +50,17 @@
   .plus{font-size:10px;color:var(--primary);font-weight:750;margin-left:4px}
   .mock{font-size:9px;color:#9a6b00;background:#fff3d6;border-radius:4px;padding:1px 4px;margin-left:5px;font-weight:800}
 
-  .drawer{position:fixed;inset:0;background:rgba(16,24,39,.42);display:none;z-index:40}
-  .drawer.on{display:block}
+  .drawer{position:fixed;inset:0;background:rgba(16,24,39,0);z-index:40;
+    visibility:hidden;transition:background .24s ease,visibility 0s linear .3s}
+  .drawer.on{background:rgba(16,24,39,.42);visibility:visible;
+    transition:background .24s ease,visibility 0s}
   .sheet{position:absolute;right:0;top:0;bottom:0;width:min(1280px,96vw);background:#fff;overflow-y:auto;overflow-x:hidden;
-    box-shadow:-14px 0 40px rgba(16,24,39,.18)}
+    box-shadow:-14px 0 40px rgba(16,24,39,.18);
+    transform:translateX(100%);transition:transform .3s cubic-bezier(.22,.7,.3,1)}
+  .drawer.on .sheet{transform:translateX(0)}
+  @media(prefers-reduced-motion:reduce){
+    .drawer,.drawer.on,.sheet,.drawer.on .sheet{transition:none}
+  }
   .sheet-head{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);
     padding:18px 22px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px;z-index:1}
   .sheet-co{font-size:20px;font-weight:850}
@@ -312,6 +319,7 @@ function open(c) {
           : '<div class="tl" style="color:var(--muted);font-size:12px">해당 없음</div>'}
       </div>
     </div>`;
+  el("sheet").scrollTop = 0;
   el("drawer").classList.add("on");
 }
 function closeD() { el("drawer").classList.remove("on"); }
