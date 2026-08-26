@@ -1,0 +1,38 @@
+:root{
+  --bg:#f5f7fb; --panel:#fff; --text:#152033; --muted:#6b7280;
+  --line:#e5e9f0; --primary:#2457d6; --primary-soft:#edf3ff;
+  --navy:#101827; --green:#087a55; --green-soft:#eaf8f2;
+  --orange:#b45309; --orange-soft:#fff5e8; --red:#b42318;
+  --red-soft:#fff0ee; --shadow:0 10px 28px rgba(16,24,39,.07);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);line-height:1.45;
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",Arial,sans-serif}
+button,input,select{font:inherit}
+a{color:inherit}
+.topbar{height:64px;background:var(--navy);color:#fff;padding:0 26px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:11px}
+.logo{width:32px;height:32px;border-radius:9px;background:#3f6ff0;display:grid;place-items:center;font-weight:800}
+.brand-title{font-size:16px;font-weight:750}
+.brand-sub{font-size:11px;color:#aeb8c7;margin-top:2px}
+.nav{display:flex;gap:6px}
+.nav a{display:inline-flex;align-items:center;height:34px;padding:0 14px;border-radius:8px;
+  font-size:13px;font-weight:700;text-decoration:none;color:#c9d2df}
+.nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+.nav a.on{background:#3f6ff0;color:#fff}
+.top-meta{font-size:12px;color:#c9d2df;text-align:right;white-space:nowrap}
+.page{width:min(1460px,calc(100% - 40px));margin:22px auto 44px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin:0 0 12px}
+.sec-title{font-size:17px;font-weight:800}
+.sec-sub{font-size:12px;color:var(--muted);margin-top:3px}
+.badge{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:4px 10px;
+  font-size:11px;font-weight:800;background:#eef2f7;color:#4b5563;white-space:nowrap}
+.badge.green{background:var(--green-soft);color:var(--green)}
+.badge.orange{background:var(--orange-soft);color:var(--orange)}
+.badge.red{background:var(--red-soft);color:var(--red)}
+.badge.blue{background:var(--primary-soft);color:var(--primary)}
+.na{color:#9aa3af;font-weight:600}
+.foot{font-size:11px;color:var(--muted);text-align:right;margin-top:12px}
+.empty{padding:56px 20px;text-align:center;color:var(--muted)}
