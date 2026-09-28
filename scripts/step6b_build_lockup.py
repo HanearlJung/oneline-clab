@@ -24,6 +24,7 @@ from dart import ROOT
 from step5_build_dashboard import ALIAS, norm_lender
 
 UA = {"User-Agent": dart.UA}
+KIND_URL = "https://kind.krx.co.kr/listinvstg/listingcompany.do?method=searchListingTypeMain"
 
 # DB 의 relationship 은 원문 표기 그대로라 수십 종이다. 요구사항의 5분류로 접는다.
 # 순서가 곧 우선순위다 — '최대주주의 특수관계인'은 특수관계인이다.
@@ -172,6 +173,62 @@ def search_prospectus(corp_code: str, ipo: date) -> str | None:
     return best
 
 
+BAD_NAMES = {"유통제한물량", "유통가능물량", "소계", "합계"}
+LOCKUP_NODES = ("투자위험요소", "모집 또는 매출에 관한 일반사항", "주주에 관한 사항",
+                "그 밖에 투자자", "인수인의 의견")
+
+
+def repair_names(out: list[dict], cache, no_fetch: bool) -> None:
+    """DB 에 주주 이름 대신 표 머리글('유통제한물량')이 들어간 행이 있다.
+
+    증권신고서의 의무보유 표에서 같은 수량·같은 기간이 적힌 줄을 찾아 이름을 되살린다.
+    같은 수량인 사람이 여럿이면 나온 순서대로 나눠 준다. 못 찾으면 '이름 미상'으로 둔다.
+    """
+    todo = defaultdict(list)
+    for x in out:
+        if x["holder_name"] in BAD_NAMES and x.get("prospectus_rcept_no"):
+            todo[x["prospectus_rcept_no"]].append(x)
+    fixed = 0
+    for rcp, rows in todo.items():
+        f = cache / f"lockup_{rcp}.txt"
+        if not f.exists() and not no_fetch:
+            try:
+                seen, parts = set(), []
+                for n in dart.get_toc(rcp):
+                    k = (n["offset"], n["length"])
+                    if n["length"] and k not in seen and any(t in n["title"] for t in LOCKUP_NODES):
+                        seen.add(k)
+                        parts.append(dart.html_to_text(dart.get_section(n)))
+                f.write_text("\n".join(parts), encoding="utf-8")
+            except Exception as exc:  # noqa: BLE001
+                print(f"  ! 이름 복구용 원문 실패 {rcp}: {exc}")
+        text = f.read_text(encoding="utf-8") if f.exists() else ""
+        used = defaultdict(int)
+        for x in rows:
+            q = f"{x['lockup_qty']:,}"
+            per = re.sub(r"\s+", "", x.get("lockup_period") or "")
+            names = []
+            for line in text.split("\n"):
+                if not line.startswith("|") or q not in line:
+                    continue
+                if per and per not in re.sub(r"\s+", "", line):
+                    continue
+                c = [v.strip() for v in line.strip("|").split("|")]
+                if c and c[0] and not re.search(r"\d{3}|합계|소계|물량", c[0]) and c[0] not in names:
+                    names.append(c[0])
+            i = used[(q, per)]
+            if i < len(names):
+                x["holder_name"] = names[i]
+                x["holder_name_src"] = "증권신고서 표에서 복구"
+                used[(q, per)] += 1
+                fixed += 1
+            else:
+                x["holder_name"] = "이름 미상"
+    n = sum(len(v) for v in todo.values())
+    if n:
+        print(f"주주 이름 복구 {fixed}/{n}건")
+
+
 def rcp_of(link: str | None) -> str | None:
     m = re.search(r"rcpNo=(\d{14})", link or "")
     return m.group(1) if m else None
@@ -302,6 +359,9 @@ def main() -> None:
         price = m.get("price") or (float(px) if px else None)
         cap = m.get("market_cap") or (round(float(mcap) / 1e8, 1) if mcap else None)
         rcp = meta.get("rcp_no")
+        # 주주 이름이 없는 행은 증권신고서가 아니라 KIND '신규상장기업 유통가능주식수 현황'의
+        # 분류 단위 물량이다 (기관 의무보유확약·우리사주·자발적 의무보유). 출처를 구분한다.
+        from_kind = holder is None
         out.append({
             "corp_name": name, "stock_code": code, "corp_code": corp_of.get(code),
             "industry": m.get("industry"), "market_cap": cap,
@@ -321,11 +381,33 @@ def main() -> None:
             "co_manager": ", ".join(uw["co_mgr"]) or None,
             "underwriter": ", ".join(uw["uw"]) or None,
             "manager_src": src_doc if any(uw.values()) else None,
-            "rcept_no": rcp,
-            "source_section": "의무보유 · 보호예수",
-            "source_url": dart.dart_url(rcp) if rcp else None,
+            "rcept_no": None if from_kind else rcp,
+            "prospectus_rcept_no": rcp,
+            "source_section": ("KIND 신규상장기업 유통가능주식수 현황" if from_kind
+                               else "증권신고서 의무보유 · 보호예수"),
+            "source_url": KIND_URL if from_kind else (dart.dart_url(rcp) if rcp else None),
+            "row_source": "KIND" if from_kind else "증권신고서",
             "is_mock": False,
         })
+
+    # KIND 의 '자발적의무보유' 합계는 증권신고서의 주주별 행과 같은 물량일 수 있다.
+    # 같은 회사에 해제일이 사흘 안쪽으로 붙어 있고 수량이 그 안에 들어가면 같은 물량으로 보고
+    # KIND 행을 뺀다 (두 번 세지 않는다). 기관 확약·우리사주는 증권신고서에 없는 물량이라 둔다.
+    named = defaultdict(list)
+    for x in out:
+        if x["row_source"] == "증권신고서":
+            named[x["stock_code"]].append(x)
+    def overlaps(k):
+        if (k["holder_rel"] or "").replace(" ", "") != "자발적의무보유":
+            return False
+        kd = date.fromisoformat(k["release_date"])
+        near = [n for n in named.get(k["stock_code"], [])
+                if abs((date.fromisoformat(n["release_date"]) - kd).days) <= 3]
+        return bool(near) and k["lockup_qty"] <= sum(n["lockup_qty"] for n in near) * 1.05
+    n0 = len(out)
+    out = [x for x in out if not (x["row_source"] == "KIND" and overlaps(x))]
+    repair_names(out, cache, args.no_fetch)
+    print(f"KIND 자발적의무보유 중 주주 행과 겹쳐 제외 {n0 - len(out)}건")
     dart.save_json(ROOT / "data" / "lockup.json", out)
     today = date.today().isoformat()
     act = [x for x in out if x["release_date"] >= today]

@@ -221,8 +221,11 @@ def parse_pledge(text: str) -> list[dict]:
         if header and len(c) >= len(header) - 2:
             row = dict(zip(header, c))
             kind = row.get(CONTRACT_HEAD, "")
-            # 양수도·공동보유 계약은 담보가 아니다. 담보성만 남긴다.
-            if not any(k in kind for k in ("담보", "질권", "대차", "신탁")):
+            # 양수도·공동보유 계약은 담보가 아니다. 돈을 빌리고 주식을 맡긴 계약만 남긴다.
+            #   주식대차(빌려준 주식)·의결권 신탁은 대출이 아니다. '대차' 중에서는
+            #   금전소비대차(=대출 계약)만, '신탁' 중에서는 담보신탁만 해당한다.
+            k = kind.replace(" ", "")
+            if not re.search(r"담보|질권|근질|금전소비대차", k):
                 continue
             # 세무서 납세담보(연부연납 공탁)는 대출이 아니다
             if re.search(r"공탁|납세", kind):
@@ -276,18 +279,22 @@ def parse_pledge(text: str) -> list[dict]:
     if len(tail) == 2 and rows:
         body = tail[1].split("\n## ", 1)[0]
         # '(단위 : 주, 백만원, %)' 처럼 여러 단위가 한 줄에 섞여 온다. 금액 단위만 고른다.
+        # 단위는 표 위 머리말에도, 표 아래 주석('대출금액은 백만원 단위로 기재')에도 온다.
         tunit = 1
-        um = re.search(r"단위[^\n|]{0,40}", body[:500])
+        around = tail[0][-200:] + body
+        um = (re.search(r"단위[^\n|]{0,40}?(억원|백만원|천원)", around)
+              or re.search(r"(억원|백만원|천원)\s*단위", around))
         if um:
-            mu = re.search(r"억원|백만원|천원", um.group())
-            if mu:
-                tunit = _UNIT[mu.group()]
+            tunit = _UNIT[um.group(1)]
         by_no = {r["_no"]: r for r in rows if r["_no"]}
         for line in body.split("\n"):
             if not line.strip().startswith("|"):
                 continue
             c = cells(line)
             if len(c) < 4 or not re.match(r"^\d+(-\d+)?$", c[0]):
+                continue
+            # 외화 대출은 '기타' 칸에 적는 경우가 있다 ('USD대출임'). 원화로 읽으면 안 된다.
+            if re.search(r"USD|US\$|달러|외화|EUR|JPY|엔화|위안", " ".join(c[2:]), re.I):
                 continue
             loan = money(c[2], tunit)
             if not loan:
@@ -299,10 +306,15 @@ def parse_pledge(text: str) -> list[dict]:
             if len(cand) > 1:
                 cand = [r for r in cand if r["_no"] == c[0]] or cand
             target = cand[0] if cand else None
-            if target is None and not sh:
-                target = by_no.get(c[0])
-                if target is not None and target["loan_amount"] is not None:
-                    target = None
+            # 주식수가 비었거나, 담보 전체 주식수(합계)를 적은 경우에는 연번으로 맞춘다.
+            # 한 담보 묶음에 대출이 여러 건(트랜치)일 때 이렇게 적는다.
+            total = sum(r["shares"] or 0 for r in rows)
+            same_holder = lambda r: sum(x["shares"] or 0 for x in rows if x["holder"] == r["holder"])
+            if target is None:
+                t2 = by_no.get(c[0])
+                if t2 is not None and t2["loan_amount"] is None and (
+                        not sh or sh == total or sh == same_holder(t2)):
+                    target = t2
             if target is None:
                 continue
             target["loan_amount"] = loan

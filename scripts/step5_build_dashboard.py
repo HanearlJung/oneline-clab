@@ -54,7 +54,16 @@ ALIAS = {
     "골드만삭스증권회사": "골드만삭스증권",
     "씨티그룹글로벌마켓증권": "씨티증권",
     "크레디트스위스증권": "CS증권",
+    "KEB하나은행": "하나은행", "케이이비하나은행": "하나은행", "하나투자증권": "하나증권",
+    "IM뱅크": "iM뱅크", "대구은행": "iM뱅크", "아이엠뱅크": "iM뱅크",   # 2024년 사명 변경
+    "BNK증권": "BNK투자증권", "한화증권": "한화투자증권", "NH증권": "NH투자증권",
+    "케이프증권": "케이프투자증권", "푸른상호저축은행": "푸른저축은행",
+    "아이비케이캐피탈": "IBK캐피탈", "케이비캐피탈": "KB캐피탈",
+    "제이비우리캐피탈": "JB우리캐피탈", "에스비아이저축은행": "SBI저축은행",
+    "비엔케이저축은행": "BNK저축은행", "엔에이치농협캐피탈": "NH농협캐피탈",
 }
+# 세무서·법원에 맡긴 주식은 납세담보·공탁이다. 대출이 아니다.
+NOT_LENDER_RE = re.compile(r"세무서|지방법원|국세청|법원$")
 
 
 def split_lenders(s):
@@ -62,8 +71,18 @@ def split_lenders(s):
     건수는 각 기관에 세고, 금액은 균등 분할해 중복 계상을 막는다."""
     if not s:
         return []
+    s = re.sub(r"\([^()]*\)", " ", s)            # 괄호 안 영문명·각주 표시는 기관명이 아니다
+    s = re.sub(r"\([^()]*$", " ", s)
+    m = re.search(r"근질권자\s*[:：]\s*(.+)$", s)   # '주선금융기관: A 근질권자: B' → 담보권자 B
+    if m:
+        s = m.group(1)
+    s = re.sub(r"(^|\s)-\s*", ", ", s)          # '- A - B - C' 나열
     parts = [norm_lender(x) for x in SPLIT_RE.split(s)]
-    return [x for x in parts if x]
+    out = []
+    for x in parts:
+        if x and x not in out:
+            out.append(x)
+    return out
 
 
 _FOOT_RE = re.compile(r"^\(?주\d*\)?$")
@@ -85,6 +104,11 @@ def norm_lender(s):
     if s in ("", "-", "없음", "해당사항없음"):
         return None
     return ALIAS.get(s, s)
+
+
+def norm_name(s):
+    """사람·법인 이름 비교용. 법인격 표기와 공백 차이를 없앤다."""
+    return re.sub(r"\s+", "", CORP_RE.sub("", s or ""))
 
 
 def lender_type(s):
@@ -123,6 +147,9 @@ def main():
             dropped["비상장/코넥스"] += 1
             continue
         names = split_lenders(p.get("counterparty"))
+        if names and all(NOT_LENDER_RE.search(n) for n in names):
+            dropped["납세담보·공탁"] += 1
+            continue
         lender = names[0] if names else None
         amount = to_won(p.get("loan_amount"), p.get("unit"))
         shares = p.get("shares")
@@ -193,6 +220,7 @@ def main():
             x["amount_src"] = "단위불명"
             unit_dropped += 1
 
+    n_before = len(loans)
     # 중복 제거 — 같은 계약이 대량보유보고서와 거래소 공시에 함께 실린다.
     # 계약 실체(회사·차주·기관·주식수)로 묶고, 금액이 있는 쪽 → 최신 접수분 순으로 남긴다.
     # 버린 쪽에만 있는 만기·체결일은 남긴 쪽에 채운다.
@@ -212,8 +240,34 @@ def main():
                 keep[f] = drop[f]
         keep["is_active"] = bool(keep["maturity_date"] and keep["maturity_date"] >= base_s)
         dedup[k] = keep
-    removed = len(loans) - len(dedup)
     loans = list(dedup.values())
+
+    # 같은 담보(회사·담보제공자·주식수)가 대량보유보고서와 거래소 공시 양쪽에 있으면 한 건이다.
+    # 기관 표기와 만기 기재가 서로 달라 위 키로는 안 묶인다. 최신 접수분을 남기고,
+    # 거기 비어 있는 값(금액·만기·금리)만 다른 쪽에서 채운다.
+    blocks = defaultdict(list)
+    for x in loans:
+        if x["pledged_qty"]:
+            blocks[(x["stock_code"], norm_name(x["borrower_name"]), x["pledged_qty"])].append(x)
+    drop_ids = set()
+    for g in blocks.values():
+        if len({r["source_kind"] for r in g}) < 2:
+            continue
+        g.sort(key=lambda r: r["rcept_no"] or "", reverse=True)
+        keep = g[0]
+        for other in g[1:]:
+            if other["source_kind"] == keep["source_kind"]:
+                continue
+            for f in ("loan_amount", "maturity_date", "maturity_src", "contract_date",
+                      "interest_rate", "maintenance_ratio", "pledged_ratio",
+                      "collateral_set_amount", "period_raw", "debtor"):
+                if keep.get(f) is None and other.get(f) is not None:
+                    keep[f] = other[f]
+            keep["also_in"] = other["rcept_no"]
+            drop_ids.add(id(other))
+        keep["is_active"] = bool(keep["maturity_date"] and keep["maturity_date"] >= base_s)
+    loans = [x for x in loans if id(x) not in drop_ids]
+    removed = n_before - len(loans)
 
     # ---- 금액 집계 기준. 목록에는 공시된 금액을 그대로 두고, 합계에만 아래를 적용한다.
     #  (1) 공동담보: 한 대출에 여러 사람이 주식을 담보로 넣으면 같은 대출금액이 사람 수만큼
@@ -236,7 +290,9 @@ def main():
             r["amount_counted"] = 0 if (i > 0 or facility) else r["loan_amount"]
     for x in loans:
         x.setdefault("amount_counted", 0)
-        x.pop("debtor", None)
+        # 제3자 채무를 위해 담보를 넣은 경우에만 채무자를 따로 보여준다
+        if not x.get("debtor") or norm_name(x["debtor"]) == norm_name(x["borrower_name"]):
+            x.pop("debtor", None)
     # 만기가 지난 계약은 현재 잔액으로 보지 않는다 (만기 미상·자동연장은 유효로 둔다)
     live = [x for x in loans if not x["maturity_date"] or x["maturity_date"] >= base_s]
 

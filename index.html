@@ -196,7 +196,7 @@ const KINDS = {
       ["수탁 증권사", r => r.custody_broker
         ? esc(r.custody_broker) + (r.custody_broker_src === "추정" ? "(추정)" : "")
         : '<span class="na">미상</span>'],
-      ["공시", r => r.source_url ? `<a class="src" href="${r.source_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">원문</a>` : NA],
+      ["공시", r => r.source_url ? `<a class="src" href="${r.source_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${r.row_source === "KIND" ? "KIND" : "원문"}</a>` : NA],
     ],
     date: r => r.release_date, amount: r => r.lockup_value,
     org: r => r.custody_broker, type: r => r.holder_type, who: r => r.holder_name,
@@ -206,7 +206,8 @@ const KINDS = {
     sorts: [["date", "만기순"], ["amount", "금액순"], ["org", "대출기관순"], ["company", "기업명순"]],
     cols: [
       ["기업", r => `<div class="co">${esc(r.corp_name)}</div><div class="co-sub">${r.stock_code || ""}${r.industry ? " · " + esc(r.industry) : ""}</div>`],
-      ["차주", r => r.borrower_name ? esc(r.borrower_name) : NA],
+      ["차주", r => (r.borrower_name ? esc(r.borrower_name) : NA)
+        + (r.debtor ? `<div class="co-sub" title="담보제공자와 채무자가 다릅니다 (제3자 채무 담보)">채무자 ${esc(r.debtor)}</div>` : "")],
       ["관계", r => r.borrower_type ? esc(r.borrower_type) : NA],
       ["대출기관", r => r.lender ? esc(r.lender) : '<span class="na">미상</span>'],
       ["대출금액", r => loanAmt(r), "num"],
@@ -423,7 +424,8 @@ function open(c) {
           ${c.lockups[0].lead_manager ? `<div class="tl" style="color:var(--muted);font-size:12px;margin-top:6px">주관 ${esc(c.lockups[0].lead_manager)}${
             c.lockups[0].co_manager ? " · 공동주관 " + esc(c.lockups[0].co_manager) : ""}${
             c.lockups[0].underwriter ? " · 인수 " + esc(c.lockups[0].underwriter) : ""}${
-            c.lockups[0].source_url ? ` · <a class="src" href="${c.lockups[0].source_url}" target="_blank" rel="noopener">증권신고서</a>` : ""}</div>` : ""}`
+            c.lockups[0].prospectus_rcept_no ? ` · <a class="src" href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${c.lockups[0].prospectus_rcept_no}" target="_blank" rel="noopener">증권신고서</a>` : ""}</div>` : ""}
+          ${c.lockups.some(x => x.row_source === "KIND") ? `<div class="tl" style="color:var(--muted);font-size:12px;margin-top:4px">기관 의무보유확약·우리사주 등 이름 없는 행은 KIND 신규상장기업 유통가능주식수 현황의 분류 단위 물량입니다.</div>` : ""}`
           : `<div class="tl" style="color:var(--muted);font-size:12px">보호예수 없음 — ${D.meta.lockupScope || "최근 신규상장 종목이 아닙니다"}</div>`}
       </div>
       <div class="blk"><div class="blk-t">주식담보대출 <span class="badge">${c.loans.length}건</span></div>
@@ -432,7 +434,8 @@ function open(c) {
             <col class="w-dd"><col class="w-dt"><col class="w-dd"><col class="w-src"></colgroup>
           <thead><tr><th>차주</th><th>관계</th><th>기관</th>
           <th class="n">금액</th><th class="n">지분율 · 금리</th><th>만기</th><th class="n">D-day</th><th>공시</th></tr></thead>
-          <tbody>${c.loans.map(x => `<tr><td>${x.borrower_name ? esc(x.borrower_name) : NA}</td><td>${x.borrower_type ? esc(x.borrower_type) : NA}</td>
+          <tbody>${c.loans.map(x => `<tr><td>${x.borrower_name ? esc(x.borrower_name) : NA}${
+            x.debtor ? `<div class="co-sub">채무자 ${esc(x.debtor)}</div>` : ""}</td><td>${x.borrower_type ? esc(x.borrower_type) : NA}</td>
           <td>${x.lender ? esc(x.lender) : NA}</td><td class="n">${loanAmt(x)}</td>
           <td class="n">${x.pledged_ratio != null ? x.pledged_ratio + "%" : NA}${
             x.interest_rate ? `<div class="co-sub" title="담보유지비율 ${x.maintenance_ratio ? x.maintenance_ratio + "%" : "미상"}">금리 ${x.interest_rate}%</div>` : ""}</td>
