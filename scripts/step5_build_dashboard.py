@@ -564,6 +564,15 @@ def main():
         # 수탁 M/S 는 상장 연도로 본다 — 그 해 IPO 를 누가 주관했는가.
         # 'all' 은 2022년부터 지금까지 전체, 'active' 는 보호예수가 아직 남은 회사만.
         "ms_ipo": ms_ipo,
+        # 점유율 화면에서 증권사를 누르면 그 증권사의 IPO 목록을 보여준다
+        "ipo_deals": [{
+            "n": d["name"], "c": d["stock_code"], "m": d["market"], "d": d["listing_date"],
+            "spac": d["is_spac"], "reit": d["is_reit"], "t": d["listing_type"],
+            "amt": d["offer_amount"], "px": d["offer_price"],
+            "lead": d["lead_managers"], "co": d["co_managers"],
+            "al": [[a["broker"], a["amount"], a["ratio"]] for a in d.get("allocations") or []],
+            "rcp": d.get("prospectus_rcept_no"),
+        } for d in sorted(deals, key=lambda d: d["listing_date"], reverse=True)],
         "ms_lockup_by_year": ms_by_year,
         "ms_lockup": ms_by_year["all"] if lockups else None,
         "ms_lockup_active": build_ms_lockup(lk_ms) if lockups else None,
