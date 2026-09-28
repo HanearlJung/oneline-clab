@@ -6,22 +6,42 @@
 <title>통합 조망 — 락업·담보대출</title>
 <link rel="stylesheet" href="assets/base.css?v=20260929c" />
 <style>
-  .sum{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:14px;overflow:hidden}
-  .sum-i{padding:16px 20px;border-right:1px solid var(--line)}
-  .sum-i:last-child{border-right:0}
-  .sum-l{font-size:11px;font-weight:750;color:#4b5563}
-  .sum-v{font-size:26px;font-weight:850;letter-spacing:-.6px;margin-top:5px;line-height:1.15}
-  .sum-v .u{font-size:14px;font-weight:750;margin-left:2px}
-  .sum-s{font-size:11px;color:var(--muted);margin-top:5px}
-  .sum-i.hot .sum-v{color:var(--red)}
-  .sum-i{cursor:pointer;position:relative;transition:background .12s}
-  .sum-i:hover{background:#f6f9ff}
-  .sum-i .go{position:absolute;right:18px;top:16px;font-size:11px;font-weight:800;color:var(--primary);
-    background:var(--primary-soft);border-radius:999px;padding:4px 10px}
-  .sum-i:hover .go{background:var(--primary);color:#fff}
-  .sum-i .tagk{display:inline-block;font-size:10px;font-weight:800;border-radius:4px;padding:1px 6px;margin-right:6px;vertical-align:1px}
-  .sum-i .tagk.lk{background:var(--primary-soft);color:var(--primary)}
-  .sum-i .tagk.ln{background:var(--orange-soft);color:var(--orange)}
+  /* 상단 요약 — 보호예수와 담보대출을 두 묶음으로 나눈다 */
+  .sum{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;background:none;border:0;box-shadow:none;border-radius:0;overflow:visible}
+  .sp{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+  .sp-h{display:flex;align-items:center;gap:12px;padding:14px 20px;border-bottom:1px solid var(--line)}
+  .sp-ic{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;flex:none}
+  .sp-ic svg{width:20px;height:20px}
+  .sp-t{font-size:16px;font-weight:850;letter-spacing:-.3px}
+  .sp-d{font-size:12px;color:var(--muted);margin-top:1px}
+  .sp-r{margin-left:auto;text-align:right;font-size:11.5px;color:var(--muted);white-space:nowrap}
+  .sp-r b{display:block;font-size:14px;font-weight:850;color:var(--text)}
+  .sp.lk{border-top:3px solid var(--primary)} .sp.lk .sp-ic{background:var(--primary-soft);color:var(--primary)}
+  .sp.ln{border-top:3px solid #e08a1e} .sp.ln .sp-ic{background:var(--orange-soft);color:var(--orange)}
+  .sp-b{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:14px 16px 16px}
+  .st{border:1px solid var(--line);border-radius:12px;padding:14px 16px 13px;cursor:pointer;position:relative;
+    transition:border-color .12s,box-shadow .12s,transform .12s;background:#fff}
+  .st:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(16,24,39,.09)}
+  .sp.lk .st:hover{border-color:var(--primary)} .sp.ln .st:hover{border-color:#e08a1e}
+  .sp.lk .st.now{background:linear-gradient(180deg,#f3f7ff,#fff 70%);border-color:#c9d9fb}
+  .sp.ln .st.now{background:linear-gradient(180deg,#fff8ee,#fff 70%);border-color:#f6d9ad}
+  .st-l{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:800;color:#374151}
+  .st-l i{font-style:normal;font-size:10.5px;font-weight:850;border-radius:999px;padding:2px 8px;background:var(--red-soft);color:var(--red)}
+  .st-v{font-size:34px;font-weight:850;letter-spacing:-1px;line-height:1.1;margin-top:8px}
+  .st-v .u{font-size:15px;font-weight:800;margin-left:3px;letter-spacing:0}
+  .st-v em{font-style:normal;font-size:15px;font-weight:800;color:#4b5563;margin-left:10px;letter-spacing:-.2px}
+  .sp.lk .st.now .st-v{color:var(--primary)} .sp.ln .st.now .st-v{color:#b45309}
+  .st-s{font-size:12px;color:var(--muted);margin-top:3px}
+  .st-bar{display:flex;height:6px;border-radius:999px;overflow:hidden;background:#eef1f6;margin-top:12px}
+  .st-bar span{display:block;height:100%}
+  .st-bar .me{background:var(--primary)} .st-bar .ot{background:#f3b04d}
+  .st-k{display:flex;justify-content:space-between;font-size:11.5px;color:#4b5563;margin-top:6px}
+  .st-k b{font-weight:850;color:var(--text)}
+  .st-k .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:1px}
+  .st-go{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:12px;font-weight:800;display:flex;justify-content:space-between}
+  .sp.lk .st-go{color:var(--primary)} .sp.ln .st-go{color:#b45309}
+  @media(max-width:1100px){.sum{grid-template-columns:1fr}}
+  @media(max-width:640px){.sp-b{grid-template-columns:1fr}}
 
   /* 영업 대상 팝업 */
   .act{position:fixed;inset:0;z-index:35;background:rgba(16,24,39,.5);display:none;align-items:flex-start;justify-content:center;padding:34px 20px;overflow:auto}
@@ -471,18 +491,36 @@ const nCo = list => new Set(list.map(x => x.stock_code)).size;
 const num = v => (v || 0).toLocaleString("ko-KR");
 
 function summary() {
-  const card = (k, days, hot) => {
-    const it = actItems(k, days), soon = k === "lockup" ? actItems(k, 1) : [];
-    const mine = nCo(it.filter(x => isMine(k, x)));
-    return `<div class="sum-i ${hot ? "hot" : ""}" data-k="${k}" data-d="${days}" title="눌러서 영업 대상을 봅니다">
-      <span class="go">영업 대상 보기 →</span>
-      <div class="sum-l"><span class="tagk ${k === "lockup" ? "lk" : "ln"}">${k === "lockup" ? "보호예수" : "담보대출"}</span>${days}일 내 ${k === "lockup" ? "해제" : "만기"}</div>
-      <div class="sum-v">${num(nCo(it))}<span class="u">개사</span></div>
-      <div class="sum-s">${k === "lockup" ? "주주 " + num(it.length) + "명" : "계약 " + num(it.length) + "건"} · ${eok(sumAmt(k, it))}원${
-        soon.length ? " · 오늘·내일 " + nCo(soon) + "개사" : ""} · ${k === "lockup" ? "자사 주관" : "자사 대출"} ${mine}개사</div></div>`;
+  const tile = (k, days, now) => {
+    const lk = k === "lockup", it = actItems(k, days), soon = actItems(k, 1);
+    const me = nCo(it.filter(x => isMine(k, x))), ot = nCo(it.filter(x => !isMine(k, x))), tot = Math.max(me + ot, 1);
+    return `<div class="st ${now ? "now" : ""}" data-k="${k}" data-d="${days}" role="button" tabindex="0" title="눌러서 영업 대상을 봅니다">
+      <div class="st-l">${days}일 내 ${lk ? "해제" : "만기"}${now && soon.length ? `<i>오늘·내일 ${nCo(soon)}개사</i>` : ""}</div>
+      <div class="st-v">${num(nCo(it))}<span class="u">개사</span><em>${eok(sumAmt(k, it))}원</em></div>
+      <div class="st-s">${lk ? "주주 " + num(it.length) + "명" : "계약 " + num(it.length) + "건"}</div>
+      <div class="st-bar"><span class="me" style="width:${(me / tot * 100).toFixed(1)}%"></span><span class="ot" style="width:${(ot / tot * 100).toFixed(1)}%"></span></div>
+      <div class="st-k"><span><span class="dot" style="background:var(--primary)"></span>${lk ? "자사 주관" : "자사 대출"} <b>${me}개사</b></span>
+        <span><span class="dot" style="background:#f3b04d"></span>${lk ? "타사 주관" : "타사 대출"} <b>${ot}개사</b></span></div>
+      <div class="st-go"><span>영업 대상 보기</span><span>→</span></div></div>`;
   };
-  el("sumBar").innerHTML = card("lockup", 7, true) + card("lockup", 30, false) + card("loan", 7, true) + card("loan", 30, false);
-  el("sumBar").querySelectorAll(".sum-i").forEach(c => c.onclick = () => openAct(c.dataset.k, +c.dataset.d));
+  const ICON = {
+    lockup: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg>',
+    loan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>' };
+  const panel = (k, title, desc) => {
+    const lk = k === "lockup", src = lk ? D.lockups : D.loans;
+    const up = src.filter(x => { const n = dd(x[actKey(k)]); return n != null && n >= 0; });
+    return `<div class="sp ${lk ? "lk" : "ln"}">
+      <div class="sp-h"><div class="sp-ic">${ICON[k]}</div>
+        <div><div class="sp-t">${title}</div><div class="sp-d">${desc}</div></div>
+        <div class="sp-r">${lk ? "해제 예정 전체" : "만기 예정 전체"}<b>${num(nCo(up))}개사 · ${eok(sumAmt(k, up))}원</b></div></div>
+      <div class="sp-b">${tile(k, 7, true)}${tile(k, 30, false)}</div></div>`;
+  };
+  el("sumBar").innerHTML = panel("lockup", "보호예수 해제", "풀리는 물량을 자사 계좌로 유치")
+    + panel("loan", "담보대출 만기", "만기에 맞춰 대환·연장 제안");
+  el("sumBar").querySelectorAll(".st").forEach(c => {
+    c.onclick = () => openAct(c.dataset.k, +c.dataset.d);
+    c.onkeydown = e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openAct(c.dataset.k, +c.dataset.d); } };
+  });
 }
 
 function actBuild() {
