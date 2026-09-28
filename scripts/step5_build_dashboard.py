@@ -333,7 +333,15 @@ def main():
                for k, v in agg.items()]
         out.sort(key=lambda x: -x["cnt"])
         return {"rows": out, "unknown": unknown, "multi_lender_cnt": multi,
-                "total": {"cnt": tot_c, "balance": tot_b, "collateral": tot_l}}
+                "total": {"cnt": tot_c, "balance": tot_b, "collateral": tot_l,
+                          "companies": len({x["stock_code"] for x in rows}),
+                          "contracts": len(rows)}}
+
+    # 체결 연도별 M/S. 과거 시점의 잔액이 아니다 — 지금 남아 있는 계약을 체결(연장)한 해로 나눈 것이다.
+    LOAN_YEARS = ("2025", "2026")
+    ms_loan_by_year = {"all": build_ms(live)}
+    for y in LOAN_YEARS:
+        ms_loan_by_year[y] = build_ms([x for x in live if (x["contract_date"] or "")[:4] == y])
 
     active = [x for x in loans if x["is_active"]]
 
@@ -565,7 +573,8 @@ def main():
                 "amount": sum(x["lockup_value"] or 0 for x in lockups if x["is_active"]),
             } if lockups else None,
         },
-        "ms_loan": build_ms(live),
+        "ms_loan": ms_loan_by_year["all"],
+        "ms_loan_by_year": ms_loan_by_year,
         # 수탁 M/S 는 아직 풀리지 않은 물량 기준이다. 이미 해제된 건은 수탁 잔고가 아니다.
         # 수탁 M/S 는 상장 연도로 본다 — 그 해 IPO 를 누가 주관했는가.
         # 'all' 은 2022년부터 지금까지 전체, 'active' 는 보호예수가 아직 남은 회사만.

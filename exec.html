@@ -231,6 +231,9 @@
         <div class="badge orange" id="lnTag"></div>
       </div>
       <div class="tot" id="lnTot"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px">
+        <div class="seg" id="lnYearSeg" style="flex-wrap:wrap"></div>
+      </div>
       <div id="lnList"></div>
       <div class="basis" id="lnBasis"></div>
     </section>
@@ -351,10 +354,11 @@ function openIpoList(org) {
 
 /* 담보대출은 계약 단위로 공시된다. 한 회사에 차주가 여럿이고 한 사람이 여러 번 빌리므로
    그대로 나열하면 같은 회사가 수십 줄 이어진다. 회사 1곳을 한 줄로 묶고, 누르면 계약을 펼친다. */
-let loanGroups = [], loanOpen = new Set(), loanOrg = "";
+let loanGroups = [], loanOpen = new Set(), loanOrg = "", lnYear = "all";
 function openLoanList(org) {
   const base = D.meta.baseDate, m = new Map();
-  D.loans.filter(x => (x.lenders || []).includes(org) && (!x.maturity_date || x.maturity_date >= base))
+  D.loans.filter(x => (x.lenders || []).includes(org) && (!x.maturity_date || x.maturity_date >= base)
+      && (lnYear === "all" || (x.contract_date || "").slice(0, 4) === lnYear))
     .forEach(x => { if (!m.has(x.stock_code)) m.set(x.stock_code, []); m.get(x.stock_code).push(x); });
   loanGroups = [...m.values()].map(items => {
     items.sort((a, b) => (a.maturity_date || "9999").localeCompare(b.maturity_date || "9999"));
@@ -367,7 +371,7 @@ function openLoanList(org) {
   }).sort((a, b) => (a.next || "9999").localeCompare(b.next || "9999") || b.amt - a.amt);
   loanOpen = new Set(); loanOrg = org;
   const n = loanGroups.reduce((s, g) => s + g.items.length, 0), sum = loanGroups.reduce((s, g) => s + g.amt, 0);
-  el("mlT").textContent = `${org} · 주식담보대출`;
+  el("mlT").textContent = `${org} · 주식담보대출${lnYear === "all" ? "" : ` · ${lnYear}년 체결`}`;
   el("mlSum").innerHTML = `<div>만기가 지나지 않은 계약</div><div>기업 <b>${loanGroups.length.toLocaleString("ko-KR")}개사</b></div>
     <div>계약 <b>${n.toLocaleString("ko-KR")}건</b></div><div>대출 잔액 <b>${eok(sum)}원</b></div>
     <div>기업을 누르면 계약이 펼쳐집니다</div>`;
@@ -406,7 +410,9 @@ function closeList() { el("modalList").classList.remove("on"); }
 function render() {
   // 수탁 증권사 = IPO 대표주관회사. 추정·기재 구분이 없으므로 토글은 쓰지 않는다.
   el("estOn").parentElement.style.display = "none";
-  const lk = ((D.ms_ipo || {})[scope] || D.ms_lockup_by_year || {})[year] || D.ms_lockup, ln = D.ms_loan;
+  const lk = ((D.ms_ipo || {})[scope] || D.ms_lockup_by_year || {})[year] || D.ms_lockup,
+    ln = (D.ms_loan_by_year || {})[lnYear] || D.ms_loan;
+  const lyl = lnYear === "all" ? "현재 잔액 전체" : `${lnYear}년 체결`;
   const yl = year === "all" ? `${D.meta.ipoRange[0].slice(0, 4)}년 ~ 현재 상장` : `${year}년 상장`;
 
   if (lk) {
@@ -425,7 +431,7 @@ function render() {
     el("lkList").innerHTML = '<div class="empty">보호예수 데이터가 없습니다.</div>';
   }
 
-  el("lnTag").textContent = `${ln.rows.length.toLocaleString("ko-KR")}개 기관`;
+  el("lnTag").textContent = `${lyl} · ${ln.rows.length.toLocaleString("ko-KR")}개 기관`;
   el("lnTot").innerHTML =
     `<div>집계 건수<b>${ln.total.cnt.toLocaleString("ko-KR")}건</b></div>
      <div>대출 잔액<b>${eok(ln.total.balance)}원</b></div>
@@ -434,7 +440,8 @@ function render() {
   el("lnBasis").innerHTML =
     `<div>기관 미상 <b>${ln.unknown.cnt}건</b> — 분모 제외</div>
      <div>복수기관 계약 <b>${ln.multi_lender_cnt}건</b> — 균등 분할</div>
-     <div>대상 기업 <b>${D.kpi.loan.total_co.toLocaleString("ko-KR")}개사</b> · 만기가 지난 계약 제외 · 대출금액 미공시 건은 금액에서 제외</div>
+     <div>대상 기업 <b>${(ln.total.companies || D.kpi.loan.total_co).toLocaleString("ko-KR")}개사</b> · 만기가 지난 계약 제외 · 대출금액 미공시 건은 금액에서 제외</div>
+     ${lnYear === "all" ? "" : `<div>체결일 기준 — 지금 남아 있는 계약 중 <b>${lnYear}년</b>에 체결하거나 연장한 계약 · 그해 말 잔액이 아님</div>`}
      <div>공동담보 대출은 금액을 한 번만 집계 · 담보 평가액의 3배를 넘는 복합여신 <b>${(D.kpi.loan.facility_cnt || 0).toLocaleString("ko-KR")}건</b>은 금액에서 제외</div>`;
 
 }
@@ -597,6 +604,14 @@ async function init() {
   if (ys.length) year = ys[ys.length - 1];
   el("yearSeg").innerHTML = [["all", "전체"], ...ys.map(y => [y, y + "년"])].map(([k, t]) =>
     `<button data-y="${k}" class="${k === year ? "on" : ""}">${t}</button>`).join("");
+  const lys = Object.keys(D.ms_loan_by_year || {}).filter(k => k !== "all").sort();
+  el("lnYearSeg").innerHTML = [["all", "전체"], ...lys.map(y => [y, y + "년 체결"])].map(([k, t]) =>
+    `<button data-y="${k}" class="${k === lnYear ? "on" : ""}">${t}</button>`).join("");
+  document.querySelectorAll("#lnYearSeg button").forEach(b => b.onclick = () => {
+    lnYear = b.dataset.y;
+    document.querySelectorAll("#lnYearSeg button").forEach(x => x.classList.toggle("on", x === b));
+    render();
+  });
   document.querySelectorAll("#scopeSeg button").forEach(b => b.onclick = () => {
     scope = b.dataset.s;
     document.querySelectorAll("#scopeSeg button").forEach(x => x.classList.toggle("on", x === b));
