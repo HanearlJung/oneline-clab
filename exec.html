@@ -126,6 +126,30 @@
   .empty{color:#7d8ca6}
 
   @media(max-width:1100px){.two{grid-template-columns:1fr}}
+
+  /* ── 삼성증권 연도별 순위 (3D) ─────────────────────────────── */
+  .btn3d{height:44px;padding:0 18px;border-radius:9px;border:1px solid rgba(245,178,60,.55);
+    background:linear-gradient(180deg,rgba(245,178,60,.20),rgba(245,178,60,.08));color:#f5b23c;
+    font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap;
+    box-shadow:0 0 18px rgba(245,178,60,.18)}
+  .btn3d:hover{background:linear-gradient(180deg,rgba(245,178,60,.32),rgba(245,178,60,.14));color:#ffd27a}
+  .modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;
+    background:rgba(4,8,16,.72);backdrop-filter:blur(3px);padding:24px}
+  .modal.on{display:flex}
+  .modal-box{width:min(1080px,100%);max-height:calc(100vh - 48px);overflow:auto;border-radius:18px;
+    background:linear-gradient(180deg,#131c30,#0d1424);border:1px solid #26334f;
+    box-shadow:0 30px 80px rgba(0,0,0,.6);padding:24px 28px 22px}
+  .modal-h{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:6px}
+  .modal-t{font-size:22px;font-weight:850;letter-spacing:-.4px;color:#f5b23c}
+  .modal-s{font-size:13.5px;color:#8f9db6;margin-bottom:10px}
+  .modal-x{display:flex;gap:8px}
+  .modal-x button{height:36px;padding:0 14px;border-radius:8px;border:1px solid #2a3753;background:#111a2c;
+    color:#c6d1e6;font-size:14px;font-weight:700;cursor:pointer}
+  .modal-x button:hover{color:#fff;border-color:#3b4c72}
+  .g3{margin-top:10px;border-radius:14px;background:rgba(255,255,255,.025);border:1px solid #1e2942;padding:14px 16px 6px}
+  .g3-t{display:flex;align-items:baseline;gap:10px;font-size:16px;font-weight:800;color:#e6ecf7}
+  .g3-t small{font-size:13px;font-weight:600;color:#8f9db6}
+  .g3 svg{display:block;width:100%;height:auto}
 </style>
 </head>
 <body>
@@ -161,6 +185,7 @@
       <div class="tot" id="lkTot"></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px">
         <div class="seg" id="yearSeg" style="flex-wrap:wrap"></div>
+        <button class="btn3d" id="btn3d" title="연도별 삼성증권 순위를 3D 그래프로 봅니다">삼성증권(3D)</button>
         <div class="seg" id="scopeSeg">
           <button data-s="core" class="on" title="증권업계 리그테이블의 통상 기준">스팩·리츠 제외</button>
           <button data-s="all">전체 포함</button>
@@ -183,6 +208,21 @@
 
   <div class="foot" id="foot"></div>
 </main>
+
+<div class="modal" id="modal3d" role="dialog" aria-modal="true" aria-labelledby="m3t">
+  <div class="modal-box">
+    <div class="modal-h">
+      <div class="modal-t" id="m3t">삼성증권 연도별 IPO 주관 순위</div>
+      <div class="modal-x">
+        <button id="m3replay">다시 보기</button>
+        <button id="m3close">닫기 ✕</button>
+      </div>
+    </div>
+    <div class="modal-s" id="m3sub"></div>
+    <div class="g3"><div class="g3-t">건수 기준 <small>대표주관 기업 수 순위</small></div><svg id="g3cnt" viewBox="0 0 1000 330"></svg></div>
+    <div class="g3"><div class="g3-t">금액 기준 <small>실제 인수금액 순위</small></div><svg id="g3amt" viewBox="0 0 1000 330"></svg></div>
+  </div>
+</div>
 
 <script>
 const el = id => document.getElementById(id);
@@ -269,6 +309,116 @@ function render() {
 
 }
 
+/* ── 삼성증권 연도별 순위 3D 그래프 ───────────────────────────────
+   막대 높이는 순위다 (1위가 가장 높다). 비스듬히 본 직육면체를 SVG 로 그린다.
+   x: 연도, y: 순위, z: 깊이.  화면 좌표 = (x + z·0.62, −y − z·0.36)            */
+const G3 = { W: 1000, H: 330, L: 86, B: 268, plotW: 760, plotH: 196, dz: 46, bw: 78, MAXR: 10 };
+const NS = "http://www.w3.org/2000/svg";
+const sv = (tag, attrs, text) => { const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; };
+const P3 = (x, y, z) => [G3.L + x + z * 0.62, G3.B - y - z * 0.36];
+const pts = a => a.map(p => p[0].toFixed(1) + "," + p[1].toFixed(1)).join(" ");
+
+function rankSeries(key) {
+  const src = (D.ms_ipo || {})[scope] || {};
+  return Object.keys(src).filter(y => y !== "all").sort().map(y => {
+    const rows = src[y].rows.filter(r => key === "amt" ? r.amt > 0 : r.cnt > 0)
+      .sort((a, b) => key === "amt" ? b.amt - a.amt : (b.cnt - a.cnt || b.amt - a.amt));
+    const i = rows.findIndex(r => r.broker === ME);
+    const r = rows[i];
+    return { year: y, rank: i < 0 ? null : i + 1, of: rows.length,
+      val: !r ? "주관 없음" : key === "amt" ? eok(r.amt) + "원" : r.cnt + "건",
+      ms: !r ? "" : (key === "amt" ? r.amt_ms : r.cnt_ms).toFixed(1) + "%" };
+  });
+}
+
+function draw3d(svg, series, uid) {
+  svg.innerHTML = "";
+  const maxR = Math.max(G3.MAXR, ...series.map(s => s.rank || 0));
+  const hOf = r => r == null ? 0 : G3.plotH * (maxR - r + 1) / maxR;
+  const defs = sv("defs", {});
+  defs.innerHTML = `
+    <linearGradient id="f${uid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc95a"/><stop offset="1" stop-color="#d9861a"/></linearGradient>
+    <linearGradient id="s${uid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9741a"/><stop offset="1" stop-color="#7d4a0c"/></linearGradient>
+    <linearGradient id="t${uid}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffe09a"/><stop offset="1" stop-color="#ffc95a"/></linearGradient>
+    <filter id="g${uid}" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter>`;
+  svg.appendChild(defs);
+
+  // 바닥과 뒷벽
+  svg.appendChild(sv("polygon", { points: pts([P3(0, 0, 0), P3(G3.plotW, 0, 0), P3(G3.plotW, 0, G3.dz * 2.1), P3(0, 0, G3.dz * 2.1)]),
+    fill: "rgba(99,160,255,.06)", stroke: "#22304d", "stroke-width": 1 }));
+  svg.appendChild(sv("polygon", { points: pts([P3(0, 0, G3.dz * 2.1), P3(G3.plotW, 0, G3.dz * 2.1), P3(G3.plotW, G3.plotH, G3.dz * 2.1), P3(0, G3.plotH, G3.dz * 2.1)]),
+    fill: "rgba(255,255,255,.018)", stroke: "#1c2740", "stroke-width": 1 }));
+  [1, 3, 5, 7, 10].filter(r => r <= maxR).forEach(r => {
+    const y = hOf(r), a = P3(0, y, G3.dz * 2.1), b = P3(G3.plotW, y, G3.dz * 2.1), c = P3(0, y, 0);
+    svg.appendChild(sv("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: r === 1 ? "rgba(245,178,60,.45)" : "#22304d",
+      "stroke-width": 1, "stroke-dasharray": r === 1 ? "" : "3 5" }));
+    svg.appendChild(sv("line", { x1: c[0], y1: c[1], x2: a[0], y2: a[1], stroke: "#22304d", "stroke-width": 1 }));
+    svg.appendChild(sv("text", { x: c[0] - 10, y: c[1] + 4, "text-anchor": "end", "font-size": 13, "font-weight": 700,
+      fill: r === 1 ? "#f5b23c" : "#7f8da8" }, r + "위"));
+  });
+
+  const step = G3.plotW / series.length, z0 = G3.dz * 0.55, z1 = z0 + G3.dz;
+  const bars = series.map((s, i) => {
+    const x0 = i * step + (step - G3.bw) / 2, x1 = x0 + G3.bw, g = sv("g", {});
+    const glow = sv("ellipse", { cx: P3((x0 + x1) / 2, 0, (z0 + z1) / 2)[0], cy: P3(0, 0, (z0 + z1) / 2)[1] + 4, rx: G3.bw * 0.78, ry: 13,
+      fill: "rgba(245,178,60,.35)", filter: `url(#g${uid})`, opacity: 0 });
+    const side = sv("polygon", { fill: `url(#s${uid})` }), front = sv("polygon", { fill: `url(#f${uid})` }),
+      top = sv("polygon", { fill: `url(#t${uid})` }), edge = sv("polyline", { fill: "none", stroke: "rgba(255,240,200,.55)", "stroke-width": 1 });
+    const cx = P3((x0 + x1) / 2, 0, z0)[0] + 14;
+    const lab = sv("g", { opacity: 0 });
+    const tRank = sv("text", { x: cx, "text-anchor": "middle", "font-size": 27, "font-weight": 850, fill: "#ffd27a",
+      style: "paint-order:stroke;stroke:#0d1424;stroke-width:5px" }, s.rank ? s.rank + "위" : "—");
+    const tVal = sv("text", { x: cx, "text-anchor": "middle", "font-size": 13.5, "font-weight": 700, fill: "#c9d4ea",
+      style: "paint-order:stroke;stroke:#0d1424;stroke-width:4px" }, s.rank ? `${s.val} · ${s.ms}` : s.val);
+    lab.appendChild(tRank); lab.appendChild(tVal);
+    const yr = P3((x0 + x1) / 2, 0, 0);
+    svg.appendChild(sv("text", { x: yr[0] - 6, y: yr[1] + 30, "text-anchor": "middle", "font-size": 16, "font-weight": 800, fill: "#dbe4f5" }, s.year + "년"));
+    [glow, side, front, top, edge, lab].forEach(n => g.appendChild(n));
+    svg.appendChild(g);
+    const target = hOf(s.rank);
+    const set = k => {                       // k: 0 → 1
+      const h = Math.max(target * k, 0.01);
+      front.setAttribute("points", pts([P3(x0, 0, z0), P3(x1, 0, z0), P3(x1, h, z0), P3(x0, h, z0)]));
+      side.setAttribute("points", pts([P3(x1, 0, z0), P3(x1, 0, z1), P3(x1, h, z1), P3(x1, h, z0)]));
+      top.setAttribute("points", pts([P3(x0, h, z0), P3(x1, h, z0), P3(x1, h, z1), P3(x0, h, z1)]));
+      edge.setAttribute("points", pts([P3(x0, h, z0), P3(x1, h, z0), P3(x1, h, z1)]));
+      glow.setAttribute("opacity", (0.9 * k).toFixed(2));
+      const ty = P3(0, h, z1)[1];
+      tRank.setAttribute("y", ty - 26); tVal.setAttribute("y", ty - 8);
+      lab.setAttribute("opacity", Math.max(0, (k - 0.72) / 0.28).toFixed(2));
+    };
+    set(0);
+    return set;
+  });
+  return bars;
+}
+
+let raf3 = 0;
+function play3d() {
+  cancelAnimationFrame(raf3);
+  const a = draw3d(el("g3cnt"), rankSeries("cnt"), "c"), b = draw3d(el("g3amt"), rankSeries("amt"), "a");
+  // 위 그래프가 왼쪽부터 차례로, 이어서 아래 그래프가 차례로 솟는다
+  const items = [...a.map((f, i) => [f, i * 230]), ...b.map((f, i) => [f, a.length * 230 + 260 + i * 230])];
+  const DUR = 820, ease = t => 1 - Math.pow(1 - t, 3);   // 끝에서 감속
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) { items.forEach(([f]) => f(1)); return; }
+  const t0 = performance.now();
+  const tick = now => {
+    let live = false;
+    items.forEach(([f, d]) => { const t = Math.min(1, Math.max(0, (now - t0 - d) / DUR));
+      f(Math.min(1, Math.max(0, ease(t)))); if (t < 1) live = true; });
+    if (live) raf3 = requestAnimationFrame(tick);
+  };
+  raf3 = requestAnimationFrame(tick);
+}
+function open3d() {
+  const src = (D.ms_ipo || {})[scope] || {}, ys = Object.keys(src).filter(y => y !== "all").sort();
+  el("m3sub").textContent = `${ys[0]}년 ~ ${ys[ys.length - 1]}년 상장 · ${scope === "all" ? "스팩·리츠 포함" : "스팩·리츠·인프라펀드 제외"} · 막대가 높을수록 순위가 높습니다`;
+  el("modal3d").classList.add("on");
+  play3d();
+}
+function close3d() { el("modal3d").classList.remove("on"); cancelAnimationFrame(raf3); }
+
 async function init() {
   try {
     const r = await fetch("data/dashboard.json", { cache: "no-store" });
@@ -293,6 +443,12 @@ async function init() {
     render();
   });
   el("estOn").onchange = e => { est = e.target.checked; render(); };
+  el("btn3d").onclick = open3d;
+  el("m3close").onclick = close3d;
+  el("m3replay").onclick = play3d;
+  el("modal3d").onclick = e => { if (e.target.id === "modal3d") close3d(); };
+  document.addEventListener("keydown", e => { if (e.key === "Escape") close3d(); });
+  if (new URLSearchParams(location.search).get("view") === "samsung3d") open3d();
   const ys = Object.keys((D.ms_ipo || {}).core || D.ms_lockup_by_year || {}).filter(k => k !== "all").sort();
   el("yearSeg").innerHTML = [["all", "전체"], ...ys.map(y => [y, y + "년"])].map(([k, t]) =>
     `<button data-y="${k}" class="${k === year ? "on" : ""}">${t}</button>`).join("");
