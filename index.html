@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>통합 조망 — 락업·담보대출</title>
-<link rel="stylesheet" href="assets/base.css?v=20260929b" />
+<link rel="stylesheet" href="assets/base.css?v=20260929c" />
 <style>
   .sum{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-bottom:14px;overflow:hidden}
   .sum-i{padding:16px 20px;border-right:1px solid var(--line)}
@@ -125,6 +125,13 @@
   .mo-h{font-size:11px;font-weight:750;color:#6b7280}
   .mini tr.past td{color:#9aa3af}
   @media(max-width:1200px){.grid{grid-template-columns:repeat(3,1fr)}.sum{grid-template-columns:repeat(2,1fr)}}
+  /* 헤더는 증권사 점유율 화면과 같은 색을 쓴다 */
+  .topbar{background:#060b14;border-bottom:1px solid #1a2438}
+  .brand-sub{color:#7d8ba4}
+  .top-meta{color:#8b98b0}
+  .nav a{color:#8b98b0}
+  .nav a:hover{background:rgba(255,255,255,.06);color:#fff}
+  .nav a.on{background:#3b6cf0;color:#fff}
 </style>
 </head>
 <body>
@@ -139,7 +146,7 @@
   </nav>
   <div class="top-right">
     <div class="top-meta" id="topMeta">불러오는 중…</div>
-    <div class="co-logo"><img src="assets/img/onelineai_logo.svg" alt="원라인에이아이" /></div>
+    <div class="co-logo"><img src="assets/img/onelineai_logo_dark.svg" alt="원라인에이아이" /></div>
   </div>
 </header>
 
