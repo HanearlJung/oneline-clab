@@ -263,6 +263,12 @@ def main():
                       "collateral_set_amount", "period_raw", "debtor"):
                 if keep.get(f) is None and other.get(f) is not None:
                     keep[f] = other[f]
+            # 대량보유보고서는 상대방을 '주4)' 처럼 주석으로 돌리는 경우가 있다.
+            # 남기는 쪽에 기관이 없으면 거래소 공시의 채권자를 가져온다.
+            if not keep.get("lender") and other.get("lender"):
+                for f in ("lender", "lenders", "lender_type"):
+                    if other.get(f):
+                        keep[f] = other[f]
             keep["also_in"] = other["rcept_no"]
             drop_ids.add(id(other))
         keep["is_active"] = bool(keep["maturity_date"] and keep["maturity_date"] >= base_s)

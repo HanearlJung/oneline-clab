@@ -200,6 +200,30 @@ def money(cell: str, table_unit: float = 1) -> float | None:
     return v * (_UNIT[m.group(2)] if m.group(2) else table_unit)
 
 
+# 계약의 종류 칸은 자유 기재다. '주식담보대출'이라고 적는 곳도, '일반대출'이라 적고
+# 비고에 '주식담보'라고 적는 곳도 있다. 실제 공시에서 확인한 표기를 모두 받는다.
+_PLEDGE_KIND = re.compile(r"담보|당보|답보|질권|근질|금전소비대차")      # 당보·답보는 오기
+_LOAN_KIND = re.compile(r"대출|차입|여신|융자|금전대여")
+# 주식을 빌려주고 받는 계약, 상환·입고 기록은 대출 계약이 아니다
+_NOT_LOAN_KIND = re.compile(r"주식차입|주식대여|주식대차|대차계약|대차입고|상환|양수도|매매|공동|의결권")
+_NOTE_PLEDGE = re.compile(r"담보대출|주식담보|대출담보|차입금\s*담보|질권\s*설정")
+_FIN_NAME = re.compile(r"은행|증권|금융|캐피탈|저축|보험|생명|화재|신협|금고|농협|수협|뱅크|대부")
+_DITTO = {'"', "〃", "″", "상동", "동일", "위와 같음", "위와같음"}
+
+
+def is_pledge_loan(kind: str, note: str, counterparty: str) -> bool:
+    """주식을 맡기고 돈을 빌린 계약인가."""
+    k = kind.replace(" ", "")
+    if _PLEDGE_KIND.search(k):
+        return True
+    if _NOT_LOAN_KIND.search(k):
+        return False
+    if _LOAN_KIND.search(k):
+        return True
+    # 종류 칸이 애매해도 비고에 담보대출이라 적고 상대방이 금융기관이면 대출이다
+    return bool(_NOTE_PLEDGE.search(note or "") and _FIN_NAME.search(counterparty or ""))
+
+
 def parse_pledge(text: str) -> list[dict]:
     """'나. 계약 내용' 표에서 담보성 계약만, '다.' 표에서 대출금액을 붙인다.
 
@@ -210,25 +234,32 @@ def parse_pledge(text: str) -> list[dict]:
       - '다.' 표의 연번은 '나.' 표의 연번을 가리킨다. 순서(위치)로 맞추면 담보가 아닌
         계약이 섞인 문서에서 어긋난다.
     """
-    rows, header = [], None
+    rows, header, prev = [], None, {}
     for line in text.split("\n"):
         if not line.strip().startswith("|"):
             continue
         c = cells(line)
         if CONTRACT_HEAD in c:
-            header = c
+            header, prev = c, {}
             continue
         if header and len(c) >= len(header) - 2:
             row = dict(zip(header, c))
+            # 윗줄과 같다는 표시(")는 윗줄 값으로 채운다
+            for col in (CONTRACT_HEAD, "계약 상대방", "비고", "계약 기간"):
+                if (row.get(col) or "").strip() in _DITTO and prev.get(col):
+                    row[col] = prev[col]
+            prev = row
             kind = row.get(CONTRACT_HEAD, "")
             # 양수도·공동보유 계약은 담보가 아니다. 돈을 빌리고 주식을 맡긴 계약만 남긴다.
             #   주식대차(빌려준 주식)·의결권 신탁은 대출이 아니다. '대차' 중에서는
             #   금전소비대차(=대출 계약)만, '신탁' 중에서는 담보신탁만 해당한다.
-            k = kind.replace(" ", "")
-            if not re.search(r"담보|질권|근질|금전소비대차", k):
+            note_raw = row.get("비고") or ""
+            if not is_pledge_loan(kind, note_raw, row.get("계약 상대방") or ""):
                 continue
             # 세무서 납세담보(연부연납 공탁)는 대출이 아니다
-            if re.search(r"공탁|납세", kind):
+            if re.search(r"공탁|납세", kind) or (
+                    not _PLEDGE_KIND.search(kind.replace(" ", ""))
+                    and re.search(r"공탁|납세|연부연납|세무서|법원", note_raw + (row.get("계약 상대방") or ""))):
                 continue
             period = row.get("계약 기간", "")
             signed_on = parse_date(row.get("계약체결 (변경)일"))
@@ -346,17 +377,34 @@ def parse_pledge_exchange(text: str) -> list[dict]:
     """
     holder = find_value(text, "명칭(성명, 법인명, 조합명, 단체명)")
     total_debt = find_number(text, "채무(차입)금액 총액")
-    part = text.split("[개별 담보제공 계약에 관한 사항]", 1)
-    if len(part) < 2:
-        return []
-    body = part[1].split("[개별 담보제공 계약의 담보권 실행 조건]", 1)[0]
-    rows = []
+    # 정정 공시는 앞쪽 '정정사항' 표 안에도 같은 제목이 셀 문구로 나온다.
+    # 표 밖에 단독으로 선 제목 중 마지막 것이 정정 후 본문의 표다.
+    heads = list(re.finditer(r"^[ \t]*\[개별 담보제공 계약에 관한 사항\][ \t]*$", text, re.M))
+    if heads:
+        rest = text[heads[-1].end():]
+    else:
+        part = text.split("[개별 담보제공 계약에 관한 사항]", 1)
+        if len(part) < 2:
+            return []
+        rest = part[1]
+    body = re.split(r"^[ \t]*\[개별 담보제공 계약의 담보권 실행 조건\]", rest, 1, flags=re.M)[0]
+    rows, n_all = [], 0
     for line in body.split("\n"):
         if not line.strip().startswith("|"):
             continue
         c = cells(line)
-        if len(c) < 10 or not c[0].isdigit():
+        if len(c) < 10:
             continue
+        numbered = c[0].isdigit()
+        # 순번이 '-' 인 행은 두 가지다. 계약이 1건뿐이라 번호를 안 매긴 경우와,
+        # 윗줄 계약에 담보 주식을 더 넣은 경우(같은 채권자, 금액 칸이 비어 있음).
+        if not numbered and not (c[0] in ("-", "") and parse_date(c[-1]) and parse_date(c[-3])):
+            continue
+        if (not numbered and rows and rows[-1]["counterparty"] == (c[1] or None)
+                and not num(c[4])):
+            rows[-1]["shares"] = (rows[-1]["shares"] or 0) + int(num(c[6]) or 0) or None
+            continue
+        n_all += 1
         if re.search(r"공탁|납세", c[5] + c[3]) or "세무서" in c[1]:
             continue                    # 납세담보는 대출이 아니다
         dates = [parse_date(x) for x in c[-3:]]
@@ -376,8 +424,6 @@ def parse_pledge_exchange(text: str) -> list[dict]:
             "unit": "원",
             "debtor": c[2] or None,
         })
-    n_all = sum(1 for line in body.split("\n")
-                if line.strip().startswith("|") and cells(line)[0].isdigit())
     if len(rows) == 1 and n_all == 1 and total_debt:
         rows[0]["loan_amount"] = total_debt
     for r in rows:
