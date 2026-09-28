@@ -93,6 +93,37 @@
   .mini col.w-num{width:12%} .mini col.w-dt{width:11%} .mini col.w-dd{width:9%} .mini col.w-src{width:8%}
   .src{display:inline-flex;align-items:center;justify-content:center;height:25px;padding:0 8px;
     border:1px solid #bfd0fa;border-radius:6px;color:var(--primary);text-decoration:none;font-size:11px;font-weight:750}
+  /* 기업 단위 행 + 펼침 */
+  .car{display:inline-block;width:14px;color:#9aa3af;font-size:10px;transition:transform .15s}
+  tr.g.open .car{transform:rotate(90deg);color:var(--primary)}
+  tr.g.open td{background:#f3f7ff;border-bottom-color:#dbe6fb}
+  .cnt{color:var(--muted);font-size:11px;font-weight:700;margin-right:6px}
+  .orgs{white-space:normal;line-height:1.35}
+  .more{color:var(--muted);font-size:11px}
+  .btn-line{height:27px;padding:0 10px;border:1px solid #cfd8e6;background:#fff;border-radius:7px;
+    font-size:11px;font-weight:750;color:#374151;cursor:pointer;white-space:nowrap}
+  .btn-line:hover{border-color:var(--primary);color:var(--primary)}
+  tr.sub{cursor:default} tr.sub:hover td{background:#fafcff}
+  tr.sub>td{padding:0 0 0 38px;background:#fafcff;border-bottom:1px solid #dbe6fb}
+  .subt{width:100%;min-width:0;font-size:12px;border-collapse:collapse}
+  .subt th{position:static;background:transparent;font-size:10.5px;padding:7px 10px;color:#6b7280;border-bottom:1px solid #e6ecf5}
+  .subt td{padding:7px 10px;border-bottom:1px solid #eef2f8;background:transparent}
+  .subt tr:last-child td{border-bottom:0}
+  .subt tr.past td{color:#9aa3af}
+  /* 상세 패널 월별 일정 */
+  .mo{border:1px solid var(--line);border-radius:10px;padding:6px 14px;background:#fbfcfe}
+  .mo-row{display:grid;grid-template-columns:74px 1fr 1fr;gap:14px;align-items:center;padding:7px 0;
+    border-bottom:1px solid #eef1f6;font-size:12px}
+  .mo-row:last-child{border-bottom:0}
+  .mo-m{font-weight:800;font-variant-numeric:tabular-nums}
+  .mo-c{display:grid;grid-template-columns:1fr 128px;gap:10px;align-items:center}
+  .mo-b{height:9px;border-radius:5px;background:#e8edf5;overflow:hidden}
+  .mo-b i{display:block;height:100%;border-radius:5px}
+  .mo-b.lk i{background:var(--primary)} .mo-b.ln i{background:var(--orange)}
+  .mo-v{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .mo-v b{font-weight:800} .mo-v small{color:var(--muted);margin-left:4px}
+  .mo-h{font-size:11px;font-weight:750;color:#6b7280}
+  .mini tr.past td{color:#9aa3af}
   @media(max-width:1200px){.grid{grid-template-columns:repeat(3,1fr)}.sum{grid-template-columns:repeat(2,1fr)}}
 </style>
 </head>
@@ -133,7 +164,7 @@
   <section class="panel">
     <div class="head">
       <div><div class="h-title"><span id="cnt">0</span>건<span id="badges"></span></div>
-        <div class="h-sub">행을 클릭하면 기업 상세가 열립니다.</div></div>
+        <div class="h-sub" id="hSub">행을 누르면 내역이 펼쳐집니다.</div></div>
       <div style="display:flex;gap:8px;align-items:center">
         <div class="tabs" id="tabs"></div>
         <button class="btn btn-dark" id="csv">CSV</button>
@@ -158,7 +189,8 @@ const NA = '<span class="na">미상</span>';
 const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const capTxt = v => v == null ? NA : v >= 10000 ? (v / 10000).toFixed(1) + "조" : Math.round(v).toLocaleString("ko-KR") + "억";
 const PAGE = 200;
-let D = null, COS = [], COMAP = new Map(), rows = [], shown = PAGE;
+let D = null, COS = [], COMAP = new Map(), rows = [], groups = [], shown = PAGE;
+const OPEN = new Set();          // 펼쳐 둔 기업 (종목코드)
 const dd = s => s ? Math.ceil((new Date(s + "T00:00:00") - new Date(D.meta.baseDate + "T00:00:00")) / 86400000) : null;
 const ddCell = k => k == null ? NA : k < 0 ? `<span class="na">${-k}일 경과</span>`
   : `<span class="dd ${k <= 7 ? "soon" : k <= 30 ? "warn" : ""}">D-${k}</span>`;
@@ -251,6 +283,34 @@ KINDS.company = {
   date: () => null, amount: r => (r.market_cap || 0) * 1e8,
   org: () => null, orgs: () => [], type: r => r.market, who: r => r.stock_code,
 };
+/* 목록은 기업 단위다. 한 회사의 주주·차주가 몇 명이든 한 줄이고, 누르면 내역이 펼쳐진다.
+   걸러낸 뒤에 묶는다 — '30일 이내'로 거르면 그 기간에 해당하는 건만 합계에 들어간다. */
+const amtOf = r => kind === "loan" ? (r.amount_counted || 0) : (r.lockup_value || 0);
+function groupRows(list) {
+  const K = KINDS[kind], base = D.meta.baseDate, m = new Map();
+  list.forEach(r => { if (!m.has(r.stock_code)) m.set(r.stock_code, []); m.get(r.stock_code).push(r); });
+  return [...m.entries()].map(([code, items]) => {
+    items.sort((a, b) => (K.date(a) || "9999").localeCompare(K.date(b) || "9999"));
+    const up = items.filter(r => K.date(r) && K.date(r) >= base);
+    const next = up.length ? K.date(up[0]) : (items.find(r => K.date(r)) ? K.date(items.filter(r => K.date(r)).slice(-1)[0]) : null);
+    const onNext = next ? items.filter(r => K.date(r) === next) : [];
+    const oc = new Map();
+    items.forEach(r => K.orgs(r).forEach(o => oc.set(o, (oc.get(o) || 0) + 1)));
+    const orgs = [...oc.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]);
+    const c = COMAP.get(code) || {};
+    return { stock_code: code, corp_name: items[0].corp_name, industry: items[0].industry, market: c.market,
+      items, next, nextCnt: onNext.length, nextAmt: onNext.reduce((s, r) => s + amtOf(r), 0),
+      cnt: items.length, amt: items.reduce((s, r) => s + amtOf(r), 0), orgs,
+      noAmt: items.filter(r => !(kind === "loan" ? r.loan_amount : r.lockup_value)).length };
+  });
+}
+const orgCell = g => !g.orgs.length ? NA : kind === "lockup" ? g.orgs.map(esc).join(" · ")
+  : esc(g.orgs.slice(0, 2).join(" · ")) + (g.orgs.length > 2 ? ` <span class="more">외 ${g.orgs.length - 2}곳</span>` : "");
+const sumCell = (n, a) => `<span class="cnt">${n.toLocaleString("ko-KR")}건</span>${a ? eok(a) : NA}`;
+const GCOLS = {
+  lockup: [["기업"], ["다음 해제일"], ["D-day", "num"], ["그날 해제", "num"], ["조회 합계", "num"], ["수탁 증권사"], [""]],
+  loan: [["기업"], ["다음 만기"], ["D-day", "num"], ["그날 만기", "num"], ["조회 합계", "num"], ["대출기관"], [""]],
+};
 const srcOf = k => k === "lockup" ? D.lockups : k === "loan" ? D.loans : COS;
 let kind = "lockup", sortKey = "date", YEAR = "";   // YEAR: 점유율 화면에서 넘어온 상장 연도
 
@@ -332,6 +392,15 @@ function apply() {
     const k = dd(d); return k != null && k <= +W;
   });
   const nk = v => v == null ? 1e9 : v < 0 ? 1e6 - v : v;
+  if (kind !== "company") {
+    groups = groupRows(rows);
+    groups.sort((a, b) => {
+      if (sortKey === "amount") return (b.amt || -1) - (a.amt || -1);
+      if (sortKey === "company") return a.corp_name.localeCompare(b.corp_name, "ko");
+      if (sortKey === "org") return (a.orgs[0] || "힣").localeCompare(b.orgs[0] || "힣", "ko") || nk(dd(a.next)) - nk(dd(b.next));
+      return nk(dd(a.next)) - nk(dd(b.next)) || b.amt - a.amt;
+    });
+  }
   rows.sort((a, b) => {
     if (sortKey === "cap") return (b.market_cap || -1) - (a.market_cap || -1);
     if (sortKey === "lk") return b.lockups.length - a.lockups.length || (b.market_cap || 0) - (a.market_cap || 0);
@@ -346,29 +415,77 @@ function apply() {
 
 function render() {
   const K = KINDS[kind];
-  el("cnt").textContent = rows.length.toLocaleString("ko-KR");
-  const co = new Set(rows.map(x => x.stock_code)).size;
-  el("cnt").nextSibling.textContent = K.unit;
-  el("badges").innerHTML = kind === "company" ? "" :
-    `<span class="badge ${kind === "lockup" ? "blue" : "orange"}" style="margin-left:8px">${co.toLocaleString("ko-KR")}개사</span>`
+  if (kind === "company") return renderFlat();
+  const tone = kind === "loan" ? "ln" : "lk";
+  el("cnt").textContent = groups.length.toLocaleString("ko-KR");
+  el("cnt").nextSibling.textContent = "개사";
+  el("hSub").textContent = "행을 누르면 내역이 펼쳐집니다. 기업 전체 내역은 ‘상세’에서 봅니다.";
+  el("badges").innerHTML =
+    `<span class="badge ${kind === "lockup" ? "blue" : "orange"}" style="margin-left:8px">${rows.length.toLocaleString("ko-KR")}건</span>`
     + (YEAR && kind === "lockup" ? `<span class="badge" style="margin-left:6px;cursor:pointer" id="yearOff" title="연도 조건 해제">${YEAR}년 상장 ✕</span>` : "");
   if (el("yearOff")) el("yearOff").onclick = () => { YEAR = ""; apply(); };
+  const cols = GCOLS[kind];
+  el("th").innerHTML = "<tr>" + cols.map(c => `<th class="${c[1] === "num" ? "num " : ""}${tone}">${c[0]}</th>`).join("") + "</tr>";
+  if (!groups.length) return renderEmpty(cols.length);
+
+  const sub = g => {
+    const sc = K.cols.slice(1).filter(c => c[0] !== "수탁 증권사");
+    return `<tr class="sub"><td colspan="${cols.length}"><table class="subt"><thead><tr>${
+      sc.map(c => `<th class="${c[2] === "num" ? "num" : ""}">${c[0]}</th>`).join("")}</tr></thead><tbody>${
+      g.items.map(r => `<tr class="${K.date(r) && K.date(r) < D.meta.baseDate ? "past" : ""}">${
+        sc.map(c => `<td class="${c[2] === "num" ? "num" : ""}">${c[1](r)}</td>`).join("")}</tr>`).join("")
+      }</tbody></table></td></tr>`;
+  };
+  // 수천 건을 한 번에 그리면 화면이 멈춘다. 정렬·필터·CSV 는 전체, 그리기만 나눈다.
+  const view = groups.slice(0, shown);
+  el("tb").innerHTML = view.map(g => {
+    const on = OPEN.has(g.stock_code);
+    return `<tr class="g${on ? " open" : ""}" data-c="${g.stock_code}">
+      <td class="${tone}"><div class="co"><span class="car">▶</span>${esc(g.corp_name)}</div>
+        <div class="co-sub" style="margin-left:14px">${g.stock_code}${g.industry ? " · " + esc(g.industry) : ""}</div></td>
+      <td class="${tone}">${g.next ? fd(g.next) : NA}</td>
+      <td class="num ${tone}">${ddCell(dd(g.next))}</td>
+      <td class="num ${tone}">${g.next ? sumCell(g.nextCnt, g.nextAmt) : NA}</td>
+      <td class="num ${tone}">${sumCell(g.cnt, g.amt)}</td>
+      <td class="${tone} orgs">${orgCell(g)}</td>
+      <td class="num ${tone}"><button class="btn-line" data-d="${g.stock_code}">상세</button></td>
+    </tr>` + (on ? sub(g) : "");
+  }).join("")
+    + (groups.length > shown ? `<tr class="sub"><td colspan="${cols.length}" style="padding:0"><div class="empty" style="padding:14px">
+        <button class="btn" id="more">${Math.min(PAGE, groups.length - shown).toLocaleString("ko-KR")}개사 더 보기
+        (${shown.toLocaleString("ko-KR")} / ${groups.length.toLocaleString("ko-KR")})</button></div></td></tr>` : "");
+  document.querySelectorAll("#tb tr.g").forEach(tr => tr.onclick = e => {
+    const code = tr.dataset.c;
+    if (e.target.closest("button[data-d]")) { const c = COMAP.get(code); if (c) open(c); return; }
+    if (e.target.closest("a")) return;
+    OPEN.has(code) ? OPEN.delete(code) : OPEN.add(code);
+    render();
+  });
+  if (el("more")) el("more").onclick = () => { shown += PAGE; render(); };
+}
+
+function renderEmpty(span) {
+  // 이벤트가 없어도 상장사이면 '없음'을 확인시켜 준다
+  const q = el("fq").value.trim().toLowerCase();
+  const hit = q && kind !== "company" ? COS.filter(c => c.corp_name.toLowerCase().includes(q) || c.stock_code.includes(q)).slice(0, 8) : [];
+  el("tb").innerHTML = `<tr class="sub"><td colspan="${span}" style="padding:0"><div class="empty">조건에 맞는 건이 없습니다.${
+    hit.length ? `<div style="margin-top:10px">상장사 검색 결과 — ${hit.map(c =>
+      `<a class="src" href="#" data-c="${c.stock_code}" style="margin:0 3px">${esc(c.corp_name)}</a>`).join("")}</div>` : ""}</div></td></tr>`;
+  document.querySelectorAll("#tb a[data-c]").forEach(a => a.onclick = e => { e.preventDefault(); open(COMAP.get(a.dataset.c)); });
+}
+
+function renderFlat() {
+  const K = KINDS[kind];
+  el("cnt").textContent = rows.length.toLocaleString("ko-KR");
+  el("cnt").nextSibling.textContent = K.unit;
+  el("hSub").textContent = "행을 누르면 기업 상세가 열립니다.";
+  el("badges").innerHTML = "";
   el("th").innerHTML = "<tr>" + K.cols.map(c =>
-    `<th class="${c[2] === "num" ? "num " : ""}${kind === "lockup" ? "lk" : "ln"}">${c[0]}</th>`).join("") + "</tr>";
-  if (!rows.length) {
-    // 이벤트가 없어도 상장사이면 '없음'을 확인시켜 준다
-    const q = el("fq").value.trim().toLowerCase();
-    const hit = q && kind !== "company" ? COS.filter(c => c.corp_name.toLowerCase().includes(q) || c.stock_code.includes(q)).slice(0, 8) : [];
-    el("tb").innerHTML = `<tr><td colspan="${K.cols.length}"><div class="empty">조건에 맞는 건이 없습니다.${
-      hit.length ? `<div style="margin-top:10px">상장사 검색 결과 — ${hit.map(c =>
-        `<a class="src" href="#" data-c="${c.stock_code}" style="margin:0 3px">${esc(c.corp_name)}</a>`).join("")}</div>` : ""}</div></td></tr>`;
-    document.querySelectorAll("#tb a[data-c]").forEach(a => a.onclick = e => { e.preventDefault(); open(COMAP.get(a.dataset.c)); });
-    return;
-  }
-  // 수천 행을 한 번에 그리면 화면이 멈춘다. 정렬·필터·CSV 는 전체, 그리기만 나눈다.
+    `<th class="${c[2] === "num" ? "num " : ""}lk">${c[0]}</th>`).join("") + "</tr>";
+  if (!rows.length) return renderEmpty(K.cols.length);
   const view = rows.slice(0, shown);
   el("tb").innerHTML = view.map((r, i) => "<tr data-i=\"" + i + "\">" +
-    K.cols.map(c => `<td class="${c[2] === "num" ? "num " : ""}${kind === "loan" ? "ln" : "lk"}">${c[1](r)}</td>`).join("")
+    K.cols.map(c => `<td class="${c[2] === "num" ? "num " : ""}lk">${c[1](r)}</td>`).join("")
     + "</tr>").join("")
     + (rows.length > shown ? `<tr><td colspan="${K.cols.length}"><div class="empty" style="padding:14px">
         <button class="btn" id="more">${Math.min(PAGE, rows.length - shown).toLocaleString("ko-KR")}${K.unit} 더 보기
@@ -394,34 +511,48 @@ function csv() {
 }
 
 function open(c) {
-  const ev = [
-    ...c.lockups.map(x => ({ t: "lk", d: x.release_date, v: x.lockup_value, who: x.holder_name, org: x.custody_broker })),
-    ...c.loans.map(x => ({ t: "ln", d: x.maturity_date, v: x.loan_amount, who: x.borrower_name, org: x.lender })),
-  ].filter(x => x.d).sort((a, b) => a.d.localeCompare(b.d));
-  const lo = ev[0]?.d, hi = ev[ev.length - 1]?.d;
-  const pos = d => (!lo || lo === hi) ? 50 : Math.max(0, Math.min(100, (new Date(d) - new Date(lo)) / (new Date(hi) - new Date(lo)) * 100));
+  const base = D.meta.baseDate, bym = base.slice(0, 7);
+  // 다가오는 건을 위에, 지난 건은 아래에 흐리게
+  const ord = (list, f) => [...list].sort((a, b) => {
+    const x = f(a), y = f(b), px = !!(x && x < base), py = !!(y && y < base);
+    if (px !== py) return px ? 1 : -1;
+    return px ? (y || "").localeCompare(x || "") : (x || "9999").localeCompare(y || "9999");
+  });
+  const lks = ord(c.lockups, x => x.release_date), lns = ord(c.loans, x => x.maturity_date);
+  const past = d => d && d < base ? "past" : "";
+
+  // 월별 일정 — 이번 달부터. 같은 날짜가 여러 줄 반복되지 않게 달 단위로 모은다.
+  const mm = new Map();
+  const add = (d, k, v) => { if (!d || d.slice(0, 7) < bym) return; const m = d.slice(0, 7);
+    if (!mm.has(m)) mm.set(m, { lk: 0, lkc: 0, ln: 0, lnc: 0 }); const o = mm.get(m); o[k] += v || 0; o[k + "c"] += 1; };
+  c.lockups.forEach(x => add(x.release_date, "lk", x.lockup_value));
+  c.loans.forEach(x => add(x.maturity_date, "ln", x.amount_counted));   // 공동담보는 한 번만
+  const months = [...mm.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+  const mx = Math.max(1, ...months.map(([, o]) => Math.max(o.lk, o.ln)));
+  // 한쪽만 있는 회사는 그쪽 칸만 그린다 (빈 칸을 반쪽이나 비워 두지 않는다)
+  const hasLk = c.lockups.length > 0, hasLn = c.loans.length > 0;
+  const one = hasLk && hasLn ? "" : "grid-template-columns:74px 1fr";
+  const pl = c.lockups.filter(x => x.release_date && x.release_date.slice(0, 7) < bym).length;
+  const pn = c.loans.filter(x => x.maturity_date && x.maturity_date.slice(0, 7) < bym).length;
+  const un = c.loans.filter(x => !x.maturity_date).length;
+  const cell = (k, o) => o[k + "c"] ? `<div class="mo-c"><div class="mo-b ${k}"><i style="width:${Math.max(3, o[k] / mx * 100).toFixed(1)}%"></i></div>
+      <div class="mo-v"><b>${o[k] ? eok(o[k]) : "금액 미상"}</b><small>${o[k + "c"]}건</small></div></div>` : '<div class="mo-c"><div></div><div class="mo-v" style="color:#c3cad6">—</div></div>';
+
   el("sheet").innerHTML = `
     <div class="sheet-head">
       <div><div class="sheet-co">${esc(c.name)}</div>
         <div class="sheet-meta">${c.stock_code || ""}${c.market ? " · " + c.market : ""}${c.industry ? " · " + esc(c.industry) : ""}${
           c.market_cap ? " · 시총 " + (c.market_cap >= 10000 ? (c.market_cap / 10000).toFixed(1) + "조" : Math.round(c.market_cap).toLocaleString("ko-KR") + "억") : ""}</div></div>
       <button class="x" onclick="closeD()">✕</button></div>
-    <div class="sheet-body">
-      <div class="blk"><div class="blk-t">일정 타임라인 <span class="badge">${ev.length}건</span>
-        <span class="badge blue">락업</span><span class="badge orange">대출</span></div>
-        ${ev.length ? `<div class="tl">${ev.map(x => `<div class="tl-row">
-          <div class="dot ${x.t}"></div><div>${fd(x.d)}</div>
-          <div class="tl-bar"><i class="" style="left:calc(${pos(x.d)}% - 3px);background:${x.t === "lk" ? "var(--primary)" : "var(--orange)"}"></i></div>
-          <div style="text-align:right;font-weight:750">${x.v ? eok(x.v) : "—"}</div></div>`).join("")}</div>`
-          : '<div class="tl" style="color:var(--muted);font-size:12px">일정이 확보된 건이 없습니다.</div>'}
-      </div>
-      <div class="blk"><div class="blk-t">보호예수 <span class="badge">${c.lockups.length}건</span></div>
+    <div class="sheet-body" style="display:flex;flex-direction:column">
+      <div class="blk" style="order:${c.lockups.length ? 1 : 2}"><div class="blk-t">보호예수 <span class="badge blue">${c.lockups.length}건</span>${
+        c.lockups.length ? `<span class="badge">해제 예정 ${c.lockups.filter(x => x.is_active).length}건</span>` : ""}</div>
         ${c.lockups.length ? `<table class="mini">
           <colgroup><col class="w-nm"><col class="w-ty"><col class="w-num"><col class="w-num">
             <col class="w-dt"><col class="w-dd"><col class="w-org"></colgroup>
           <thead><tr><th>대상자</th><th>구분</th><th class="n">수량</th>
           <th class="n">평가금액</th><th>해제일</th><th class="n">D-day</th><th>수탁 증권사</th></tr></thead>
-          <tbody>${c.lockups.map(x => `<tr><td>${esc(x.holder_name)}</td><td>${x.holder_type}</td>
+          <tbody>${lks.map(x => `<tr class="${past(x.release_date)}"><td>${esc(x.holder_name)}</td><td>${x.holder_type}</td>
           <td class="n">${x.lockup_qty.toLocaleString("ko-KR")}</td>
           <td class="n">${x.lockup_value ? eok(x.lockup_value) : NA}</td><td>${x.release_date ? fd(x.release_date) : NA}</td>
           <td class="n">${ddCell(dd(x.release_date))}</td>
@@ -429,17 +560,17 @@ function open(c) {
           ${c.lockups[0].lead_manager ? `<div class="tl" style="color:var(--muted);font-size:12px;margin-top:6px">IPO 대표주관 ${esc(c.lockups[0].lead_manager)}${
             c.lockups[0].co_manager ? " · 공동주관 " + esc(c.lockups[0].co_manager) : ""}${
             c.lockups[0].underwriter ? " · 인수 " + esc(c.lockups[0].underwriter) : ""}${
-            c.lockups[0].prospectus_rcept_no ? ` · <a class="src" href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${c.lockups[0].prospectus_rcept_no}" target="_blank" rel="noopener">증권신고서</a>` : ""}</div>` : ""}
-`
+            c.lockups[0].prospectus_rcept_no ? ` · <a class="src" href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${c.lockups[0].prospectus_rcept_no}" target="_blank" rel="noopener">증권신고서</a>` : ""}</div>` : ""}`
           : `<div class="tl" style="color:var(--muted);font-size:12px">보호예수 없음 — ${D.meta.lockupScope || "최근 신규상장 종목이 아닙니다"}</div>`}
       </div>
-      <div class="blk"><div class="blk-t">주식담보대출 <span class="badge">${c.loans.length}건</span></div>
+      <div class="blk" style="order:${c.loans.length ? 1 : 2}"><div class="blk-t">주식담보대출 <span class="badge orange">${c.loans.length}건</span>${
+        c.loans.length ? `<span class="badge">만기 예정 ${c.loans.filter(x => x.is_active).length}건</span>` : ""}</div>
         ${c.loans.length ? `<table class="mini">
           <colgroup><col class="w-nm"><col class="w-ty"><col class="w-org"><col class="w-num">
             <col class="w-dd"><col class="w-dt"><col class="w-dd"><col class="w-src"></colgroup>
           <thead><tr><th>차주</th><th>관계</th><th>기관</th>
           <th class="n">금액</th><th class="n">지분율 · 금리</th><th>만기</th><th class="n">D-day</th><th>공시</th></tr></thead>
-          <tbody>${c.loans.map(x => `<tr><td>${x.borrower_name ? esc(x.borrower_name) : NA}${
+          <tbody>${lns.map(x => `<tr class="${past(x.maturity_date)}"><td>${x.borrower_name ? esc(x.borrower_name) : NA}${
             x.debtor ? `<div class="co-sub">채무자 ${esc(x.debtor)}</div>` : ""}</td><td>${x.borrower_type ? esc(x.borrower_type) : NA}</td>
           <td>${x.lender ? esc(x.lender) : NA}</td><td class="n">${loanAmt(x)}</td>
           <td class="n">${x.pledged_ratio != null ? x.pledged_ratio + "%" : NA}${
@@ -447,6 +578,16 @@ function open(c) {
           <td>${matCell(x)}</td><td class="n">${ddCell(dd(x.maturity_date))}</td>
           <td><a class="src" href="${x.source_url}" target="_blank" rel="noopener">원문</a></td></tr>`).join("")}</tbody></table>`
           : `<div class="tl" style="color:var(--muted);font-size:12px">담보계약 공시 없음 — ${D.meta.loanScope || ""}</div>`}
+      </div>
+      <div class="blk" style="order:3"><div class="blk-t">월별 일정 <span class="badge">${months.length}개월</span></div>
+        ${months.length ? `<div class="mo">
+          <div class="mo-row mo-h" style="${one}"><div>월</div>${hasLk ? "<div>보호예수 해제</div>" : ""}${hasLn ? "<div>담보대출 만기</div>" : ""}</div>
+          ${months.map(([m, o]) => `<div class="mo-row" style="${one}"><div class="mo-m">${m.replace("-", ".")}</div>${
+            hasLk ? cell("lk", o) : ""}${hasLn ? cell("ln", o) : ""}</div>`).join("")}
+        </div>` : '<div class="tl" style="color:var(--muted);font-size:12px">이번 달 이후로 잡힌 일정이 없습니다.</div>'}
+        ${pl || pn || un ? `<div style="color:var(--muted);font-size:12px;margin-top:8px">${
+          [pl ? `지난 보호예수 해제 ${pl}건` : "", pn ? `만기 지난 담보대출 ${pn}건` : "", un ? `만기 미상 담보대출 ${un}건` : ""].filter(Boolean).join(" · ")
+        } — 위 표에 흐리게 표시</div>` : ""}
       </div>
     </div>`;
   el("sheet").scrollTop = 0;
