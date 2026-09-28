@@ -169,8 +169,8 @@
     <h1>보호예수 수탁 / 담보대출 M/S</h1>
     <div class="ctl">
       <div class="seg" id="modeSeg">
-        <button data-m="cnt" class="on">건수 기준</button>
-        <button data-m="amt">금액 기준</button>
+        <button data-m="cnt">건수 기준</button>
+        <button data-m="amt" class="on">금액 기준</button>
       </div>
       <label class="chk"><input type="checkbox" id="estOn" checked /> 추정 포함</label>
     </div>
@@ -231,7 +231,8 @@ const eok = v => { if (v == null) return null; const a = v / 1e8;
   return Math.round(a).toLocaleString("ko-KR") + "억"; };
 const fd = s => s ? s.replaceAll("-", ".") : "";
 const ME = "삼성증권";
-let D = null, mode = "cnt", est = true, year = "all", scope = "core";
+// 처음 열었을 때: 금액 기준 · 가장 최근 연도 · 스팩·리츠 제외
+let D = null, mode = "amt", est = true, year = "all", scope = "core";
 
 const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -450,6 +451,7 @@ async function init() {
   document.addEventListener("keydown", e => { if (e.key === "Escape") close3d(); });
   if (new URLSearchParams(location.search).get("view") === "samsung3d") open3d();
   const ys = Object.keys((D.ms_ipo || {}).core || D.ms_lockup_by_year || {}).filter(k => k !== "all").sort();
+  if (ys.length) year = ys[ys.length - 1];
   el("yearSeg").innerHTML = [["all", "전체"], ...ys.map(y => [y, y + "년"])].map(([k, t]) =>
     `<button data-y="${k}" class="${k === year ? "on" : ""}">${t}</button>`).join("");
   document.querySelectorAll("#scopeSeg button").forEach(b => b.onclick = () => {
