@@ -479,7 +479,7 @@ function render() {
   el("lnList").innerHTML = list(ln.rows, ln.unknown, "cnt", "cnt_ms", "balance", "balance_ms", "lender", false);
   const n = v => (v || 0).toLocaleString("ko-KR");
   el("lnBasis").innerHTML =
-    `<div>DART 공시 기준 · 코스피·코스닥 전체 · ${lnYear === "all" ? "현재 남아 있는 계약" : lnYear + "년 체결"} <b>${n(ln.total.contracts)}건</b> · <b>${n(ln.total.companies)}개사</b> (만기 경과 제외)</div>
+    `<div>DART 공시 기준 · 전체 상장사 <b>${n(D.meta.universe.listed)}개사</b> 기준 · ${lnYear === "all" ? "현재 남아 있는 계약" : lnYear + "년 체결"} <b>${n(ln.total.contracts)}건</b> · <b>${n(ln.total.companies)}개사</b> (만기 경과 제외)</div>
      <div>수집 — 대량보유상황보고서 · 거래소 담보제공계약 공시 · 회사·제출인별 <b>최신 공시</b> 기준</div>
      <div>금액 — 공시에 적힌 <b>대출금액</b> (담보계약 추가 기재사항 표)</div>`;
 
