@@ -413,6 +413,17 @@ function apply() {
   render();
 }
 
+/* 다가오는 건을 위에(가까운 순), 일정 미상이 그다음, 지난 건은 맨 아래(최근에 지난 순).
+   펼친 내역과 기업 상세 패널이 같은 순서를 쓴다. */
+function upcomingFirst(list, f) {
+  const base = D.meta.baseDate;
+  return [...list].sort((a, b) => {
+    const x = f(a), y = f(b), px = !!(x && x < base), py = !!(y && y < base);
+    if (px !== py) return px ? 1 : -1;
+    return px ? (y || "").localeCompare(x || "") : (x || "9999").localeCompare(y || "9999");
+  });
+}
+
 function render() {
   const K = KINDS[kind];
   if (kind === "company") return renderFlat();
@@ -430,9 +441,10 @@ function render() {
 
   const sub = g => {
     const sc = K.cols.slice(1).filter(c => c[0] !== "수탁 증권사");
+    const items = upcomingFirst(g.items, K.date);
     return `<tr class="sub"><td colspan="${cols.length}"><table class="subt"><thead><tr>${
       sc.map(c => `<th class="${c[2] === "num" ? "num" : ""}">${c[0]}</th>`).join("")}</tr></thead><tbody>${
-      g.items.map(r => `<tr class="${K.date(r) && K.date(r) < D.meta.baseDate ? "past" : ""}">${
+      items.map(r => `<tr class="${K.date(r) && K.date(r) < D.meta.baseDate ? "past" : ""}">${
         sc.map(c => `<td class="${c[2] === "num" ? "num" : ""}">${c[1](r)}</td>`).join("")}</tr>`).join("")
       }</tbody></table></td></tr>`;
   };
@@ -513,12 +525,7 @@ function csv() {
 function open(c) {
   const base = D.meta.baseDate, bym = base.slice(0, 7);
   // 다가오는 건을 위에, 지난 건은 아래에 흐리게
-  const ord = (list, f) => [...list].sort((a, b) => {
-    const x = f(a), y = f(b), px = !!(x && x < base), py = !!(y && y < base);
-    if (px !== py) return px ? 1 : -1;
-    return px ? (y || "").localeCompare(x || "") : (x || "9999").localeCompare(y || "9999");
-  });
-  const lks = ord(c.lockups, x => x.release_date), lns = ord(c.loans, x => x.maturity_date);
+  const lks = upcomingFirst(c.lockups, x => x.release_date), lns = upcomingFirst(c.loans, x => x.maturity_date);
   const past = d => d && d < base ? "past" : "";
 
   // 월별 일정 — 이번 달부터. 같은 날짜가 여러 줄 반복되지 않게 달 단위로 모은다.
