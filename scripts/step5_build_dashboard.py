@@ -348,6 +348,24 @@ def main():
     if ksd_path.exists():                       # 예탁결제원 — 사유 단위 (유상증자·합병 등)
         lockups += json.loads(ksd_path.read_text(encoding="utf-8"))
     lockups = [x for x in lockups if x.get("stock_code") in listed]
+    # 주관사는 KIND 공식 신규상장 목록으로 만든 IPO 모집단(step8)의 확정값을 쓴다.
+    # 목록과 점유율이 서로 다른 주관사를 말하면 안 된다.
+    deals_path = ROOT / "data" / "ipo_deals.json"
+    deals = json.loads(deals_path.read_text(encoding="utf-8")) if deals_path.exists() else []
+    deal_by_code = {d["stock_code"]: d for d in deals if d.get("stock_code")}
+    deal_by_name = {re.sub(r"\s+", "", d["name"]): d for d in deals}
+    for x in lockups:
+        d = deal_by_code.get(x["stock_code"]) or deal_by_name.get(re.sub(r"\s+", "", x["corp_name"]))
+        if not d:
+            continue
+        x["custody_brokers"] = d["lead_managers"]
+        x["custody_broker"] = d["lead_managers"][0] if d["lead_managers"] else None
+        x["custody_broker_src"] = "주관사"
+        x["lead_manager"] = ", ".join(d["lead_managers"]) or None
+        x["co_manager"] = ", ".join(d["co_managers"]) or None
+        x["manager_src"] = d["lead_src"]
+        x["listing_date"] = d["listing_date"]          # 거래소 확정 상장일
+        x["is_spac"] = d["is_spac"]
     # 있을 수 없는 값은 화면에 내지 않는다. 한 건이 틀리면 전체를 못 믿게 된다.
     #   - 평가금액이 시가총액보다 큼: 주식수 칸에 금액(전환사채 권면 등)이 들어간 행
     #   - 해제일이 상장일보다 앞섬: 기산일이 잘못 잡힌 행
@@ -420,14 +438,49 @@ def main():
                 "total": {"cnt": tc, "amt": int(ta), "rows": len(rows),
                           "companies": len({x["stock_code"] for x in rows})}}
 
-    ipo_rows = [x for x in lockups if x.get("source") == "IPO"]
-    years = sorted({x["listing_date"][:4] for x in ipo_rows if x.get("listing_date")})
-    ms_by_year = {"all": build_ms_lockup(ipo_rows)}
-    for y in years:
-        ms_by_year[y] = build_ms_lockup([x for x in ipo_rows
-                                         if (x.get("listing_date") or "")[:4] == y])
-    no_date = len({x["stock_code"] for x in ipo_rows if not x.get("listing_date")})
-    ld = [x["listing_date"] for x in ipo_rows if x.get("listing_date")]
+    def build_ms_ipo(rows):
+        """IPO 주관 실적. 회사 1곳 = 1건. 공동대표주관이면 각 주관사에 1건, 공모금액은 균등 분할."""
+        agg = defaultdict(lambda: {"cnt": 0, "amt": 0.0, "spac": 0})
+        joint = 0
+        for d in rows:
+            bs = d["lead_managers"]
+            if len(bs) > 1:
+                joint += 1
+            for b in bs:
+                a = agg[b]
+                a["cnt"] += 1
+                a["spac"] += 1 if d["is_spac"] else 0
+                a["amt"] += (d["offer_amount"] or 0) / len(bs)
+        tc = sum(a["cnt"] for a in agg.values()) or 1
+        ta = sum(a["amt"] for a in agg.values()) or 1
+        out = [{"broker": k, "cnt": v["cnt"], "amt": int(v["amt"]), "co_cnt": v["cnt"],
+                "spac_cnt": v["spac"], "est_cnt": 0,
+                "cnt_ms": round(v["cnt"] / tc * 100, 1),
+                "amt_ms": round(v["amt"] / ta * 100, 1)} for k, v in agg.items()]
+        out.sort(key=lambda x: (-x["cnt"], -x["amt"]))
+        codes = {d["stock_code"] for d in rows}
+        with_lock = {x["stock_code"] for x in lockups} & codes
+        return {"rows": out, "unknown": {"cnt": 0, "amt": 0}, "joint_cnt": joint, "unit": "개사",
+                "total": {"cnt": tc, "amt": int(sum(d["offer_amount"] or 0 for d in rows)),
+                          "companies": len(rows),
+                          "kospi": sum(1 for d in rows if d["market"] == "KOSPI"),
+                          "kosdaq": sum(1 for d in rows if d["market"] == "KOSDAQ"),
+                          "spac": sum(1 for d in rows if d["is_spac"]),
+                          "reit": sum(1 for d in rows if d["is_reit"]),
+                          "with_lockup": len(with_lock),
+                          "rows": sum(1 for x in lockups if x["stock_code"] in codes)}}
+
+    # 'core' = 스팩·리츠·인프라펀드 제외 (증권업계 리그테이블의 통상 기준), 'all' = 전부 포함
+    scopes = {"core": [d for d in deals if not d["is_spac"] and not d["is_reit"]], "all": deals}
+    years = sorted({d["listing_date"][:4] for d in deals})
+    ms_ipo = {}
+    for sc, rows in scopes.items():
+        ms_ipo[sc] = {"all": build_ms_ipo(rows)}
+        for y in years:
+            ms_ipo[sc][y] = build_ms_ipo([d for d in rows if d["listing_date"][:4] == y])
+    ms_by_year = ms_ipo["core"]
+    no_date = 0
+    ld = [d["listing_date"] for d in deals]
     ms_range = [min(ld), max(ld)] if ld else None
 
     basis = {"주관사": sum(1 for x in lk_ms if x.get("custody_brokers")),
@@ -502,6 +555,7 @@ def main():
         # 수탁 M/S 는 아직 풀리지 않은 물량 기준이다. 이미 해제된 건은 수탁 잔고가 아니다.
         # 수탁 M/S 는 상장 연도로 본다 — 그 해 IPO 를 누가 주관했는가.
         # 'all' 은 2022년부터 지금까지 전체, 'active' 는 보호예수가 아직 남은 회사만.
+        "ms_ipo": ms_ipo,
         "ms_lockup_by_year": ms_by_year,
         "ms_lockup": ms_by_year["all"] if lockups else None,
         "ms_lockup_active": build_ms_lockup(lk_ms) if lockups else None,

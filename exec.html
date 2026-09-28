@@ -159,7 +159,13 @@
         <div class="badge blue" id="lkTag"></div>
       </div>
       <div class="tot" id="lkTot"></div>
-      <div class="seg" id="yearSeg" style="margin:0 0 12px;flex-wrap:wrap"></div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px">
+        <div class="seg" id="yearSeg" style="flex-wrap:wrap"></div>
+        <div class="seg" id="scopeSeg">
+          <button data-s="core" class="on" title="증권업계 리그테이블의 통상 기준">스팩·리츠 제외</button>
+          <button data-s="all">전체 포함</button>
+        </div>
+      </div>
       <div id="lkList"></div>
       <div class="basis" id="lkBasis"></div>
     </section>
@@ -185,7 +191,7 @@ const eok = v => { if (v == null) return null; const a = v / 1e8;
   return Math.round(a).toLocaleString("ko-KR") + "억"; };
 const fd = s => s ? s.replaceAll("-", ".") : "";
 const ME = "삼성증권";
-let D = null, mode = "cnt", est = true, year = "all";
+let D = null, mode = "cnt", est = true, year = "all", scope = "core";
 
 const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
@@ -229,21 +235,21 @@ function list(rows0, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEs
 function render() {
   // 수탁 증권사 = IPO 대표주관회사. 추정·기재 구분이 없으므로 토글은 쓰지 않는다.
   el("estOn").parentElement.style.display = "none";
-  const lk = (D.ms_lockup_by_year || {})[year] || D.ms_lockup, ln = D.ms_loan;
+  const lk = ((D.ms_ipo || {})[scope] || D.ms_lockup_by_year || {})[year] || D.ms_lockup, ln = D.ms_loan;
   const yl = year === "all" ? `${D.meta.ipoRange[0].slice(0, 4)}년 ~ 현재 상장` : `${year}년 상장`;
 
   if (lk) {
     el("lkTag").textContent = `${yl} · ${lk.rows.length}개 증권사`;
     el("lkTot").innerHTML =
       `<div>IPO 기업<b>${lk.total.companies.toLocaleString("ko-KR")}개사</b></div>
-       <div>평가금액<b>${eok(lk.total.amt)}원</b></div>
-       <div>보호예수<b>${lk.total.rows.toLocaleString("ko-KR")}건</b></div>`;
+       <div>공모금액<b>${eok(lk.total.amt)}원</b></div>
+       <div>코스피 · 코스닥<b>${lk.total.kospi} · ${lk.total.kosdaq}</b></div>`;
     el("lkList").innerHTML = list(lk.rows, lk.unknown, "cnt", "cnt_ms", "amt", "amt_ms", "broker", true);
     el("lkBasis").innerHTML =
-      `<div>IPO 대표주관회사 기준 · ${yl} <b>${lk.total.companies.toLocaleString("ko-KR")}개사</b> · 회사 1곳을 1건으로 집계</div>
-       <div>공동대표주관 <b>${(lk.joint_cnt || 0).toLocaleString("ko-KR")}개사</b> — 각 주관사에 1건씩, 금액은 균등 분할</div>
-       <div>평가금액은 그 회사들의 보호예수 물량(해제된 분 포함)을 ${fd(D.meta.priceDate)} 종가로 계산</div>`
-      + (lk.unknown.cnt ? `<div>주관사 미확인 <b>${lk.unknown.cnt}개사</b> — 분모 제외</div>` : "");
+      `<div>한국거래소 신규상장 목록 기준 · ${yl} <b>${lk.total.companies.toLocaleString("ko-KR")}개사</b>${
+        scope === "all" ? ` (스팩 ${lk.total.spac} · 리츠 등 ${lk.total.reit} 포함)` : " (스팩·리츠·인프라펀드 제외)"} · 회사 1곳 = 1건</div>
+       <div>IPO 대표주관회사 기준 · 공동대표주관 <b>${(lk.joint_cnt || 0).toLocaleString("ko-KR")}개사</b>는 각 주관사에 1건, 공모금액은 균등 분할</div>
+       <div>이 중 보호예수 내역을 보유한 회사 <b>${lk.total.with_lockup.toLocaleString("ko-KR")}개사</b> · ${lk.total.rows.toLocaleString("ko-KR")}건</div>`;
   } else {
     el("lkList").innerHTML = '<div class="empty">보호예수 데이터가 없습니다.</div>';
   }
@@ -278,7 +284,7 @@ async function init() {
   el("foot").innerHTML = `출처 ${D.meta.source} · 생성 ${D.meta.generated}<br>`
     + `대상 KOSPI ${U.kospi.toLocaleString("ko-KR")} · KOSDAQ ${U.kosdaq.toLocaleString("ko-KR")}개사<br>`
     + (C.majorstock ? `담보대출 — ${ymd(C.majorstock.period[0])} ~ ${ymd(C.majorstock.period[1])} 접수 대량보유상황보고서(제출인별 최신)·거래소 담보제공 공시<br>` : "")
-    + `보호예수 수탁 M/S — ${fd(D.meta.ipoRange[0])} ~ ${fd(D.meta.ipoRange[1])} 신규상장 종목, IPO 대표주관회사 기준(증권신고서·KIND 상장주선인)`;
+    + `보호예수 수탁 M/S — 한국거래소(KIND) 신규상장기업현황 ${fd(D.meta.ipoRange[0])} ~ ${fd(D.meta.ipoRange[1])} 코스피·코스닥, IPO 대표주관회사(증권신고서) 기준`;
 
   document.querySelectorAll("#modeSeg button").forEach(b => b.onclick = () => {
     mode = b.dataset.m;
@@ -286,9 +292,14 @@ async function init() {
     render();
   });
   el("estOn").onchange = e => { est = e.target.checked; render(); };
-  const ys = Object.keys(D.ms_lockup_by_year || {}).filter(k => k !== "all").sort();
+  const ys = Object.keys((D.ms_ipo || {}).core || D.ms_lockup_by_year || {}).filter(k => k !== "all").sort();
   el("yearSeg").innerHTML = [["all", "전체"], ...ys.map(y => [y, y + "년"])].map(([k, t]) =>
     `<button data-y="${k}" class="${k === year ? "on" : ""}">${t}</button>`).join("");
+  document.querySelectorAll("#scopeSeg button").forEach(b => b.onclick = () => {
+    scope = b.dataset.s;
+    document.querySelectorAll("#scopeSeg button").forEach(x => x.classList.toggle("on", x === b));
+    render();
+  });
   document.querySelectorAll("#yearSeg button").forEach(b => b.onclick = () => {
     year = b.dataset.y;
     document.querySelectorAll("#yearSeg button").forEach(x => x.classList.toggle("on", x === b));
