@@ -7,3 +7,6 @@ data/cache/
 __pycache__/
 *.pyc
 .env
+data/cache_uw/
+data/cache_seibro/
+data/seibro_*.json

@@ -155,7 +155,10 @@ const eok = v => { if (v == null) return null; const a = v / 1e8;
   if (a < 1) return Math.round(v / 1e4).toLocaleString("ko-KR") + "만"; return Math.round(a).toLocaleString("ko-KR") + "억"; };
 const fd = s => s ? s.replaceAll("-", ".") : "";
 const NA = '<span class="na">미상</span>';
-let D = null, COS = [], rows = [];
+const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const capTxt = v => v == null ? NA : v >= 10000 ? (v / 10000).toFixed(1) + "조" : Math.round(v).toLocaleString("ko-KR") + "억";
+const PAGE = 200;
+let D = null, COS = [], COMAP = new Map(), rows = [], shown = PAGE;
 const dd = s => s ? Math.ceil((new Date(s + "T00:00:00") - new Date(D.meta.baseDate + "T00:00:00")) / 86400000) : null;
 const ddCell = k => k == null ? NA : k < 0 ? `<span class="na">${-k}일 경과</span>`
   : `<span class="dd ${k <= 7 ? "soon" : k <= 30 ? "warn" : ""}">D-${k}</span>`;
@@ -163,14 +166,17 @@ const ddCell = k => k == null ? NA : k < 0 ? `<span class="na">${-k}일 경과</
 /* 기업 상세 패널용 — 한 기업의 락업·대출을 묶어 둔다.
    목록은 탭별 이벤트 단위라 별개다. */
 function buildCompanies() {
+  // 공시가 없는 회사도 검색·조회되어야 한다. 상장사 마스터를 먼저 깔고 이벤트를 얹는다.
   const m = new Map();
-  const get = n => { if (!m.has(n)) m.set(n, { name: n, lockups: [], loans: [] }); return m.get(n); };
-  D.lockups.forEach(x => get(x.corp_name).lockups.push(x));
-  D.loans.forEach(x => get(x.corp_name).loans.push(x));
-  return [...m.values()].map(c => {
-    const meta = c.lockups[0] || c.loans[0];
-    return { ...c, stock_code: meta.stock_code, industry: meta.industry, market_cap: meta.market_cap };
-  });
+  (D.companies || []).forEach(c => m.set(c.c, { name: c.n, corp_name: c.n, stock_code: c.c, market: c.m,
+    industry: c.i, market_cap: c.cap, lockups: [], loans: [] }));
+  const get = x => { if (!m.has(x.stock_code)) m.set(x.stock_code, { name: x.corp_name, corp_name: x.corp_name,
+    stock_code: x.stock_code, market: x.market, industry: x.industry, market_cap: x.market_cap, lockups: [], loans: [] });
+    return m.get(x.stock_code); };
+  D.lockups.forEach(x => get(x).lockups.push(x));
+  D.loans.forEach(x => get(x).loans.push(x));
+  COMAP = m;
+  return [...m.values()];
 }
 
 const KINDS = {
@@ -178,16 +184,19 @@ const KINDS = {
     label: "보호예수 해제", unit: "건",
     sorts: [["date", "해제일순"], ["amount", "금액순"], ["org", "수탁기관순"], ["company", "기업명순"]],
     cols: [
-      ["기업", r => `<div class="co">${r.corp_name}</div><div class="co-sub">${r.stock_code || ""}${r.industry ? " · " + r.industry : ""}</div>`],
-      ["대상자", r => r.holder_name || NA],
+      ["기업", r => `<div class="co">${esc(r.corp_name)}</div><div class="co-sub">${r.stock_code || ""}${r.industry ? " · " + esc(r.industry) : ""}</div>`],
+      ["대상자", r => r.holder_name ? esc(r.holder_name) : NA],
       ["구분", r => r.holder_type || NA],
-      ["해제일", r => fd(r.release_date)],
+      ["해제일", r => r.release_date
+        ? fd(r.release_date) + (r.release_src === "실측기간" ? ' <span class="na" title="예탁일에 이 사유의 실제 보유 기간을 더한 날짜입니다 (한국예탁결제원 반환 내역 기준).">(계산)</span>' : "")
+        : NA],
       ["D-day", r => ddCell(dd(r.release_date)), "num"],
       ["수량", r => r.lockup_qty ? r.lockup_qty.toLocaleString("ko-KR") + "주" : NA, "num"],
       ["평가금액", r => r.lockup_value ? eok(r.lockup_value) : NA, "num"],
       ["수탁 증권사", r => r.custody_broker
-        ? r.custody_broker + (r.custody_broker_src === "추정" ? "(추정)" : "")
+        ? esc(r.custody_broker) + (r.custody_broker_src === "추정" ? "(추정)" : "")
         : '<span class="na">미상</span>'],
+      ["공시", r => r.source_url ? `<a class="src" href="${r.source_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">원문</a>` : NA],
     ],
     date: r => r.release_date, amount: r => r.lockup_value,
     org: r => r.custody_broker, type: r => r.holder_type, who: r => r.holder_name,
@@ -196,14 +205,14 @@ const KINDS = {
     label: "담보대출 만기", unit: "건",
     sorts: [["date", "만기순"], ["amount", "금액순"], ["org", "대출기관순"], ["company", "기업명순"]],
     cols: [
-      ["기업", r => `<div class="co">${r.corp_name}</div><div class="co-sub">${r.stock_code || ""}${r.industry ? " · " + r.industry : ""}</div>`],
-      ["차주", r => r.borrower_name || NA],
-      ["관계", r => r.borrower_type || NA],
-      ["대출기관", r => r.lender || '<span class="na">미상</span>'],
-      ["대출금액", r => r.loan_amount ? eok(r.loan_amount) : NA, "num"],
+      ["기업", r => `<div class="co">${esc(r.corp_name)}</div><div class="co-sub">${r.stock_code || ""}${r.industry ? " · " + esc(r.industry) : ""}</div>`],
+      ["차주", r => r.borrower_name ? esc(r.borrower_name) : NA],
+      ["관계", r => r.borrower_type ? esc(r.borrower_type) : NA],
+      ["대출기관", r => r.lender ? esc(r.lender) : '<span class="na">미상</span>'],
+      ["대출금액", r => loanAmt(r), "num"],
       ["담보주식", r => r.pledged_qty ? r.pledged_qty.toLocaleString("ko-KR") + "주" : NA, "num"],
       ["지분율", r => r.pledged_ratio != null ? r.pledged_ratio + "%" : NA, "num"],
-      ["만기", r => fd(r.maturity_date) || NA],
+      ["만기", r => matCell(r)],
       ["D-day", r => ddCell(dd(r.maturity_date)), "num"],
       ["공시", r => `<a class="src" href="${r.source_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">원문</a>`],
     ],
@@ -211,16 +220,47 @@ const KINDS = {
     org: r => r.lender, type: r => r.borrower_type, who: r => r.borrower_name,
   },
 };
+// 대출금액이 공시되지 않고 담보설정금액만 있는 건(거래소 공시)은 구분해서 보여준다
+const loanAmt = r => r.loan_amount ? eok(r.loan_amount)
+    + (r.amount_src === "단위추정" ? ' <span class="na" title="공시에 금액 단위가 없어 담보 평가액에 비추어 환산했습니다. 원문을 확인하세요.">단위추정</span>' : "")
+    + (r.facility ? ' <span class="na" title="대출금액이 담보 주식 평가액의 3배를 넘습니다. 주식 외 자산이 함께 담보된 여신으로 보고 합계에서 뺍니다.">복합</span>'
+      : r.shared_cnt ? ` <span class="na" title="한 대출에 ${r.shared_cnt}건의 담보가 묶여 있습니다. 합계에는 한 번만 셉니다.">공동${r.shared_cnt}</span>` : "")
+  : r.collateral_set_amount ? `<span class="na" title="대출금액 미공시 · 담보설정금액">설정 ${eok(r.collateral_set_amount)}</span>` : NA;
+// 만기가 없으면 공시에 적힌 기간 표기를 그대로 보여준다 (자동연장·해지시까지 등)
+const matCell = r => r.maturity_date
+  ? fd(r.maturity_date) + (r.maturity_src === "계산" ? ' <span class="na" title="체결일 + 기재된 기간">(계산)</span>' : "")
+  : (r.period_raw && r.period_raw !== "-" ? `<span class="na" title="공시 기재 그대로">${esc(r.period_raw.slice(0, 18))}</span>` : NA);
+
+KINDS.company = {
+  label: "전체 상장사", unit: "개사",
+  sorts: [["cap", "시가총액순"], ["company", "기업명순"], ["lk", "보호예수순"], ["ln", "담보대출순"]],
+  cols: [
+    ["기업", r => `<div class="co">${esc(r.corp_name)}</div><div class="co-sub">${r.stock_code || ""}</div>`],
+    ["시장", r => r.market || NA],
+    ["업종", r => r.industry ? esc(r.industry) : NA],
+    ["시가총액", r => capTxt(r.market_cap), "num"],
+    ["보호예수", r => r.lockups.length ? r.lockups.length.toLocaleString("ko-KR") + "건" : '<span class="na">없음</span>', "num"],
+    ["해제 예정", r => { const n = r.lockups.filter(x => x.is_active).length; return n ? n + "건" : '<span class="na">—</span>'; }, "num"],
+    ["담보대출", r => r.loans.length ? r.loans.length.toLocaleString("ko-KR") + "건" : '<span class="na">공시 없음</span>', "num"],
+    ["만기 예정", r => { const n = r.loans.filter(x => x.is_active).length; return n ? n + "건" : '<span class="na">—</span>'; }, "num"],
+  ],
+  date: () => null, amount: r => (r.market_cap || 0) * 1e8,
+  org: () => null, type: r => r.market, who: r => r.stock_code,
+};
+const srcOf = k => k === "lockup" ? D.lockups : k === "loan" ? D.loans : COS;
 let kind = "lockup", sortKey = "date";
 
 function setup() {
   el("kindTabs").innerHTML = Object.entries(KINDS).map(([k, v]) => {
-    const src = k === "lockup" ? D.lockups : D.loans;
+    const src = srcOf(k);
+    const sub = k === "company"
+      ? `${src.length.toLocaleString("ko-KR")}개사 · KOSPI ${D.meta.universe.kospi.toLocaleString("ko-KR")} · KOSDAQ ${D.meta.universe.kosdaq.toLocaleString("ko-KR")}`
+      : `${src.length.toLocaleString("ko-KR")}건 · ${new Set(src.map(x => x.stock_code)).size.toLocaleString("ko-KR")}개사`;
     return `<button class="kt ${k === kind ? "on" : ""}" data-k="${k}">${v.label}
-      <small>${src.length.toLocaleString("ko-KR")}건 · ${new Set(src.map(x => x.corp_name)).size}개사</small></button>`;
+      <small>${sub}</small></button>`;
   }).join("");
   document.querySelectorAll(".kt").forEach(b => b.onclick = () => {
-    kind = b.dataset.k; sortKey = "date"; setup(); apply();
+    kind = b.dataset.k; sortKey = KINDS[kind].sorts[0][0]; setup(); apply();
   });
 
   const K = KINDS[kind];
@@ -228,13 +268,18 @@ function setup() {
     `<button class="tab ${k === sortKey ? "on" : ""}" data-k="${k}">${t}</button>`).join("");
   document.querySelectorAll(".tab").forEach(b => b.onclick = () => { sortKey = b.dataset.k; setup(); apply(); });
 
-  const src = kind === "lockup" ? D.lockups : D.loans;
+  const src = srcOf(kind);
   const orgs = [...new Set(src.map(K.org).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
-  el("fOrg").innerHTML = '<option value="">전체</option>' + orgs.map(x => `<option>${x}</option>`).join("");
+  el("fOrg").innerHTML = '<option value="">전체</option>' + orgs.map(x => `<option>${esc(x)}</option>`).join("");
   const ts = [...new Set(src.map(K.type).filter(Boolean))].sort();
-  el("fType").innerHTML = '<option value="">전체</option>' + ts.map(x => `<option>${x}</option>`).join("");
-  el("fOrgLabel").textContent = kind === "lockup" ? "수탁 증권사" : "대출기관";
-  el("fTypeLabel").textContent = kind === "lockup" ? "대상자 구분" : "차주 관계";
+  el("fType").innerHTML = '<option value="">전체</option>' + ts.map(x => `<option>${esc(x)}</option>`).join("");
+  const isCo = kind === "company";
+  el("fOrgLabel").textContent = kind === "lockup" ? "수탁 증권사" : isCo ? "보유 공시" : "대출기관";
+  if (isCo) el("fOrg").innerHTML = '<option value="">전체</option><option value="lk">보호예수 있음</option>'
+    + '<option value="ln">담보대출 있음</option><option value="none">둘 다 없음</option>';
+  el("fTypeLabel").textContent = kind === "lockup" ? "대상자 구분" : isCo ? "시장" : "차주 관계";
+  el("fWhen").disabled = isCo;
+  el("fAmt").previousElementSibling.textContent = isCo ? "시가총액" : "금액";
 }
 
 function summary() {
@@ -258,9 +303,19 @@ function apply() {
   const K = KINDS[kind];
   const q = el("fq").value.trim().toLowerCase();
   const O = el("fOrg").value, W = el("fWhen").value, T = el("fType").value, A = el("fAmt").value;
-  const src = kind === "lockup" ? D.lockups : D.loans;
+  const src = srcOf(kind);
+  shown = PAGE;
   rows = src.filter(x => {
-    if (q && !(x.corp_name.toLowerCase().includes(q) || (K.who(x) || "").toLowerCase().includes(q))) return false;
+    if (q && !(x.corp_name.toLowerCase().includes(q) || (x.stock_code || "").includes(q)
+      || (K.who(x) || "").toLowerCase().includes(q))) return false;
+    if (kind === "company") {
+      if (O === "lk" && !x.lockups.length) return false;
+      if (O === "ln" && !x.loans.length) return false;
+      if (O === "none" && (x.lockups.length || x.loans.length)) return false;
+      if (T && x.market !== T) return false;
+      if (A && (x.market_cap || 0) < +A) return false;
+      return true;
+    }
     if (O && K.org(x) !== O) return false;
     if (T && K.type(x) !== T) return false;
     if (A && (K.amount(x) || 0) / 1e8 < +A) return false;
@@ -273,6 +328,9 @@ function apply() {
   });
   const nk = v => v == null ? 1e9 : v < 0 ? 1e6 - v : v;
   rows.sort((a, b) => {
+    if (sortKey === "cap") return (b.market_cap || -1) - (a.market_cap || -1);
+    if (sortKey === "lk") return b.lockups.length - a.lockups.length || (b.market_cap || 0) - (a.market_cap || 0);
+    if (sortKey === "ln") return b.loans.length - a.loans.length || (b.market_cap || 0) - (a.market_cap || 0);
     if (sortKey === "amount") return (K.amount(b) || -1) - (K.amount(a) || -1);
     if (sortKey === "company") return a.corp_name.localeCompare(b.corp_name, "ko");
     if (sortKey === "org") return (K.org(a) || "힣").localeCompare(K.org(b) || "힣", "ko");
@@ -284,21 +342,34 @@ function apply() {
 function render() {
   const K = KINDS[kind];
   el("cnt").textContent = rows.length.toLocaleString("ko-KR");
-  const co = new Set(rows.map(x => x.corp_name)).size;
-  el("badges").innerHTML =
-    `<span class="badge ${kind === "lockup" ? "blue" : "orange"}" style="margin-left:8px">${co}개사</span>`
+  const co = new Set(rows.map(x => x.stock_code)).size;
+  el("cnt").nextSibling.textContent = K.unit;
+  el("badges").innerHTML = kind === "company" ? "" :
+    `<span class="badge ${kind === "lockup" ? "blue" : "orange"}" style="margin-left:8px">${co.toLocaleString("ko-KR")}개사</span>`
     ;
   el("th").innerHTML = "<tr>" + K.cols.map(c =>
     `<th class="${c[2] === "num" ? "num " : ""}${kind === "lockup" ? "lk" : "ln"}">${c[0]}</th>`).join("") + "</tr>";
   if (!rows.length) {
-    el("tb").innerHTML = `<tr><td colspan="${K.cols.length}"><div class="empty">조건에 맞는 건이 없습니다.</div></td></tr>`;
+    // 이벤트가 없어도 상장사이면 '없음'을 확인시켜 준다
+    const q = el("fq").value.trim().toLowerCase();
+    const hit = q && kind !== "company" ? COS.filter(c => c.corp_name.toLowerCase().includes(q) || c.stock_code.includes(q)).slice(0, 8) : [];
+    el("tb").innerHTML = `<tr><td colspan="${K.cols.length}"><div class="empty">조건에 맞는 건이 없습니다.${
+      hit.length ? `<div style="margin-top:10px">상장사 검색 결과 — ${hit.map(c =>
+        `<a class="src" href="#" data-c="${c.stock_code}" style="margin:0 3px">${esc(c.corp_name)}</a>`).join("")}</div>` : ""}</div></td></tr>`;
+    document.querySelectorAll("#tb a[data-c]").forEach(a => a.onclick = e => { e.preventDefault(); open(COMAP.get(a.dataset.c)); });
     return;
   }
-  el("tb").innerHTML = rows.map((r, i) => "<tr data-i=\"" + i + "\">" +
-    K.cols.map(c => `<td class="${c[2] === "num" ? "num " : ""}${kind === "lockup" ? "lk" : "ln"}">${c[1](r)}</td>`).join("")
-    + "</tr>").join("");
+  // 수천 행을 한 번에 그리면 화면이 멈춘다. 정렬·필터·CSV 는 전체, 그리기만 나눈다.
+  const view = rows.slice(0, shown);
+  el("tb").innerHTML = view.map((r, i) => "<tr data-i=\"" + i + "\">" +
+    K.cols.map(c => `<td class="${c[2] === "num" ? "num " : ""}${kind === "loan" ? "ln" : "lk"}">${c[1](r)}</td>`).join("")
+    + "</tr>").join("")
+    + (rows.length > shown ? `<tr><td colspan="${K.cols.length}"><div class="empty" style="padding:14px">
+        <button class="btn" id="more">${Math.min(PAGE, rows.length - shown).toLocaleString("ko-KR")}${K.unit} 더 보기
+        (${shown.toLocaleString("ko-KR")} / ${rows.length.toLocaleString("ko-KR")})</button></div></td></tr>` : "");
   document.querySelectorAll("#tb tr[data-i]").forEach(tr =>
-    tr.onclick = () => { const c = COS.find(x => x.name === rows[+tr.dataset.i].corp_name); if (c) open(c); });
+    tr.onclick = () => { const c = COMAP.get(rows[+tr.dataset.i].stock_code); if (c) open(c); });
+  if (el("more")) el("more").onclick = () => { shown += PAGE; render(); };
 }
 
 function csv() {
@@ -308,7 +379,7 @@ function csv() {
   const b = rows.map(r => K.cols.filter(c => c[0] !== "공시").map(c =>
     c[0] === "기업" ? r.corp_name : strip(c[1](r))));
   const t = [[...h, "종목코드", "접수번호", "원문"], ...b.map((row, i) =>
-    [...row, rows[i].stock_code, rows[i].rcept_no || rows[i].rcept_no, rows[i].source_url])]
+    [...row, rows[i].stock_code, rows[i].rcept_no || "", rows[i].source_url || ""])]
     .map(r => r.map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(",")).join("\n");
   const u = URL.createObjectURL(new Blob(["\ufeff" + t], { type: "text/csv;charset=utf-8" }));
   const a = document.createElement("a");
@@ -325,8 +396,8 @@ function open(c) {
   const pos = d => (!lo || lo === hi) ? 50 : Math.max(0, Math.min(100, (new Date(d) - new Date(lo)) / (new Date(hi) - new Date(lo)) * 100));
   el("sheet").innerHTML = `
     <div class="sheet-head">
-      <div><div class="sheet-co">${c.name}</div>
-        <div class="sheet-meta">${c.stock_code || ""}${c.industry ? " · " + c.industry : ""}${
+      <div><div class="sheet-co">${esc(c.name)}</div>
+        <div class="sheet-meta">${c.stock_code || ""}${c.market ? " · " + c.market : ""}${c.industry ? " · " + esc(c.industry) : ""}${
           c.market_cap ? " · 시총 " + (c.market_cap >= 10000 ? (c.market_cap / 10000).toFixed(1) + "조" : Math.round(c.market_cap).toLocaleString("ko-KR") + "억") : ""}</div></div>
       <button class="x" onclick="closeD()">✕</button></div>
     <div class="sheet-body">
@@ -344,25 +415,30 @@ function open(c) {
             <col class="w-dt"><col class="w-dd"><col class="w-org"></colgroup>
           <thead><tr><th>대상자</th><th>구분</th><th class="n">수량</th>
           <th class="n">평가금액</th><th>해제일</th><th class="n">D-day</th><th>수탁 증권사</th></tr></thead>
-          <tbody>${c.lockups.map(x => `<tr><td>${x.holder_name}</td><td>${x.holder_type}</td>
+          <tbody>${c.lockups.map(x => `<tr><td>${esc(x.holder_name)}</td><td>${x.holder_type}</td>
           <td class="n">${x.lockup_qty.toLocaleString("ko-KR")}</td>
-          <td class="n">${eok(x.lockup_value)}</td><td>${fd(x.release_date)}</td>
+          <td class="n">${x.lockup_value ? eok(x.lockup_value) : NA}</td><td>${x.release_date ? fd(x.release_date) : NA}</td>
           <td class="n">${ddCell(dd(x.release_date))}</td>
-          <td>${x.custody_broker ? x.custody_broker + (x.custody_broker_src === "추정" ? "(추정)" : "") : NA}</td></tr>`).join("")}</tbody></table>`
-          : '<div class="tl" style="color:var(--muted);font-size:12px">해당 없음</div>'}
+          <td>${x.custody_broker ? esc(x.custody_broker) + (x.custody_broker_src === "추정" ? "(추정)" : "") : NA}</td></tr>`).join("")}</tbody></table>
+          ${c.lockups[0].lead_manager ? `<div class="tl" style="color:var(--muted);font-size:12px;margin-top:6px">주관 ${esc(c.lockups[0].lead_manager)}${
+            c.lockups[0].co_manager ? " · 공동주관 " + esc(c.lockups[0].co_manager) : ""}${
+            c.lockups[0].underwriter ? " · 인수 " + esc(c.lockups[0].underwriter) : ""}${
+            c.lockups[0].source_url ? ` · <a class="src" href="${c.lockups[0].source_url}" target="_blank" rel="noopener">증권신고서</a>` : ""}</div>` : ""}`
+          : `<div class="tl" style="color:var(--muted);font-size:12px">보호예수 없음 — ${D.meta.lockupScope || "최근 신규상장 종목이 아닙니다"}</div>`}
       </div>
       <div class="blk"><div class="blk-t">주식담보대출 <span class="badge">${c.loans.length}건</span></div>
         ${c.loans.length ? `<table class="mini">
           <colgroup><col class="w-nm"><col class="w-ty"><col class="w-org"><col class="w-num">
             <col class="w-dd"><col class="w-dt"><col class="w-dd"><col class="w-src"></colgroup>
           <thead><tr><th>차주</th><th>관계</th><th>기관</th>
-          <th class="n">금액</th><th class="n">지분율</th><th>만기</th><th class="n">D-day</th><th>공시</th></tr></thead>
-          <tbody>${c.loans.map(x => `<tr><td>${x.borrower_name || NA}</td><td>${x.borrower_type || NA}</td>
-          <td>${x.lender || NA}</td><td class="n">${x.loan_amount ? eok(x.loan_amount) : NA}</td>
-          <td class="n">${x.pledged_ratio != null ? x.pledged_ratio + "%" : NA}</td>
-          <td>${fd(x.maturity_date) || NA}</td><td class="n">${ddCell(dd(x.maturity_date))}</td>
+          <th class="n">금액</th><th class="n">지분율 · 금리</th><th>만기</th><th class="n">D-day</th><th>공시</th></tr></thead>
+          <tbody>${c.loans.map(x => `<tr><td>${x.borrower_name ? esc(x.borrower_name) : NA}</td><td>${x.borrower_type ? esc(x.borrower_type) : NA}</td>
+          <td>${x.lender ? esc(x.lender) : NA}</td><td class="n">${loanAmt(x)}</td>
+          <td class="n">${x.pledged_ratio != null ? x.pledged_ratio + "%" : NA}${
+            x.interest_rate ? `<div class="co-sub" title="담보유지비율 ${x.maintenance_ratio ? x.maintenance_ratio + "%" : "미상"}">금리 ${x.interest_rate}%</div>` : ""}</td>
+          <td>${matCell(x)}</td><td class="n">${ddCell(dd(x.maturity_date))}</td>
           <td><a class="src" href="${x.source_url}" target="_blank" rel="noopener">원문</a></td></tr>`).join("")}</tbody></table>`
-          : '<div class="tl" style="color:var(--muted);font-size:12px">해당 없음</div>'}
+          : `<div class="tl" style="color:var(--muted);font-size:12px">담보계약 공시 없음 — ${D.meta.loanScope || ""}</div>`}
       </div>
     </div>`;
   el("sheet").scrollTop = 0;
@@ -384,10 +460,25 @@ async function init() {
     return;
   }
   COS = buildCompanies();
-  el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)}`;
-  el("foot").textContent = `출처 ${D.meta.source} · 생성 ${D.meta.generated}`
-;
-  setup(); summary(); apply();
+  const U = D.meta.universe, C = D.meta.collection || {};
+  const per = k => C[k] ? `${C[k].period[0].replace(/(\d{4})(\d{2})(\d{2})/, "$1.$2.$3")} ~ ${C[k].period[1].replace(/(\d{4})(\d{2})(\d{2})/, "$1.$2.$3")}` : "";
+  D.meta.loanScope = C.majorstock ? `${per("majorstock")} 접수 대량보유상황보고서·거래소 담보제공 공시 기준` : "";
+  D.meta.lockupScope = "2022년 이후 신규상장 종목의 의무보유(증권신고서) 기준";
+  el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)} · 상장사 ${U.listed.toLocaleString("ko-KR")}개사`;
+  el("foot").innerHTML = `출처 ${D.meta.source} · 생성 ${D.meta.generated}<br>`
+    + `대상 KOSPI ${U.kospi.toLocaleString("ko-KR")} · KOSDAQ ${U.kosdaq.toLocaleString("ko-KR")}개사 `
+    + `(담보대출 공시 ${U.with_loan.toLocaleString("ko-KR")}개사 · 보호예수 ${U.with_lockup.toLocaleString("ko-KR")}개사)<br>`
+    + `담보대출 — ${D.meta.loanScope}<br>보호예수 — ${D.meta.lockupScope} · 수탁 증권사는 대표주관회사 기준 추정<br>`
+    + `평가금액 — ${fd(D.meta.priceDate)} 종가 기준`;
+  // 주소로 상태를 넘겨받는다 — 점유율 화면에서 기관명을 누르면 그 기관 건만 걸러서 연다
+  const Q = new URLSearchParams(location.search);
+  if (KINDS[Q.get("kind")]) { kind = Q.get("kind"); sortKey = KINDS[kind].sorts[0][0]; }
+  setup(); summary();
+  if (Q.get("q")) el("fq").value = Q.get("q");
+  if (Q.get("org")) { const o = [...el("fOrg").options].find(x => x.value === Q.get("org") || x.text === Q.get("org")); if (o) el("fOrg").value = o.value; }
+  if (Q.get("when")) el("fWhen").value = Q.get("when");
+  apply();
+  if (Q.get("open") && COMAP.get(Q.get("open"))) open(COMAP.get(Q.get("open")));
   el("fq").addEventListener("input", apply);
   ["fOrg", "fWhen", "fType", "fAmt"].forEach(id => el(id).addEventListener("change", apply));
   el("csv").onclick = csv;

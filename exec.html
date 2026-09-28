@@ -186,8 +186,13 @@ const fd = s => s ? s.replaceAll("-", ".") : "";
 const ME = "삼성증권";
 let D = null, mode = "cnt", est = true;
 
-function list(rows, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEst) {
+const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+function list(rows0, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEst) {
+  const kindOf = nameKey === "broker" ? "lockup" : "loan";
   const pctKey = mode === "cnt" ? keyPct : keyAmtPct;
+  // 순위는 보고 있는 기준(건수·금액)으로 매긴다
+  const rows = [...rows0].sort((a, b) => b[pctKey] - a[pctKey] || b[keyCnt] - a[keyCnt]);
   const top = rows.slice(0, 10);
   const mi = rows.findIndex(r => r[nameKey] === ME);
   // 상위 10위 밖의 자사 행을 끌어올릴 때, 사이가 비었다는 걸 표시해야 한다
@@ -202,42 +207,49 @@ function list(rows, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEst
       <div class="rk">⋯</div><div class="nm">${it.n}개 기관 생략</div>
       <div></div><div></div><div></div></div>`;
     const r = it.r, rank = rows.indexOf(r) + 1, me = r[nameKey] === ME;
-    const estN = showEst && r.est_cnt ? `<small>추정 ${r.est_cnt}</small>` : "";
-    return `<div class="row ${me ? "me" : ""}">
+    // 전부 추정이면 행마다 다시 적지 않는다 (아래 근거 문구로 한 번만 밝힌다)
+    const estN = showEst && r.est_cnt && r.est_cnt < r.cnt ? `<small>추정 ${r.est_cnt}</small>` : "";
+    return `<div class="row ${me ? "me" : ""}" style="cursor:pointer" title="이 기관의 건만 보기"
+      onclick="location.href='index.html?kind=${kindOf}&org=${encodeURIComponent(r[nameKey])}'">
       <div class="rk">${rank}</div>
-      <div class="nm">${r[nameKey]}${estN}</div>
+      <div class="nm">${esc(r[nameKey])}${estN}</div>
       <div class="bar"><i style="width:${(r[pctKey] / max * 100).toFixed(1)}%"></i></div>
       <div class="pct">${r[pctKey].toFixed(1)}%</div>
-      <div class="cn">${mode === "cnt" ? r[keyCnt] + "건" : eok(r[keyAmt])}</div>
+      <div class="cn">${mode === "cnt" ? r[keyCnt].toLocaleString("ko-KR") + "건" : eok(r[keyAmt])}</div>
     </div>`;
   }).join("");
   const u = unknown.cnt ? `<div class="row unk">
       <div class="rk">—</div><div class="nm">기관 미상</div>
       <div class="bar"></div><div class="pct">—</div>
-      <div class="cn">${unknown.cnt}건</div></div>` : "";
+      <div class="cn">${mode === "cnt" ? unknown.cnt.toLocaleString("ko-KR") + "건" : eok(unknown.amt ?? unknown.balance)}</div></div>` : "";
   return body + u;
 }
 
 function render() {
-  const lkSrc = est ? D.ms_lockup : D.ms_lockup_strict;
+  // 수탁 증권사가 공시에 기재된 건이 없으면 '기재분만' 집계는 빈 표가 된다. 토글을 내보이지 않는다.
+  const hasStated = D.lockup_basis && D.lockup_basis.기재 > 0;
+  el("estOn").parentElement.style.display = hasStated ? "" : "none";
+  const lkSrc = (est || !hasStated) ? D.ms_lockup : D.ms_lockup_strict;
   const lk = lkSrc, ln = D.ms_loan;
 
   if (lk) {
-    el("lkTag").textContent = `${lk.rows.length}개사`;
+    el("lkTag").textContent = `${lk.rows.length}개 증권사`;
     el("lkTot").innerHTML =
       `<div>집계 건수<b>${lk.total.cnt.toLocaleString("ko-KR")}건</b></div>
        <div>평가금액<b>${eok(lk.total.amt)}원</b></div>
-       <div>해제 예정<b>${D.kpi.lockup.active_cnt}건</b></div>`;
+       <div>대상 기업<b>${(D.kpi.lockup.ms_co ?? D.kpi.lockup.active_co).toLocaleString("ko-KR")}개사</b></div>`;
     el("lkList").innerHTML = list(lk.rows, lk.unknown, "cnt", "cnt_ms", "amt", "amt_ms", "broker", true);
     const b = D.lockup_basis;
-    el("lkBasis").innerHTML =
-      `<div>수탁 근거 — 공시 기재 <b>${b.기재}건</b> · 주관사 추정 <b>${b.추정}건</b> · 미상 <b>${b.미상}건</b></div>
-       <div>${est ? "추정 포함 집계" : "공시 기재분만 집계"}</div>`;
+    el("lkBasis").innerHTML = hasStated
+      ? `<div>수탁 근거 — 공시 기재 <b>${b.기재}건</b> · 주관사 추정 <b>${b.추정}건</b> · 미상 <b>${b.미상}건</b></div>
+         <div>${est ? "추정 포함 집계" : "공시 기재분만 집계"}</div>`
+      : `<div>신규상장 의무보유 중 해제 예정 물량 · 대표주관회사 기준 <b>${b.추정.toLocaleString("ko-KR")}건</b> · 미상 <b>${b.미상.toLocaleString("ko-KR")}건</b> — 분모 제외</div>
+         <div>수탁 증권사는 공시에 기재되지 않아 증권신고서의 대표주관회사로 집계 (대표주관이 복수이면 미상)</div>`;
   } else {
     el("lkList").innerHTML = '<div class="empty">보호예수 데이터가 없습니다.</div>';
   }
 
-  el("lnTag").textContent = `${ln.rows.length}개사`;
+  el("lnTag").textContent = `${ln.rows.length.toLocaleString("ko-KR")}개 기관`;
   el("lnTot").innerHTML =
     `<div>집계 건수<b>${ln.total.cnt.toLocaleString("ko-KR")}건</b></div>
      <div>대출 잔액<b>${eok(ln.total.balance)}원</b></div>
@@ -245,7 +257,9 @@ function render() {
   el("lnList").innerHTML = list(ln.rows, ln.unknown, "cnt", "cnt_ms", "balance", "balance_ms", "lender", false);
   el("lnBasis").innerHTML =
     `<div>기관 미상 <b>${ln.unknown.cnt}건</b> — 분모 제외</div>
-     <div>복수기관 계약 <b>${ln.multi_lender_cnt}건</b> — 균등 분할</div>`;
+     <div>복수기관 계약 <b>${ln.multi_lender_cnt}건</b> — 균등 분할</div>
+     <div>대상 기업 <b>${D.kpi.loan.total_co.toLocaleString("ko-KR")}개사</b> · 만기가 지난 계약 제외 · 대출금액 미공시 건은 금액에서 제외</div>
+     <div>공동담보 대출은 금액을 한 번만 집계 · 담보 평가액의 3배를 넘는 복합여신 <b>${(D.kpi.loan.facility_cnt || 0).toLocaleString("ko-KR")}건</b>은 금액에서 제외</div>`;
 
 }
 
@@ -259,8 +273,13 @@ async function init() {
     el("lkList").innerHTML = `<div class="empty">데이터를 불러오지 못했습니다. (${e.message})</div>`;
     return;
   }
-  el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)}`;
-  el("foot").textContent = `출처 ${D.meta.source} · 생성 ${D.meta.generated}`;
+  const U = D.meta.universe, C = D.meta.collection || {};
+  const ymd = s => s.replace(/(\d{4})(\d{2})(\d{2})/, "$1.$2.$3");
+  el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)} · 상장사 ${U.listed.toLocaleString("ko-KR")}개사`;
+  el("foot").innerHTML = `출처 ${D.meta.source} · 생성 ${D.meta.generated}<br>`
+    + `대상 KOSPI ${U.kospi.toLocaleString("ko-KR")} · KOSDAQ ${U.kosdaq.toLocaleString("ko-KR")}개사<br>`
+    + (C.majorstock ? `담보대출 — ${ymd(C.majorstock.period[0])} ~ ${ymd(C.majorstock.period[1])} 접수 대량보유상황보고서(제출인별 최신)·거래소 담보제공 공시<br>` : "")
+    + `보호예수 수탁 M/S — 2022년 이후 신규상장 종목의 의무보유(증권신고서) · 평가금액 ${fd(D.meta.priceDate)} 종가 기준`;
 
   document.querySelectorAll("#modeSeg button").forEach(b => b.onclick = () => {
     mode = b.dataset.m;

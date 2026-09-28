@@ -10,6 +10,7 @@ OpenDART API 키는 등록 IP에서만 쓸 수 있어 사용하지 않는다.
 이 모듈은 '가져오기'와 '기계적 텍스트화'까지만 한다. 값 해석은 하지 않는다.
 """
 import json
+import os
 import re
 import time
 from pathlib import Path
@@ -18,14 +19,16 @@ import requests
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parent.parent
-BASE = "https://dart.fss.or.kr"
+# 화면에 노출하는 원문 주소는 항상 공개 DART 다. 수집 경로만 DART_BASE 로 바꿀 수 있다.
+PUBLIC_BASE = "https://dart.fss.or.kr"
+BASE = os.environ.get("DART_BASE", PUBLIC_BASE).rstrip("/")
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0 Safari/537.36")
 TIMEOUT = 90
 RETRY = 5
 # 공개 서비스다. 짧은 간격으로 수백 페이지를 훑으면 IP가 차단된다(경험).
 # 처리량보다 차단 회피가 우선이다.
-PAUSE = 1.5
+PAUSE = float(os.environ.get("DART_PAUSE", "1.5"))
 BACKOFF = (5, 15, 45, 120, 300)  # 실패 시 대기(초). 차단은 시간이 지나야 풀린다
 
 # 공시유형 코드 (상세검색 publicType)
@@ -345,4 +348,4 @@ def load_json(path: Path):
 
 
 def dart_url(rcp_no: str) -> str:
-    return f"{BASE}/dsaf001/main.do?rcpNo={rcp_no}"
+    return f"{PUBLIC_BASE}/dsaf001/main.do?rcpNo={rcp_no}"
