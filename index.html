@@ -252,7 +252,7 @@ KINDS.company = {
   org: () => null, orgs: () => [], type: r => r.market, who: r => r.stock_code,
 };
 const srcOf = k => k === "lockup" ? D.lockups : k === "loan" ? D.loans : COS;
-let kind = "lockup", sortKey = "date";
+let kind = "lockup", sortKey = "date", YEAR = "";   // YEAR: 점유율 화면에서 넘어온 상장 연도
 
 function setup() {
   el("kindTabs").innerHTML = Object.entries(KINDS).map(([k, v]) => {
@@ -321,6 +321,7 @@ function apply() {
       return true;
     }
     if (O && !K.orgs(x).includes(O)) return false;
+    if (YEAR && kind === "lockup" && (x.listing_date || "").slice(0, 4) !== YEAR) return false;
     if (T && K.type(x) !== T) return false;
     if (A && (K.amount(x) || 0) / 1e8 < +A) return false;
     const d = K.date(x);
@@ -350,7 +351,8 @@ function render() {
   el("cnt").nextSibling.textContent = K.unit;
   el("badges").innerHTML = kind === "company" ? "" :
     `<span class="badge ${kind === "lockup" ? "blue" : "orange"}" style="margin-left:8px">${co.toLocaleString("ko-KR")}개사</span>`
-    ;
+    + (YEAR && kind === "lockup" ? `<span class="badge" style="margin-left:6px;cursor:pointer" id="yearOff" title="연도 조건 해제">${YEAR}년 상장 ✕</span>` : "");
+  if (el("yearOff")) el("yearOff").onclick = () => { YEAR = ""; apply(); };
   el("th").innerHTML = "<tr>" + K.cols.map(c =>
     `<th class="${c[2] === "num" ? "num " : ""}${kind === "lockup" ? "lk" : "ln"}">${c[0]}</th>`).join("") + "</tr>";
   if (!rows.length) {
@@ -483,6 +485,7 @@ async function init() {
   if (Q.get("q")) el("fq").value = Q.get("q");
   if (Q.get("org")) { const o = [...el("fOrg").options].find(x => x.value === Q.get("org") || x.text === Q.get("org")); if (o) el("fOrg").value = o.value; }
   if (Q.get("when")) el("fWhen").value = Q.get("when");
+  if (/^\d{4}$/.test(Q.get("year") || "")) YEAR = Q.get("year");
   apply();
   if (Q.get("open") && COMAP.get(Q.get("open"))) open(COMAP.get(Q.get("open")));
   el("fq").addEventListener("input", apply);

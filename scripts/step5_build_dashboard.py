@@ -420,6 +420,16 @@ def main():
                 "total": {"cnt": tc, "amt": int(ta), "rows": len(rows),
                           "companies": len({x["stock_code"] for x in rows})}}
 
+    ipo_rows = [x for x in lockups if x.get("source") == "IPO"]
+    years = sorted({x["listing_date"][:4] for x in ipo_rows if x.get("listing_date")})
+    ms_by_year = {"all": build_ms_lockup(ipo_rows)}
+    for y in years:
+        ms_by_year[y] = build_ms_lockup([x for x in ipo_rows
+                                         if (x.get("listing_date") or "")[:4] == y])
+    no_date = len({x["stock_code"] for x in ipo_rows if not x.get("listing_date")})
+    ld = [x["listing_date"] for x in ipo_rows if x.get("listing_date")]
+    ms_range = [min(ld), max(ld)] if ld else None
+
     basis = {"주관사": sum(1 for x in lk_ms if x.get("custody_brokers")),
              "미상": sum(1 for x in lk_ms if not x.get("custody_brokers")),
              "기재": 0, "추정": 0}
@@ -459,6 +469,7 @@ def main():
                          "kosdaq": sum(1 for v in listed.values() if v["market"] == "KOSDAQ"),
                          "with_loan": len(n_loan), "with_lockup": len(n_lock)},
             "collection": manifest,
+            "ipoRange": ms_range,
         },
         "kpi": {
             "loan": {
@@ -489,9 +500,11 @@ def main():
         },
         "ms_loan": build_ms(live),
         # 수탁 M/S 는 아직 풀리지 않은 물량 기준이다. 이미 해제된 건은 수탁 잔고가 아니다.
-        "ms_lockup": build_ms_lockup(lk_ms) if lockups else None,
-        "ms_lockup_all": build_ms_lockup([x for x in lockups if x.get("source") == "IPO"])
-                         if lockups else None,
+        # 수탁 M/S 는 상장 연도로 본다 — 그 해 IPO 를 누가 주관했는가.
+        # 'all' 은 2022년부터 지금까지 전체, 'active' 는 보호예수가 아직 남은 회사만.
+        "ms_lockup_by_year": ms_by_year,
+        "ms_lockup": ms_by_year["all"] if lockups else None,
+        "ms_lockup_active": build_ms_lockup(lk_ms) if lockups else None,
         "lockup_basis": basis,
         "companies": companies,
         "loans": sorted(loans, key=lambda x: (x["maturity_date"] or "9999", -(x["loan_amount"] or 0))),
@@ -546,6 +559,9 @@ def main():
     k = data["kpi"]["loan"]
     print(f"dashboard.json 저장 — {out.stat().st_size//1024}KB")
     print(f"  중복 제거 {removed}건 (같은 계약의 반복 보고) · 제외 {dict(dropped)}")
+    print("  수탁 M/S(상장 연도) — " + " · ".join(
+        f"{k} {v['total']['companies']}개사" for k, v in ms_by_year.items())
+        + (f" · 상장일 없음 {no_date}개사" if no_date else ""))
     print(f"  단위 누락 — 환산 {unit_fixed}건 · 금액 비움 {unit_dropped}건")
     print(f"  상장사 {len(listed):,}개사 중 담보대출 {len(n_loan):,} · 보호예수 {len(n_lock):,}개사")
     print(f"  검증 위반 {len(issues)}건 {dict(by_rule)} → data/validation.json")
