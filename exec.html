@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>증권사 점유율 — 보호예수 · 담보대출</title>
-<link rel="stylesheet" href="assets/base.css" />
+<link rel="stylesheet" href="assets/base.css?v=20260929b" />
 <style>
   .hero{display:flex;justify-content:space-between;align-items:center;margin:2px 0 16px;gap:20px}
   .hero h1{margin:0;font-size:30px;font-weight:850;letter-spacing:-.6px}
@@ -192,14 +192,18 @@
 </head>
 <body>
 <header class="topbar">
-  <div class="brand"><div class="logo">O</div>
+  <div class="brand"><img class="brand-logo" src="assets/img/samsung_financial_networks_white.png" alt="삼성금융네트웍스" />
+    <div class="brand-bar"></div>
     <div><div class="brand-title">증권사 점유율</div>
       <div class="brand-sub">보호예수 수탁 · 주식담보대출</div></div></div>
   <nav class="nav">
     <a href="index.html">통합 조망</a>
     <a href="exec.html" class="on">증권사 점유율</a>
   </nav>
-  <div class="top-meta" id="topMeta">불러오는 중…</div>
+  <div class="top-right">
+    <div class="top-meta" id="topMeta">불러오는 중…</div>
+    <div class="co-logo"><img src="assets/img/onelineai_logo.svg" alt="원라인에이아이" /></div>
+  </div>
 </header>
 
 <main class="page">
@@ -702,7 +706,7 @@ async function init() {
   }
   const U = D.meta.universe, C = D.meta.collection || {};
   const ymd = s => s.replace(/(\d{4})(\d{2})(\d{2})/, "$1.$2.$3");
-  el("topMeta").innerHTML = `기준일 ${fd(D.meta.baseDate)} · 상장사 ${U.listed.toLocaleString("ko-KR")}개사`;
+  el("topMeta").innerHTML = `<div>기준일 ${fd(D.meta.baseDate)}</div><div>상장사 ${U.listed.toLocaleString("ko-KR")}개사</div>`;
   el("foot").innerHTML = `출처 ${D.meta.source} · 생성 ${D.meta.generated}<br>`
     + `대상 KOSPI ${U.kospi.toLocaleString("ko-KR")} · KOSDAQ ${U.kosdaq.toLocaleString("ko-KR")}개사<br>`
     + (C.majorstock ? `담보대출 — ${ymd(C.majorstock.period[0])} ~ ${ymd(C.majorstock.period[1])} 접수 대량보유상황보고서(제출인별 최신)·거래소 담보제공 공시<br>` : "")

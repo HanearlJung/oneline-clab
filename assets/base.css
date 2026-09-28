@@ -21,7 +21,12 @@ a{color:inherit}
   font-size:16px;font-weight:750;letter-spacing:-.2px;text-decoration:none;color:#c9d2df}
 .nav a:hover{background:rgba(255,255,255,.08);color:#fff}
 .nav a.on{background:#3f6ff0;color:#fff}
-.top-meta{font-size:14px;color:#c9d2df;text-align:right;white-space:nowrap}
+.top-meta{font-size:14px;color:#c9d2df;text-align:right;white-space:nowrap;line-height:1.45}
+.top-right{display:flex;align-items:center;gap:16px;justify-content:flex-end}
+.brand-logo{height:40px;width:auto;display:block}
+.brand-bar{width:1px;height:34px;background:rgba(255,255,255,.18)}
+.co-logo{background:#fff;border-radius:9px;height:40px;padding:0 12px;display:flex;align-items:center}
+.co-logo img{height:20px;width:auto;display:block}
 .page{width:min(1460px,calc(100% - 40px));margin:22px auto 44px}
 .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow)}
 .sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin:0 0 12px}
