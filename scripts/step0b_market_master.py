@@ -30,60 +30,59 @@ PAUSE = 0.8
 def fetch_kind() -> pd.DataFrame:
     r = requests.get(KIND_URL, headers={"User-Agent": UA}, timeout=90)
     r.raise_for_status()
-    df = pd.read_html(io.BytesIO(r.content), encoding="euc-kr")[0]
+    df = pd.read_html(io.BytesIO(r.content), encoding="euc-kr", flavor="lxml")[0]
     df["종목코드"] = df["종목코드"].astype(str).str.zfill(6)
     return df[["회사명", "시장구분", "종목코드", "업종", "결산월"]]
 
 
-def fetch_naver_caps() -> dict[str, dict]:
-    """시장별 전 페이지 순회.
+NAVER_API = "https://m.stock.naver.com/api/stocks/marketValue/{market}"
+_traded = []          # 시세 시각 — 기준일을 정하는 데 쓴다
 
-    시가총액(억원)뿐 아니라 현재가·상장주식수도 같이 받는다.
-    담보주식 평가액, 지분 매각대금, 주식보상 행사가치를 '금액'으로 환산하려면
-    이 둘이 필요하다. 지분율·주식수만으로는 영업에 쓸 수 없다.
+
+def _n(v):
+    v = str(v or "").replace(",", "").strip()
+    try:
+        return float(v)
+    except ValueError:
+        return None
+
+
+def fetch_naver_caps() -> dict[str, dict]:
+    """시장별 전 종목의 종가·시가총액.
+
+    담보주식 평가액, 보호예수 평가금액을 '금액'으로 환산하려면 종가가 필요하다.
+    PC 시세 페이지는 자동 조회를 막는다. 모바일 시세 API 를 쓴다.
     """
     caps: dict[str, dict] = {}
-    for sosok, label in ((0, "KOSPI"), (1, "KOSDAQ")):
+    for market in ("KOSPI", "KOSDAQ"):
         page = 1
         while True:
-            r = requests.get(NAVER_URL, params={"sosok": sosok, "page": page},
+            r = requests.get(NAVER_API.format(market=market), params={"page": page, "pageSize": 100},
                              headers={"User-Agent": UA}, timeout=60)
             r.raise_for_status()
-            html = r.content.decode("euc-kr", errors="replace")
-
-            tables = [t for t in pd.read_html(io.StringIO(html)) if "종목명" in t.columns]
-            if not tables:
-                break
-            table = tables[0].dropna(subset=["종목명"])
-            if table.empty:
-                break
-
-            # 표에는 코드가 없다. 링크에서 순서대로 뽑아 짝지운다.
-            codes = []
-            for c in re.findall(r"code=(\d{6})", html):
-                if not codes or codes[-1] != c:
-                    codes.append(c)
-            def col(name):
-                return table[name].tolist() if name in table.columns else [None] * len(table)
-
-            caps_col = col("시가총액")
-            price_col = col("현재가")
-            shares_col = col("상장주식수")
-            for i in range(len(table)):
-                if i >= len(codes):
-                    break
-                caps[codes[i]] = {
-                    "market_cap": float(caps_col[i]) if pd.notna(caps_col[i]) else None,
-                    "price": float(price_col[i]) if pd.notna(price_col[i]) else None,
-                    "shares": float(shares_col[i]) if pd.notna(shares_col[i]) else None,
+            j = r.json()
+            stocks = j.get("stocks") or []
+            for x in stocks:
+                price = _n(x.get("closePrice"))
+                cap = _n(x.get("marketValue"))              # 억원
+                caps[x["itemCode"]] = {
+                    "market_cap": cap, "price": price,
+                    "shares": round(cap * 1e8 / price / 1e3, 1) if cap and price else None,   # 천주
                 }
-
-            print(f"  {label} {page}p — 누적 {len(caps):,}종목", flush=True)
-            if len(table) < 50:
+                if x.get("localTradedAt"):
+                    _traded.append(x["localTradedAt"][:10])
+            print(f"  {market} {page}p — 누적 {len(caps):,}종목", flush=True)
+            if len(stocks) < 100 or page * 100 >= (j.get("totalCount") or 0):
                 break
             page += 1
             time.sleep(PAUSE)
     return caps
+
+
+def price_date() -> str | None:
+    """시세 기준일 — 받은 시세의 체결일 중 가장 많은 날짜 (거래정지 종목의 옛 날짜는 버린다)."""
+    from collections import Counter
+    return Counter(_traded).most_common(1)[0][0] if _traded else None
 
 
 def _month(value) -> int | None:
@@ -119,6 +118,8 @@ def main() -> None:
 
     matched = sum(1 for v in master.values() if v["market_cap"])
     save_json(ROOT / "data" / "market_master.json", master)
+    save_json(ROOT / "data" / "market_master_meta.json",
+              {"price_date": price_date(), "price_src": "네이버 금융", "companies": len(master)})
     print(f"\ndata/market_master.json — {len(master):,}개사 "
           f"(시총 매칭 {matched:,}개사)")
 

@@ -121,7 +121,16 @@ def main() -> None:
         if not doc and not is_spac and not args.no_fetch:
             cc = corp_of.get(r["code"])
             try:
-                doc = search_prospectus(cc, date.fromisoformat(r["listing_date"])) if cc else None
+                ld = date.fromisoformat(r["listing_date"])
+                doc = search_prospectus(cc, ld) if cc else None
+                if not doc:
+                    # 고유번호 표에 아직 없는 최근 상장사는 회사명으로 찾는다
+                    found, _ = dart.search("C001", (ld - timedelta(days=400)).strftime("%Y%m%d"),
+                                           (ld + timedelta(days=10)).strftime("%Y%m%d"), corp_name=name)
+                    cand = [x["rcp_no"] for x in found
+                            if nospace(x["corp_name"]) == nospace(name)
+                            and re.search(r"증권신고서\(지분증권\)|투자설명서", x["report_nm"])]
+                    doc = max(cand, default=None)
             except Exception as exc:  # noqa: BLE001
                 print(f"  ! 신고서 검색 {name}: {exc}")
         if doc:

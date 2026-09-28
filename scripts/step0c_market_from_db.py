@@ -5,6 +5,7 @@
 
 산출: data/market_master.json (+ meta 는 data/market_master_meta.json)
 """
+import argparse
 import os
 
 import psycopg2
@@ -16,6 +17,10 @@ MARKET = {"KOSPI": "KOSPI", "KOSDAQ": "KOSDAQ", "KONEX": "KONEX",
 
 
 def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--fill-only", action="store_true",
+                    help="이미 시세가 있는 종목은 건드리지 않는다 (step0b 로 최신 시세를 받은 뒤 빈 곳만 채울 때)")
+    args = ap.parse_args()
     master = load_json(ROOT / "data" / "market_master.json")
     by_code = {v["stock_code"]: k for k, v in master.items()}
     with psycopg2.connect(os.environ["DUNAMIS_DSN"]) as conn, conn.cursor() as cur:
@@ -40,6 +45,8 @@ def main() -> None:
         code = str(code).zfill(6)
         key = by_code.get(code)
         if key is None:
+            if args.fill_only:
+                continue        # 거래소 상장법인목록에 없는 종목 — 상장폐지된 회사다
             key = name if name not in master else f"{name}({code})"
             master[key] = {"stock_code": code, "industry": None, "fiscal_month": None}
             by_code[code] = key
@@ -47,6 +54,9 @@ def main() -> None:
         else:
             upd += 1
         m = master[key]
+        if args.fill_only and m.get("price"):
+            continue
+        m["price_basis"] = f"종가({_dt.isoformat()})" if args.fill_only else m.get("price_basis")
         m["market"] = MARKET.get(mkt, m.get("market") or mkt)
         m["market_cap"] = round(cap / 1e8, 1) if cap else None
         m["price"] = float(px) if px else None
@@ -73,9 +83,11 @@ def main() -> None:
     for v in master.values():
         v["market"] = MARKET.get(v.get("market"), v.get("market"))
     save_json(ROOT / "data" / "market_master.json", master)
-    save_json(ROOT / "data" / "market_master_meta.json",
-              {"price_date": base.isoformat(), "updated": upd, "added": new,
-               "ipo_added": ipo_added})
+    meta_path = ROOT / "data" / "market_master_meta.json"
+    meta = load_json(meta_path) if (args.fill_only and meta_path.exists()) else {}
+    meta.update({"price_date": meta.get("price_date") or base.isoformat(), "db_price_date": base.isoformat(),
+                 "updated": upd, "added": new, "ipo_added": ipo_added})
+    save_json(meta_path, meta)
     listed = sum(1 for v in master.values() if v["market"] in ("KOSPI", "KOSDAQ"))
     priced = sum(1 for v in master.values() if v["market"] in ("KOSPI", "KOSDAQ") and v.get("price"))
     print(f"시세 기준일 {base} · 갱신 {upd:,} · 신규 {new:,} · 최근 상장(공모가 평가) {ipo_added}")

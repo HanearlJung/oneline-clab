@@ -848,7 +848,7 @@
     "lead_managers": [
       "삼성증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "삼성증권"
     ],
@@ -1640,7 +1640,7 @@
     "lead_managers": [
       "신한투자증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "신한투자증권"
     ],
@@ -9135,7 +9135,7 @@
     "lead_managers": [
       "대신증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "대신증권"
     ],
@@ -10566,7 +10566,7 @@
     "lead_managers": [
       "신한투자증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "신한투자증권"
     ],
@@ -12110,7 +12110,7 @@
     "lead_managers": [
       "미래에셋증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "미래에셋증권"
     ],
@@ -14605,6 +14605,74 @@
     "in_lockup_db": false
   },
   {
+    "name": "빅웨이브로보틱스",
+    "stock_code": "0035S0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-09-29",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 18000,
+    "offer_amount": 28800000000,
+    "allocations": [
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.51,
+        "amount": 14688000000
+      },
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.49,
+        "amount": 14112000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "유진투자증권"
+    ],
+    "lead_src": "증권신고서",
+    "kind_sponsors": [
+      "미래에셋증권",
+      "유진투자증권"
+    ],
+    "co_managers": [
+      "미래에셋증권"
+    ],
+    "prospectus_rcept_no": "20260522000660",
+    "in_lockup_db": true
+  },
+  {
+    "name": "글로벌테크놀로지",
+    "stock_code": "486510",
+    "market": "KOSDAQ",
+    "listing_date": "2026-09-29",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 10000,
+    "offer_amount": 40000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 40000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "한국투자증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "한국투자증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20260915000241",
+    "in_lockup_db": false
+  },
+  {
     "name": "와이즈플래닛컴퍼니",
     "stock_code": "0010S0",
     "market": "KOSDAQ",
@@ -14931,7 +14999,7 @@
     "lead_managers": [
       "IBK투자증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "IBK투자증권"
     ],
@@ -14961,7 +15029,7 @@
     "lead_managers": [
       "한국투자증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "한국투자증권"
     ],
@@ -15276,7 +15344,7 @@
     "lead_managers": [
       "대신증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "대신증권"
     ],
