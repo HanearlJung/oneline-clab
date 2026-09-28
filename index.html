@@ -62,6 +62,7 @@
   .sg{display:flex;border:1px solid #d5dbe4;border-radius:8px;overflow:hidden;background:#fff}
   .sg button{border:0;background:#fff;height:34px;padding:0 14px;font-size:13px;font-weight:750;color:#4b5563;cursor:pointer}
   .sg button.on{background:var(--primary);color:#fff}
+  .sg button small{font-size:11px;font-weight:800;opacity:.7;margin-left:3px}
   .act-b{padding:16px 24px 26px}
   .act-sec{font-size:13px;font-weight:850;color:#374151;margin:16px 0 8px;display:flex;align-items:center;gap:8px}
   .act-sec:first-child{margin-top:0}
@@ -434,6 +435,7 @@
       </div>
       <div class="act-k" id="actK"></div>
       <div class="act-f">
+        <div class="sg" id="actBkt"></div>
         <div class="sg" id="actWho"></div>
         <div class="sg" id="actSort"><button data-s="date" class="on">임박순</button><button data-s="amt">금액순</button></div>
       </div>
@@ -617,7 +619,11 @@ function setup() {
 /* ── 상단 카드와 영업 대상 팝업 ─────────────────────────────────
    카드 숫자는 회사 수다. 연락할 곳이 몇 군데인지가 먼저이고, 주주·계약 건수는 그 안의 내용이다. */
 const ME = "삼성증권";
-const ACT = { kind: "lockup", days: 7, who: "all", sort: "date", open: new Set(), groups: [] };
+const ACT = { kind: "lockup", days: 7, who: "all", sort: "date", bkt: "all", open: new Set(), groups: [] };
+// 기간 묶음. 30일 팝업을 열면 7일 팝업에서 이미 본 기업이 앞에 깔리므로, 기간을 골라 바로 볼 수 있게 한다.
+const BKT = [["d0", "오늘", n => n === 0], ["d1", "내일", n => n === 1], ["wk", "이번 주", n => n >= 2 && n <= 7], ["later", "8일 ~ 30일 뒤", n => n > 7]];
+const inBkt = (k, x, b) => b === "all" || BKT.find(t => t[0] === b)[2](dd(x[actKey(k)]));
+const actPool = () => actItems(ACT.kind, ACT.days).filter(x => ACT.who === "all" || (ACT.who === "me") === isMine(ACT.kind, x));
 const actKey = k => k === "lockup" ? "release_date" : "maturity_date";
 const isMine = (k, x) => (k === "lockup" ? (x.custody_brokers || [x.custody_broker]) : (x.lenders || [])).includes(ME);
 const actItems = (k, days) => (k === "lockup" ? D.lockups : D.loans).filter(x => { const n = dd(x[actKey(k)]); return n != null && n >= 0 && n <= days; });
@@ -627,10 +633,10 @@ const num = v => (v || 0).toLocaleString("ko-KR");
 
 function summary() {
   const tile = (k, days, now) => {
-    const lk = k === "lockup", it = actItems(k, days), soon = actItems(k, 1);
+    const lk = k === "lockup", it = actItems(k, days);
     const me = nCo(it.filter(x => isMine(k, x))), ot = nCo(it.filter(x => !isMine(k, x))), tot = Math.max(me + ot, 1);
     return `<div class="st ${now ? "now" : ""}" data-k="${k}" data-d="${days}" role="button" tabindex="0" title="눌러서 영업 대상을 봅니다">
-      <div class="st-l">${days}일 내 ${lk ? "해제" : "만기"}${now && soon.length ? `<i>오늘·내일 ${nCo(soon)}개사</i>` : ""}</div>
+      <div class="st-l">${days}일 내 ${lk ? "해제" : "만기"}</div>
       <div class="st-v">${num(nCo(it))}<span class="u">개사</span><em>${eok(sumAmt(k, it))}원</em></div>
       <div class="st-s">${lk ? "주주 " + num(it.length) + "명" : "계약 " + num(it.length) + "건"}</div>
       <div class="st-bar"><span class="me" style="width:${(me / tot * 100).toFixed(1)}%"></span><span class="ot" style="width:${(ot / tot * 100).toFixed(1)}%"></span></div>
@@ -661,7 +667,7 @@ function summary() {
 function actBuild() {
   const k = ACT.kind, key = actKey(k);
   const px = new Map((D.ipo_deals || []).map(d => [d.c, d.px]));
-  const items = actItems(k, ACT.days).filter(x => ACT.who === "all" || (ACT.who === "me") === isMine(k, x));
+  const items = actPool().filter(x => inBkt(k, x, ACT.bkt));
   const m = new Map();
   items.forEach(x => { if (!m.has(x.stock_code)) m.set(x.stock_code, []); m.get(x.stock_code).push(x); });
   ACT.groups = [...m.values()].map(list => {
@@ -731,7 +737,7 @@ function actPoints(g) {
 
 function actDraw() {
   const k = ACT.kind, lk = k === "lockup";
-  const buckets = [["오늘", x => x.k === 0], ["내일", x => x.k === 1], ["이번 주", x => x.k >= 2 && x.k <= 7], ["8일 ~ 30일 뒤", x => x.k > 7]];
+  const buckets = BKT.map(([, t, f]) => [t, g => f(g.k)]);
   const dcls = n => n <= 1 ? "soon" : n <= 7 ? "warn" : "";
   const card = g => {
     const on = ACT.open.has(g.code), pts = actPoints(g);
@@ -795,10 +801,17 @@ function actHead() {
   el("actWho").innerHTML = [["all", "전체"], ["me", lk ? "자사 주관" : "자사 대출"], ["ot", lk ? "타사 주관" : "타사 대출"]]
     .map(([v, t]) => `<button data-w="${v}" class="${ACT.who === v ? "on" : ""}">${t}</button>`).join("");
   document.querySelectorAll("#actSort button").forEach(b => b.classList.toggle("on", b.dataset.s === ACT.sort));
+  const pool = actPool();
+  el("actBkt").innerHTML = [["all", "전체", () => true], ...BKT].map(([v, t, f]) => {
+    const c = nCo(pool.filter(x => f(dd(x[actKey(k)]))));
+    return c || v === "all" ? `<button data-b="${v}" class="${ACT.bkt === v ? "on" : ""}">${t} <small>${c}</small></button>` : "";
+  }).join("");
 }
 
 function openAct(k, days) {
-  Object.assign(ACT, { kind: k, days, who: "all", sort: "date", open: new Set() });
+  // 30일 카드는 7일 카드에 없는 기간(8일 뒤부터)을 먼저 보여준다
+  Object.assign(ACT, { kind: k, days, who: "all", sort: "date", open: new Set(), bkt: "all" });
+  if (days > 7 && actItems(k, days).some(x => dd(x[actKey(k)]) > 7)) ACT.bkt = "later";
   actHead(); actBuild(); actDraw();
   el("act").classList.add("on"); el("act").scrollTop = 0;
   document.body.style.overflow = "hidden";
@@ -818,7 +831,7 @@ function actCsv() {
   const t = [head, ...body].map(r => r.map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(",")).join("\n");
   const u = URL.createObjectURL(new Blob(["﻿" + t], { type: "text/csv;charset=utf-8" }));
   const a = document.createElement("a");
-  a.href = u; a.download = `영업대상_${lk ? "보호예수해제" : "담보대출만기"}_${ACT.days}일_${D.meta.baseDate}.csv`; a.click();
+  a.href = u; a.download = `영업대상_${lk ? "보호예수해제" : "담보대출만기"}_${ACT.days}일${ACT.bkt === "all" ? "" : "_" + BKT.find(t => t[0] === ACT.bkt)[1].replace(/\s/g, "")}_${D.meta.baseDate}.csv`; a.click();
   URL.revokeObjectURL(u);
 }
 
@@ -1104,7 +1117,11 @@ async function init() {
   el("act").addEventListener("click", e => {
     if (e.target.id === "act") return closeAct();
     const w = e.target.closest("#actWho button"), so = e.target.closest("#actSort button");
-    if (w) { ACT.who = w.dataset.w; actHead(); actBuild(); actDraw(); return; }
+    const bk = e.target.closest("#actBkt button");
+    if (bk) { ACT.bkt = bk.dataset.b; actHead(); actBuild(); actDraw(); el("act").scrollTop = 0; return; }
+    if (w) { ACT.who = w.dataset.w;
+      if (ACT.bkt !== "all" && !actPool().some(x => inBkt(ACT.kind, x, ACT.bkt))) ACT.bkt = "all";   // 고른 기간에 해당 건이 없으면 전체로
+      actHead(); actBuild(); actDraw(); return; }
     if (so) { ACT.sort = so.dataset.s; actHead(); actBuild(); actDraw(); return; }
     const t = e.target.closest("button[data-t]"), o = e.target.closest("button[data-o]"), n = e.target.closest("a[data-c]");
     if (t) { ACT.open.has(t.dataset.t) ? ACT.open.delete(t.dataset.t) : ACT.open.add(t.dataset.t); actDraw(); return; }
