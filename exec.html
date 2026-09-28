@@ -291,8 +291,8 @@
 
 <script>
 const el = id => document.getElementById(id);
-// 이름을 굵게 쓰는 곳은 삼성전자와 삼성증권뿐이다. 나머지는 보통 굵기로 둔다.
-const isKey = n => n === "삼성전자" || n === "삼성증권";
+// 이름을 굵게 쓰는 곳은 삼성증권뿐이다. 나머지는 보통 굵기로 둔다.
+const isKey = n => n === "삼성증권";
 const eok = v => { if (v == null) return null; const a = v / 1e8;
   if (a >= 10000) { const j = a / 10000; return (Number.isInteger(j) ? j.toFixed(0) : j.toFixed(1)) + "조"; }
   if (a < 1) return Math.round(v / 1e4).toLocaleString("ko-KR") + "만";      // 1억 미만은 만원 단위로

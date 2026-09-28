@@ -457,8 +457,8 @@ const NA = '<span class="na">미상</span>';
 const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const capTxt = v => v == null ? NA : v >= 10000 ? (v / 10000).toFixed(1) + "조" : Math.round(v).toLocaleString("ko-KR") + "억";
 const PAGE = 200;
-// 이름을 굵게 쓰는 곳은 삼성전자와 삼성증권뿐이다. 나머지는 보통 굵기로 둔다.
-const isKey = n => n === "삼성전자" || n === "삼성증권";
+// 이름을 굵게 쓰는 곳은 삼성증권뿐이다. 나머지는 보통 굵기로 둔다.
+const isKey = n => n === "삼성증권";
 let INFO = "";                  // 데이터 출처·기준 안내 (전체 상장사 옆 아이콘)
 let D = null, COS = [], COMAP = new Map(), rows = [], groups = [], shown = PAGE;
 const OPEN = new Set();          // 펼쳐 둔 기업 (종목코드)
@@ -638,14 +638,10 @@ const num = v => (v || 0).toLocaleString("ko-KR");
 function summary() {
   const tile = (k, days, now) => {
     const lk = k === "lockup", it = actItems(k, days);
-    const me = nCo(it.filter(x => isMine(k, x))), ot = nCo(it.filter(x => !isMine(k, x))), tot = Math.max(me + ot, 1);
     return `<div class="st ${now ? "now" : ""}" data-k="${k}" data-d="${days}" role="button" tabindex="0" title="눌러서 영업 대상을 봅니다">
       <div class="st-l">${days}일 내 ${lk ? "해제" : "만기"}</div>
       <div class="st-v">${num(nCo(it))}<span class="u">개사</span><em>${eok(sumAmt(k, it))}원</em></div>
       <div class="st-s">${lk ? "주주 " + num(it.length) + "명" : "계약 " + num(it.length) + "건"}</div>
-      <div class="st-bar"><span class="me" style="width:${(me / tot * 100).toFixed(1)}%"></span><span class="ot" style="width:${(ot / tot * 100).toFixed(1)}%"></span></div>
-      <div class="st-k"><span><span class="dot" style="background:#7389ee"></span>${lk ? "자사 주관" : "자사 대출"} <b>${me}개사</b></span>
-        <span><span class="dot" style="background:#f5b23c"></span>${lk ? "타사 주관" : "타사 대출"} <b>${ot}개사</b></span></div>
       <div class="st-go"><span>영업 대상 보기</span><span>→</span></div></div>`;
   };
   const ICON = {
