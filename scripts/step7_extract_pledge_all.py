@@ -57,6 +57,7 @@ def stock_codes() -> dict[str, str]:
 def main() -> None:
     rows_by_rcp = load_list_rows()
     codes = stock_codes()
+    master = load_json(ROOT / "data" / "market_master.json")
     files = sorted((ROOT / "slices").glob("*/events/pledge_*.md"))
 
     docs = []
@@ -96,7 +97,9 @@ def main() -> None:
         stat["docs"] += 1
         if recs:
             stat["docs_with_pledge"] += 1
-        code = codes.get(d["corp_code"], {})
+        # 고유번호 표는 DB 적재 시점 기준이라 최근 상장사가 빠져 있다. 회사명으로 보완한다.
+        code = codes.get(d["corp_code"]) or (
+            {"stock_code": master[d["name"]]["stock_code"]} if d["name"] in master else {})
         for r in recs:
             out.append({
                 **r,
