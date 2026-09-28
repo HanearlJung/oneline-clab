@@ -10,6 +10,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10300000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 10300000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -32,6 +40,29 @@
     "secu": "주권",
     "offer_price": 9000,
     "offer_amount": 93600000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.45,
+        "amount": 42120000000
+      },
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.35,
+        "amount": 32759999999
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.1,
+        "amount": 9360000000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.1,
+        "amount": 9360000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권",
       "한국투자증권"
@@ -56,6 +87,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "BNK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "BNK투자증권"
     ],
@@ -78,6 +117,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 13000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -100,6 +147,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -122,6 +177,14 @@
     "secu": "주권",
     "offer_price": 17000,
     "offer_amount": 23800000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 23800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -144,6 +207,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 11000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "대신증권"
     ],
@@ -166,6 +237,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 15000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 15000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -188,6 +267,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 6500000000,
+    "allocations": [
+      {
+        "broker": "유진투자증권",
+        "ratio": 1.0,
+        "amount": 6500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유진투자증권"
     ],
@@ -210,6 +297,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "대신증권"
     ],
@@ -232,6 +327,14 @@
     "secu": "주권",
     "offer_price": 8000,
     "offer_amount": 8800000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 8800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -254,6 +357,14 @@
     "secu": "주권",
     "offer_price": 12000,
     "offer_amount": 12480000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 12480000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -276,6 +387,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 5520000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 5520000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -298,6 +417,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 21000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 21000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -320,6 +447,14 @@
     "secu": "주권",
     "offer_price": 1700,
     "offer_amount": 28900000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 28900000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -342,6 +477,14 @@
     "secu": "주권",
     "offer_price": 10500,
     "offer_amount": 28350000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 28350000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -364,6 +507,14 @@
     "secu": "주권",
     "offer_price": 49000,
     "offer_amount": 97743338000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 97743338000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -386,6 +537,14 @@
     "secu": "주권",
     "offer_price": 17000,
     "offer_amount": 23800000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 23800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -408,6 +567,14 @@
     "secu": "주권",
     "offer_price": 16900,
     "offer_amount": 25350000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 25350000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -430,6 +597,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 27661920000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 27661920000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -452,6 +627,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 5000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 5000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -474,6 +657,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -496,6 +687,14 @@
     "secu": "주권",
     "offer_price": 44000,
     "offer_amount": 43582000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 43582000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -518,6 +717,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 7600000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 7600000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "교보증권"
     ],
@@ -540,6 +747,14 @@
     "secu": "주권",
     "offer_price": 10500,
     "offer_amount": 18060000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 18060000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -562,6 +777,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -584,6 +807,14 @@
     "secu": "주권",
     "offer_price": 18800,
     "offer_amount": 28012000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 28012000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -606,6 +837,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 30000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 30000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -628,6 +867,14 @@
     "secu": "주권",
     "offer_price": 7000,
     "offer_amount": 12397000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 12397000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -650,6 +897,14 @@
     "secu": "주권",
     "offer_price": 8900,
     "offer_amount": 17800000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 17800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -672,6 +927,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 40000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 40000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -694,6 +957,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -716,6 +987,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8600000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 8600000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -738,6 +1017,14 @@
     "secu": "주권",
     "offer_price": 5000,
     "offer_amount": 13735000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 13735000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -760,6 +1047,14 @@
     "secu": "주권",
     "offer_price": 30000,
     "offer_amount": 60000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 60000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -782,6 +1077,14 @@
     "secu": "주권",
     "offer_price": 12400,
     "offer_amount": 22320000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 22320000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -804,6 +1107,14 @@
     "secu": "주권",
     "offer_price": 8400,
     "offer_amount": 17270400000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 17270400000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -826,6 +1137,14 @@
     "secu": "주권",
     "offer_price": 12500,
     "offer_amount": 14434300000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 14434300000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -848,6 +1167,14 @@
     "secu": "주권",
     "offer_price": 27000,
     "offer_amount": 27000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 27000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -870,6 +1197,14 @@
     "secu": "부동산투자회사",
     "offer_price": 5000,
     "offer_amount": 153500000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 153500000000
+      }
+    ],
+    "alloc_src": "주관사 단독(인수인 표 미확인)",
     "lead_managers": [
       "KB증권"
     ],
@@ -892,6 +1227,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11000000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 11000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -914,6 +1257,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 7000000000,
+    "allocations": [
+      {
+        "broker": "SK증권",
+        "ratio": 1.0,
+        "amount": 7000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "SK증권"
     ],
@@ -936,6 +1287,14 @@
     "secu": "주권",
     "offer_price": 11000,
     "offer_amount": 6776000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 6776000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권"
     ],
@@ -958,6 +1317,24 @@
     "secu": "주권",
     "offer_price": 60000,
     "offer_amount": 432000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.53,
+        "amount": 228960000000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.4,
+        "amount": 172800000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.07,
+        "amount": 30240000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "KB증권",
       "신한투자증권"
@@ -982,6 +1359,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 15600000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 15600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -1004,6 +1389,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 14000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -1026,6 +1419,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "한화투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "한화투자증권"
     ],
@@ -1048,6 +1449,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 33850000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 33850000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -1070,6 +1479,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -1092,6 +1509,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -1114,6 +1539,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -1136,6 +1569,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9500000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 9500000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -1158,6 +1599,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12500000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 12500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -1180,6 +1629,14 @@
     "secu": "주권",
     "offer_price": 9000,
     "offer_amount": 29903040000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 29903040000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -1202,6 +1659,24 @@
     "secu": "주권",
     "offer_price": 28000,
     "offer_amount": 101920000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.695,
+        "amount": 70834400000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.295,
+        "amount": 30066400000
+      },
+      {
+        "broker": "유안타증권",
+        "ratio": 0.01,
+        "amount": 1019200000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -1226,6 +1701,24 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 33900000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 0.88,
+        "amount": 29832000000
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.06,
+        "amount": 2034000000
+      },
+      {
+        "broker": "현대차증권",
+        "ratio": 0.06,
+        "amount": 2034000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -1248,6 +1741,14 @@
     "secu": "주권",
     "offer_price": 35000,
     "offer_amount": 37450000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 37450000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -1270,6 +1771,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -1292,6 +1801,19 @@
     "secu": "주권",
     "offer_price": 35000,
     "offer_amount": 200025000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 0.93,
+        "amount": 186023250000
+      },
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.07,
+        "amount": 14001750000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -1314,6 +1836,14 @@
     "secu": "주권",
     "offer_price": 34000,
     "offer_amount": 40120000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 40120000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -1336,6 +1866,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 6500000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 6500000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -1358,6 +1896,24 @@
     "secu": "주권",
     "offer_price": 50000,
     "offer_amount": 133500000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.46,
+        "amount": 61410000000
+      },
+      {
+        "broker": "대신증권",
+        "ratio": 0.46,
+        "amount": 61410000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.08,
+        "amount": 10680000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권",
       "대신증권"
@@ -1382,6 +1938,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 20736000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 20736000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -1404,6 +1968,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -1426,6 +1998,14 @@
     "secu": "주권",
     "offer_price": 30000,
     "offer_amount": 36474000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 36474000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -1448,6 +2028,14 @@
     "secu": "주권",
     "offer_price": 25000,
     "offer_amount": 75000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 75000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -1470,6 +2058,14 @@
     "secu": "주권",
     "offer_price": 18600,
     "offer_amount": 44640000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 44640000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -1492,6 +2088,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "대신증권"
     ],
@@ -1514,6 +2118,14 @@
     "secu": "주권",
     "offer_price": 25000,
     "offer_amount": 30000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 30000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -1536,6 +2148,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 33800000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 33800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -1558,6 +2178,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -1580,6 +2208,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12300000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 12300000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -1602,6 +2238,19 @@
     "secu": "주권",
     "offer_price": 40000,
     "offer_amount": 52000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.65,
+        "amount": 33800000000
+      },
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.35,
+        "amount": 18200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권",
       "미래에셋증권"
@@ -1626,6 +2275,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 25600000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 25600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -1648,6 +2305,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11500000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 11500000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "교보증권"
     ],
@@ -1670,6 +2335,14 @@
     "secu": "주권",
     "offer_price": 16200,
     "offer_amount": 86930609000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 86930609000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -1692,6 +2365,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 15000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 15000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -1714,6 +2395,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -1736,6 +2425,29 @@
     "secu": "주권",
     "offer_price": 40000,
     "offer_amount": 85440000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.755056,
+        "amount": 64511984639
+      },
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.188764,
+        "amount": 16127996159
+      },
+      {
+        "broker": "iM증권",
+        "ratio": 0.02809,
+        "amount": 2400009600
+      },
+      {
+        "broker": "DB증권",
+        "ratio": 0.02809,
+        "amount": 2400009600
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -1761,6 +2473,19 @@
     "secu": "주권",
     "offer_price": 6000,
     "offer_amount": 30440094000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.7,
+        "amount": 21308065800
+      },
+      {
+        "broker": "대신증권",
+        "ratio": 0.3,
+        "amount": 9132028200
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -1786,6 +2511,14 @@
     "secu": "부동산투자회사",
     "offer_price": 5000,
     "offer_amount": 59300000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 59300000000
+      }
+    ],
+    "alloc_src": "주관사 단독(인수인 표 미확인)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -1808,6 +2541,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -1830,6 +2571,14 @@
     "secu": "주권",
     "offer_price": 14000,
     "offer_amount": 28000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 28000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -1852,6 +2601,19 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 37500000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.7,
+        "amount": 26250000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.3,
+        "amount": 11250000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -1877,6 +2639,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "상상인증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "상상인증권"
     ],
@@ -1899,6 +2669,14 @@
     "secu": "주권",
     "offer_price": 17000,
     "offer_amount": 30174439000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 30174439000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -1921,6 +2699,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8400000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 8400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -1943,6 +2729,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -1965,6 +2759,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11700000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 11700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -1987,6 +2789,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 6400000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 6400000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -2009,6 +2819,19 @@
     "secu": "주권",
     "offer_price": 16400,
     "offer_amount": 14514000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.7,
+        "amount": 10159800000
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.3,
+        "amount": 4354200000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -2034,6 +2857,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "유진투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유진투자증권"
     ],
@@ -2056,6 +2887,19 @@
     "secu": "부동산투자회사",
     "offer_price": 5000,
     "offer_amount": 97500000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 0.5,
+        "amount": 48750000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.5,
+        "amount": 48750000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권",
       "삼성증권"
@@ -2080,6 +2924,14 @@
     "secu": "주권",
     "offer_price": 4400,
     "offer_amount": 29260000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 29260000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -2102,6 +2954,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 22400000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 22400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -2124,6 +2984,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 21500000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 21500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -2146,6 +3014,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 16000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 16000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권"
     ],
@@ -2168,6 +3044,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 6000000000,
+    "allocations": [
+      {
+        "broker": "SK증권",
+        "ratio": 1.0,
+        "amount": 6000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "SK증권"
     ],
@@ -2190,6 +3074,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 32500000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 32500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -2212,6 +3104,19 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 15000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.7,
+        "amount": 10500000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.3,
+        "amount": 4500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -2237,6 +3142,14 @@
     "secu": "주권",
     "offer_price": 15200,
     "offer_amount": 45600000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 45600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -2259,6 +3172,19 @@
     "secu": "주권",
     "offer_price": 8000,
     "offer_amount": 32400000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.5,
+        "amount": 16200000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.5,
+        "amount": 16200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권",
       "삼성증권"
@@ -2283,6 +3209,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -2305,6 +3239,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 15000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 15000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -2327,6 +3269,19 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 24000000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 0.7,
+        "amount": 16799999999
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.3,
+        "amount": 7200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유안타증권",
       "신한투자증권"
@@ -2351,6 +3306,14 @@
     "secu": "주권",
     "offer_price": 28000,
     "offer_amount": 36400000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 36400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "DB증권"
     ],
@@ -2359,7 +3322,7 @@
       "DB증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20220127000145",
     "in_lockup_db": false
   },
   {
@@ -2373,6 +3336,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -2395,6 +3366,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 5000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 5000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -2417,6 +3396,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 15836400000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 15836400000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -2439,6 +3426,14 @@
     "secu": "주권",
     "offer_price": 17500,
     "offer_amount": 54250000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 54250000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -2447,7 +3442,7 @@
       "미래에셋증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20220120000220",
     "in_lockup_db": false
   },
   {
@@ -2461,6 +3456,14 @@
     "secu": "주권",
     "offer_price": 8000,
     "offer_amount": 16000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 16000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -2469,7 +3472,7 @@
       "한국투자증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20220120000164",
     "in_lockup_db": false
   },
   {
@@ -2483,6 +3486,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 28941900000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 28941900000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -2491,7 +3502,7 @@
       "신영증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20220118000130",
     "in_lockup_db": false
   },
   {
@@ -2505,6 +3516,14 @@
     "secu": "주권",
     "offer_price": 22000,
     "offer_amount": 43560000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 43560000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -2513,7 +3532,7 @@
       "NH투자증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20220118000224",
     "in_lockup_db": false
   },
   {
@@ -2527,6 +3546,64 @@
     "secu": "주권",
     "offer_price": 300000,
     "offer_amount": 12750000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.22,
+        "amount": 2805000000000
+      },
+      {
+        "broker": "모건스탠리증권",
+        "ratio": 0.19,
+        "amount": 2422500000000
+      },
+      {
+        "broker": "대신증권",
+        "ratio": 0.11,
+        "amount": 1402500000000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.11,
+        "amount": 1402500000000
+      },
+      {
+        "broker": "골드만삭스증권",
+        "ratio": 0.11,
+        "amount": 1402500000000
+      },
+      {
+        "broker": "메릴린치증권",
+        "ratio": 0.11,
+        "amount": 1402500000000
+      },
+      {
+        "broker": "씨티증권",
+        "ratio": 0.11,
+        "amount": 1402500000000
+      },
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.01,
+        "amount": 127500000000
+      },
+      {
+        "broker": "신영증권",
+        "ratio": 0.01,
+        "amount": 127500000000
+      },
+      {
+        "broker": "하나증권",
+        "ratio": 0.01,
+        "amount": 127500000000
+      },
+      {
+        "broker": "iM증권",
+        "ratio": 0.01,
+        "amount": 127500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권",
       "모건스탠리증권"
@@ -2557,6 +3634,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 32000000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 32000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -2565,7 +3650,7 @@
       "신영증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20220111000198",
     "in_lockup_db": false
   },
   {
@@ -2579,6 +3664,14 @@
     "secu": "주권",
     "offer_price": 7000,
     "offer_amount": 9520000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 9520000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -2587,7 +3680,7 @@
       "대신증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20220111000215",
     "in_lockup_db": false
   },
   {
@@ -2601,6 +3694,19 @@
     "secu": "주권",
     "offer_price": 5300,
     "offer_amount": 15251169000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.8,
+        "amount": 12200935200
+      },
+      {
+        "broker": "현대차증권",
+        "ratio": 0.2,
+        "amount": 3050233800
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -2609,7 +3715,7 @@
       "미래에셋증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20220110000199",
     "in_lockup_db": false
   },
   {
@@ -2623,6 +3729,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "DB증권"
     ],
@@ -2645,6 +3759,19 @@
     "secu": "주권",
     "offer_price": 100000,
     "offer_amount": 122000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.65,
+        "amount": 79300000000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.35,
+        "amount": 42700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권",
       "NH투자증권"
@@ -2669,6 +3796,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -2691,6 +3826,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 14000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -2713,6 +3856,19 @@
     "secu": "주권",
     "offer_price": 19000,
     "offer_amount": 26600000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 0.7,
+        "amount": 18620000000
+      },
+      {
+        "broker": "키움증권",
+        "ratio": 0.3,
+        "amount": 7980000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권"
     ],
@@ -2738,6 +3894,34 @@
     "secu": "주권",
     "offer_price": 6000,
     "offer_amount": 87750000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 0.4125,
+        "amount": 36196875000
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.4125,
+        "amount": 36196875000
+      },
+      {
+        "broker": "LS증권",
+        "ratio": 0.075,
+        "amount": 6581250000
+      },
+      {
+        "broker": "iM증권",
+        "ratio": 0.05,
+        "amount": 4387500000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.05,
+        "amount": 4387500000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "키움증권",
       "KB증권"
@@ -2762,6 +3946,14 @@
     "secu": "주권",
     "offer_price": 23000,
     "offer_amount": 17250000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 17250000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -2784,6 +3976,14 @@
     "secu": "주권",
     "offer_price": 9000,
     "offer_amount": 13500000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 13500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -2806,6 +4006,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 7000000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 7000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "교보증권"
     ],
@@ -2828,6 +4036,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 20000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 20000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -2850,6 +4066,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 11700000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 11700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권"
     ],
@@ -2872,6 +4096,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 16000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 16000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -2894,6 +4126,14 @@
     "secu": "주권",
     "offer_price": 28000,
     "offer_amount": 39396000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 39396000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -2916,6 +4156,14 @@
     "secu": "주권",
     "offer_price": 17000,
     "offer_amount": 27880000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 27880000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -2938,6 +4186,14 @@
     "secu": "주권",
     "offer_price": 7000,
     "offer_amount": 29750000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 29750000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -2960,6 +4216,14 @@
     "secu": "주권",
     "offer_price": 30000,
     "offer_amount": 44112000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 44112000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -2982,6 +4246,14 @@
     "secu": "주권",
     "offer_price": 34700,
     "offer_amount": 72141300000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 72141300000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -3004,6 +4276,14 @@
     "secu": "주권",
     "offer_price": 11000,
     "offer_amount": 36850000000,
+    "allocations": [
+      {
+        "broker": "iM증권",
+        "ratio": 1.0,
+        "amount": 36850000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "iM증권"
     ],
@@ -3026,6 +4306,24 @@
     "secu": "주권",
     "offer_price": 36200,
     "offer_amount": 419224960000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.679,
+        "amount": 284653747840
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.291,
+        "amount": 121994463359
+      },
+      {
+        "broker": "iM증권",
+        "ratio": 0.03,
+        "amount": 12576748800
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -3051,6 +4349,14 @@
     "secu": "주권",
     "offer_price": 4000,
     "offer_amount": 6384000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 6384000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -3073,6 +4379,14 @@
     "secu": "주권",
     "offer_price": 1800,
     "offer_amount": 12600000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 12600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -3095,6 +4409,14 @@
     "secu": "주권",
     "offer_price": 25000,
     "offer_amount": 65908250000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 65908250000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -3117,6 +4439,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -3139,6 +4469,19 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 32000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.5,
+        "amount": 16000000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.5,
+        "amount": 16000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권",
       "삼성증권"
@@ -3163,6 +4506,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 15600000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 15600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -3185,6 +4536,14 @@
     "secu": "주권",
     "offer_price": 4800,
     "offer_amount": 24960000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 24960000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -3207,6 +4566,14 @@
     "secu": "주권",
     "offer_price": 22500,
     "offer_amount": 46350000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 46350000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -3229,6 +4596,14 @@
     "secu": "주권",
     "offer_price": 7500,
     "offer_amount": 27000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 27000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -3251,6 +4626,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 25000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 25000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -3273,6 +4656,14 @@
     "secu": "주권",
     "offer_price": 4400,
     "offer_amount": 4966368000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 4966368000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -3295,6 +4686,14 @@
     "secu": "주권",
     "offer_price": 17000,
     "offer_amount": 17841194000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 17841194000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -3317,6 +4716,14 @@
     "secu": "주권",
     "offer_price": 17000,
     "offer_amount": 30600000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 30600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -3339,6 +4746,14 @@
     "secu": "주권",
     "offer_price": 6500,
     "offer_amount": 26000000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 26000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -3361,6 +4776,14 @@
     "secu": "주권",
     "offer_price": 7000,
     "offer_amount": 5390000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 5390000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권"
     ],
@@ -3383,6 +4806,14 @@
     "secu": "주권",
     "offer_price": 26000,
     "offer_amount": 52000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 52000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -3405,6 +4836,14 @@
     "secu": "주권",
     "offer_price": 10700,
     "offer_amount": 44265900000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 44265900000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -3427,6 +4866,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "현대차증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "현대차증권"
     ],
@@ -3449,6 +4896,19 @@
     "secu": "주권",
     "offer_price": 14000,
     "offer_amount": 22120000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 0.7,
+        "amount": 15483999999
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.3,
+        "amount": 6636000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -3471,6 +4931,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 33600000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 33600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -3493,6 +4961,54 @@
     "secu": "주권",
     "offer_price": 26000,
     "offer_amount": 421200000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.3,
+        "amount": 126360000000
+      },
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.3,
+        "amount": 126360000000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.1,
+        "amount": 42120000000
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.1,
+        "amount": 42120000000
+      },
+      {
+        "broker": "CS증권",
+        "ratio": 0.1,
+        "amount": 42120000000
+      },
+      {
+        "broker": "키움증권",
+        "ratio": 0.03,
+        "amount": 12636000000
+      },
+      {
+        "broker": "신영증권",
+        "ratio": 0.03,
+        "amount": 12636000000
+      },
+      {
+        "broker": "하나증권",
+        "ratio": 0.03,
+        "amount": 12636000000
+      },
+      {
+        "broker": "UBS증권",
+        "ratio": 0.01,
+        "amount": 4212000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권",
       "한국투자증권"
@@ -3524,6 +5040,14 @@
     "secu": "주권",
     "offer_price": 12500,
     "offer_amount": 18750000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 18750000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -3546,6 +5070,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 36000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 36000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -3568,6 +5100,14 @@
     "secu": "주권",
     "offer_price": 23000,
     "offer_amount": 34500000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 34500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -3590,6 +5130,14 @@
     "secu": "주권",
     "offer_price": 24000,
     "offer_amount": 26400000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 26400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -3612,6 +5160,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "상상인증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "상상인증권"
     ],
@@ -3634,6 +5190,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9500000000,
+    "allocations": [
+      {
+        "broker": "한화투자증권",
+        "ratio": 1.0,
+        "amount": 9500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한화투자증권"
     ],
@@ -3656,6 +5220,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 13000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -3678,6 +5250,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -3700,6 +5280,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 13000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "대신증권"
     ],
@@ -3722,6 +5310,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -3744,6 +5340,14 @@
     "secu": "주권",
     "offer_price": 12000,
     "offer_amount": 16006620000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 16006620000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -3766,6 +5370,14 @@
     "secu": "주권",
     "offer_price": 8000,
     "offer_amount": 17760000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 17760000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -3788,6 +5400,14 @@
     "secu": "주권",
     "offer_price": 11500,
     "offer_amount": 80500000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 80500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권"
     ],
@@ -3810,6 +5430,14 @@
     "secu": "주권",
     "offer_price": 23000,
     "offer_amount": 10768600000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 10768600000
+      }
+    ],
+    "alloc_src": "주관사 단독(인수인 표 미확인)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -3832,6 +5460,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 6000000000,
+    "allocations": [
+      {
+        "broker": "SK증권",
+        "ratio": 1.0,
+        "amount": 6000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "SK증권"
     ],
@@ -3854,6 +5490,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 18200000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 18200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -3876,6 +5520,19 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.95,
+        "amount": 12350000000
+      },
+      {
+        "broker": "iM증권",
+        "ratio": 0.05,
+        "amount": 650000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -3898,6 +5555,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 13000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -3920,6 +5585,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -3942,6 +5615,39 @@
     "secu": "주권",
     "offer_price": 31000,
     "offer_amount": 193750000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.64,
+        "amount": 124000000000
+      },
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.28,
+        "amount": 54250000000
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.02,
+        "amount": 3875000000
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.02,
+        "amount": 3875000000
+      },
+      {
+        "broker": "한화투자증권",
+        "ratio": 0.02,
+        "amount": 3875000000
+      },
+      {
+        "broker": "현대차증권",
+        "ratio": 0.02,
+        "amount": 3875000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -3967,6 +5673,14 @@
     "secu": "주권",
     "offer_price": 12000,
     "offer_amount": 14520000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 14520000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -3989,6 +5703,14 @@
     "secu": "주권",
     "offer_price": 25000,
     "offer_amount": 22500000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 22500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -3997,7 +5719,7 @@
       "유안타증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20230721000288",
     "in_lockup_db": false
   },
   {
@@ -4011,6 +5733,14 @@
     "secu": "주권",
     "offer_price": 25000,
     "offer_amount": 22500000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 22500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -4033,6 +5763,14 @@
     "secu": "주권",
     "offer_price": 14000,
     "offer_amount": 19600000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 19600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -4055,6 +5793,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -4077,6 +5823,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 30720000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 30720000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -4099,6 +5853,14 @@
     "secu": "주권",
     "offer_price": 26000,
     "offer_amount": 11440000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 11440000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "DB증권"
     ],
@@ -4121,6 +5883,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "SK증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "SK증권"
     ],
@@ -4143,6 +5913,14 @@
     "secu": "주권",
     "offer_price": 9000,
     "offer_amount": 27000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 27000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -4165,6 +5943,14 @@
     "secu": "주권",
     "offer_price": 4500,
     "offer_amount": 17550000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 17550000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -4187,6 +5973,19 @@
     "secu": "주권",
     "offer_price": 34000,
     "offer_amount": 95625000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.85,
+        "amount": 81281250000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.15,
+        "amount": 14343750000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -4209,6 +6008,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "DB증권"
     ],
@@ -4231,6 +6038,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 13500000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 13500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권"
     ],
@@ -4253,6 +6068,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 7700000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 7700000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "교보증권"
     ],
@@ -4275,6 +6098,14 @@
     "secu": "주권",
     "offer_price": 50000,
     "offer_amount": 50000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 50000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -4297,6 +6128,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 16500000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 16500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권"
     ],
@@ -4319,6 +6158,14 @@
     "secu": "주권",
     "offer_price": 3000,
     "offer_amount": 5844000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 5844000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -4341,6 +6188,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -4363,6 +6218,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 25500000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 25500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -4385,6 +6248,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -4407,6 +6278,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8500000000,
+    "allocations": [
+      {
+        "broker": "iM증권",
+        "ratio": 1.0,
+        "amount": 8500000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "iM증권"
     ],
@@ -4429,6 +6308,14 @@
     "secu": "주권",
     "offer_price": 4500,
     "offer_amount": 7200000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 7200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -4451,6 +6338,19 @@
     "secu": "주권",
     "offer_price": 4000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 0.65,
+        "amount": 9100000000
+      },
+      {
+        "broker": "신영증권",
+        "ratio": 0.35,
+        "amount": 4900000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권",
       "신영증권"
@@ -4475,6 +6375,19 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 32000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.9,
+        "amount": 28800000000
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.1,
+        "amount": 3200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -4497,6 +6410,19 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 29000000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 0.95,
+        "amount": 27550000000
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.05,
+        "amount": 1450000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -4519,6 +6445,14 @@
     "secu": "주권",
     "offer_price": 5000,
     "offer_amount": 21250000000,
+    "allocations": [
+      {
+        "broker": "iM증권",
+        "ratio": 1.0,
+        "amount": 21250000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "iM증권"
     ],
@@ -4541,6 +6475,14 @@
     "secu": "주권",
     "offer_price": 43000,
     "offer_amount": 95385094000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 95385094000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -4563,6 +6505,24 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 22500000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.8,
+        "amount": 18000000000
+      },
+      {
+        "broker": "SK증권",
+        "ratio": 0.1,
+        "amount": 2250000000
+      },
+      {
+        "broker": "신영증권",
+        "ratio": 0.1,
+        "amount": 2250000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -4588,6 +6548,14 @@
     "secu": "주권",
     "offer_price": 9800,
     "offer_amount": 19600000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 19600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -4610,6 +6578,14 @@
     "secu": "주권",
     "offer_price": 12000,
     "offer_amount": 30000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 30000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -4632,6 +6608,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -4654,6 +6638,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 13500000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 13500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -4676,6 +6668,14 @@
     "secu": "주권",
     "offer_price": 18200,
     "offer_amount": 15652000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 15652000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "교보증권"
     ],
@@ -4698,6 +6698,14 @@
     "secu": "주권",
     "offer_price": 15500,
     "offer_amount": 15500000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 15500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -4720,6 +6728,29 @@
     "secu": "부동산투자회사",
     "offer_price": 5000,
     "offer_amount": 118900000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 0.352397,
+        "amount": 41900003300
+      },
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.311186,
+        "amount": 37000015400
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.168209,
+        "amount": 20000050100
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.168209,
+        "amount": 20000050100
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권",
       "한국투자증권"
@@ -4746,6 +6777,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -4768,6 +6807,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -4790,6 +6837,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -4812,6 +6867,24 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 26000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.4,
+        "amount": 10400000000
+      },
+      {
+        "broker": "하나증권",
+        "ratio": 0.4,
+        "amount": 10400000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.2,
+        "amount": 5200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권",
       "하나증권"
@@ -4839,6 +6912,14 @@
     "secu": "주권",
     "offer_price": 5100,
     "offer_amount": 23552040000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 23552040000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -4861,6 +6942,24 @@
     "secu": "부동산투자회사",
     "offer_price": 5000,
     "offer_amount": 116000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.413793,
+        "amount": 47999988000
+      },
+      {
+        "broker": "한화투자증권",
+        "ratio": 0.413793,
+        "amount": 47999988000
+      },
+      {
+        "broker": "SK증권",
+        "ratio": 0.172414,
+        "amount": 20000024000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권",
       "한화투자증권"
@@ -4885,6 +6984,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -4907,6 +7014,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 70000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 70000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -4929,6 +7044,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 30073200000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 30073200000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -4951,6 +7074,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 6800000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 6800000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -4973,6 +7104,14 @@
     "secu": "주권",
     "offer_price": 22000,
     "offer_amount": 20460000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 20460000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -4995,6 +7134,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 11000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -5017,6 +7164,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 26650000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 26650000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -5039,6 +7194,14 @@
     "secu": "주권",
     "offer_price": 21000,
     "offer_amount": 13650000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 13650000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "DB증권"
     ],
@@ -5061,6 +7224,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 40000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 40000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -5083,6 +7254,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 17000000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 17000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -5105,6 +7284,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9300000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 9300000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -5127,6 +7314,14 @@
     "secu": "주권",
     "offer_price": 3000,
     "offer_amount": 7800000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 7800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -5149,6 +7344,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 52000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 52000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -5171,6 +7374,14 @@
     "secu": "주권",
     "offer_price": 10500,
     "offer_amount": 38850000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 38850000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -5193,6 +7404,14 @@
     "secu": "주권",
     "offer_price": 5000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -5215,6 +7434,14 @@
     "secu": "주권",
     "offer_price": 19500,
     "offer_amount": 19500000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 19500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -5237,6 +7464,14 @@
     "secu": "주권",
     "offer_price": 11000,
     "offer_amount": 39072407000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 39072407000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -5259,6 +7494,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 13967208000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 13967208000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -5281,6 +7524,14 @@
     "secu": "주권",
     "offer_price": 6000,
     "offer_amount": 21600000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 21600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -5303,6 +7554,24 @@
     "secu": "주권",
     "offer_price": 3100,
     "offer_amount": 20150000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.45,
+        "amount": 9067500000
+      },
+      {
+        "broker": "현대차증권",
+        "ratio": 0.45,
+        "amount": 9067500000
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.1,
+        "amount": 2015000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권",
       "현대차증권"
@@ -5327,6 +7596,14 @@
     "secu": "주권",
     "offer_price": 28000,
     "offer_amount": 50400000000,
+    "allocations": [
+      {
+        "broker": "한화투자증권",
+        "ratio": 1.0,
+        "amount": 50400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한화투자증권"
     ],
@@ -5349,6 +7626,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -5371,6 +7656,19 @@
     "secu": "주권",
     "offer_price": 11000,
     "offer_amount": 20431400000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.7,
+        "amount": 14301980000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.3,
+        "amount": 6129420000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권",
       "신한투자증권"
@@ -5395,6 +7693,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -5417,6 +7723,14 @@
     "secu": "주권",
     "offer_price": 8000,
     "offer_amount": 11440000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 11440000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -5439,6 +7753,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 7800000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 7800000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -5461,6 +7783,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 20150000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 20150000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -5483,6 +7813,14 @@
     "secu": "주권",
     "offer_price": 7300,
     "offer_amount": 10387900000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 10387900000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -5505,6 +7843,14 @@
     "secu": "주권",
     "offer_price": 3900,
     "offer_amount": 18525000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 18525000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -5527,6 +7873,24 @@
     "secu": "주권",
     "offer_price": 65000,
     "offer_amount": 156000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.9,
+        "amount": 140400000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.05,
+        "amount": 7800000000
+      },
+      {
+        "broker": "키움증권",
+        "ratio": 0.05,
+        "amount": 7800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -5549,6 +7913,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -5571,6 +7943,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "키움증권"
     ],
@@ -5593,6 +7973,14 @@
     "secu": "사회간접자본투융자회사",
     "offer_price": 8400,
     "offer_amount": 160000008000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 160000008000
+      }
+    ],
+    "alloc_src": "주관사 단독(인수인 표 미확인)",
     "lead_managers": [
       "KB증권"
     ],
@@ -5616,6 +8004,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "DB증권"
     ],
@@ -5638,6 +8034,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "교보증권"
     ],
@@ -5660,6 +8064,14 @@
     "secu": "주권",
     "offer_price": 6400,
     "offer_amount": 19200000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 19200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -5682,6 +8094,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 11000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "대신증권"
     ],
@@ -5704,6 +8124,14 @@
     "secu": "주권",
     "offer_price": 24500,
     "offer_amount": 24745000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 24745000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -5726,6 +8154,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -5748,6 +8184,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 17500000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 17500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -5770,6 +8214,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 19500000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 19500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -5792,6 +8244,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 7800000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 7800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -5814,6 +8274,14 @@
     "secu": "주권",
     "offer_price": 4500,
     "offer_amount": 14400000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 14400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -5836,6 +8304,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 15600000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 15600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -5858,6 +8334,14 @@
     "secu": "주권",
     "offer_price": 30200,
     "offer_amount": 34126000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 34126000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -5880,6 +8364,14 @@
     "secu": "주권",
     "offer_price": 23000,
     "offer_amount": 27600000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 27600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -5902,6 +8394,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 32000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 32000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -5924,6 +8424,19 @@
     "secu": "주권",
     "offer_price": 34000,
     "offer_amount": 102000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.6,
+        "amount": 61200000000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.4,
+        "amount": 40800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권",
       "NH투자증권"
@@ -5948,6 +8461,14 @@
     "secu": "주권",
     "offer_price": 23000,
     "offer_amount": 16031000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 16031000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -5970,6 +8491,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 45000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 45000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -5992,6 +8521,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 24000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 24000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -6014,6 +8551,14 @@
     "secu": "주권",
     "offer_price": 32000,
     "offer_amount": 96000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 96000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -6036,6 +8581,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "유진투자증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유진투자증권"
     ],
@@ -6058,6 +8611,19 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 39000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.9,
+        "amount": 35100000000
+      },
+      {
+        "broker": "신영증권",
+        "ratio": 0.1,
+        "amount": 3900000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -6080,6 +8646,14 @@
     "secu": "주권",
     "offer_price": 22000,
     "offer_amount": 11000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 11000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -6102,6 +8676,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 22350000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 22350000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -6124,6 +8706,24 @@
     "secu": "주권",
     "offer_price": 30000,
     "offer_amount": 78000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 0.77,
+        "amount": 60060000000
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.18,
+        "amount": 14040000000
+      },
+      {
+        "broker": "유안타증권",
+        "ratio": 0.05,
+        "amount": 3900000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -6149,6 +8749,19 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 28800000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 0.935,
+        "amount": 26928000000
+      },
+      {
+        "broker": "유진증권",
+        "ratio": 0.065,
+        "amount": 1872000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -6171,6 +8784,14 @@
     "secu": "주권",
     "offer_price": 12000,
     "offer_amount": 28800000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 28800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -6193,6 +8814,14 @@
     "secu": "주권",
     "offer_price": 12000,
     "offer_amount": 42720000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 42720000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -6215,6 +8844,14 @@
     "secu": "주권",
     "offer_price": 12000,
     "offer_amount": 27000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 27000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -6237,6 +8874,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 28665000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 28665000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -6259,6 +8904,19 @@
     "secu": "주권",
     "offer_price": 40000,
     "offer_amount": 26400000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 0.9,
+        "amount": 23760000000
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.1,
+        "amount": 2640000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -6281,6 +8939,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -6303,6 +8969,14 @@
     "secu": "주권",
     "offer_price": 7000,
     "offer_amount": 21000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 21000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -6325,6 +8999,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 15900000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 15900000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -6347,6 +9029,14 @@
     "secu": "주권",
     "offer_price": 32000,
     "offer_amount": 78700000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 78700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -6369,6 +9059,14 @@
     "secu": "주권",
     "offer_price": 15300,
     "offer_amount": 23972040000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 23972040000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -6391,6 +9089,19 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 24000000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 0.95,
+        "amount": 22800000000
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.05,
+        "amount": 1200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -6413,6 +9124,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 13000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 13000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -6435,6 +9154,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 13000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -6457,6 +9184,14 @@
     "secu": "주권",
     "offer_price": 29000,
     "offer_amount": 29000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 29000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -6479,6 +9214,14 @@
     "secu": "주권",
     "offer_price": 15500,
     "offer_amount": 21700000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 21700000000
+      }
+    ],
+    "alloc_src": "주관사 단독(인수인 표 미확인)",
     "lead_managers": [
       "하나증권"
     ],
@@ -6501,6 +9244,14 @@
     "secu": "주권",
     "offer_price": 16500,
     "offer_amount": 50781225000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 50781225000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -6523,6 +9274,14 @@
     "secu": "주권",
     "offer_price": 21000,
     "offer_amount": 15771000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 15771000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -6545,6 +9304,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11600000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 11600000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "교보증권"
     ],
@@ -6567,6 +9334,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 22400000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 22400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -6589,6 +9364,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 22340000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 22340000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -6611,6 +9394,14 @@
     "secu": "주권",
     "offer_price": 22000,
     "offer_amount": 29700000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 29700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -6633,6 +9424,19 @@
     "secu": "주권",
     "offer_price": 35000,
     "offer_amount": 266000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.96,
+        "amount": 255360000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.04,
+        "amount": 10640000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -6655,6 +9459,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -6677,6 +9489,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "SK증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "SK증권"
     ],
@@ -6699,6 +9519,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 16180000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 16180000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -6721,6 +9549,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "LS증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "LS증권"
     ],
@@ -6743,6 +9579,29 @@
     "secu": "주권",
     "offer_price": 60000,
     "offer_amount": 435000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.33,
+        "amount": 143550000000
+      },
+      {
+        "broker": "JP모간증권",
+        "ratio": 0.33,
+        "amount": 143550000000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.3,
+        "amount": 130500000000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.04,
+        "amount": 17400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권",
       "JP모간증권",
@@ -6769,6 +9628,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 28960000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 28960000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -6791,6 +9658,19 @@
     "secu": "주권",
     "offer_price": 43300,
     "offer_amount": 57589000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.94,
+        "amount": 54133660000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.06,
+        "amount": 3455340000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -6813,6 +9693,19 @@
     "secu": "부동산투자회사",
     "offer_price": 3000,
     "offer_amount": 70000002000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.5,
+        "amount": 35000001000
+      },
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.5,
+        "amount": 35000001000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권",
       "한국투자증권"
@@ -6837,6 +9730,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 43200000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 43200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -6859,6 +9760,14 @@
     "secu": "주권",
     "offer_price": 7000,
     "offer_amount": 23800000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 23800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -6881,6 +9790,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12500000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 12500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -6903,6 +9820,19 @@
     "secu": "주권",
     "offer_price": 11500,
     "offer_amount": 23000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.95,
+        "amount": 21850000000
+      },
+      {
+        "broker": "BNK투자증권",
+        "ratio": 0.05,
+        "amount": 1150000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -6925,6 +9855,14 @@
     "secu": "주권",
     "offer_price": 30000,
     "offer_amount": 48000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 48000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -6947,6 +9885,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "현대차증권",
+        "ratio": 1.0,
+        "amount": 14000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "현대차증권"
     ],
@@ -6969,6 +9915,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12900000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 12900000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -6991,6 +9945,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -7013,6 +9975,14 @@
     "secu": "주권",
     "offer_price": 17000,
     "offer_amount": 22100000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 22100000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -7035,6 +10005,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9500000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 9500000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -7057,6 +10035,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -7079,6 +10065,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "DB증권"
     ],
@@ -7101,6 +10095,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 20768000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 20768000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -7123,6 +10125,14 @@
     "secu": "주권",
     "offer_price": 40000,
     "offer_amount": 56000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 56000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -7145,6 +10155,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 13300000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 13300000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -7167,6 +10185,14 @@
     "secu": "주권",
     "offer_price": 14000,
     "offer_amount": 16800000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 16800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -7189,6 +10215,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 39400000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 39400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -7211,6 +10245,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -7233,6 +10275,44 @@
     "secu": "주권",
     "offer_price": 83400,
     "offer_amount": 742260000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.29,
+        "amount": 215255400000
+      },
+      {
+        "broker": "UBS증권",
+        "ratio": 0.23,
+        "amount": 170719800000
+      },
+      {
+        "broker": "JP모간증권",
+        "ratio": 0.23,
+        "amount": 170719800000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.1,
+        "amount": 74226000000
+      },
+      {
+        "broker": "하나증권",
+        "ratio": 0.1,
+        "amount": 74226000000
+      },
+      {
+        "broker": "대신증권",
+        "ratio": 0.025,
+        "amount": 18556500000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.025,
+        "amount": 18556500000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권",
       "UBS증권",
@@ -7265,6 +10345,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 27000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 27000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -7287,6 +10375,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 6000000000,
+    "allocations": [
+      {
+        "broker": "SK증권",
+        "ratio": 1.0,
+        "amount": 6000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "SK증권"
     ],
@@ -7309,6 +10405,14 @@
     "secu": "주권",
     "offer_price": 10500,
     "offer_amount": 31500000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 31500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -7331,6 +10435,14 @@
     "secu": "주권",
     "offer_price": 33000,
     "offer_amount": 36300000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 36300000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -7353,6 +10465,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10300000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 10300000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -7375,6 +10495,14 @@
     "secu": "주권",
     "offer_price": 22000,
     "offer_amount": 52800000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 52800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -7397,6 +10525,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 7000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 7000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -7419,6 +10555,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 6000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 6000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -7441,6 +10585,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -7463,6 +10615,14 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 32500000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 32500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -7485,6 +10645,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 6000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 6000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -7507,6 +10675,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 32000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 32000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -7529,6 +10705,14 @@
     "secu": "주권",
     "offer_price": 30000,
     "offer_amount": 60000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 60000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -7551,6 +10735,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 19800000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 19800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -7573,6 +10765,19 @@
     "secu": "주권",
     "offer_price": 13500,
     "offer_amount": 28404000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 0.5,
+        "amount": 14202000000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.5,
+        "amount": 14202000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "DB증권",
       "NH투자증권"
@@ -7597,6 +10802,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -7619,6 +10832,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "BNK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "BNK투자증권"
     ],
@@ -7641,6 +10862,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "SK증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "SK증권"
     ],
@@ -7663,6 +10892,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "유진투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유진투자증권"
     ],
@@ -7685,6 +10922,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 13000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -7707,6 +10952,19 @@
     "secu": "주권",
     "offer_price": 250000,
     "offer_amount": 94750000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.8,
+        "amount": 75800000000
+      },
+      {
+        "broker": "하나증권",
+        "ratio": 0.2,
+        "amount": 18950000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -7732,6 +10990,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 9600000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 9600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -7754,6 +11020,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 22600000000,
+    "allocations": [
+      {
+        "broker": "한화투자증권",
+        "ratio": 1.0,
+        "amount": 22600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한화투자증권"
     ],
@@ -7776,6 +11050,14 @@
     "secu": "주권",
     "offer_price": 7000,
     "offer_amount": 7000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 7000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -7798,6 +11080,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 15300000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 15300000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "DB증권"
     ],
@@ -7820,6 +11110,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9150000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 9150000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -7842,6 +11140,14 @@
     "secu": "주권",
     "offer_price": 14000,
     "offer_amount": 42000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 42000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -7864,6 +11170,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -7886,6 +11200,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 27000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 27000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "하나증권"
     ],
@@ -7908,6 +11230,14 @@
     "secu": "주권",
     "offer_price": 7300,
     "offer_amount": 63561100000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 63561100000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -7930,6 +11260,14 @@
     "secu": "주권",
     "offer_price": 3400,
     "offer_amount": 22667800000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 22667800000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -7952,6 +11290,14 @@
     "secu": "주권",
     "offer_price": 5300,
     "offer_amount": 10918000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 10918000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -7974,6 +11320,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 11000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -7996,6 +11350,19 @@
     "secu": "주권",
     "offer_price": 24000,
     "offer_amount": 129600000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 0.7,
+        "amount": 90720000000
+      },
+      {
+        "broker": "UBS증권",
+        "ratio": 0.3,
+        "amount": 38880000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권",
       "UBS증권"
@@ -8020,6 +11387,19 @@
     "secu": "주권",
     "offer_price": 55000,
     "offer_amount": 135850000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 0.7,
+        "amount": 95095000000
+      },
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.3,
+        "amount": 40755000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권",
       "미래에셋증권"
@@ -8044,6 +11424,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -8066,6 +11454,14 @@
     "secu": "주권",
     "offer_price": 7600,
     "offer_amount": 15200000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 15200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -8088,6 +11484,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -8110,6 +11514,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 14000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -8132,6 +11544,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -8154,6 +11574,19 @@
     "secu": "주권",
     "offer_price": 22500,
     "offer_amount": 46350000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 0.5,
+        "amount": 23175000000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.5,
+        "amount": 23175000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권",
       "NH투자증권"
@@ -8178,6 +11611,14 @@
     "secu": "주권",
     "offer_price": 16500,
     "offer_amount": 28380000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 28380000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -8200,6 +11641,14 @@
     "secu": "주권",
     "offer_price": 19500,
     "offer_amount": 42120000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 42120000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -8222,6 +11671,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11000000000,
+    "allocations": [
+      {
+        "broker": "메리츠증권",
+        "ratio": 1.0,
+        "amount": 11000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "메리츠증권"
     ],
@@ -8244,6 +11701,14 @@
     "secu": "주권",
     "offer_price": 9300,
     "offer_amount": 56730000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 56730000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -8266,6 +11731,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "교보증권"
     ],
@@ -8288,6 +11761,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 25500000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 25500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -8310,6 +11791,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -8332,6 +11821,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "유진투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "유진투자증권"
     ],
@@ -8354,6 +11851,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 22500000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 22500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -8376,6 +11881,19 @@
     "secu": "주권",
     "offer_price": 15500,
     "offer_amount": 20150000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.75,
+        "amount": 15112500000
+      },
+      {
+        "broker": "한화투자증권",
+        "ratio": 0.25,
+        "amount": 5037500000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -8401,6 +11919,14 @@
     "secu": "주식예탁증권",
     "offer_price": 8000,
     "offer_amount": 40000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 40000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(인수인 표 미확인)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -8423,6 +11949,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10300000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 10300000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -8445,6 +11979,14 @@
     "secu": "주권",
     "offer_price": 11000,
     "offer_amount": 70730000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 70730000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -8467,6 +12009,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -8489,6 +12039,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -8511,6 +12069,14 @@
     "secu": "주권",
     "offer_price": 8000,
     "offer_amount": 24000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 24000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -8533,6 +12099,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -8555,6 +12129,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11600000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 11600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -8577,6 +12159,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "BNK투자증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "BNK투자증권"
     ],
@@ -8599,6 +12189,19 @@
     "secu": "주권",
     "offer_price": 6900,
     "offer_amount": 30360000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.8,
+        "amount": 24288000000
+      },
+      {
+        "broker": "교보증권",
+        "ratio": 0.2,
+        "amount": 6072000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -8621,6 +12224,14 @@
     "secu": "주권",
     "offer_price": 60500,
     "offer_amount": 60500000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 60500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -8643,6 +12254,19 @@
     "secu": "주권",
     "offer_price": 38000,
     "offer_amount": 76000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.625,
+        "amount": 47500000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.375,
+        "amount": 28500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권",
       "삼성증권"
@@ -8667,6 +12291,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 32000000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 32000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -8689,6 +12321,19 @@
     "secu": "주권",
     "offer_price": 56800,
     "offer_amount": 31808000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.6,
+        "amount": 19084800000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.4,
+        "amount": 12723200000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권",
       "신한투자증권"
@@ -8713,6 +12358,14 @@
     "secu": "주권",
     "offer_price": 22000,
     "offer_amount": 26400000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 26400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "키움증권"
     ],
@@ -8735,6 +12388,14 @@
     "secu": "주권",
     "offer_price": 14700,
     "offer_amount": 25872000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 25872000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -8757,6 +12418,14 @@
     "secu": "주권",
     "offer_price": 9100,
     "offer_amount": 26535600000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 26535600000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -8779,6 +12448,14 @@
     "secu": "주권",
     "offer_price": 58000,
     "offer_amount": 197200000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 197200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -8801,6 +12478,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -8823,6 +12508,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 15000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 15000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -8845,6 +12538,14 @@
     "secu": "주권",
     "offer_price": 13200,
     "offer_amount": 20856000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 20856000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -8867,6 +12568,19 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 29250000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.75,
+        "amount": 21937500000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.25,
+        "amount": 7312500000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -8892,6 +12606,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 31600000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 31600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "키움증권"
     ],
@@ -8914,6 +12636,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 14000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -8936,6 +12666,14 @@
     "secu": "주권",
     "offer_price": 5800,
     "offer_amount": 43500000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 43500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -8958,6 +12696,14 @@
     "secu": "주권",
     "offer_price": 30000,
     "offer_amount": 57000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 57000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -8980,6 +12726,19 @@
     "secu": "주권",
     "offer_price": 7700,
     "offer_amount": 111650000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.5,
+        "amount": 55825000000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.5,
+        "amount": 55825000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권",
       "NH투자증권"
@@ -9004,6 +12763,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9000000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 9000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "교보증권"
     ],
@@ -9026,6 +12793,14 @@
     "secu": "주권",
     "offer_price": 58000,
     "offer_amount": 52200000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 52200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -9048,6 +12823,14 @@
     "secu": "주권",
     "offer_price": 16100,
     "offer_amount": 32200000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 32200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -9070,6 +12853,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11000000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 11000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "하나증권"
     ],
@@ -9092,6 +12883,24 @@
     "secu": "주권",
     "offer_price": 50000,
     "offer_amount": 500000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.45,
+        "amount": 225000000000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.43,
+        "amount": 215000000000
+      },
+      {
+        "broker": "신영증권",
+        "ratio": 0.12,
+        "amount": 60000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권",
       "NH투자증권"
@@ -9119,6 +12928,14 @@
     "secu": "주권",
     "offer_price": 14000,
     "offer_amount": 21000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 21000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -9141,6 +12958,19 @@
     "secu": "주권",
     "offer_price": 21000,
     "offer_amount": 44100000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.7,
+        "amount": 30869999999
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.3,
+        "amount": 13230000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -9163,6 +12993,14 @@
     "secu": "주권",
     "offer_price": 14000,
     "offer_amount": 28000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 28000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수수량)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -9185,6 +13023,14 @@
     "secu": "주권",
     "offer_price": 32000,
     "offer_amount": 44800000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 44800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "키움증권"
     ],
@@ -9207,6 +13053,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "DB증권"
     ],
@@ -9229,6 +13083,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 8000000000,
+    "allocations": [
+      {
+        "broker": "LS증권",
+        "ratio": 1.0,
+        "amount": 8000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "LS증권"
     ],
@@ -9251,6 +13113,14 @@
     "secu": "주권",
     "offer_price": 22000,
     "offer_amount": 30800000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 30800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -9273,6 +13143,24 @@
     "secu": "부동산투자회사",
     "offer_price": 5000,
     "offer_amount": 96500000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 0.378238,
+        "amount": 36499967000
+      },
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.362694,
+        "amount": 34999971000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.259067,
+        "amount": 24999965500
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권",
       "한국투자증권"
@@ -9299,6 +13187,14 @@
     "secu": "주권",
     "offer_price": 4700,
     "offer_amount": 16450000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 16450000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -9321,6 +13217,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -9343,6 +13247,19 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 33300000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.9,
+        "amount": 29970000000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.1,
+        "amount": 3330000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -9365,6 +13282,14 @@
     "secu": "주권",
     "offer_price": 15300,
     "offer_amount": 11995200000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 11995200000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -9387,6 +13312,14 @@
     "secu": "주권",
     "offer_price": 10500,
     "offer_amount": 42000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 42000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -9409,6 +13342,14 @@
     "secu": "주권",
     "offer_price": 23000,
     "offer_amount": 20700000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 20700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -9431,6 +13372,14 @@
     "secu": "주권",
     "offer_price": 3600,
     "offer_amount": 22680000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 22680000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -9453,6 +13402,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -9475,6 +13432,14 @@
     "secu": "주권",
     "offer_price": 17000,
     "offer_amount": 25500000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 25500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -9497,6 +13462,14 @@
     "secu": "주권",
     "offer_price": 66300,
     "offer_amount": 43360200000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 43360200000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -9519,6 +13492,14 @@
     "secu": "주권",
     "offer_price": 9100,
     "offer_amount": 27300000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 27300000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -9541,6 +13522,14 @@
     "secu": "주권",
     "offer_price": 3600,
     "offer_amount": 32905735000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 32905735000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -9563,6 +13552,19 @@
     "secu": "주권",
     "offer_price": 11000,
     "offer_amount": 17160000000,
+    "allocations": [
+      {
+        "broker": "SK증권",
+        "ratio": 0.9,
+        "amount": 15444000000
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.1,
+        "amount": 1716000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "SK증권"
     ],
@@ -9585,6 +13587,14 @@
     "secu": "주권",
     "offer_price": 13500,
     "offer_amount": 16200000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 16200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -9607,6 +13617,14 @@
     "secu": "주권",
     "offer_price": 21000,
     "offer_amount": 25200000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 25200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -9629,6 +13647,19 @@
     "secu": "주권",
     "offer_price": 6800,
     "offer_amount": 17000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 0.9,
+        "amount": 15300000000
+      },
+      {
+        "broker": "iM증권",
+        "ratio": 0.1,
+        "amount": 1700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -9654,6 +13685,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 18000000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 18000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -9676,6 +13715,14 @@
     "secu": "주권",
     "offer_price": 11200,
     "offer_amount": 14560000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 14560000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -9698,6 +13745,14 @@
     "secu": "주권",
     "offer_price": 16000,
     "offer_amount": 32000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 32000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -9720,6 +13775,14 @@
     "secu": "주권",
     "offer_price": 9000,
     "offer_amount": 22500000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 22500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -9742,6 +13805,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 13800000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 13800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -9764,6 +13835,14 @@
     "secu": "주권",
     "offer_price": 10800,
     "offer_amount": 35737200000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 35737200000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -9786,6 +13865,24 @@
     "secu": "주권",
     "offer_price": 13500,
     "offer_amount": 41517900000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.7,
+        "amount": 29062530000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.15,
+        "amount": 6227685000
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.15,
+        "amount": 6227685000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -9811,6 +13908,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 9500000000,
+    "allocations": [
+      {
+        "broker": "한화투자증권",
+        "ratio": 1.0,
+        "amount": 9500000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "한화투자증권"
     ],
@@ -9833,6 +13938,14 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 22500000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 22500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -9855,6 +13968,19 @@
     "secu": "주권",
     "offer_price": 26000,
     "offer_amount": 181536160000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.5,
+        "amount": 90768080000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.5,
+        "amount": 90768080000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권",
       "삼성증권"
@@ -9879,6 +14005,14 @@
     "secu": "주권",
     "offer_price": 8350,
     "offer_amount": 10521000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 10521000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -9901,6 +14035,19 @@
     "secu": "주권",
     "offer_price": 9000,
     "offer_amount": 27000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.89,
+        "amount": 24030000000
+      },
+      {
+        "broker": "신영증권",
+        "ratio": 0.11,
+        "amount": 2970000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -9923,6 +14070,14 @@
     "secu": "주권",
     "offer_price": 21000,
     "offer_amount": 21000000000,
+    "allocations": [
+      {
+        "broker": "신영증권",
+        "ratio": 1.0,
+        "amount": 21000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신영증권"
     ],
@@ -9945,6 +14100,14 @@
     "secu": "주권",
     "offer_price": 8500,
     "offer_amount": 14450000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 14450000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -9967,6 +14130,14 @@
     "secu": "주권",
     "offer_price": 6000,
     "offer_amount": 18123540000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 18123540000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -9989,6 +14160,19 @@
     "secu": "주권",
     "offer_price": 9000,
     "offer_amount": 18000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.85,
+        "amount": 15300000000
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.15,
+        "amount": 2700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -10014,6 +14198,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 50000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 50000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -10036,6 +14228,14 @@
     "secu": "주권",
     "offer_price": 10500,
     "offer_amount": 31500000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 31500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -10058,6 +14258,14 @@
     "secu": "주권",
     "offer_price": 11400,
     "offer_amount": 14820000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 14820000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -10080,6 +14288,54 @@
     "secu": "주권",
     "offer_price": 61900,
     "offer_amount": 1199448061000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.22,
+        "amount": 263878573420
+      },
+      {
+        "broker": "메릴린치증권",
+        "ratio": 0.2,
+        "amount": 239889612200
+      },
+      {
+        "broker": "모건스탠리증권",
+        "ratio": 0.2,
+        "amount": 239889612200
+      },
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.095,
+        "amount": 113947565795
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.095,
+        "amount": 113947565795
+      },
+      {
+        "broker": "JP모간증권",
+        "ratio": 0.09,
+        "amount": 107950325490
+      },
+      {
+        "broker": "대신증권",
+        "ratio": 0.085,
+        "amount": 101953085185
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.0075,
+        "amount": 8995860457
+      },
+      {
+        "broker": "하나증권",
+        "ratio": 0.0075,
+        "amount": 8995860457
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권",
       "메릴린치증권",
@@ -10111,6 +14367,14 @@
     "secu": "주권",
     "offer_price": 5000,
     "offer_amount": 18000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 18000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -10133,6 +14397,14 @@
     "secu": "주권",
     "offer_price": 7000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 14000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -10155,6 +14427,14 @@
     "secu": "주권",
     "offer_price": 18000,
     "offer_amount": 19800000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 19800000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -10177,6 +14457,14 @@
     "secu": "주권",
     "offer_price": 17000,
     "offer_amount": 15300000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 15300000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -10199,6 +14487,19 @@
     "secu": "주권",
     "offer_price": 13000,
     "offer_amount": 17693000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.7,
+        "amount": 12385100000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.3,
+        "amount": 5307900000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -10224,6 +14525,14 @@
     "secu": "주권",
     "offer_price": 4600,
     "offer_amount": 16790000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 16790000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "DB증권"
     ],
@@ -10246,6 +14555,14 @@
     "secu": "주권",
     "offer_price": 19000,
     "offer_amount": 19000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 19000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -10268,6 +14585,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "유안타증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "유안타증권"
     ],
@@ -10290,6 +14615,14 @@
     "secu": "주권",
     "offer_price": 12000,
     "offer_amount": 19200000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 19200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -10298,7 +14631,7 @@
       "대신증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20260911000214",
     "in_lockup_db": false
   },
   {
@@ -10312,6 +14645,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 14000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -10334,6 +14675,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 14000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "KB증권"
     ],
@@ -10356,6 +14705,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 20000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 20000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -10364,7 +14721,7 @@
       "대신증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20260909000317",
     "in_lockup_db": false
   },
   {
@@ -10378,6 +14735,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 17000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 17000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -10400,6 +14765,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 20000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 20000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -10408,7 +14781,7 @@
       "한국투자증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20260825000417",
     "in_lockup_db": false
   },
   {
@@ -10422,6 +14795,14 @@
     "secu": "주권",
     "offer_price": 23000,
     "offer_amount": 23000000000,
+    "allocations": [
+      {
+        "broker": "DB증권",
+        "ratio": 1.0,
+        "amount": 23000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "DB증권"
     ],
@@ -10430,7 +14811,7 @@
       "DB증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20260810000669",
     "in_lockup_db": false
   },
   {
@@ -10444,6 +14825,14 @@
     "secu": "주권",
     "offer_price": 41200,
     "offer_amount": 37492000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 37492000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -10466,6 +14855,19 @@
     "secu": "주권",
     "offer_price": 28400,
     "offer_amount": 48280000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.9,
+        "amount": 43452000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.1,
+        "amount": 4828000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -10474,7 +14876,7 @@
       "미래에셋증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
+    "prospectus_rcept_no": "20260810000684",
     "in_lockup_db": false
   },
   {
@@ -10488,6 +14890,14 @@
     "secu": "주식예탁증권",
     "offer_price": 12000,
     "offer_amount": 60000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 60000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(인수인 표 미확인)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -10510,6 +14920,14 @@
     "secu": "주권",
     "offer_price": 11000,
     "offer_amount": 26400000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 26400000000
+      }
+    ],
+    "alloc_src": "주관사 단독(인수인 표 미확인)",
     "lead_managers": [
       "IBK투자증권"
     ],
@@ -10532,6 +14950,14 @@
     "secu": "주권",
     "offer_price": 7000,
     "offer_amount": 15400000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 15400000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -10554,6 +14980,19 @@
     "secu": "주권",
     "offer_price": 21500,
     "offer_amount": 55147500000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.9,
+        "amount": 49632750000
+      },
+      {
+        "broker": "IBK투자증권",
+        "ratio": 0.1,
+        "amount": 5514750000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -10579,6 +15018,14 @@
     "secu": "주권",
     "offer_price": 20700,
     "offer_amount": 24840000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 24840000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -10601,6 +15048,14 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 20000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 20000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -10623,6 +15078,14 @@
     "secu": "주권",
     "offer_price": 8000,
     "offer_amount": 16000000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 16000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -10645,6 +15108,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 11000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 11000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -10667,6 +15138,14 @@
     "secu": "주권",
     "offer_price": 12000,
     "offer_amount": 84000000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 84000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권"
     ],
@@ -10689,6 +15168,14 @@
     "secu": "주권",
     "offer_price": 12500,
     "offer_amount": 20000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 20000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],
@@ -10711,6 +15198,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 14000000000,
+    "allocations": [
+      {
+        "broker": "메리츠증권",
+        "ratio": 1.0,
+        "amount": 14000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "메리츠증권"
     ],
@@ -10733,6 +15228,19 @@
     "secu": "주권",
     "offer_price": 21500,
     "offer_amount": 48861696000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.5,
+        "amount": 24430848000
+      },
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.5,
+        "amount": 24430848000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권",
       "미래에셋증권"
@@ -10757,6 +15265,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 13000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "대신증권"
     ],
@@ -10779,6 +15295,19 @@
     "secu": "주권",
     "offer_price": 15000,
     "offer_amount": 39525000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.85,
+        "amount": 33596250000
+      },
+      {
+        "broker": "현대차증권",
+        "ratio": 0.15,
+        "amount": 5928750000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -10801,6 +15330,14 @@
     "secu": "주권",
     "offer_price": 5000,
     "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 13000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -10823,6 +15360,24 @@
     "secu": "주권",
     "offer_price": 6000,
     "offer_amount": 25020000000,
+    "allocations": [
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.475,
+        "amount": 11884500000
+      },
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.475,
+        "amount": 11884500000
+      },
+      {
+        "broker": "유안타증권",
+        "ratio": 0.05,
+        "amount": 1251000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "유진투자증권",
       "NH투자증권"
@@ -10847,6 +15402,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -10869,6 +15432,29 @@
     "secu": "주권",
     "offer_price": 12300,
     "offer_amount": 110700000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 0.375,
+        "amount": 41512500000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.375,
+        "amount": 41512500000
+      },
+      {
+        "broker": "대신증권",
+        "ratio": 0.125,
+        "amount": 13837500000
+      },
+      {
+        "broker": "하나증권",
+        "ratio": 0.125,
+        "amount": 13837500000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "KB증권",
       "삼성증권"
@@ -10898,6 +15484,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "키움증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "키움증권"
     ],
@@ -10920,6 +15514,19 @@
     "secu": "주권",
     "offer_price": 16600,
     "offer_amount": 19588000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.7,
+        "amount": 13711600000
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.3,
+        "amount": 5876400000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -10945,6 +15552,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10800000000,
+    "allocations": [
+      {
+        "broker": "교보증권",
+        "ratio": 1.0,
+        "amount": 10800000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "교보증권"
     ],
@@ -10967,6 +15582,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -10989,6 +15612,19 @@
     "secu": "주권",
     "offer_price": 11000,
     "offer_amount": 15400000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.5,
+        "amount": 7700000000
+      },
+      {
+        "broker": "KB증권",
+        "ratio": 0.5,
+        "amount": 7700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권",
       "KB증권"
@@ -11013,6 +15649,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12700000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 12700000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권"
     ],
@@ -11035,6 +15679,14 @@
     "secu": "주권",
     "offer_price": 21600,
     "offer_amount": 29052000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 29052000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "신한투자증권"
     ],
@@ -11057,6 +15709,19 @@
     "secu": "주권",
     "offer_price": 19000,
     "offer_amount": 20900000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.8,
+        "amount": 16720000000
+      },
+      {
+        "broker": "대신증권",
+        "ratio": 0.2,
+        "amount": 4180000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -11082,6 +15747,19 @@
     "secu": "주권",
     "offer_price": 26000,
     "offer_amount": 52000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 0.7,
+        "amount": 36400000000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.3,
+        "amount": 15600000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -11107,6 +15785,14 @@
     "secu": "주권",
     "offer_price": 20000,
     "offer_amount": 40000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 40000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -11129,6 +15815,14 @@
     "secu": "주권",
     "offer_price": 11500,
     "offer_amount": 26450000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 26450000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "미래에셋증권"
     ],
@@ -11151,6 +15845,14 @@
     "secu": "주권",
     "offer_price": 8500,
     "offer_amount": 15300000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 15300000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "한국투자증권"
     ],
@@ -11173,6 +15875,24 @@
     "secu": "주권",
     "offer_price": 8300,
     "offer_amount": 498000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.5,
+        "amount": 249000000000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.46,
+        "amount": 229080000000
+      },
+      {
+        "broker": "신한투자증권",
+        "ratio": 0.04,
+        "amount": 19920000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권",
       "삼성증권"
@@ -11197,6 +15917,19 @@
     "secu": "주권",
     "offer_price": 10000,
     "offer_amount": 75000000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 0.5,
+        "amount": 37500000000
+      },
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.5,
+        "amount": 37500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "NH투자증권",
       "미래에셋증권"
@@ -11221,6 +15954,14 @@
     "secu": "주권",
     "offer_price": 2000,
     "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
     "lead_managers": [
       "삼성증권"
     ],

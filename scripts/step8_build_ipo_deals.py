@@ -9,6 +9,10 @@
   3) KIND 상장주선인이 여러 곳이면 증권신고서를 새로 받아 역할을 읽는다
   4) 그래도 못 정하면 KIND 상장주선인 전부 (근거를 'KIND(역할 미확인)'으로 남긴다)
 
+금액은 증권사별 **실제 인수금액**이다. 증권신고서 인수인 표의 비율에 거래소가 공시한
+확정 공모금액을 곱한다. 대표주관뿐 아니라 공동주관·인수회사도 각자 인수한 만큼 잡힌다.
+스팩은 주관사가 전량 인수한다(신고서를 읽은 52건 전부 그랬다).
+
 산출: data/ipo_deals.json
 """
 import argparse
@@ -18,6 +22,7 @@ from datetime import date, timedelta
 
 import dart
 from dart import ROOT, load_json, save_json
+from ipo_alloc import parse_allocations, underwriting_text
 from step6b_build_lockup import clean_broker, custody, parse_underwriters, search_prospectus
 
 MARKET = {"코스닥": "KOSDAQ", "유가증권": "KOSPI"}
@@ -43,8 +48,10 @@ def main() -> None:
     idx_by_name = {nospace(k): v for k, v in idx.items()}
     cache = ROOT / "data" / "cache_uw"
     overrides = load_json(ROOT / "data" / "verify" / "lead_overrides.json")
+    bn = ROOT / "data" / "verify" / "prospectus_by_name.json"
+    by_name = load_json(bn) if bn.exists() else {}
 
-    deals, stat = [], Counter()
+    deals, stat, stat2 = [], Counter(), Counter()
     for r in kind:
         if r["market"] not in MARKET or r["type"] not in ("신규상장", "이전상장"):
             continue
@@ -96,6 +103,46 @@ def main() -> None:
         if not leads and sponsors:
             leads, src = sponsors, "KIND 상장주선인(역할 미확인)"
         amt = re.sub(r"[^\d]", "", r.get("amount_k") or "")
+        offer = int(amt) * 1000 if amt else None
+
+        # ---- 증권사별 인수 몫
+        def fetch_section(no):
+            f = cache / f"{no}.md"
+            stale = f.exists() and not parse_allocations(f.read_text(encoding="utf-8"))
+            if (not f.exists() or stale) and not args.no_fetch:
+                text = underwriting_text(dart, no)
+                if text:
+                    f.write_text(text, encoding="utf-8")
+            return f.read_text(encoding="utf-8") if f.exists() else ""
+
+        alloc, alloc_src = [], None
+        is_spac = bool(SPAC_RE.search(name))
+        doc = rcp or by_name.get(name)
+        if not doc and not is_spac and not args.no_fetch:
+            cc = corp_of.get(r["code"])
+            try:
+                doc = search_prospectus(cc, date.fromisoformat(r["listing_date"])) if cc else None
+            except Exception as exc:  # noqa: BLE001
+                print(f"  ! 신고서 검색 {name}: {exc}")
+        if doc:
+            try:
+                got = parse_allocations(fetch_section(doc))
+            except Exception as exc:  # noqa: BLE001
+                got = []
+                print(f"  ! 인수표 {name}: {exc}")
+            if got and set(leads) <= {g["broker"] for g in got}:
+                alloc = [{"broker": g["broker"], "ratio": round(g["ratio"], 6)} for g in got]
+                alloc_src = f"증권신고서 인수인 표({got[0]['ratio_basis']})"
+                rcp = rcp or doc
+        if not alloc and len(leads) == 1:
+            alloc = [{"broker": leads[0], "ratio": 1.0}]
+            alloc_src = "주관사 단독(전량)" if is_spac else "주관사 단독(인수인 표 미확인)"
+        if not alloc and leads:
+            alloc = [{"broker": b, "ratio": round(1 / len(leads), 6)} for b in leads]
+            alloc_src = "균등 분할(인수인 표 미확인)"
+        for a in alloc:
+            a["amount"] = int(offer * a["ratio"]) if offer else None
+        stat2[alloc_src] += 1
         deals.append({
             "name": name, "stock_code": r["code"], "market": MARKET[r["market"]],
             "listing_date": r["listing_date"], "listing_type": r["type"],
@@ -103,7 +150,8 @@ def main() -> None:
             # 이름으로 가리면 '바이오인프라', '메리츠스팩'이 리츠로 잡힌다. 거래소 증권구분을 쓴다.
             "is_reit": r["secu"] in REIT_SECU, "secu": r["secu"],
             "offer_price": int(re.sub(r"[^\d]", "", r["price"])) if has_offer else None,
-            "offer_amount": int(amt) * 1000 if amt else None,          # 원
+            "offer_amount": offer,                                     # 원
+            "allocations": alloc, "alloc_src": alloc_src,
             "lead_managers": leads, "lead_src": src,
             "kind_sponsors": sponsors,
             "co_managers": (uw or {}).get("co_mgr") or [],
@@ -113,6 +161,8 @@ def main() -> None:
         stat[src or "주관사 없음"] += 1
     save_json(ROOT / "data" / "ipo_deals.json", deals)
     print(f"ipo_deals.json — {len(deals)}건", dict(stat))
+    print("  인수 몫 근거:", dict(stat2))
+    print("  인수인 표 미확인:", [d["name"] for d in deals if "미확인" in (d["alloc_src"] or "")])
     print("  주관사 없음:", [d["name"] for d in deals if not d["lead_managers"]])
     print("  역할 미확인:", [(d["name"], d["kind_sponsors"]) for d in deals
                           if d["lead_src"] == "KIND 상장주선인(역할 미확인)"])

@@ -439,27 +439,34 @@ def main():
                           "companies": len({x["stock_code"] for x in rows})}}
 
     def build_ms_ipo(rows):
-        """IPO 주관 실적. 회사 1곳 = 1건. 공동대표주관이면 각 주관사에 1건, 공모금액은 균등 분할."""
-        agg = defaultdict(lambda: {"cnt": 0, "amt": 0.0, "spac": 0})
+        """IPO 주관 실적.
+
+        건수 — 대표주관(공동대표주관 포함) 기준. 회사 1곳 = 1건.
+        금액 — 증권사별 실제 인수금액. 증권신고서 인수인 표의 비율 × 확정 공모금액.
+               공동주관·인수회사도 각자 인수한 만큼 잡힌다.
+        """
+        agg = defaultdict(lambda: {"cnt": 0, "amt": 0.0, "spac": 0, "uw_cnt": 0})
         joint = 0
         for d in rows:
             bs = d["lead_managers"]
             if len(bs) > 1:
                 joint += 1
             for b in bs:
-                a = agg[b]
-                a["cnt"] += 1
-                a["spac"] += 1 if d["is_spac"] else 0
-                a["amt"] += (d["offer_amount"] or 0) / len(bs)
+                agg[b]["cnt"] += 1
+                agg[b]["spac"] += 1 if d["is_spac"] else 0
+            for al in d.get("allocations") or []:
+                agg[al["broker"]]["amt"] += al["amount"] or 0
+                agg[al["broker"]]["uw_cnt"] += 1
         tc = sum(a["cnt"] for a in agg.values()) or 1
         ta = sum(a["amt"] for a in agg.values()) or 1
         out = [{"broker": k, "cnt": v["cnt"], "amt": int(v["amt"]), "co_cnt": v["cnt"],
-                "spac_cnt": v["spac"], "est_cnt": 0,
+                "uw_cnt": v["uw_cnt"], "spac_cnt": v["spac"], "est_cnt": 0,
                 "cnt_ms": round(v["cnt"] / tc * 100, 1),
                 "amt_ms": round(v["amt"] / ta * 100, 1)} for k, v in agg.items()]
         out.sort(key=lambda x: (-x["cnt"], -x["amt"]))
         codes = {d["stock_code"] for d in rows}
         with_lock = {x["stock_code"] for x in lockups} & codes
+        unverified = sum(1 for d in rows if "미확인" in (d.get("alloc_src") or ""))
         return {"rows": out, "unknown": {"cnt": 0, "amt": 0}, "joint_cnt": joint, "unit": "개사",
                 "total": {"cnt": tc, "amt": int(sum(d["offer_amount"] or 0 for d in rows)),
                           "companies": len(rows),
@@ -467,6 +474,7 @@ def main():
                           "kosdaq": sum(1 for d in rows if d["market"] == "KOSDAQ"),
                           "spac": sum(1 for d in rows if d["is_spac"]),
                           "reit": sum(1 for d in rows if d["is_reit"]),
+                          "alloc_unverified": unverified,
                           "with_lockup": len(with_lock),
                           "rows": sum(1 for x in lockups if x["stock_code"] in codes)}}
 

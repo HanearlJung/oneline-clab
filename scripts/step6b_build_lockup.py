@@ -37,8 +37,10 @@ HOLDER_RULES = [
                        r"상장주선인|주관|인수")),
 ]
 
-ROLE_RE = re.compile(r"^(공동\s*대표\s*주관|대표\s*주관|공동\s*주관|인수)\s*(회사|사|단|인|기관)?$")
-ROLE_KEY = {"대표주관": "lead", "공동대표주관": "co_lead", "공동주관": "co_mgr", "인수": "uw"}
+ROLE_RE = re.compile(r"^(공동\s*대표\s*주관|공동\s*대표|대표\s*주관|대표|공동\s*주관|인수)"
+                     r"\s*(회사|사|단|인|기관)?$")
+ROLE_KEY = {"대표주관": "lead", "대표": "lead", "공동대표주관": "co_lead", "공동대표": "co_lead",
+            "공동주관": "co_mgr", "인수": "uw"}
 BROKER_HINT = re.compile(r"증권|투자|금융|Securities|리미티드|은행")
 
 
