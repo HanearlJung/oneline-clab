@@ -14,6 +14,75 @@
   .sum-v .u{font-size:14px;font-weight:750;margin-left:2px}
   .sum-s{font-size:11px;color:var(--muted);margin-top:5px}
   .sum-i.hot .sum-v{color:var(--red)}
+  .sum-i{cursor:pointer;position:relative;transition:background .12s}
+  .sum-i:hover{background:#f6f9ff}
+  .sum-i .go{position:absolute;right:18px;top:16px;font-size:11px;font-weight:800;color:var(--primary);
+    background:var(--primary-soft);border-radius:999px;padding:4px 10px}
+  .sum-i:hover .go{background:var(--primary);color:#fff}
+  .sum-i .tagk{display:inline-block;font-size:10px;font-weight:800;border-radius:4px;padding:1px 6px;margin-right:6px;vertical-align:1px}
+  .sum-i .tagk.lk{background:var(--primary-soft);color:var(--primary)}
+  .sum-i .tagk.ln{background:var(--orange-soft);color:var(--orange)}
+
+  /* 영업 대상 팝업 */
+  .act{position:fixed;inset:0;z-index:35;background:rgba(16,24,39,.5);display:none;align-items:flex-start;justify-content:center;padding:34px 20px;overflow:auto}
+  .act.on{display:flex}
+  .act-box{width:min(1240px,100%);background:#f5f7fb;border-radius:16px;box-shadow:0 30px 80px rgba(16,24,39,.35);overflow:hidden}
+  .act-h{background:#fff;padding:20px 24px 16px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:2}
+  .act-t{font-size:20px;font-weight:850;letter-spacing:-.4px}
+  .act-d{font-size:12.5px;color:var(--muted);margin-top:3px}
+  .act-x{display:flex;gap:8px}
+  .act-x button{height:36px;padding:0 14px;border-radius:8px;border:1px solid #d5dbe4;background:#fff;font-weight:750;font-size:13px;cursor:pointer;color:#374151}
+  .act-x button:hover{border-color:#9aa9c4}
+  .act-k{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+  .act-k div{background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+  .act-k small{display:block;font-size:11px;font-weight:750;color:#6b7280}
+  .act-k b{display:block;font-size:19px;font-weight:850;letter-spacing:-.4px;margin-top:2px}
+  .act-k span{font-size:11.5px;color:var(--muted)}
+  .act-f{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap}
+  .sg{display:flex;border:1px solid #d5dbe4;border-radius:8px;overflow:hidden;background:#fff}
+  .sg button{border:0;background:#fff;height:34px;padding:0 14px;font-size:13px;font-weight:750;color:#4b5563;cursor:pointer}
+  .sg button.on{background:var(--primary);color:#fff}
+  .act-b{padding:16px 24px 26px}
+  .act-sec{font-size:13px;font-weight:850;color:#374151;margin:16px 0 8px;display:flex;align-items:center;gap:8px}
+  .act-sec:first-child{margin-top:0}
+  .act-sec small{font-weight:700;color:var(--muted)}
+  .ac{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:8px;overflow:hidden}
+  .ac.mine{border-left:4px solid var(--primary)}
+  .ac.other{border-left:4px solid #f59e0b}
+  .ac-top{display:grid;grid-template-columns:96px minmax(0,1.5fr) minmax(0,1fr) minmax(0,1.2fr);gap:16px;padding:14px 18px;align-items:center}
+  .ac-d b{display:inline-block;font-size:15px;font-weight:850;border-radius:7px;padding:3px 9px;background:#eef1f6;color:#374151}
+  .ac-d b.soon{background:var(--red-soft);color:var(--red)}
+  .ac-d b.warn{background:var(--orange-soft);color:var(--orange)}
+  .ac-d small{display:block;font-size:11.5px;color:var(--muted);margin-top:4px}
+  .ac-n a{font-size:16px;font-weight:850;color:var(--text);text-decoration:none;letter-spacing:-.3px}
+  .ac-n a:hover{color:var(--primary);text-decoration:underline}
+  .ac-n small{display:block;font-size:11.5px;color:var(--muted);margin-top:2px}
+  .ac-a b{font-size:19px;font-weight:850;letter-spacing:-.4px}
+  .ac-a small{display:block;font-size:11.5px;color:var(--muted);margin-top:1px}
+  .ac-o small{display:block;font-size:10.5px;font-weight:750;color:#6b7280;margin-bottom:3px}
+  .pill{display:inline-block;font-size:12px;font-weight:800;border-radius:6px;padding:3px 8px;margin:0 4px 3px 0}
+  .pill.me{background:var(--primary);color:#fff}
+  .pill.ot{background:#fff5e8;color:#92400e;border:1px solid #fcd9a8}
+  .ac-m{display:flex;gap:6px 18px;flex-wrap:wrap;padding:0 18px 12px 130px;font-size:12.5px;color:#4b5563}
+  .ac-m b{color:var(--text);font-weight:800}
+  .ac-m .up{color:#b42318;font-weight:800}
+  .ac-m .dn{color:#1d4ed8;font-weight:800}
+  .ac-p{margin:0 18px 12px 130px;background:#f8fafc;border-radius:9px;padding:10px 14px;font-size:12.5px;color:#374151}
+  .ac-p h5{margin:0 0 5px;font-size:11px;font-weight:850;color:var(--primary)}
+  .ac-p ul{margin:0;padding-left:16px}
+  .ac-p li{margin:2px 0}
+  .ac-btn{display:flex;gap:6px;padding:0 18px 14px 130px}
+  .ac-btn button,.ac-btn a{height:30px;padding:0 12px;border-radius:7px;border:1px solid #d5dbe4;background:#fff;font-size:12px;font-weight:750;
+    color:#374151;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+  .ac-btn button:hover,.ac-btn a:hover{border-color:var(--primary);color:var(--primary)}
+  .ac-t{border-top:1px solid var(--line);background:#fbfcfe;padding:4px 18px 10px}
+  .ac-t{overflow-x:auto}
+  .ac-t table{width:100%;min-width:0;table-layout:auto;border-collapse:collapse;font-size:12px}
+  .ac-t th{position:static;background:transparent;text-align:left;font-size:10.5px;color:#6b7280;padding:8px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+  .ac-t td{padding:7px 8px;border-bottom:1px solid #eef1f6}
+  .ac-t tr:last-child td{border-bottom:0}
+  .ac-t .r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  @media(max-width:900px){.ac-top{grid-template-columns:80px 1fr}.ac-m,.ac-p,.ac-btn{padding-left:18px;margin-left:0}.ac-p{margin-left:18px}.act-k{grid-template-columns:repeat(2,1fr)}}
 
   .kindtabs{display:flex;gap:8px;margin-bottom:12px}
   .kt{height:42px;padding:0 20px;border:1px solid #d9dee7;background:#fff;border-radius:11px;
@@ -188,6 +257,22 @@
   <div class="foot" id="foot"></div>
 </main>
 
+<div class="act" id="act" role="dialog" aria-modal="true" aria-labelledby="actT">
+  <div class="act-box">
+    <div class="act-h">
+      <div style="display:flex;justify-content:space-between;gap:14px;align-items:flex-start">
+        <div><div class="act-t" id="actT"></div><div class="act-d" id="actD"></div></div>
+        <div class="act-x"><button id="actCsv">CSV 내려받기</button><button id="actClose">닫기 ✕</button></div>
+      </div>
+      <div class="act-k" id="actK"></div>
+      <div class="act-f">
+        <div class="sg" id="actWho"></div>
+        <div class="sg" id="actSort"><button data-s="date" class="on">임박순</button><button data-s="amt">금액순</button></div>
+      </div>
+    </div>
+    <div class="act-b" id="actB"></div>
+  </div>
+</div>
 <div class="drawer" id="drawer"><div class="sheet" id="sheet"></div></div>
 
 <script>
@@ -357,21 +442,194 @@ function setup() {
   el("fAmt").previousElementSibling.textContent = isCo ? "시가총액" : "금액";
 }
 
+/* ── 상단 카드와 영업 대상 팝업 ─────────────────────────────────
+   카드 숫자는 회사 수다. 연락할 곳이 몇 군데인지가 먼저이고, 주주·계약 건수는 그 안의 내용이다. */
+const ME = "삼성증권";
+const ACT = { kind: "lockup", days: 7, who: "all", sort: "date", open: new Set(), groups: [] };
+const actKey = k => k === "lockup" ? "release_date" : "maturity_date";
+const isMine = (k, x) => (k === "lockup" ? (x.custody_brokers || [x.custody_broker]) : (x.lenders || [])).includes(ME);
+const actItems = (k, days) => (k === "lockup" ? D.lockups : D.loans).filter(x => { const n = dd(x[actKey(k)]); return n != null && n >= 0 && n <= days; });
+const sumAmt = (k, list) => list.reduce((t, x) => t + ((k === "lockup" ? x.lockup_value : x.amount_counted) || 0), 0);
+const nCo = list => new Set(list.map(x => x.stock_code)).size;
+const num = v => (v || 0).toLocaleString("ko-KR");
+
 function summary() {
-  const L = D.kpi.lockup, N = D.kpi.loan;
-  el("sumBar").innerHTML = `
-    <div class="sum-i hot"><div class="sum-l">오늘·내일 락업 해제</div>
-      <div class="sum-v">${L ? L.d1.cnt : 0}<span class="u">건</span></div>
-      <div class="sum-s">${L ? eok(L.d1.amount) + "원 · 7일 내 " + L.d7.cnt + "건" : "—"}</div></div>
-    <div class="sum-i"><div class="sum-l">30일 내 락업 해제</div>
-      <div class="sum-v">${L ? L.d30.cnt : 0}<span class="u">건</span></div>
-      <div class="sum-s">${L ? eok(L.d30.amount) + "원" : "—"}</div></div>
-    <div class="sum-i hot"><div class="sum-l">이번 주 대출 만기</div>
-      <div class="sum-v">${N.d7.cnt}<span class="u">건</span></div>
-      <div class="sum-s">${eok(N.d7.amount)}원 · 30일 내 ${N.d30.cnt}건</div></div>
-    <div class="sum-i"><div class="sum-l">대환 제안 가능</div>
-      <div class="sum-v">${N.callable_co}<span class="u">개사</span></div>
-      <div class="sum-s">계약 ${N.callable_cnt}건 · 만기 미상 ${N.unknown_maturity_cnt}건 제외</div></div>`;
+  const card = (k, days, hot) => {
+    const it = actItems(k, days), soon = k === "lockup" ? actItems(k, 1) : [];
+    const mine = nCo(it.filter(x => isMine(k, x)));
+    return `<div class="sum-i ${hot ? "hot" : ""}" data-k="${k}" data-d="${days}" title="눌러서 영업 대상을 봅니다">
+      <span class="go">영업 대상 보기 →</span>
+      <div class="sum-l"><span class="tagk ${k === "lockup" ? "lk" : "ln"}">${k === "lockup" ? "보호예수" : "담보대출"}</span>${days}일 내 ${k === "lockup" ? "해제" : "만기"}</div>
+      <div class="sum-v">${num(nCo(it))}<span class="u">개사</span></div>
+      <div class="sum-s">${k === "lockup" ? "주주 " + num(it.length) + "명" : "계약 " + num(it.length) + "건"} · ${eok(sumAmt(k, it))}원${
+        soon.length ? " · 오늘·내일 " + nCo(soon) + "개사" : ""} · ${k === "lockup" ? "자사 주관" : "자사 대출"} ${mine}개사</div></div>`;
+  };
+  el("sumBar").innerHTML = card("lockup", 7, true) + card("lockup", 30, false) + card("loan", 7, true) + card("loan", 30, false);
+  el("sumBar").querySelectorAll(".sum-i").forEach(c => c.onclick = () => openAct(c.dataset.k, +c.dataset.d));
+}
+
+function actBuild() {
+  const k = ACT.kind, key = actKey(k);
+  const px = new Map((D.ipo_deals || []).map(d => [d.c, d.px]));
+  const items = actItems(k, ACT.days).filter(x => ACT.who === "all" || (ACT.who === "me") === isMine(k, x));
+  const m = new Map();
+  items.forEach(x => { if (!m.has(x.stock_code)) m.set(x.stock_code, []); m.get(x.stock_code).push(x); });
+  ACT.groups = [...m.values()].map(list => {
+    list.sort((a, b) => a[key].localeCompare(b[key]) || ((b.lockup_value || b.loan_amount || 0) - (a.lockup_value || a.loan_amount || 0)));
+    const f = list[0], c = COMAP.get(f.stock_code) || {};
+    const g = { code: f.stock_code, name: f.corp_name, market: f.market, cap: f.market_cap ?? c.market_cap, list,
+      date: f[key], k: dd(f[key]), dates: [...new Set(list.map(x => x[key]))], amt: sumAmt(k, list),
+      mine: list.some(x => isMine(k, x)), src: f.source_url };
+    if (k === "lockup") {
+      g.listing = f.listing_date; g.qty = list.reduce((t, x) => t + (x.lockup_qty || 0), 0);
+      g.orgs = [...new Set(list.flatMap(x => x.custody_brokers || [x.custody_broker]).filter(Boolean))];
+      g.types = new Map();
+      list.forEach(x => { const t = x.holder_type || "기타"; const o = g.types.get(t) || { n: 0, amt: 0, names: [] };
+        o.n++; o.amt += x.lockup_value || 0; if (x.row_source !== "KIND" && x.holder_name) o.names.push(x.holder_name); g.types.set(t, o); });
+      const v = list.find(x => x.lockup_qty && x.lockup_value);
+      g.cur = v ? Math.round(v.lockup_value / v.lockup_qty) : null; g.basis = v ? v.value_basis : null;
+      g.px = px.get(g.code) || null;
+      g.ret = g.cur && g.px && g.basis !== "공모가" ? (g.cur / g.px - 1) * 100 : null;
+      g.share = g.cap ? g.amt / (g.cap * 1e8) * 100 : null;
+    } else {
+      g.orgs = [...new Set(list.flatMap(x => x.lenders || []))];
+      g.who = [...new Set(list.map(x => x.borrower_name).filter(Boolean))];
+      const rates = list.map(x => x.interest_rate).filter(v => v > 0 && v < 30);
+      g.rate = rates.length ? [Math.min(...rates), Math.max(...rates)] : null;
+      g.qty = list.reduce((t, x) => t + (x.pledged_qty || 0), 0);
+      g.coll = list.reduce((t, x) => t + (x.collateral_amount || 0), 0);
+      g.noAmt = list.filter(x => !x.loan_amount).length;
+      // 담보 여유: 대출금액과 담보 평가액이 둘 다 있는 계약만 본다
+      const both = list.filter(x => x.loan_amount && x.collateral_amount && x.amount_counted);
+      const la = both.reduce((t, x) => t + x.loan_amount, 0), ca = both.reduce((t, x) => t + x.collateral_amount, 0);
+      g.cover = la ? ca / la * 100 : null;                       // 담보비율(%)
+      const mr = list.map(x => x.maintenance_ratio).filter(v => v >= 100 && v <= 400);
+      g.keep = mr.length ? Math.max(...mr) : null;
+    }
+    return g;
+  });
+  ACT.groups.sort(ACT.sort === "amt" ? (a, b) => b.amt - a.amt || a.k - b.k : (a, b) => a.k - b.k || b.amt - a.amt);
+}
+
+function actPoints(g) {
+  const k = ACT.kind, out = [], others = g.orgs.filter(o => o !== ME);
+  if (k === "lockup") {
+    out.push(g.mine ? `<b>자사 주관 종목</b>입니다. 상장 때 맺은 관계로 바로 연락할 수 있습니다.`
+      : `<b>${esc(others.join("·"))}</b> 주관 종목입니다. 해제 물량을 자사 계좌로 유치할 대상입니다.`);
+    const t = n => g.types.get(n);
+    const own = ["최대주주", "특수관계인"].filter(t);
+    if (own.length) { const a = own.reduce((s, n) => s + t(n).amt, 0), nm = own.flatMap(n => t(n).names).slice(0, 3);
+      out.push(`대주주 측 물량 <b>${eok(a)}원</b>${nm.length ? " (" + esc(nm.join(", ")) + (own.reduce((s, n) => s + t(n).n, 0) > nm.length ? " 등" : "") + ")" : ""} — 매각 계획과 주식담보대출 수요를 확인하세요.`); }
+    if (t("기관")) out.push(`기관 물량 <b>${eok(t("기관").amt)}원</b> — 블록딜·매각 주문 수요를 확인하세요.`);
+    if (t("우리사주")) out.push(`우리사주 <b>${eok(t("우리사주").amt)}원</b> — 임직원 계좌 유치와 담보대출 안내 대상입니다.`);
+    if (g.ret != null && (g.ret <= -60 || g.ret >= 200)) out.push(`현재가가 공모가와 <b>${g.ret >= 0 ? "+" : ""}${g.ret.toFixed(0)}%</b> 차이 납니다. 차이가 커서 무상증자·액면분할 여부를 먼저 확인하세요.`);
+    else if (g.ret != null) out.push(g.ret >= 0 ? `현재가가 공모가보다 <b>${g.ret.toFixed(0)}%</b> 높습니다. 차익 실현 물량이 나올 수 있습니다.`
+      : `현재가가 공모가보다 <b>${Math.abs(g.ret).toFixed(0)}%</b> 낮습니다. 매도보다 보유·담보대출 쪽 수요를 확인하세요.`);
+    if (g.share != null && g.share >= 5) out.push(`해제 물량이 시가총액의 <b>${g.share.toFixed(1)}%</b>입니다. 주가 영향이 커서 분할 매각 상담이 필요합니다.`);
+  } else {
+    if (g.mine && !others.length) out.push(`<b>자사 대출</b>입니다. 만기 전에 연장 의사를 확인해 이탈을 막으세요.`);
+    else if (g.mine) out.push(`자사와 <b>${esc(others.slice(0, 3).join("·"))}</b>에 나눠 빌렸습니다. 타사분을 자사로 모으는 제안이 가능합니다.`);
+    else out.push(`<b>${esc(others.slice(0, 3).join("·"))}${others.length > 3 ? " 등" : ""}</b> 대출입니다. 만기에 맞춰 대환을 제안할 대상입니다.`);
+    if (g.rate) out.push(`현재 금리 <b>${g.rate[0] === g.rate[1] ? g.rate[0].toFixed(2) : g.rate[0].toFixed(2) + " ~ " + g.rate[1].toFixed(2)}%</b> — 이보다 낮은 금리를 제시할 수 있는지 확인하세요.`);
+    else out.push(`금리가 공시되지 않았습니다. 상담 때 현재 조건을 먼저 확인하세요.`);
+    if (g.cover != null && g.keep && g.cover < g.keep + 20) out.push(`담보비율 <b>${g.cover.toFixed(0)}%</b>로 유지비율 ${g.keep}%에 가깝습니다. 추가 담보 부담이 있어 조건 개선 제안이 통할 수 있습니다.`);
+    else if (g.cover != null && g.cover >= 300) out.push(`담보 평가액이 대출의 <b>${(g.cover / 100).toFixed(1)}배</b>입니다. 증액 여력이 있습니다.`);
+    if (g.noAmt) out.push(`대출금액이 공시되지 않은 계약이 ${g.noAmt}건 있습니다.`);
+  }
+  return out;
+}
+
+function actDraw() {
+  const k = ACT.kind, lk = k === "lockup";
+  const buckets = [["오늘", x => x.k === 0], ["내일", x => x.k === 1], ["이번 주", x => x.k >= 2 && x.k <= 7], ["8일 ~ 30일 뒤", x => x.k > 7]];
+  const dcls = n => n <= 1 ? "soon" : n <= 7 ? "warn" : "";
+  const card = g => {
+    const on = ACT.open.has(g.code), pts = actPoints(g);
+    const orgs = g.orgs.length ? g.orgs.map(o => `<span class="pill ${o === ME ? "me" : "ot"}">${esc(o)}</span>`).join("") : '<span class="na">미상</span>';
+    const meta = lk ? [
+        `해제 주식 <b>${num(g.qty)}주</b>`,
+        g.share != null ? `시가총액의 <b>${g.share.toFixed(1)}%</b>` : "",
+        g.cur ? `${g.basis === "공모가" ? "공모가" : "현재가"} <b>${num(g.cur)}원</b>` : "",
+        g.ret != null ? `공모가 ${num(g.px)}원 대비 <span class="${g.ret >= 0 ? "up" : "dn"}">${g.ret >= 0 ? "+" : ""}${g.ret.toFixed(0)}%</span>` : "",
+        [...g.types.entries()].map(([t, o]) => `${esc(t)} <b>${o.n}</b>`).join(" · ")]
+      : [
+        `차주 <b>${esc(g.who.slice(0, 3).join(", "))}</b>${g.who.length > 3 ? ` 외 ${g.who.length - 3}명` : ""}`,
+        `계약 <b>${g.list.length}건</b>`,
+        g.rate ? `금리 <b>${g.rate[0] === g.rate[1] ? g.rate[0].toFixed(2) : g.rate[0].toFixed(2) + "~" + g.rate[1].toFixed(2)}%</b>` : "금리 미공시",
+        g.qty ? `담보 <b>${num(g.qty)}주</b>${g.coll ? " (" + eok(g.coll) + "원)" : ""}` : "",
+        g.cover != null ? `담보비율 <b>${g.cover.toFixed(0)}%</b>${g.keep ? " / 유지 " + g.keep + "%" : ""}` : ""];
+    const tbl = !on ? "" : `<div class="ac-t"><table>${lk
+      ? `<thead><tr><th>대상자</th><th>구분</th><th>관계</th><th class="r">수량</th><th class="r">평가금액</th><th>기간</th><th>해제일</th></tr></thead><tbody>${
+        g.list.map(x => `<tr><td>${esc(x.holder_name || "")}</td><td>${esc(x.holder_type || "")}</td><td>${esc(x.holder_rel || "")}</td>
+          <td class="r">${num(x.lockup_qty)}주</td><td class="r">${x.lockup_value ? eok(x.lockup_value) + "원" : NA}</td>
+          <td>${esc(x.lockup_period || "")}</td><td>${fd(x.release_date)}</td></tr>`).join("")}</tbody>`
+      : `<thead><tr><th>차주</th><th>관계</th><th>대출기관</th><th class="r">대출금액</th><th class="r">금리</th><th class="r">유지비율</th>
+          <th class="r">담보 수량</th><th class="r">담보 평가액</th><th>만기</th><th>원문</th></tr></thead><tbody>${
+        g.list.map(x => `<tr><td>${esc(x.borrower_name || "")}</td><td>${esc(x.borrower_type || "")}</td><td>${esc((x.lenders || []).join(" · "))}</td>
+          <td class="r">${x.loan_amount ? eok(x.loan_amount) + "원" : NA}</td><td class="r">${x.interest_rate ? x.interest_rate.toFixed(2) + "%" : NA}</td>
+          <td class="r">${x.maintenance_ratio ? x.maintenance_ratio + "%" : NA}</td><td class="r">${x.pledged_qty ? num(x.pledged_qty) + "주" : NA}</td>
+          <td class="r">${x.collateral_amount ? eok(x.collateral_amount) + "원" : NA}</td><td>${fd(x.maturity_date)}</td>
+          <td><a href="${x.source_url}" target="_blank" rel="noopener">원문</a></td></tr>`).join("")}</tbody>`}</table></div>`;
+    return `<div class="ac ${g.mine ? "mine" : "other"}">
+      <div class="ac-top">
+        <div class="ac-d"><b class="${dcls(g.k)}">${g.k === 0 ? "오늘" : "D-" + g.k}</b><small>${fd(g.date)}${g.dates.length > 1 ? ` 외 ${g.dates.length - 1}일` : ""}</small></div>
+        <div class="ac-n"><a href="#" data-c="${g.code}">${esc(g.name)}</a>
+          <small>${g.market === "KOSPI" ? "코스피" : "코스닥"} ${g.code} · 시가총액 ${capTxt(g.cap)}${lk && g.listing ? " · 상장 " + fd(g.listing) : ""}</small></div>
+        <div class="ac-a"><b>${g.amt ? eok(g.amt) + "원" : "금액 미공시"}</b><small>${lk ? "해제 물량 평가금액" : "만기 도래 대출금액"}</small></div>
+        <div class="ac-o"><small>${lk ? "IPO 주관(수탁) 증권사" : "현재 대출기관"}</small>${orgs}</div>
+      </div>
+      <div class="ac-m">${meta.filter(Boolean).map(t => `<span>${t}</span>`).join("")}</div>
+      <div class="ac-p"><h5>영업 포인트</h5><ul>${pts.map(t => `<li>${t}</li>`).join("")}</ul></div>
+      <div class="ac-btn"><button data-t="${g.code}">${lk ? "대상자" : "계약"} ${g.list.length}${lk ? "명" : "건"} ${on ? "접기 ▴" : "보기 ▾"}</button>
+        <button data-o="${g.code}">기업 상세</button>
+        ${g.src ? `<a href="${g.src}" target="_blank" rel="noopener">공시 원문</a>` : ""}</div>
+      ${tbl}</div>`;
+  };
+  const G = ACT.groups;
+  el("actB").innerHTML = !G.length ? '<div class="empty">해당하는 기업이 없습니다.</div>'
+    : ACT.sort === "amt" ? G.map(card).join("")
+    : buckets.map(([t, f]) => { const s = G.filter(f); return s.length
+        ? `<div class="act-sec">${t}<small>${s.length}개사 · ${eok(s.reduce((a, g) => a + g.amt, 0))}원</small></div>` + s.map(card).join("") : ""; }).join("");
+}
+
+function actHead() {
+  const k = ACT.kind, lk = k === "lockup", all = actItems(k, ACT.days);
+  const mine = all.filter(x => isMine(k, x)), oth = all.filter(x => !isMine(k, x)), soon = actItems(k, 1);
+  el("actT").textContent = `${ACT.days}일 내 ${lk ? "보호예수 해제" : "담보대출 만기"} · 영업 대상`;
+  el("actD").textContent = `기준일 ${fd(D.meta.baseDate)} · ${lk ? "평가금액은 " + fd(D.meta.priceDate) + " 종가 기준" : "대출금액은 공시 기재 금액 · 공동담보는 한 번만 합산"}`;
+  el("actK").innerHTML = `
+    <div><small>연락할 기업</small><b>${num(nCo(all))}개사</b><span>${lk ? "주주 " + num(all.length) + "명" : "계약 " + num(all.length) + "건"}</span></div>
+    <div><small>${lk ? "해제 물량" : "만기 대출금액"}</small><b>${eok(sumAmt(k, all))}원</b><span>오늘·내일 ${nCo(soon)}개사 · ${eok(sumAmt(k, soon))}원</span></div>
+    <div><small>${lk ? "자사 주관" : "자사 대출"} (관계 유지)</small><b>${num(nCo(mine))}개사</b><span>${eok(sumAmt(k, mine))}원</span></div>
+    <div><small>${lk ? "타사 주관" : "타사 대출"} (${lk ? "유치" : "대환"} 대상)</small><b>${num(nCo(oth))}개사</b><span>${eok(sumAmt(k, oth))}원</span></div>`;
+  el("actWho").innerHTML = [["all", "전체"], ["me", lk ? "자사 주관" : "자사 대출"], ["ot", lk ? "타사 주관" : "타사 대출"]]
+    .map(([v, t]) => `<button data-w="${v}" class="${ACT.who === v ? "on" : ""}">${t}</button>`).join("");
+  document.querySelectorAll("#actSort button").forEach(b => b.classList.toggle("on", b.dataset.s === ACT.sort));
+}
+
+function openAct(k, days) {
+  Object.assign(ACT, { kind: k, days, who: "all", sort: "date", open: new Set() });
+  actHead(); actBuild(); actDraw();
+  el("act").classList.add("on"); el("act").scrollTop = 0;
+  document.body.style.overflow = "hidden";
+}
+function closeAct() { el("act").classList.remove("on"); document.body.style.overflow = ""; }
+
+function actCsv() {
+  const lk = ACT.kind === "lockup", strip = v => String(v).replace(/<[^>]*>/g, "");
+  const head = lk ? ["해제일", "D-day", "기업", "종목코드", "시장", "시가총액(억)", "해제 평가금액(원)", "해제 주식수", "주주 수", "주관 증권사", "자사 주관", "공모가 대비(%)", "영업 포인트", "원문"]
+    : ["만기일", "D-day", "기업", "종목코드", "시장", "시가총액(억)", "만기 대출금액(원)", "계약 수", "차주", "대출기관", "자사 대출", "금리(%)", "담보비율(%)", "영업 포인트", "원문"];
+  const body = ACT.groups.map(g => lk
+    ? [g.date, g.k, g.name, g.code, g.market, g.cap ?? "", Math.round(g.amt), g.qty, g.list.length, g.orgs.join("·"), g.mine ? "Y" : "N",
+       g.ret != null ? g.ret.toFixed(0) : "", actPoints(g).map(strip).join(" / "), g.src || ""]
+    : [g.date, g.k, g.name, g.code, g.market, g.cap ?? "", Math.round(g.amt), g.list.length, g.who.join("·"), g.orgs.join("·"), g.mine ? "Y" : "N",
+       g.rate ? (g.rate[0] === g.rate[1] ? g.rate[0] : g.rate[0] + "~" + g.rate[1]) : "", g.cover != null ? g.cover.toFixed(0) : "",
+       actPoints(g).map(strip).join(" / "), g.src || ""]);
+  const t = [head, ...body].map(r => r.map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(",")).join("\n");
+  const u = URL.createObjectURL(new Blob(["﻿" + t], { type: "text/csv;charset=utf-8" }));
+  const a = document.createElement("a");
+  a.href = u; a.download = `영업대상_${lk ? "보호예수해제" : "담보대출만기"}_${ACT.days}일_${D.meta.baseDate}.csv`; a.click();
+  URL.revokeObjectURL(u);
 }
 
 function apply() {
@@ -650,6 +908,21 @@ async function init() {
   el("fq").addEventListener("input", apply);
   ["fOrg", "fWhen", "fType", "fAmt"].forEach(id => el(id).addEventListener("change", apply));
   el("csv").onclick = csv;
+  el("actClose").onclick = closeAct;
+  el("actCsv").onclick = actCsv;
+  el("act").addEventListener("click", e => {
+    if (e.target.id === "act") return closeAct();
+    const w = e.target.closest("#actWho button"), so = e.target.closest("#actSort button");
+    if (w) { ACT.who = w.dataset.w; actHead(); actBuild(); actDraw(); return; }
+    if (so) { ACT.sort = so.dataset.s; actHead(); actBuild(); actDraw(); return; }
+    const t = e.target.closest("button[data-t]"), o = e.target.closest("button[data-o]"), n = e.target.closest("a[data-c]");
+    if (t) { ACT.open.has(t.dataset.t) ? ACT.open.delete(t.dataset.t) : ACT.open.add(t.dataset.t); actDraw(); return; }
+    if (o || n) { e.preventDefault(); const c = COMAP.get((o || n).dataset.o || (o || n).dataset.c); if (c) open(c); }
+  });
+  // 상세 패널이 위에 떠 있으면 그것만 닫는다. 패널의 닫기보다 먼저 확인해야 해서 캡처 단계에서 본다.
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !el("drawer").classList.contains("on")) closeAct(); }, true);
+  const av = (Q.get("act") || "").match(/^(lockup|loan)-(7|30)$/);
+  if (av) openAct(av[1], +av[2]);
 }
 init();
 </script>
