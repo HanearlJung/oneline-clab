@@ -338,7 +338,7 @@ def main():
                           "contracts": len(rows)}}
 
     # 체결 연도별 M/S. 과거 시점의 잔액이 아니다 — 지금 남아 있는 계약을 체결(연장)한 해로 나눈 것이다.
-    LOAN_YEARS = ("2025", "2026")
+    LOAN_YEARS = ("2026",)
     ms_loan_by_year = {"all": build_ms(live)}
     for y in LOAN_YEARS:
         ms_loan_by_year[y] = build_ms([x for x in live if (x["contract_date"] or "")[:4] == y])
