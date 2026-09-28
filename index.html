@@ -234,6 +234,141 @@
   .nav a{color:#8b98b0}
   .nav a:hover{background:rgba(255,255,255,.06);color:#fff}
   .nav a.on{background:#3b6cf0;color:#fff}
+  /* ── 어두운 테마 (증권사 점유율 화면과 같은 색) ─────────────────── */
+  :root{
+    color-scheme:dark;
+    --bg:#090e19; --panel:#121b2d; --text:#e6ecf7; --muted:#8291ab; --line:#202b43;
+    --primary:#3b6cf0; --primary-soft:rgba(59,108,240,.18); --pt:#7fa8ff;
+    --navy:#2a3a5e; --green:#4fd1a1; --green-soft:rgba(79,209,161,.14);
+    --orange:#f0b45c; --orange-soft:rgba(245,178,60,.15);
+    --red:#ff8a7a; --red-soft:rgba(255,99,82,.16); --shadow:0 24px 60px rgba(0,0,0,.45);
+  }
+  body{background:
+      radial-gradient(1200px 600px at 12% -10%, #16233c 0%, transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, #131d34 0%, transparent 55%),
+      #090e19;background-attachment:fixed;color:#e6ecf7}
+  .panel,.sp{background:linear-gradient(180deg,#141d31 0%,#111927 100%);border:1px solid #222d45;
+    box-shadow:0 24px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.03)}
+  .sum{background:none;border:0;box-shadow:none}
+  .na{color:#5d6a85}
+  .badge{background:#1a2440;color:#9aa7bd}
+  .badge.blue{color:#7fa8ff}
+
+  /* 상단 요약 */
+  .sp.lk{border-top:3px solid #3b6cf0} .sp.ln{border-top:3px solid #f5b23c}
+  .sp.lk .sp-ic{color:#7fa8ff} .sp.ln .sp-ic{color:#f5b23c}
+  .sp-h{border-bottom-color:#1e2941}
+  .sp-t{color:#f2f6ff}
+  .sp-r b{color:#dfe7f5}
+  .st{background:rgba(255,255,255,.025);border-color:#26324c}
+  .st:hover{box-shadow:0 10px 26px rgba(0,0,0,.4)}
+  .sp.lk .st:hover{border-color:#63a0ff} .sp.ln .st:hover{border-color:#f5b23c}
+  .sp.lk .st.now{background:linear-gradient(180deg,rgba(59,108,240,.22),rgba(59,108,240,.05));border-color:rgba(99,160,255,.36)}
+  .sp.ln .st.now{background:linear-gradient(180deg,rgba(245,178,60,.19),rgba(245,178,60,.04));border-color:rgba(245,178,60,.36)}
+  .st-l{color:#c9d4ea}
+  .st-v{color:#f2f6ff}
+  .st-v em{color:#aab6cc}
+  .sp.lk .st.now .st-v{color:#7fa8ff} .sp.ln .st.now .st-v{color:#f5b23c}
+  .st-bar{background:#1a2540}
+  .st-bar .me{background:#4f7ef5} .st-bar .ot{background:#f5b23c}
+  .st-k{color:#94a3ba} .st-k b{color:#e6ecf7}
+  .st-go{border-top-color:#26324c}
+  .sp.lk .st-go{color:#7fa8ff} .sp.ln .st-go{color:#f0b45c}
+
+  /* 탭·필터 */
+  .kt{background:#111a2c;border-color:#25314a;color:#9aa7bd}
+  .kt small{color:#6c7b96}
+  .kt.on{background:#3b6cf0;border-color:#3b6cf0;color:#fff}
+  .kt.all{background:rgba(124,141,240,.13);border-color:rgba(124,141,240,.34);color:#aab4ff}
+  .kt.all:hover{background:rgba(124,141,240,.2)}
+  .kt.all.on{background:rgba(124,141,240,.27);border-color:#7c8df0;color:#dfe3ff;box-shadow:inset 0 0 0 1px #7c8df0}
+  .info-i{background:#111a2c;border-color:#25314a;color:#9aa7bd}
+  .info:hover .info-i,.info-i:focus{background:rgba(124,141,240,.2);border-color:#7c8df0;color:#dfe3ff}
+  .info-p{background:#0b1220;border:1px solid #2a3756;box-shadow:0 18px 44px rgba(0,0,0,.6)}
+  .field label{color:#8b98b0}
+  input,select{background:#0e1626;border-color:#25314a;color:#e6ecf7}
+  input::placeholder{color:#5d6a85}
+  input:focus,select:focus{border-color:#63a0ff;box-shadow:0 0 0 3px rgba(99,160,255,.16)}
+  select:disabled{opacity:.45}
+  .h-title span{color:#7fa8ff}
+  .tab{background:#111a2c;border-color:#25314a;color:#9aa7bd}
+  .tab.on{background:rgba(59,108,240,.2);border-color:#3b6cf0;color:#a9c4ff}
+  .btn-dark{background:#2a3a5e;color:#fff}
+  .btn-dark:hover{background:#34487a}
+
+  /* 목록 표 */
+  th{background:#0f1728;color:#8b98b0;border-bottom-color:#202b43}
+  th.lk{background:#101b33} th.ln{background:#1c1710}
+  td{border-bottom-color:#1b2439}
+  td.lk{background:rgba(59,108,240,.04)} td.ln{background:rgba(245,178,60,.04)}
+  tbody tr:hover td{background:rgba(99,160,255,.07)}
+  .co{color:#f1f5fd}
+  .plus{color:#7fa8ff}
+  .car{color:#5d6a85}
+  tr.g.open .car{color:#7fa8ff}
+  tr.g.open td{background:rgba(59,108,240,.11);border-bottom-color:#25355a}
+  .btn-line{background:#111a2c;border-color:#2c3a59;color:#c9d4ea}
+  .btn-line:hover{border-color:#63a0ff;color:#a9c4ff}
+  tr.sub:hover td,tr.sub>td{background:#0c1321;border-bottom-color:#25355a}
+  .subt th{color:#7f8da8;border-bottom-color:#1e2942;background:transparent}
+  .subt td{border-bottom-color:#182238;background:transparent}
+  tr.sub .subt tr:hover td{background:transparent}
+  .subt tr.past td,.mini tr.past td{color:#5d6a85}
+  .src{border-color:rgba(99,160,255,.4);color:#7fa8ff}
+  .src:hover{background:rgba(99,160,255,.12)}
+
+  /* 기업 상세 패널 */
+  .drawer.on{background:rgba(3,6,12,.62)}
+  .sheet{background:#0f1726;box-shadow:-14px 0 50px rgba(0,0,0,.6)}
+  .sheet-head{background:#0f1726;border-bottom-color:#202b43}
+  .sheet-co{color:#f2f6ff}
+  .x{background:#1a2440;color:#c9d4ea}
+  .x:hover{background:#25325a}
+  .tl,.mo{background:#0c1321;border-color:#202b43}
+  .tl-row,.mo-row{border-bottom-color:#1b2439}
+  .tl-bar,.mo-b{background:#1a2540}
+  .mo-b.lk i{background:#4f7ef5} .mo-b.ln i{background:#f5b23c}
+  .dot.lk{background:#4f7ef5} .dot.ln{background:#f5b23c}
+  .mo-h{color:#8b98b0}
+  .mini th{background:#0f1728}
+  .mini td{border-bottom-color:#1b2439}
+
+  /* 영업 대상 팝업 */
+  .act{background:rgba(3,6,12,.74)}
+  .act-box{background:#0b1220;border:1px solid #222d45;box-shadow:0 40px 100px rgba(0,0,0,.7)}
+  .act-h{background:#101827;border-bottom-color:#202b43}
+  .act-t{color:#f2f6ff}
+  .act-x button{background:#111a2c;border-color:#2c3a59;color:#c9d4ea}
+  .act-x button:hover{border-color:#63a0ff;color:#fff}
+  .act-k div{background:rgba(255,255,255,.035);border-color:#222d45}
+  .act-k small{color:#8b98b0}
+  .act-k b{color:#f2f6ff}
+  .sg{background:#111a2c;border-color:#25314a}
+  .sg button{background:transparent;color:#9aa7bd}
+  .sg button:hover{color:#dbe4f5}
+  .sg button.on{background:#3b6cf0;color:#fff}
+  .act-sec{color:#c9d4ea}
+  .ac{background:#121b2d;border-color:#222d45}
+  .ac.mine{border-left-color:#4f7ef5} .ac.other{border-left-color:#f5b23c}
+  .ac-d b{background:#1a2440;color:#c9d4ea}
+  .ac-n a{color:#f2f6ff} .ac-n a:hover{color:#a9c4ff}
+  .ac-a b{color:#f2f6ff}
+  .ac-o small{color:#8b98b0}
+  .pill.me{background:#3b6cf0;color:#fff}
+  .pill.ot{background:rgba(245,178,60,.14);color:#f0b45c;border-color:rgba(245,178,60,.36)}
+  .ac-m{color:#94a3ba}
+  .ac-m .up{color:#ff8a7a} .ac-m .dn{color:#7fa8ff}
+  .ac-p{background:rgba(255,255,255,.035);color:#c9d4ea}
+  .ac-p b{color:#f2f6ff}
+  .ac-p h5{color:#7fa8ff}
+  .ac-btn button,.ac-btn a{background:#111a2c;border-color:#2c3a59;color:#c9d4ea}
+  .ac-btn button:hover,.ac-btn a:hover{border-color:#63a0ff;color:#a9c4ff}
+  .ac-t{background:#0c1321;border-top-color:#202b43}
+  .ac-t th{color:#7f8da8;border-bottom-color:#1e2942;background:transparent}
+  .ac-t td{border-bottom-color:#182238}
+  .ac-t a{color:#7fa8ff}
+  .ac-t tbody tr{cursor:default} .ac-t tbody tr:hover td{background:transparent}
+  .empty{color:#7d8ca6}
 </style>
 </head>
 <body>
@@ -499,8 +634,8 @@ function summary() {
       <div class="st-v">${num(nCo(it))}<span class="u">개사</span><em>${eok(sumAmt(k, it))}원</em></div>
       <div class="st-s">${lk ? "주주 " + num(it.length) + "명" : "계약 " + num(it.length) + "건"}</div>
       <div class="st-bar"><span class="me" style="width:${(me / tot * 100).toFixed(1)}%"></span><span class="ot" style="width:${(ot / tot * 100).toFixed(1)}%"></span></div>
-      <div class="st-k"><span><span class="dot" style="background:var(--primary)"></span>${lk ? "자사 주관" : "자사 대출"} <b>${me}개사</b></span>
-        <span><span class="dot" style="background:#f3b04d"></span>${lk ? "타사 주관" : "타사 대출"} <b>${ot}개사</b></span></div>
+      <div class="st-k"><span><span class="dot" style="background:#4f7ef5"></span>${lk ? "자사 주관" : "자사 대출"} <b>${me}개사</b></span>
+        <span><span class="dot" style="background:#f5b23c"></span>${lk ? "타사 주관" : "타사 대출"} <b>${ot}개사</b></span></div>
       <div class="st-go"><span>영업 대상 보기</span><span>→</span></div></div>`;
   };
   const ICON = {
@@ -867,7 +1002,7 @@ function open(c) {
   const pn = c.loans.filter(x => x.maturity_date && x.maturity_date.slice(0, 7) < bym).length;
   const un = c.loans.filter(x => !x.maturity_date).length;
   const cell = (k, o) => o[k + "c"] ? `<div class="mo-c"><div class="mo-b ${k}"><i style="width:${Math.max(3, o[k] / mx * 100).toFixed(1)}%"></i></div>
-      <div class="mo-v"><b>${o[k] ? eok(o[k]) : "금액 미상"}</b><small>${o[k + "c"]}건</small></div></div>` : '<div class="mo-c"><div></div><div class="mo-v" style="color:#c3cad6">—</div></div>';
+      <div class="mo-v"><b>${o[k] ? eok(o[k]) : "금액 미상"}</b><small>${o[k + "c"]}건</small></div></div>` : '<div class="mo-c"><div></div><div class="mo-v" style="color:#5d6a85">—</div></div>';
 
   el("sheet").innerHTML = `
     <div class="sheet-head">
