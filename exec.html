@@ -250,9 +250,7 @@ function render() {
       `<div>한국거래소 신규상장 목록 기준 · ${yl} <b>${lk.total.companies.toLocaleString("ko-KR")}개사</b>${
         scope === "all" ? ` (스팩 ${lk.total.spac} · 리츠 등 ${lk.total.reit} 포함)` : " (스팩·리츠·인프라펀드 제외)"} · 회사 1곳 = 1건</div>
        <div>건수 — IPO 대표주관회사 기준 · 공동대표주관 <b>${(lk.joint_cnt || 0).toLocaleString("ko-KR")}개사</b>는 각 주관사에 1건</div>
-       <div>금액 — 증권사별 <b>실제 인수금액</b> (증권신고서 인수인 표의 비율 × 확정 공모금액). 공동주관·인수회사 인수분 포함${
-         lk.total.alloc_unverified ? ` · 인수인 표 미확인 ${lk.total.alloc_unverified}건은 주관사 전량 인수로 계산` : ""}</div>
-       <div>이 중 보호예수 내역을 보유한 회사 <b>${lk.total.with_lockup.toLocaleString("ko-KR")}개사</b> · ${lk.total.rows.toLocaleString("ko-KR")}건</div>`;
+       <div>금액 — 증권사별 <b>실제 인수금액</b> (증권신고서 인수인 표의 비율 × 확정 공모금액)</div>`;
   } else {
     el("lkList").innerHTML = '<div class="empty">보호예수 데이터가 없습니다.</div>';
   }
