@@ -190,6 +190,7 @@ const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": 
 
 function list(rows0, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEst) {
   const kindOf = nameKey === "broker" ? "lockup" : "loan";
+  const unit = nameKey === "broker" ? "개사" : "건";     // 보호예수는 IPO 1건 = 회사 1곳
   const pctKey = mode === "cnt" ? keyPct : keyAmtPct;
   // 순위는 보고 있는 기준(건수·금액)으로 매긴다
   const rows = [...rows0].sort((a, b) => b[pctKey] - a[pctKey] || b[keyCnt] - a[keyCnt]);
@@ -207,20 +208,20 @@ function list(rows0, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEs
       <div class="rk">⋯</div><div class="nm">${it.n}개 기관 생략</div>
       <div></div><div></div><div></div></div>`;
     const r = it.r, rank = rows.indexOf(r) + 1, me = r[nameKey] === ME;
-    const estN = r.co_cnt ? `<small>${r.co_cnt}개사</small>` : "";
+    const estN = "";
     return `<div class="row ${me ? "me" : ""}" style="cursor:pointer" title="이 기관의 건만 보기"
       onclick="location.href='index.html?kind=${kindOf}&org=${encodeURIComponent(r[nameKey])}'">
       <div class="rk">${rank}</div>
       <div class="nm">${esc(r[nameKey])}${estN}</div>
       <div class="bar"><i style="width:${(r[pctKey] / max * 100).toFixed(1)}%"></i></div>
       <div class="pct">${r[pctKey].toFixed(1)}%</div>
-      <div class="cn">${mode === "cnt" ? r[keyCnt].toLocaleString("ko-KR") + "건" : eok(r[keyAmt])}</div>
+      <div class="cn">${mode === "cnt" ? r[keyCnt].toLocaleString("ko-KR") + unit : eok(r[keyAmt])}</div>
     </div>`;
   }).join("");
   const u = unknown.cnt ? `<div class="row unk">
       <div class="rk">—</div><div class="nm">기관 미상</div>
       <div class="bar"></div><div class="pct">—</div>
-      <div class="cn">${mode === "cnt" ? unknown.cnt.toLocaleString("ko-KR") + "건" : eok(unknown.amt ?? unknown.balance)}</div></div>` : "";
+      <div class="cn">${mode === "cnt" ? unknown.cnt.toLocaleString("ko-KR") + unit : eok(unknown.amt ?? unknown.balance)}</div></div>` : "";
   return body + u;
 }
 
@@ -232,14 +233,14 @@ function render() {
   if (lk) {
     el("lkTag").textContent = `${lk.rows.length}개 증권사`;
     el("lkTot").innerHTML =
-      `<div>집계 건수<b>${lk.total.cnt.toLocaleString("ko-KR")}건</b></div>
+      `<div>IPO 기업<b>${lk.total.companies.toLocaleString("ko-KR")}개사</b></div>
        <div>평가금액<b>${eok(lk.total.amt)}원</b></div>
-       <div>대상 기업<b>${(D.kpi.lockup.ms_co ?? D.kpi.lockup.active_co).toLocaleString("ko-KR")}개사</b></div>`;
+       <div>보호예수<b>${lk.total.rows.toLocaleString("ko-KR")}건</b></div>`;
     el("lkList").innerHTML = list(lk.rows, lk.unknown, "cnt", "cnt_ms", "amt", "amt_ms", "broker", true);
     el("lkBasis").innerHTML =
-      `<div>IPO 대표주관회사 기준 · 해제 예정 보호예수 <b>${lk.total.rows.toLocaleString("ko-KR")}건</b> · <b>${D.kpi.lockup.ms_co.toLocaleString("ko-KR")}개사</b></div>
-       <div>공동대표주관 <b>${(lk.joint_cnt || 0).toLocaleString("ko-KR")}건</b> — 건수는 각 주관사에, 금액은 균등 분할</div>`
-      + (lk.unknown.cnt ? `<div>주관사 미확인 <b>${lk.unknown.cnt}건</b> — 분모 제외</div>` : "");
+      `<div>IPO 대표주관회사 기준 · 보호예수가 남아 있는 <b>${lk.total.companies.toLocaleString("ko-KR")}개사</b> · 회사 1곳을 1건으로 집계</div>
+       <div>공동대표주관 <b>${(lk.joint_cnt || 0).toLocaleString("ko-KR")}개사</b> — 각 주관사에 1건씩, 금액은 균등 분할</div>`
+      + (lk.unknown.cnt ? `<div>주관사 미확인 <b>${lk.unknown.cnt}개사</b> — 분모 제외</div>` : "");
   } else {
     el("lkList").innerHTML = '<div class="empty">보호예수 데이터가 없습니다.</div>';
   }

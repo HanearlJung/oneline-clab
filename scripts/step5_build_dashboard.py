@@ -386,33 +386,39 @@ def main():
         return {"cnt": len(rows), "amount": sum(x["lockup_value"] or 0 for x in rows)}
 
     def build_ms_lockup(rows):
-        """IPO 주관사별 점유율. 공동대표주관이면 건수는 각 주관사에 세고 금액은 고르게 나눈다
-        (담보대출의 복수 기관 계약과 같은 규칙)."""
-        agg = defaultdict(lambda: {"cnt": 0, "amt": 0, "cos": set()})
-        unknown = {"cnt": 0, "amt": 0}
-        joint = 0
+        """IPO 주관사별 점유율.
+
+        건수는 회사 단위다 — 한 회사의 IPO 는 주주가 몇 명이든 1건이다.
+        공동대표주관이면 그 1건을 각 주관사에 세고, 금액은 고르게 나눈다.
+        """
+        agg = defaultdict(lambda: {"cos": set(), "amt": 0, "rows": 0})
+        unknown = {"cos": set(), "amt": 0}
+        joint = set()
         for x in rows:
             bs = x.get("custody_brokers") or ([x["custody_broker"]] if x.get("custody_broker") else [])
             if not bs:
-                unknown["cnt"] += 1
+                unknown["cos"].add(x["stock_code"])
                 unknown["amt"] += x["lockup_value"] or 0
                 continue
             if len(bs) > 1:
-                joint += 1
+                joint.add(x["stock_code"])
             for b in bs:
                 a = agg[b]
-                a["cnt"] += 1
-                a["amt"] += (x["lockup_value"] or 0) / len(bs)
                 a["cos"].add(x["stock_code"])
-        tc = sum(a["cnt"] for a in agg.values()) or 1
+                a["rows"] += 1
+                a["amt"] += (x["lockup_value"] or 0) / len(bs)
+        tc = sum(len(a["cos"]) for a in agg.values()) or 1
         ta = sum(a["amt"] for a in agg.values()) or 1
-        out = [{"broker": k, "cnt": v["cnt"], "amt": int(v["amt"]), "co_cnt": len(v["cos"]),
-                "est_cnt": 0,
-                "cnt_ms": round(v["cnt"] / tc * 100, 1),
+        out = [{"broker": k, "cnt": len(v["cos"]), "amt": int(v["amt"]),
+                "co_cnt": len(v["cos"]), "row_cnt": v["rows"], "est_cnt": 0,
+                "cnt_ms": round(len(v["cos"]) / tc * 100, 1),
                 "amt_ms": round(v["amt"] / ta * 100, 1)} for k, v in agg.items()]
-        out.sort(key=lambda x: -x["cnt"])
-        return {"rows": out, "unknown": unknown, "joint_cnt": joint,
-                "total": {"cnt": tc, "amt": int(ta), "rows": len(rows)}}
+        out.sort(key=lambda x: (-x["cnt"], -x["amt"]))
+        return {"rows": out,
+                "unknown": {"cnt": len(unknown["cos"]), "amt": unknown["amt"]},
+                "joint_cnt": len(joint), "unit": "개사",
+                "total": {"cnt": tc, "amt": int(ta), "rows": len(rows),
+                          "companies": len({x["stock_code"] for x in rows})}}
 
     basis = {"주관사": sum(1 for x in lk_ms if x.get("custody_brokers")),
              "미상": sum(1 for x in lk_ms if not x.get("custody_brokers")),
