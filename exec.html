@@ -233,6 +233,7 @@
       <div class="tot" id="lnTot"></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px">
         <div class="seg" id="lnYearSeg" style="flex-wrap:wrap"></div>
+        <button class="btn3d" id="btn3dLn" title="상위 기관과 삼성증권을 3D 그래프로 봅니다">삼성증권(3D)</button>
       </div>
       <div id="lnList"></div>
       <div class="basis" id="lnBasis"></div>
@@ -252,8 +253,8 @@
       </div>
     </div>
     <div class="modal-s" id="m3sub"></div>
-    <div class="g3"><div class="g3-t">건수 기준 <small>대표주관 기업 수 순위</small></div><svg id="g3cnt" viewBox="0 0 1000 330"></svg></div>
-    <div class="g3"><div class="g3-t">금액 기준 <small>실제 인수금액 순위</small></div><svg id="g3amt" viewBox="0 0 1000 330"></svg></div>
+    <div class="g3"><div class="g3-t" id="g3tCnt">건수 기준 <small>대표주관 기업 수 순위</small></div><svg id="g3cnt" viewBox="0 0 1000 330"></svg></div>
+    <div class="g3"><div class="g3-t" id="g3tAmt">금액 기준 <small>실제 인수금액 순위</small></div><svg id="g3amt" viewBox="0 0 1000 330"></svg></div>
   </div>
 </div>
 
@@ -312,11 +313,7 @@ function list(rows0, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEs
       <div class="cn">${mode === "cnt" ? r[keyCnt].toLocaleString("ko-KR") + unit : eok(r[keyAmt])}</div>
     </div>`;
   }).join("");
-  const u = unknown.cnt ? `<div class="row unk">
-      <div class="rk">—</div><div class="nm">기관 미상</div>
-      <div class="bar"></div><div class="pct">—</div>
-      <div class="cn">${mode === "cnt" ? unknown.cnt.toLocaleString("ko-KR") + unit : eok(unknown.amt ?? unknown.balance)}</div></div>` : "";
-  return body + u;
+  return body;
 }
 
 /* ── 증권사를 누르면 그 기관의 건을 팝업으로 ─────────────────────── */
@@ -437,12 +434,23 @@ function render() {
      <div>대출 잔액<b>${eok(ln.total.balance)}원</b></div>
      <div>담보 평가액<b>${eok(ln.total.collateral)}원</b></div>`;
   el("lnList").innerHTML = list(ln.rows, ln.unknown, "cnt", "cnt_ms", "balance", "balance_ms", "lender", false);
+  const C = D.meta.collection || {}, cm = C.majorstock || {}, cx = C.exchange || {};
+  const n = v => (v || 0).toLocaleString("ko-KR"), dot = d => (d || "").replace(/(\d{4})(\d{2})(\d{2})/, "$1.$2.$3");
+  el("lnBasis").style.cssText = "display:block;line-height:1.75";
   el("lnBasis").innerHTML =
-    `<div>기관 미상 <b>${ln.unknown.cnt}건</b> — 분모 제외</div>
-     <div>복수기관 계약 <b>${ln.multi_lender_cnt}건</b> — 균등 분할</div>
-     <div>대상 기업 <b>${(ln.total.companies || D.kpi.loan.total_co).toLocaleString("ko-KR")}개사</b> · 만기가 지난 계약 제외 · 대출금액 미공시 건은 금액에서 제외</div>
-     ${lnYear === "all" ? "" : `<div>체결일 기준 — 지금 남아 있는 계약 중 <b>${lnYear}년</b>에 체결하거나 연장한 계약 · 그해 말 잔액이 아님</div>`}
-     <div>공동담보 대출은 금액을 한 번만 집계 · 담보 평가액의 3배를 넘는 복합여신 <b>${(D.kpi.loan.facility_cnt || 0).toLocaleString("ko-KR")}건</b>은 금액에서 제외</div>`;
+    `<div style="font-weight:800;color:#dde5f4;margin-bottom:6px">데이터 수집 · 파싱 방법</div>
+     <div><b>1. 전체 상장사 검색</b> — 회사를 고르지 않고 코스피·코스닥 전체를 공시 종류로 검색했습니다.
+       ${dot((cm.period || [])[0])} ~ ${dot((cm.period || [])[1])} 접수된 대량보유상황보고서(일반) <b>${n(cm.list_rows)}건</b>,
+       거래소 주식담보제공계약 공시 <b>${n(cx.list_rows)}건</b>의 목록을 빠짐없이 받았습니다.</div>
+     <div><b>2. 최신 공시만 사용</b> — 같은 계약이 다음 보고서에 다시 적히므로, 회사·제출인별로 가장 최근 보고서가 현재 상태입니다.
+       해당 원문 <b>${n(cm.targets)}건</b>과 거래소 공시 <b>${n(cx.targets)}건</b>을 DART에서 받았습니다.</div>
+     <div><b>3. 표에서 계약 읽기</b> — 보고서의 '보유주식등에 관한 계약' 표에서 담보·질권·대출 계약을 읽고,
+       '담보계약 추가 기재사항' 표의 대출금액·이자율을 주식 수와 연번으로 연결했습니다.
+       거래소 공시는 '개별 담보제공 계약' 표에서 채권자·기간·주식 수를 읽었습니다.</div>
+     <div><b>4. 대출이 아닌 것 제외</b> — 납세담보·공탁, 주식대차, 해지·상환된 계약, 만기가 지난 계약은 뺐습니다.
+       두 공시에 함께 실린 계약은 1건으로 합쳤습니다.</div>
+     <div><b>5. 집계 대상</b> — ${lnYear === "all" ? "현재 남아 있는 계약 전체" : `현재 남아 있는 계약 중 ${lnYear}년에 체결하거나 연장한 계약`}
+       <b>${n(ln.total.contracts)}건</b> · <b>${n(ln.total.companies)}개사</b></div>`;
 
 }
 
@@ -531,12 +539,93 @@ function draw3d(svg, series, uid) {
   return bars;
 }
 
-let raf3 = 0;
+/* 담보대출 — 상위 10개 기관과 삼성증권. 막대 높이는 값(건수·금액)이다. */
+function lenderSeries(key) {
+  const ms = (D.ms_loan_by_year || {})[lnYear] || D.ms_loan;
+  const v = r => key === "amt" ? r.balance : r.cnt, pct = r => key === "amt" ? r.balance_ms : r.cnt_ms;
+  const rows = ms.rows.filter(r => v(r) > 0).sort((a, b) => v(b) - v(a) || b.balance - a.balance);
+  const mi = rows.findIndex(r => r.lender === ME);
+  const pick = rows.slice(0, 10).map((r, i) => [r, i + 1]);
+  if (mi >= 10) pick.push([rows[mi], mi + 1]);
+  const max = Math.max(...pick.map(([r]) => v(r)), 1);
+  return { max, key, gap: mi >= 10, bars: pick.map(([r, rank]) => ({
+    name: r.lender, rank, me: r.lender === ME, k: v(r) / max,
+    val: key === "amt" ? eok(r.balance) : r.cnt.toLocaleString("ko-KR") + "건", ms: pct(r).toFixed(1) + "%" })) };
+}
+function drawBars3d(svg, S, uid) {
+  svg.innerHTML = "";
+  const W = 850, H = G3.plotH, L = 74, dz = G3.dz;
+  const Q = (x, y, z) => [L + x + z * 0.62, G3.B - y - z * 0.36];
+  const defs = sv("defs", {});
+  defs.innerHTML = `
+    <linearGradient id="f${uid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc95a"/><stop offset="1" stop-color="#d9861a"/></linearGradient>
+    <linearGradient id="s${uid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9741a"/><stop offset="1" stop-color="#7d4a0c"/></linearGradient>
+    <linearGradient id="t${uid}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffe09a"/><stop offset="1" stop-color="#ffc95a"/></linearGradient>
+    <linearGradient id="fb${uid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d9bff"/><stop offset="1" stop-color="#2f56c8"/></linearGradient>
+    <linearGradient id="sb${uid}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c4fb3"/><stop offset="1" stop-color="#1a2f70"/></linearGradient>
+    <linearGradient id="tb${uid}" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a9c4ff"/><stop offset="1" stop-color="#7fa5ff"/></linearGradient>
+    <filter id="g${uid}" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="7"/></filter>`;
+  svg.appendChild(defs);
+  svg.appendChild(sv("polygon", { points: pts([Q(0, 0, 0), Q(W, 0, 0), Q(W, 0, dz * 2.1), Q(0, 0, dz * 2.1)]),
+    fill: "rgba(99,160,255,.06)", stroke: "#22304d", "stroke-width": 1 }));
+  svg.appendChild(sv("polygon", { points: pts([Q(0, 0, dz * 2.1), Q(W, 0, dz * 2.1), Q(W, H, dz * 2.1), Q(0, H, dz * 2.1)]),
+    fill: "rgba(255,255,255,.018)", stroke: "#1c2740", "stroke-width": 1 }));
+  const HMAX = H * 0.8;                       // 가장 큰 막대 위에 값 글자가 들어갈 자리를 남긴다
+  [0.25, 0.5, 0.75, 1].forEach(f => {
+    const y = HMAX * f, a = Q(0, y, dz * 2.1), b = Q(W, y, dz * 2.1), c = Q(0, y, 0);
+    svg.appendChild(sv("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: "#22304d", "stroke-width": 1, "stroke-dasharray": "3 5" }));
+    svg.appendChild(sv("line", { x1: c[0], y1: c[1], x2: a[0], y2: a[1], stroke: "#22304d", "stroke-width": 1 }));
+    svg.appendChild(sv("text", { x: c[0] - 8, y: c[1] + 4, "text-anchor": "end", "font-size": 11.5, "font-weight": 700, fill: "#7f8da8" },
+      S.key === "amt" ? eok(S.max * f) : Math.round(S.max * f).toLocaleString("ko-KR") + "건"));
+  });
+  const n = S.bars.length, step = W / n, bw = Math.min(50, step * 0.62), z0 = dz * 0.55, z1 = z0 + dz;
+  return S.bars.map((s, i) => {
+    const x0 = i * step + (step - bw) / 2, x1 = x0 + bw, g = sv("g", {}), c = s.me ? "" : "b";
+    const glow = sv("ellipse", { cx: Q((x0 + x1) / 2, 0, (z0 + z1) / 2)[0], cy: Q(0, 0, (z0 + z1) / 2)[1] + 4, rx: bw * 0.8, ry: 12,
+      fill: s.me ? "rgba(245,178,60,.4)" : "rgba(99,160,255,.22)", filter: `url(#g${uid})`, opacity: 0 });
+    const side = sv("polygon", { fill: `url(#s${c}${uid})` }), front = sv("polygon", { fill: `url(#f${c}${uid})` }),
+      top = sv("polygon", { fill: `url(#t${c}${uid})` }),
+      edge = sv("polyline", { fill: "none", stroke: s.me ? "rgba(255,240,200,.6)" : "rgba(200,220,255,.4)", "stroke-width": 1 });
+    const cx = Q((x0 + x1) / 2, 0, z0)[0] + 14, lab = sv("g", { opacity: 0 });
+    const tVal = sv("text", { x: cx, "text-anchor": "middle", "font-size": s.me ? 17 : 13.5, "font-weight": 850,
+      fill: s.me ? "#ffd27a" : "#e6edfb", style: "paint-order:stroke;stroke:#0d1424;stroke-width:4px" }, s.val);
+    const tPct = sv("text", { x: cx, "text-anchor": "middle", "font-size": 11.5, "font-weight": 700,
+      fill: s.me ? "#f0b45c" : "#9aa7bd", style: "paint-order:stroke;stroke:#0d1424;stroke-width:4px" }, s.ms);
+    lab.appendChild(tVal); lab.appendChild(tPct);
+    const base = Q((x0 + x1) / 2, 0, 0);
+    if (s.me && S.gap) svg.appendChild(sv("text", { x: Q(i * step, 0, 0)[0] - 4, y: base[1] + 24, "text-anchor": "middle",
+      "font-size": 15, "font-weight": 800, fill: "#5d6a85" }, "⋯"));
+    svg.appendChild(sv("text", { x: base[0] - 4, y: base[1] + 22, "text-anchor": "middle", "font-size": s.me ? 15 : 13,
+      "font-weight": 850, fill: s.me ? "#f5b23c" : "#8fa0bf" }, s.rank + "위"));
+    svg.appendChild(sv("text", { x: base[0] - 4, y: base[1] + 40, "text-anchor": "middle", "font-size": 11.5,
+      "font-weight": s.me ? 800 : 650, fill: s.me ? "#ffd27a" : "#c9d4ea" }, s.name.length > 7 ? s.name.slice(0, 6) + "…" : s.name));
+    [glow, side, front, top, edge, lab].forEach(e => g.appendChild(e));
+    svg.appendChild(g);
+    const target = Math.max(HMAX * s.k, 3);
+    const set = k => {
+      const h = Math.max(target * k, 0.01);
+      front.setAttribute("points", pts([Q(x0, 0, z0), Q(x1, 0, z0), Q(x1, h, z0), Q(x0, h, z0)]));
+      side.setAttribute("points", pts([Q(x1, 0, z0), Q(x1, 0, z1), Q(x1, h, z1), Q(x1, h, z0)]));
+      top.setAttribute("points", pts([Q(x0, h, z0), Q(x1, h, z0), Q(x1, h, z1), Q(x0, h, z1)]));
+      edge.setAttribute("points", pts([Q(x0, h, z0), Q(x1, h, z0), Q(x1, h, z1)]));
+      glow.setAttribute("opacity", (0.9 * k).toFixed(2));
+      const ty = Q(0, h, z1)[1];
+      tVal.setAttribute("y", ty - 20); tPct.setAttribute("y", ty - 6);
+      lab.setAttribute("opacity", Math.max(0, (k - 0.72) / 0.28).toFixed(2));
+    };
+    set(0);
+    return set;
+  });
+}
+
+let raf3 = 0, g3Kind = "ipo";
 function play3d() {
   cancelAnimationFrame(raf3);
-  const a = draw3d(el("g3cnt"), rankSeries("cnt"), "c"), b = draw3d(el("g3amt"), rankSeries("amt"), "a");
+  const loan = g3Kind === "loan", gapMs = loan ? 140 : 230;
+  const a = loan ? drawBars3d(el("g3cnt"), lenderSeries("cnt"), "c") : draw3d(el("g3cnt"), rankSeries("cnt"), "c"),
+    b = loan ? drawBars3d(el("g3amt"), lenderSeries("amt"), "a") : draw3d(el("g3amt"), rankSeries("amt"), "a");
   // 위 그래프가 왼쪽부터 차례로, 이어서 아래 그래프가 차례로 솟는다
-  const items = [...a.map((f, i) => [f, i * 230]), ...b.map((f, i) => [f, a.length * 230 + 260 + i * 230])];
+  const items = [...a.map((f, i) => [f, i * gapMs]), ...b.map((f, i) => [f, a.length * gapMs + 260 + i * gapMs])];
   const DUR = 820, ease = t => 1 - Math.pow(1 - t, 3);   // 끝에서 감속
   if (matchMedia("(prefers-reduced-motion: reduce)").matches) { items.forEach(([f]) => f(1)); return; }
   const t0 = performance.now();
@@ -548,7 +637,21 @@ function play3d() {
   };
   raf3 = requestAnimationFrame(tick);
 }
+function open3dLoan() {
+  g3Kind = "loan";
+  const ms = (D.ms_loan_by_year || {})[lnYear] || D.ms_loan;
+  el("m3t").textContent = `삼성증권 담보대출 순위 · ${lnYear === "all" ? "현재 잔액 전체" : lnYear + "년 체결"}`;
+  el("m3sub").textContent = `${lnYear === "all" ? "현재 남아 있는 계약 전체" : `현재 남아 있는 계약 중 ${lnYear}년에 체결하거나 연장한 계약`} · ${ms.rows.length}개 기관 중 상위 10곳과 삼성증권 · 막대가 높을수록 규모가 큽니다`;
+  el("g3tCnt").innerHTML = "건수 기준 <small>담보대출 계약 건수</small>";
+  el("g3tAmt").innerHTML = "금액 기준 <small>대출금액</small>";
+  el("modal3d").classList.add("on");
+  play3d();
+}
 function open3d() {
+  g3Kind = "ipo";
+  el("m3t").textContent = "삼성증권 연도별 IPO 주관 순위";
+  el("g3tCnt").innerHTML = "건수 기준 <small>대표주관 기업 수 순위</small>";
+  el("g3tAmt").innerHTML = "금액 기준 <small>실제 인수금액 순위</small>";
   const src = (D.ms_ipo || {})[scope] || {}, ys = Object.keys(src).filter(y => y !== "all").sort();
   el("m3sub").textContent = `${ys[0]}년 ~ ${ys[ys.length - 1]}년 상장 · ${scope === "all" ? "스팩·리츠 포함" : "스팩·리츠·인프라펀드 제외"} · 막대가 높을수록 순위가 높습니다`;
   el("modal3d").classList.add("on");
@@ -595,11 +698,16 @@ async function init() {
   el("modalList").onclick = e => { if (e.target.id === "modalList") closeList(); };
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeList(); });
   el("btn3d").onclick = open3d;
+  el("btn3dLn").onclick = open3dLoan;
   el("m3close").onclick = close3d;
   el("m3replay").onclick = play3d;
   el("modal3d").onclick = e => { if (e.target.id === "modal3d") close3d(); };
   document.addEventListener("keydown", e => { if (e.key === "Escape") close3d(); });
-  if (new URLSearchParams(location.search).get("view") === "samsung3d") open3d();
+  const lys0 = Object.keys(D.ms_loan_by_year || {}).filter(k => k !== "all").sort();
+  if (lys0.length) lnYear = lys0[lys0.length - 1];        // 기본값: 가장 최근 체결 연도
+  const view = new URLSearchParams(location.search).get("view");
+  if (view === "samsung3d") open3d();
+  if (view === "samsung3d-loan") open3dLoan();
   const ys = Object.keys((D.ms_ipo || {}).core || D.ms_lockup_by_year || {}).filter(k => k !== "all").sort();
   if (ys.length) year = ys[ys.length - 1];
   el("yearSeg").innerHTML = [["all", "전체"], ...ys.map(y => [y, y + "년"])].map(([k, t]) =>
