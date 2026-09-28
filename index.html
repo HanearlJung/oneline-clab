@@ -193,13 +193,12 @@ const KINDS = {
       ["D-day", r => ddCell(dd(r.release_date)), "num"],
       ["수량", r => r.lockup_qty ? r.lockup_qty.toLocaleString("ko-KR") + "주" : NA, "num"],
       ["평가금액", r => r.lockup_value ? eok(r.lockup_value) : NA, "num"],
-      ["수탁 증권사", r => r.custody_broker
-        ? esc(r.custody_broker) + (r.custody_broker_src === "추정" ? "(추정)" : "")
-        : '<span class="na">미상</span>'],
+      ["수탁 증권사", r => brokers(r)],
       ["공시", r => r.source_url ? `<a class="src" href="${r.source_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${r.row_source === "KIND" ? "KIND" : "원문"}</a>` : NA],
     ],
     date: r => r.release_date, amount: r => r.lockup_value,
-    org: r => r.custody_broker, type: r => r.holder_type, who: r => r.holder_name,
+    org: r => r.custody_broker, orgs: r => r.custody_brokers || (r.custody_broker ? [r.custody_broker] : []),
+    type: r => r.holder_type, who: r => r.holder_name,
   },
   loan: {
     label: "담보대출 만기", unit: "건",
@@ -218,9 +217,13 @@ const KINDS = {
       ["공시", r => `<a class="src" href="${r.source_url}" target="_blank" rel="noopener" onclick="event.stopPropagation()">원문</a>`],
     ],
     date: r => r.maturity_date, amount: r => r.loan_amount,
-    org: r => r.lender, type: r => r.borrower_type, who: r => r.borrower_name,
+    org: r => r.lender, orgs: r => r.lenders || (r.lender ? [r.lender] : []),
+    type: r => r.borrower_type, who: r => r.borrower_name,
   },
 };
+// 수탁 증권사 = IPO 대표주관회사. 공동대표주관이면 여러 곳이다.
+const brokers = r => { const b = r.custody_brokers || (r.custody_broker ? [r.custody_broker] : []);
+  return b.length ? b.map(esc).join(" · ") : NA; };
 // 대출금액이 공시되지 않고 담보설정금액만 있는 건(거래소 공시)은 구분해서 보여준다
 const loanAmt = r => r.loan_amount ? eok(r.loan_amount)
     + (r.amount_src === "단위추정" ? ' <span class="na" title="공시에 금액 단위가 없어 담보 평가액에 비추어 환산했습니다. 원문을 확인하세요.">단위추정</span>' : "")
@@ -246,7 +249,7 @@ KINDS.company = {
     ["만기 예정", r => { const n = r.loans.filter(x => x.is_active).length; return n ? n + "건" : '<span class="na">—</span>'; }, "num"],
   ],
   date: () => null, amount: r => (r.market_cap || 0) * 1e8,
-  org: () => null, type: r => r.market, who: r => r.stock_code,
+  org: () => null, orgs: () => [], type: r => r.market, who: r => r.stock_code,
 };
 const srcOf = k => k === "lockup" ? D.lockups : k === "loan" ? D.loans : COS;
 let kind = "lockup", sortKey = "date";
@@ -270,7 +273,7 @@ function setup() {
   document.querySelectorAll(".tab").forEach(b => b.onclick = () => { sortKey = b.dataset.k; setup(); apply(); });
 
   const src = srcOf(kind);
-  const orgs = [...new Set(src.map(K.org).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
+  const orgs = [...new Set(src.flatMap(K.orgs).filter(Boolean))].sort((a, b) => a.localeCompare(b, "ko"));
   el("fOrg").innerHTML = '<option value="">전체</option>' + orgs.map(x => `<option>${esc(x)}</option>`).join("");
   const ts = [...new Set(src.map(K.type).filter(Boolean))].sort();
   el("fType").innerHTML = '<option value="">전체</option>' + ts.map(x => `<option>${esc(x)}</option>`).join("");
@@ -317,7 +320,7 @@ function apply() {
       if (A && (x.market_cap || 0) < +A) return false;
       return true;
     }
-    if (O && K.org(x) !== O) return false;
+    if (O && !K.orgs(x).includes(O)) return false;
     if (T && K.type(x) !== T) return false;
     if (A && (K.amount(x) || 0) / 1e8 < +A) return false;
     const d = K.date(x);
@@ -420,12 +423,12 @@ function open(c) {
           <td class="n">${x.lockup_qty.toLocaleString("ko-KR")}</td>
           <td class="n">${x.lockup_value ? eok(x.lockup_value) : NA}</td><td>${x.release_date ? fd(x.release_date) : NA}</td>
           <td class="n">${ddCell(dd(x.release_date))}</td>
-          <td>${x.custody_broker ? esc(x.custody_broker) + (x.custody_broker_src === "추정" ? "(추정)" : "") : NA}</td></tr>`).join("")}</tbody></table>
-          ${c.lockups[0].lead_manager ? `<div class="tl" style="color:var(--muted);font-size:12px;margin-top:6px">주관 ${esc(c.lockups[0].lead_manager)}${
+          <td>${brokers(x)}</td></tr>`).join("")}</tbody></table>
+          ${c.lockups[0].lead_manager ? `<div class="tl" style="color:var(--muted);font-size:12px;margin-top:6px">IPO 대표주관 ${esc(c.lockups[0].lead_manager)}${
             c.lockups[0].co_manager ? " · 공동주관 " + esc(c.lockups[0].co_manager) : ""}${
             c.lockups[0].underwriter ? " · 인수 " + esc(c.lockups[0].underwriter) : ""}${
             c.lockups[0].prospectus_rcept_no ? ` · <a class="src" href="https://dart.fss.or.kr/dsaf001/main.do?rcpNo=${c.lockups[0].prospectus_rcept_no}" target="_blank" rel="noopener">증권신고서</a>` : ""}</div>` : ""}
-          ${c.lockups.some(x => x.row_source === "KIND") ? `<div class="tl" style="color:var(--muted);font-size:12px;margin-top:4px">기관 의무보유확약·우리사주 등 이름 없는 행은 KIND 신규상장기업 유통가능주식수 현황의 분류 단위 물량입니다.</div>` : ""}`
+`
           : `<div class="tl" style="color:var(--muted);font-size:12px">보호예수 없음 — ${D.meta.lockupScope || "최근 신규상장 종목이 아닙니다"}</div>`}
       </div>
       <div class="blk"><div class="blk-t">주식담보대출 <span class="badge">${c.loans.length}건</span></div>
@@ -471,7 +474,7 @@ async function init() {
   el("foot").innerHTML = `출처 ${D.meta.source} · 생성 ${D.meta.generated}<br>`
     + `대상 KOSPI ${U.kospi.toLocaleString("ko-KR")} · KOSDAQ ${U.kosdaq.toLocaleString("ko-KR")}개사 `
     + `(담보대출 공시 ${U.with_loan.toLocaleString("ko-KR")}개사 · 보호예수 ${U.with_lockup.toLocaleString("ko-KR")}개사)<br>`
-    + `담보대출 — ${D.meta.loanScope}<br>보호예수 — ${D.meta.lockupScope} · 수탁 증권사는 대표주관회사 기준 추정<br>`
+    + `담보대출 — ${D.meta.loanScope}<br>보호예수 — ${D.meta.lockupScope} · 수탁 증권사는 IPO 대표주관회사<br>`
     + `평가금액 — ${fd(D.meta.priceDate)} 종가 기준`;
   // 주소로 상태를 넘겨받는다 — 점유율 화면에서 기관명을 누르면 그 기관 건만 걸러서 연다
   const Q = new URLSearchParams(location.search);

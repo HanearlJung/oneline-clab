@@ -207,8 +207,7 @@ function list(rows0, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEs
       <div class="rk">⋯</div><div class="nm">${it.n}개 기관 생략</div>
       <div></div><div></div><div></div></div>`;
     const r = it.r, rank = rows.indexOf(r) + 1, me = r[nameKey] === ME;
-    // 전부 추정이면 행마다 다시 적지 않는다 (아래 근거 문구로 한 번만 밝힌다)
-    const estN = showEst && r.est_cnt && r.est_cnt < r.cnt ? `<small>추정 ${r.est_cnt}</small>` : "";
+    const estN = r.co_cnt ? `<small>${r.co_cnt}개사</small>` : "";
     return `<div class="row ${me ? "me" : ""}" style="cursor:pointer" title="이 기관의 건만 보기"
       onclick="location.href='index.html?kind=${kindOf}&org=${encodeURIComponent(r[nameKey])}'">
       <div class="rk">${rank}</div>
@@ -226,11 +225,9 @@ function list(rows0, unknown, keyCnt, keyPct, keyAmt, keyAmtPct, nameKey, showEs
 }
 
 function render() {
-  // 수탁 증권사가 공시에 기재된 건이 없으면 '기재분만' 집계는 빈 표가 된다. 토글을 내보이지 않는다.
-  const hasStated = D.lockup_basis && D.lockup_basis.기재 > 0;
-  el("estOn").parentElement.style.display = hasStated ? "" : "none";
-  const lkSrc = (est || !hasStated) ? D.ms_lockup : D.ms_lockup_strict;
-  const lk = lkSrc, ln = D.ms_loan;
+  // 수탁 증권사 = IPO 대표주관회사. 추정·기재 구분이 없으므로 토글은 쓰지 않는다.
+  el("estOn").parentElement.style.display = "none";
+  const lk = D.ms_lockup, ln = D.ms_loan;
 
   if (lk) {
     el("lkTag").textContent = `${lk.rows.length}개 증권사`;
@@ -239,12 +236,10 @@ function render() {
        <div>평가금액<b>${eok(lk.total.amt)}원</b></div>
        <div>대상 기업<b>${(D.kpi.lockup.ms_co ?? D.kpi.lockup.active_co).toLocaleString("ko-KR")}개사</b></div>`;
     el("lkList").innerHTML = list(lk.rows, lk.unknown, "cnt", "cnt_ms", "amt", "amt_ms", "broker", true);
-    const b = D.lockup_basis;
-    el("lkBasis").innerHTML = hasStated
-      ? `<div>수탁 근거 — 공시 기재 <b>${b.기재}건</b> · 주관사 추정 <b>${b.추정}건</b> · 미상 <b>${b.미상}건</b></div>
-         <div>${est ? "추정 포함 집계" : "공시 기재분만 집계"}</div>`
-      : `<div>신규상장 의무보유 중 해제 예정 물량 · 대표주관회사 기준 <b>${b.추정.toLocaleString("ko-KR")}건</b> · 미상 <b>${b.미상.toLocaleString("ko-KR")}건</b> — 분모 제외</div>
-         <div>수탁 증권사는 공시에 기재되지 않아 증권신고서의 대표주관회사로 집계 (대표주관이 복수이면 미상)</div>`;
+    el("lkBasis").innerHTML =
+      `<div>IPO 대표주관회사 기준 · 해제 예정 보호예수 <b>${lk.total.rows.toLocaleString("ko-KR")}건</b> · <b>${D.kpi.lockup.ms_co.toLocaleString("ko-KR")}개사</b></div>
+       <div>공동대표주관 <b>${(lk.joint_cnt || 0).toLocaleString("ko-KR")}건</b> — 건수는 각 주관사에, 금액은 균등 분할</div>`
+      + (lk.unknown.cnt ? `<div>주관사 미확인 <b>${lk.unknown.cnt}건</b> — 분모 제외</div>` : "");
   } else {
     el("lkList").innerHTML = '<div class="empty">보호예수 데이터가 없습니다.</div>';
   }
@@ -279,7 +274,7 @@ async function init() {
   el("foot").innerHTML = `출처 ${D.meta.source} · 생성 ${D.meta.generated}<br>`
     + `대상 KOSPI ${U.kospi.toLocaleString("ko-KR")} · KOSDAQ ${U.kosdaq.toLocaleString("ko-KR")}개사<br>`
     + (C.majorstock ? `담보대출 — ${ymd(C.majorstock.period[0])} ~ ${ymd(C.majorstock.period[1])} 접수 대량보유상황보고서(제출인별 최신)·거래소 담보제공 공시<br>` : "")
-    + `보호예수 수탁 M/S — 2022년 이후 신규상장 종목의 의무보유(증권신고서) · 평가금액 ${fd(D.meta.priceDate)} 종가 기준`;
+    + `보호예수 수탁 M/S — 2022년 이후 신규상장 종목, IPO 대표주관회사 기준(증권신고서·KIND 상장주선인) · 평가금액 ${fd(D.meta.priceDate)} 종가 기준`;
 
   document.querySelectorAll("#modeSeg button").forEach(b => b.onclick = () => {
     mode = b.dataset.m;

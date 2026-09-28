@@ -1,10 +1,11 @@
 """Phase 6-b — 보호예수(락업) 실데이터.
 
 주주별 보호예수 물량·해제일은 사내 DB(dunamis)에 정형화돼 있다. 여기에 없는
-주관사 위계는 증권신고서 '5. 인수 등에 관한 사항'에서 직접 읽는다.
+IPO 주관사는 증권신고서 '5. 인수 등에 관한 사항'에서 직접 읽는다.
 
-수탁 증권사는 공시에 명시되지 않는다. 데이터요구사항 5-3 에 따라 주관사로
-보정하되 반드시 '추정'으로 구분한다. 대표주관이 복수면 보정하지 않는다(미상).
+이 대시보드에서 '수탁 증권사'는 그 회사의 IPO 대표주관회사다. 상장은 반드시 증권사를
+통해서 하므로 주관사가 없는 회사는 없다 — 못 찾았으면 수집이 덜 된 것이다.
+공동대표주관이면 주관사가 여러 곳이고, 점유율은 그 회사 물량을 고르게 나눠 센다.
 
 접속 정보는 환경변수 DUNAMIS_DSN 으로만 받는다. 코드에 넣지 않는다.
 
@@ -91,7 +92,7 @@ def parse_underwriters(text: str) -> dict:
 
     # 역할 칸이 없는 서식 — '| 명칭 | 주소 |' 아래로 인수인 이름만 나열된다.
     # 누가 대표주관인지는 이 표로 알 수 없다. 1곳뿐이면 단독 주관이다.
-    names, in_tbl = [], False
+    names, raw_of, in_tbl = [], {}, False
     for line in head.split("\n"):
         line = line.strip()
         if not line.startswith("|"):
@@ -106,19 +107,43 @@ def parse_underwriters(text: str) -> dict:
             b = clean_broker(c[0])
             if b and b not in names:
                 names.append(b)
+                raw_of[b] = re.sub(r"\s+", "", c[0])
     if len(names) == 1:
         out["lead"] = names
+        return out
+
+    # 표에 역할이 없으면 주석 문장에서 읽는다.
+    #   '대표주관회사인 삼성증권㈜이 전체 공모주식의 …'
+    #   '공동대표주관회사인 케이비증권 주식회사 및 엔에이치투자증권 주식회사가 …'
+    prose = {"공동대표주관회사": "co_lead", "대표주관회사": "lead", "공동주관회사": "co_mgr",
+             "인수회사": "uw"}
+    found = defaultdict(list)
+    flat = re.sub(r"\s+", "", text)
+    for m in re.finditer(r"(공동대표주관회사|대표주관회사|공동주관회사|인수회사)인", flat):
+        span = flat[m.end(): m.end() + 90]
+        span = re.split(r"전체|자기계산|발행회사|총액인수|[.]|공동대표주관회사|대표주관회사|"
+                        r"공동주관회사|인수회사", span)[0]
+        for b in names:
+            key = raw_of[b][:4]
+            if (key in span or b in span) and not any(b in v for v in found.values()):
+                found[prose[m.group(1)]].append(b)
+    if found.get("lead") or found.get("co_lead"):
+        for k, v in found.items():
+            out[k] = v
+        placed = {b for v in found.values() for b in v}
+        out["uw"] = [n for n in names if n not in placed]
     else:
         out["uw"] = names
     return out
 
 
-def custody(uw: dict) -> tuple[str | None, str]:
-    if len(uw["lead"]) == 1:
-        return uw["lead"][0], "추정"
-    if not uw["lead"] and len(uw["co_lead"]) == 1:
-        return uw["co_lead"][0], "추정"
-    return None, "미상"
+def custody(uw: dict) -> list[str]:
+    """IPO 주관사. 대표주관 → 공동대표주관 → (둘 다 못 읽었으면) 공동주관·인수인 순."""
+    for keys in (("lead", "co_lead"), ("co_mgr",), ("uw",)):
+        got = [b for k in keys for b in uw[k]]
+        if got:
+            return list(dict.fromkeys(got))
+    return []
 
 
 def fetch_kind_sponsors(start="2021-06-01") -> dict[str, str]:
@@ -263,10 +288,13 @@ def main() -> None:
                     "where corp_code is not null")
         corp_of = dict(cur.fetchall())
         cur.execute("""
-            select company_name, max(substring(source_link from 'rcpNo=(\\d{14})'))
+            select distinct company_name, substring(source_link from 'rcpNo=(\\d{14})')
             from silver.kr_dart_disclosure_shareholder_data
-            where deleted_at is null group by 1""")
-        doc_of = dict(cur.fetchall())
+            where deleted_at is null""")
+        docs_of = defaultdict(list)
+        for nm, r in cur.fetchall():
+            if r:
+                docs_of[nm].append(r)
         cur.execute("""
             select rcept_no, link from silver.kr_dart_disclosure_metadata_toc_html
             where title like '%%인수 등에 관한 사항' and title not like '%%본 문%%'""")
@@ -282,10 +310,23 @@ def main() -> None:
     idx_path = cache / "_index.json"
     idx = dart.load_json(idx_path) if idx_path.exists() else {}
 
+    def ipo_doc(name, ipo):
+        """상장 전에 낸 신고서 중 가장 늦은 것. 상장 뒤의 신고서는 유상증자 등 다른 공모다 —
+        그 주관사를 IPO 주관사로 읽으면 안 된다."""
+        if not ipo:
+            return None
+        limit = (ipo + timedelta(days=7)).strftime("%Y%m%d")
+        ok = [r for r in docs_of.get(name, []) if r[:8] <= limit]
+        return max(ok) if ok else None
+
     for i, (name, c) in enumerate(sorted(companies.items()), 1):
-        if (idx.get(name) or {}).get("rcp_no"):
-            continue
-        rcp = doc_of.get(name)
+        rcp = ipo_doc(name, c["ipo"])
+        prev = (idx.get(name) or {}).get("rcp_no")
+        if prev and (rcp is None or rcp == prev):
+            if rcp is None and c["ipo"] and prev[:8] > (c["ipo"] + timedelta(days=7)).strftime("%Y%m%d"):
+                pass            # 예전에 잡은 문서가 상장 뒤 것이다. 아래에서 다시 찾는다
+            else:
+                continue
         cc = corp_of.get(c["stock_code"])
         if not rcp and cc and not args.no_fetch:
             try:
@@ -316,9 +357,18 @@ def main() -> None:
                     r.encoding = r.apparent_encoding or "utf-8"
                     html = r.text
                 else:
-                    node = dart.find_toc_node(dart.get_toc(rcp), ["인수 등에 관한 사항"])
+                    toc = dart.get_toc(rcp)
+                    node = dart.find_toc_node(toc, ["인수 등에 관한 사항"])
                     html = dart.get_section(node) if node else ""
-                f.write_text(dart.html_to_text(html), encoding="utf-8")
+                text = dart.html_to_text(html)
+                if len(text) < 50:
+                    # 2022년 상반기까지의 서식은 목차가 한 단계 얕다. 상위 절을 받아 잘라낸다.
+                    toc = dart.get_toc(rcp)
+                    node = dart.find_toc_node(toc, ["모집 또는 매출에 관한 일반사항"])
+                    whole = dart.html_to_text(dart.get_section(node)) if node else ""
+                    i = whole.rfind("인수 등에 관한 사항")
+                    text = whole[i:] if i >= 0 else ""
+                f.write_text(text, encoding="utf-8")
             except Exception as exc:  # noqa: BLE001
                 print(f"  ! 인수섹션 실패 {name} {rcp}: {exc}")
         if f.exists():
@@ -343,17 +393,31 @@ def main() -> None:
 
     # ---- 조립
     out, stat = [], defaultdict(int)
+    mismatch = []
     for (_id, code, name, holder, rel, qty, rel_dt, px, mcap, period, ipo, _lk) in rows:
         meta = idx.get(name) or {}
         uw = meta.get("uw") or {"lead": [], "co_lead": [], "co_mgr": [], "uw": []}
         src_doc = "증권신고서"
+        kind_names = [clean_broker(x) for x in re.split(r"[,/]|\s{2,}", sponsors.get(name) or "")]
+        kind_names = [x for x in kind_names if x]
+        leads = uw["lead"] + uw["co_lead"]
+        if leads and kind_names and set(kind_names) < set(leads):
+            # 신고서 문장이 '대표주관회사인 A와 B는 각각 95%, 5%를 인수' 처럼 모호할 때가 있다.
+            # 거래소(KIND)가 상장주선인으로 올린 곳만 주관사로 둔다.
+            extra = [b for b in leads if b not in kind_names]
+            uw = {"lead": [b for b in uw["lead"] if b in kind_names],
+                  "co_lead": [b for b in uw["co_lead"] if b in kind_names],
+                  "co_mgr": uw["co_mgr"], "uw": uw["uw"] + extra}
+            leads = uw["lead"] + uw["co_lead"]
+        if leads and kind_names and not set(leads) <= set(kind_names):
+            mismatch.append((name, leads, kind_names))
         if not (uw["lead"] or uw["co_lead"]) and sponsors.get(name):
             names = [clean_broker(x) for x in re.split(r"[,/]|\s{2,}", sponsors[name])]
             names = [x for x in names if x]
             uw = {**uw, "lead": names, "uw": [x for x in uw["uw"] if x not in names]}
             src_doc = "KIND 상장주선인"
-        broker, bsrc = custody(uw)
-        stat[bsrc] += 1
+        brokers = custody(uw)
+        stat["주관사 있음" if brokers else "주관사 없음"] += 1
         m = by_code.get(code) or master.get(name) or {}
         code = m.get("stock_code") or code
         price = m.get("price") or (float(px) if px else None)
@@ -376,7 +440,9 @@ def main() -> None:
                                if price else None,
             "value_basis": m.get("price_basis") or ("종가" if price else None),
             "release_date": rel_dt.isoformat(), "lockup_period": period,
-            "custody_broker": broker, "custody_broker_src": bsrc,
+            "custody_broker": brokers[0] if brokers else None,
+            "custody_brokers": brokers,
+            "custody_broker_src": "주관사" if brokers else "미상",
             "lead_manager": ", ".join(uw["lead"] + uw["co_lead"]) or None,
             "co_manager": ", ".join(uw["co_mgr"]) or None,
             "underwriter": ", ".join(uw["uw"]) or None,
@@ -413,7 +479,15 @@ def main() -> None:
     act = [x for x in out if x["release_date"] >= today]
     print(f"\nlockup.json — {len(out):,}행 · {len({x['stock_code'] for x in out}):,}종목 "
           f"(해제 예정 {len(act):,}행 · {len({x['stock_code'] for x in act}):,}종목)")
-    print(f"  수탁 근거 — 추정 {stat['추정']:,} · 미상 {stat['미상']:,}")
+    print(f"  IPO 주관사 — 확보 {stat['주관사 있음']:,}행 · 없음 {stat['주관사 없음']:,}행")
+    seen = set()
+    mm = [m for m in mismatch if not (m[0] in seen or seen.add(m[0]))]
+    print(f"  증권신고서 대표주관이 KIND 상장주선인에 없는 회사 {len(mm)}곳")
+    dart.save_json(ROOT / "data" / "manager_mismatch.json",
+                   [{"corp_name": a, "prospectus": b, "kind": c} for a, b, c in mm])
+    missing = sorted({x["corp_name"] for x in out if not x["custody_brokers"]})
+    if missing:
+        print(f"  !! 주관사를 못 찾은 회사 {len(missing)}곳: {missing}")
     print(f"  평가금액 없음 {sum(1 for x in out if x['lockup_value'] is None):,}행 · "
           f"원문 없음 {sum(1 for x in out if not x['rcept_no']):,}행")
     ht = defaultdict(int)

@@ -377,7 +377,7 @@ def main():
         # 해제일을 모르는 건(예탁결제원 미반환 잔량)은 아직 묶여 있는 물량이다
         x["is_active"] = (x["release_date"] is None) or x["release_date"] >= base_s
     lk_active = [x for x in lockups if x["is_active"]]
-    # 수탁 M/S 는 신규상장 건으로만 낸다. 대표주관회사가 수탁한다는 근거가 거기에만 선다.
+    # 수탁 M/S = IPO 주관사 점유율
     lk_ms = [x for x in lk_active if x.get("source") == "IPO"]
 
     def lk_within(days):
@@ -385,30 +385,38 @@ def main():
                 and (datetime.fromisoformat(x["release_date"]).date() - base).days <= days]
         return {"cnt": len(rows), "amount": sum(x["lockup_value"] or 0 for x in rows)}
 
-    def build_ms_lockup(rows, include_est=True):
-        agg = defaultdict(lambda: {"cnt": 0, "amt": 0, "est": 0})
+    def build_ms_lockup(rows):
+        """IPO 주관사별 점유율. 공동대표주관이면 건수는 각 주관사에 세고 금액은 고르게 나눈다
+        (담보대출의 복수 기관 계약과 같은 규칙)."""
+        agg = defaultdict(lambda: {"cnt": 0, "amt": 0, "cos": set()})
         unknown = {"cnt": 0, "amt": 0}
+        joint = 0
         for x in rows:
-            b, src = x.get("custody_broker"), x.get("custody_broker_src")
-            if not b or (src == "추정" and not include_est):
+            bs = x.get("custody_brokers") or ([x["custody_broker"]] if x.get("custody_broker") else [])
+            if not bs:
                 unknown["cnt"] += 1
                 unknown["amt"] += x["lockup_value"] or 0
                 continue
-            a = agg[b]
-            a["cnt"] += 1
-            a["amt"] += x["lockup_value"] or 0
-            if src == "추정":
-                a["est"] += 1
+            if len(bs) > 1:
+                joint += 1
+            for b in bs:
+                a = agg[b]
+                a["cnt"] += 1
+                a["amt"] += (x["lockup_value"] or 0) / len(bs)
+                a["cos"].add(x["stock_code"])
         tc = sum(a["cnt"] for a in agg.values()) or 1
         ta = sum(a["amt"] for a in agg.values()) or 1
-        out = [{"broker": k, "cnt": v["cnt"], "amt": v["amt"], "est_cnt": v["est"],
+        out = [{"broker": k, "cnt": v["cnt"], "amt": int(v["amt"]), "co_cnt": len(v["cos"]),
+                "est_cnt": 0,
                 "cnt_ms": round(v["cnt"] / tc * 100, 1),
                 "amt_ms": round(v["amt"] / ta * 100, 1)} for k, v in agg.items()]
         out.sort(key=lambda x: -x["cnt"])
-        return {"rows": out, "unknown": unknown, "total": {"cnt": tc, "amt": ta}}
+        return {"rows": out, "unknown": unknown, "joint_cnt": joint,
+                "total": {"cnt": tc, "amt": int(ta), "rows": len(rows)}}
 
-    basis = {k: sum(1 for x in lk_ms if x.get("custody_broker_src") == k)
-             for k in ("기재", "추정", "미상")}
+    basis = {"주관사": sum(1 for x in lk_ms if x.get("custody_brokers")),
+             "미상": sum(1 for x in lk_ms if not x.get("custody_brokers")),
+             "기재": 0, "추정": 0}
 
     # ---- 전체 상장사 마스터. 공시가 없는 회사도 검색되어야 한다.
     n_loan, n_lock = defaultdict(int), defaultdict(int)
@@ -476,7 +484,8 @@ def main():
         "ms_loan": build_ms(live),
         # 수탁 M/S 는 아직 풀리지 않은 물량 기준이다. 이미 해제된 건은 수탁 잔고가 아니다.
         "ms_lockup": build_ms_lockup(lk_ms) if lockups else None,
-        "ms_lockup_strict": build_ms_lockup(lk_ms, include_est=False) if lockups else None,
+        "ms_lockup_all": build_ms_lockup([x for x in lockups if x.get("source") == "IPO"])
+                         if lockups else None,
         "lockup_basis": basis,
         "companies": companies,
         "loans": sorted(loans, key=lambda x: (x["maturity_date"] or "9999", -(x["loan_amount"] or 0))),
@@ -486,7 +495,7 @@ def main():
             "state": "mock" if is_mock else ("ok" if lockups else "pending"),
             "note": ("화면 검증용 샘플 데이터입니다. 실공시 연결 시 교체됩니다."
                      if is_mock else "증권신고서·투자설명서 '의무보유' 섹션. "
-                     "수탁 증권사는 공시에 기재되지 않아 대표주관회사 기준으로 추정"),
+                     "수탁 증권사는 IPO 대표주관회사"),
         },
     }
     # ---- 검증 (데이터요구사항 6절). 위반 건은 지우지 않고 기록한다 — 사람이 원문과 대조한다.
