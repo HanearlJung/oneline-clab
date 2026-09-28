@@ -132,6 +132,14 @@
     background:linear-gradient(180deg,rgba(245,178,60,.20),rgba(245,178,60,.08));color:#f5b23c;
     font-size:15px;font-weight:800;cursor:pointer;white-space:nowrap;
     box-shadow:0 0 18px rgba(245,178,60,.18)}
+  .rbtn{display:flex;gap:8px;margin-left:auto}
+  .btnAll{height:44px;padding:0 18px;border-radius:9px;border:1px solid #2c3a59;background:#111a2c;
+    color:#c9d4ea;font-size:15px;font-weight:750;cursor:pointer;white-space:nowrap}
+  .btnAll:hover{border-color:#4a6bd0;color:#fff}
+  tr.rkr{cursor:pointer}
+  tr.rkr:hover td{background:rgba(99,160,255,.07)}
+  tr.rkr.me td{background:rgba(245,178,60,.1)}
+  tr.rkr.me .nm2,tr.rkr.me td{color:#ffd27a}
   .btn3d:hover{background:linear-gradient(180deg,rgba(245,178,60,.32),rgba(245,178,60,.14));color:#ffd27a}
   .modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;
     background:rgba(4,8,16,.72);backdrop-filter:blur(3px);padding:24px}
@@ -215,10 +223,13 @@
       <div class="tot" id="lkTot"></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px">
         <div class="seg" id="yearSeg" style="flex-wrap:wrap"></div>
-        <button class="btn3d" id="btn3d" title="연도별 삼성증권 순위를 3D 그래프로 봅니다">삼성증권(3D)</button>
         <div class="seg" id="scopeSeg">
           <button data-s="core" class="on" title="증권업계 리그테이블의 통상 기준">스팩·리츠 제외</button>
           <button data-s="all">전체 포함</button>
+        </div>
+        <div class="rbtn">
+          <button class="btn3d" id="btn3d" title="연도별 삼성증권 순위를 3D 그래프로 봅니다">삼성증권(3D)</button>
+          <button class="btnAll" id="btnAllLk" title="모든 증권사의 순위를 봅니다">전체 순위</button>
         </div>
       </div>
       <div id="lkList"></div>
@@ -233,7 +244,10 @@
       <div class="tot" id="lnTot"></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px">
         <div class="seg" id="lnYearSeg" style="flex-wrap:wrap"></div>
-        <button class="btn3d" id="btn3dLn" title="상위 기관과 삼성증권을 3D 그래프로 봅니다">삼성증권(3D)</button>
+        <div class="rbtn">
+          <button class="btn3d" id="btn3dLn" title="상위 기관과 삼성증권을 3D 그래프로 봅니다">삼성증권(3D)</button>
+          <button class="btnAll" id="btnAllLn" title="모든 기관의 순위를 봅니다">전체 순위</button>
+        </div>
       </div>
       <div id="lnList"></div>
       <div class="basis" id="lnBasis"></div>
@@ -402,6 +416,35 @@ function drawLoanList() {
         }</tbody></table></td></tr>` : "");
   }).join("") : `<tr><td colspan="7" style="text-align:center;color:#7f8da8;padding:30px">해당하는 건이 없습니다.</td></tr>`;
 }
+/* 전체 순위 — 상위 10곳만이 아니라 모든 기관을 빠짐없이 */
+function openRankList(kind) {
+  const loan = kind === "loan";
+  const ms = loan ? ((D.ms_loan_by_year || {})[lnYear] || D.ms_loan)
+    : (((D.ms_ipo || {})[scope] || D.ms_lockup_by_year || {})[year] || D.ms_lockup);
+  const nameKey = loan ? "lender" : "broker", aKey = loan ? "balance" : "amt", apKey = loan ? "balance_ms" : "amt_ms";
+  const rows = [...ms.rows].sort((a, b) => mode === "cnt"
+    ? (b.cnt - a.cnt || b[aKey] - a[aKey]) : (b[aKey] - a[aKey] || b.cnt - a.cnt));
+  const unit = loan ? "건" : "개사", n = v => (v || 0).toLocaleString("ko-KR");
+  const label = loan ? (lnYear === "all" ? "현재 잔액 전체" : `${lnYear}년 체결`)
+    : (year === "all" ? `${D.meta.ipoRange[0].slice(0, 4)}년 ~ 현재 상장` : `${year}년 상장`) + (scope === "all" ? " · 스팩·리츠 포함" : " · 스팩·리츠 제외");
+  const mi = rows.findIndex(r => r[nameKey] === ME);
+  loanGroups = []; loanOpen = new Set();
+  el("mlT").textContent = `${loan ? "담보대출" : "보호예수 수탁"} 전체 순위 · ${label}`;
+  el("mlSum").innerHTML = `<div>${mode === "cnt" ? "건수" : "금액"} 기준 순위</div>
+    <div>${loan ? "기관" : "증권사"} <b>${n(rows.length)}곳</b></div>
+    <div>삼성증권 <b>${mi < 0 ? "없음" : (mi + 1) + "위"}</b></div>
+    <div>이름을 누르면 해당 ${loan ? "기관" : "증권사"}의 목록이 열립니다</div>`;
+  el("mlH").innerHTML = `<tr><th class="r" style="width:64px">순위</th><th>${loan ? "기관" : "증권사"}</th>${loan ? "<th>구분</th>" : ""}
+    <th class="r">${loan ? "계약" : "주관 기업"}</th><th class="r">건수 점유율</th>
+    <th class="r">${loan ? "대출금액" : "인수금액"}</th><th class="r">금액 점유율</th></tr>`;
+  el("mlB").innerHTML = rows.map((r, i) => `<tr class="rkr${r[nameKey] === ME ? " me" : ""}" data-org="${esc(r[nameKey])}" data-kind="${kind}">
+      <td class="r">${i + 1}</td><td><div class="nm2">${esc(r[nameKey])}</div></td>${loan ? `<td>${esc(r.lender_type || "")}</td>` : ""}
+      <td class="r">${n(r.cnt)}${unit}</td><td class="r">${(r.cnt_ms || 0).toFixed(1)}%</td>
+      <td class="r">${r[aKey] ? eok(r[aKey]) + "원" : '<span style="color:#5d6a85">—</span>'}</td><td class="r">${(r[apKey] || 0).toFixed(1)}%</td></tr>`).join("");
+  el("modalList").classList.add("on");
+  const wrap = el("modalList").querySelector(".lwrap");
+  wrap.scrollTop = 0;
+}
 function closeList() { el("modalList").classList.remove("on"); }
 
 function render() {
@@ -434,23 +477,11 @@ function render() {
      <div>대출 잔액<b>${eok(ln.total.balance)}원</b></div>
      <div>담보 평가액<b>${eok(ln.total.collateral)}원</b></div>`;
   el("lnList").innerHTML = list(ln.rows, ln.unknown, "cnt", "cnt_ms", "balance", "balance_ms", "lender", false);
-  const C = D.meta.collection || {}, cm = C.majorstock || {}, cx = C.exchange || {};
-  const n = v => (v || 0).toLocaleString("ko-KR"), dot = d => (d || "").replace(/(\d{4})(\d{2})(\d{2})/, "$1.$2.$3");
-  el("lnBasis").style.cssText = "display:block;line-height:1.75";
+  const n = v => (v || 0).toLocaleString("ko-KR");
   el("lnBasis").innerHTML =
-    `<div style="font-weight:800;color:#dde5f4;margin-bottom:6px">데이터 수집 · 파싱 방법</div>
-     <div><b>1. 전체 상장사 검색</b> — 회사를 고르지 않고 코스피·코스닥 전체를 공시 종류로 검색했습니다.
-       ${dot((cm.period || [])[0])} ~ ${dot((cm.period || [])[1])} 접수된 대량보유상황보고서(일반) <b>${n(cm.list_rows)}건</b>,
-       거래소 주식담보제공계약 공시 <b>${n(cx.list_rows)}건</b>의 목록을 빠짐없이 받았습니다.</div>
-     <div><b>2. 최신 공시만 사용</b> — 같은 계약이 다음 보고서에 다시 적히므로, 회사·제출인별로 가장 최근 보고서가 현재 상태입니다.
-       해당 원문 <b>${n(cm.targets)}건</b>과 거래소 공시 <b>${n(cx.targets)}건</b>을 DART에서 받았습니다.</div>
-     <div><b>3. 표에서 계약 읽기</b> — 보고서의 '보유주식등에 관한 계약' 표에서 담보·질권·대출 계약을 읽고,
-       '담보계약 추가 기재사항' 표의 대출금액·이자율을 주식 수와 연번으로 연결했습니다.
-       거래소 공시는 '개별 담보제공 계약' 표에서 채권자·기간·주식 수를 읽었습니다.</div>
-     <div><b>4. 대출이 아닌 것 제외</b> — 납세담보·공탁, 주식대차, 해지·상환된 계약, 만기가 지난 계약은 뺐습니다.
-       두 공시에 함께 실린 계약은 1건으로 합쳤습니다.</div>
-     <div><b>5. 집계 대상</b> — ${lnYear === "all" ? "현재 남아 있는 계약 전체" : `현재 남아 있는 계약 중 ${lnYear}년에 체결하거나 연장한 계약`}
-       <b>${n(ln.total.contracts)}건</b> · <b>${n(ln.total.companies)}개사</b></div>`;
+    `<div>DART 공시 기준 · 코스피·코스닥 전체 · ${lnYear === "all" ? "현재 남아 있는 계약" : lnYear + "년 체결"} <b>${n(ln.total.contracts)}건</b> · <b>${n(ln.total.companies)}개사</b> (만기 경과 제외)</div>
+     <div>수집 — 대량보유상황보고서 · 거래소 담보제공계약 공시 · 회사·제출인별 <b>최신 공시</b> 기준</div>
+     <div>금액 — 공시에 적힌 <b>대출금액</b> (담보계약 추가 기재사항 표)</div>`;
 
 }
 
@@ -689,6 +720,8 @@ async function init() {
   });
   el("mlB").addEventListener("click", e => {
     if (e.target.closest("a")) return;
+    const k = e.target.closest("tr.rkr");
+    if (k) { (k.dataset.kind === "loan" ? openLoanList : openIpoList)(k.dataset.org); return; }
     const r = e.target.closest("tr.lg");
     if (!r) return;
     loanOpen.has(r.dataset.c) ? loanOpen.delete(r.dataset.c) : loanOpen.add(r.dataset.c);
@@ -699,6 +732,8 @@ async function init() {
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeList(); });
   el("btn3d").onclick = open3d;
   el("btn3dLn").onclick = open3dLoan;
+  el("btnAllLn").onclick = () => openRankList("loan");
+  el("btnAllLk").onclick = () => openRankList("lockup");
   el("m3close").onclick = close3d;
   el("m3replay").onclick = play3d;
   el("modal3d").onclick = e => { if (e.target.id === "modal3d") close3d(); };
