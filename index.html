@@ -43,7 +43,7 @@
   @media(max-width:1100px){.sum{grid-template-columns:1fr}}
   @media(max-width:640px){.sp-b{grid-template-columns:1fr}}
 
-  /* 영업 대상 팝업 */
+  /* 대상 기업 팝업 */
   .act{position:fixed;inset:0;z-index:35;background:rgba(16,24,39,.5);display:none;align-items:flex-start;justify-content:center;padding:34px 20px;overflow:auto}
   .act.on{display:flex}
   .act-box{width:min(1240px,100%);background:#f5f7fb;border-radius:16px;box-shadow:0 30px 80px rgba(16,24,39,.35);overflow:hidden}
@@ -336,7 +336,7 @@
   .mini th{background:#0f1728}
   .mini td{border-bottom-color:#1b2439}
 
-  /* 영업 대상 팝업 */
+  /* 대상 기업 팝업 */
   .act{background:rgba(3,6,12,.74)}
   .act-box{background:#0b1220;border:1px solid #222d45;box-shadow:0 40px 100px rgba(0,0,0,.7)}
   .act-h{background:#101827;border-bottom-color:#202b43}
@@ -620,7 +620,7 @@ function setup() {
   el("fAmt").previousElementSibling.textContent = isCo ? "시가총액" : "금액";
 }
 
-/* ── 상단 카드와 영업 대상 팝업 ─────────────────────────────────
+/* ── 상단 카드와 대상 기업 팝업 ─────────────────────────────────
    카드 숫자는 회사 수다. 연락할 곳이 몇 군데인지가 먼저이고, 주주·계약 건수는 그 안의 내용이다. */
 const ME = "삼성증권";
 const ACT = { kind: "lockup", days: 7, who: "all", sort: "date", bkt: "all", open: new Set(), groups: [] };
@@ -638,11 +638,11 @@ const num = v => (v || 0).toLocaleString("ko-KR");
 function summary() {
   const tile = (k, days, now) => {
     const lk = k === "lockup", it = actItems(k, days);
-    return `<div class="st ${now ? "now" : ""}" data-k="${k}" data-d="${days}" role="button" tabindex="0" title="눌러서 영업 대상을 봅니다">
+    return `<div class="st ${now ? "now" : ""}" data-k="${k}" data-d="${days}" role="button" tabindex="0" title="눌러서 대상 기업을 봅니다">
       <div class="st-l">${days}일 내 ${lk ? "해제" : "만기"}</div>
       <div class="st-v">${num(nCo(it))}<span class="u">개사</span><em>${eok(sumAmt(k, it))}원</em></div>
       <div class="st-s">${lk ? "주주 " + num(it.length) + "명" : "계약 " + num(it.length) + "건"}</div>
-      <div class="st-go"><span>영업 대상 보기</span><span>→</span></div></div>`;
+      <div class="st-go"><span>대상 기업 보기</span><span>→</span></div></div>`;
   };
   const ICON = {
     lockup: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 7.5-2"/></svg>',
@@ -775,7 +775,7 @@ function actDraw() {
         <div class="ac-o"><small>${lk ? "IPO 주관(수탁) 증권사" : "현재 대출기관"}</small>${orgs}</div>
       </div>
       <div class="ac-m">${meta.filter(Boolean).map(t => `<span>${t}</span>`).join("")}</div>
-      <div class="ac-p"><h5>영업 포인트</h5><ul>${pts.map(t => `<li>${t}</li>`).join("")}</ul></div>
+      <div class="ac-p"><h5>확인 포인트</h5><ul>${pts.map(t => `<li>${t}</li>`).join("")}</ul></div>
       <div class="ac-btn"><button data-t="${g.code}">${lk ? "대상자" : "계약"} ${g.list.length}${lk ? "명" : "건"} ${on ? "접기 ▴" : "보기 ▾"}</button>
         <button data-o="${g.code}">기업 상세</button>
         ${g.src ? `<a href="${g.src}" target="_blank" rel="noopener">공시 원문</a>` : ""}</div>
@@ -791,7 +791,7 @@ function actDraw() {
 function actHead() {
   const k = ACT.kind, lk = k === "lockup", all = actItems(k, ACT.days);
   const mine = all.filter(x => isMine(k, x)), oth = all.filter(x => !isMine(k, x)), soon = actItems(k, 1);
-  el("actT").textContent = `${ACT.days}일 내 ${lk ? "보호예수 해제" : "담보대출 만기"} · 영업 대상`;
+  el("actT").textContent = `${ACT.days}일 내 ${lk ? "보호예수 해제" : "담보대출 만기"} · 대상 기업`;
   el("actD").textContent = `기준일 ${fd(D.meta.baseDate)} · ${lk ? "평가금액은 " + fd(D.meta.priceDate) + " 종가 기준" : "대출금액은 공시 기재 금액 · 공동담보는 한 번만 합산"}`;
   el("actK").innerHTML = `
     <div><small>연락할 기업</small><b>${num(nCo(all))}개사</b><span>${lk ? "주주 " + num(all.length) + "명" : "계약 " + num(all.length) + "건"}</span></div>
@@ -820,8 +820,8 @@ function closeAct() { el("act").classList.remove("on"); document.body.style.over
 
 function actCsv() {
   const lk = ACT.kind === "lockup", strip = v => String(v).replace(/<[^>]*>/g, "");
-  const head = lk ? ["해제일", "D-day", "기업", "종목코드", "시장", "시가총액(억)", "해제 평가금액(원)", "해제 주식수", "주주 수", "주관 증권사", "자사 주관", "공모가 대비(%)", "영업 포인트", "원문"]
-    : ["만기일", "D-day", "기업", "종목코드", "시장", "시가총액(억)", "만기 대출금액(원)", "계약 수", "차주", "대출기관", "자사 대출", "금리(%)", "담보비율(%)", "영업 포인트", "원문"];
+  const head = lk ? ["해제일", "D-day", "기업", "종목코드", "시장", "시가총액(억)", "해제 평가금액(원)", "해제 주식수", "주주 수", "주관 증권사", "자사 주관", "공모가 대비(%)", "확인 포인트", "원문"]
+    : ["만기일", "D-day", "기업", "종목코드", "시장", "시가총액(억)", "만기 대출금액(원)", "계약 수", "차주", "대출기관", "자사 대출", "금리(%)", "담보비율(%)", "확인 포인트", "원문"];
   const body = ACT.groups.map(g => lk
     ? [g.date, g.k, g.name, g.code, g.market, g.cap ?? "", Math.round(g.amt), g.qty, g.list.length, g.orgs.join("·"), g.mine ? "Y" : "N",
        g.ret != null ? g.ret.toFixed(0) : "", actPoints(g).map(strip).join(" / "), g.src || ""]
@@ -831,7 +831,7 @@ function actCsv() {
   const t = [head, ...body].map(r => r.map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(",")).join("\n");
   const u = URL.createObjectURL(new Blob(["﻿" + t], { type: "text/csv;charset=utf-8" }));
   const a = document.createElement("a");
-  a.href = u; a.download = `영업대상_${lk ? "보호예수해제" : "담보대출만기"}_${ACT.days}일${ACT.bkt === "all" ? "" : "_" + BKT.find(t => t[0] === ACT.bkt)[1].replace(/\s/g, "")}_${D.meta.baseDate}.csv`; a.click();
+  a.href = u; a.download = `대상기업_${lk ? "보호예수해제" : "담보대출만기"}_${ACT.days}일${ACT.bkt === "all" ? "" : "_" + BKT.find(t => t[0] === ACT.bkt)[1].replace(/\s/g, "")}_${D.meta.baseDate}.csv`; a.click();
   URL.revokeObjectURL(u);
 }
 
