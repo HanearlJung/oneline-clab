@@ -561,6 +561,16 @@ function labelTables() {
     .observe(document.body, { childList: true, subtree: true });
   MQ.addEventListener("change", labelTables); }
 
+/* 뒤로가기로 닫기 — 팝업을 열 때마다 방문 기록을 한 칸 쌓는다.
+   뒤로가기를 누르면 이전 페이지로 가지 않고 맨 위에 열린 화면만 닫힌다.
+   닫기 버튼·바깥 누르기·ESC 도 같은 길(기록 한 칸 되돌리기)을 탄다. */
+const OV = [];
+let ovSeq = (history.state && history.state.ov) || 0;
+function ovPush(close) { const id = ++ovSeq; OV.push({ id, close }); history.pushState({ ov: id }, ""); }
+function ovBack(n = 1) { if (OV.length) history.go(-Math.min(n, OV.length)); }
+addEventListener("popstate", e => { const keep = (e.state && e.state.ov) || 0;
+  while (OV.length && OV[OV.length - 1].id > keep) OV.pop().close(); });
+
 const eok = v => { if (v == null) return null; const a = v / 1e8;
   if (a >= 10000) { const j = a / 10000; return (Number.isInteger(j) ? j.toFixed(0) : j.toFixed(1)) + "조"; }
   if (a < 1) return Math.round(v / 1e4).toLocaleString("ko-KR") + "만"; return Math.round(a).toLocaleString("ko-KR") + "억"; };
@@ -927,10 +937,13 @@ function openAct(k, days) {
   Object.assign(ACT, { kind: k, days, who: "all", sort: "date", open: new Set(), bkt: "all" });
   if (days > 7 && actItems(k, days).some(x => dd(x[actKey(k)]) > 7)) ACT.bkt = "later";
   actHead(); actBuild(); actDraw();
+  const was = el("act").classList.contains("on");
   el("act").classList.add("on"); el("act").scrollTop = 0;
   document.body.style.overflow = "hidden";
+  if (!was) ovPush(hideAct);
 }
-function closeAct() { el("act").classList.remove("on"); document.body.style.overflow = ""; }
+function hideAct() { el("act").classList.remove("on"); document.body.style.overflow = ""; }
+function closeAct() { if (el("act").classList.contains("on") && !el("drawer").classList.contains("on")) ovBack(); }
 
 function actCsv() {
   const lk = ACT.kind === "lockup", strip = v => String(v).replace(/<[^>]*>/g, "");
@@ -1184,9 +1197,12 @@ function open(c) {
       </div>
     </div>`;
   el("sheet").scrollTop = 0;
+  const was = el("drawer").classList.contains("on");
   el("drawer").classList.add("on");
+  if (!was) ovPush(hideD);
 }
-function closeD() { el("drawer").classList.remove("on"); }
+function hideD() { el("drawer").classList.remove("on"); }
+function closeD() { if (el("drawer").classList.contains("on")) ovBack(); }
 el("drawer").onclick = e => { if (e.target.id === "drawer") closeD(); };
 document.addEventListener("keydown", e => { if (e.key === "Escape") closeD(); });
 

@@ -391,6 +391,16 @@ function labelTables() {
     .observe(document.body, { childList: true, subtree: true });
   MQ.addEventListener("change", labelTables); }
 
+/* 뒤로가기로 닫기 — 팝업을 열 때마다 방문 기록을 한 칸 쌓는다.
+   뒤로가기를 누르면 이전 페이지로 가지 않고 맨 위에 열린 화면만 닫힌다.
+   닫기 버튼·바깥 누르기·ESC 도 같은 길(기록 한 칸 되돌리기)을 탄다. */
+const OV = [];
+let ovSeq = (history.state && history.state.ov) || 0;
+function ovPush(close) { const id = ++ovSeq; OV.push({ id, close }); history.pushState({ ov: id }, ""); }
+function ovBack(n = 1) { if (OV.length) history.go(-Math.min(n, OV.length)); }
+addEventListener("popstate", e => { const keep = (e.state && e.state.ov) || 0;
+  while (OV.length && OV[OV.length - 1].id > keep) OV.pop().close(); });
+
 // 이름을 굵게 쓰는 곳은 삼성증권뿐이다. 나머지는 보통 굵기로 둔다.
 const isKey = n => n === "삼성증권";
 const eok = v => { if (v == null) return null; const a = v / 1e8;
@@ -554,7 +564,14 @@ function openRankList(kind) {
   const wrap = el("modalList").querySelector(".lwrap");
   wrap.scrollTop = 0;
 }
-function closeList() { el("modalList").classList.remove("on"); }
+/* 목록 팝업은 전체 순위 → 기관 목록처럼 안에서 화면이 바뀐다.
+   뒤로가기는 한 단계씩 되돌리고, 닫기 버튼은 팝업 전체를 닫는다. */
+const listStack = [];
+function showList(render) {
+  listStack.push(render); render();
+  ovPush(() => { listStack.pop(); const prev = listStack[listStack.length - 1]; prev ? prev() : el("modalList").classList.remove("on"); });
+}
+function closeList() { if (el("modalList").classList.contains("on")) ovBack(listStack.length); }
 
 function render() {
   // 수탁 증권사 = IPO 대표주관회사. 추정·기재 구분이 없으므로 토글은 쓰지 않는다.
@@ -799,6 +816,7 @@ function open3dLoan() {
   el("g3tAmt").innerHTML = "금액 기준 <small>대출금액</small>";
   el("modal3d").classList.add("on");
   play3d();
+  ovPush(hide3d);
 }
 function open3d() {
   g3Kind = "ipo";
@@ -809,8 +827,10 @@ function open3d() {
   el("m3sub").textContent = `${ys[0]}년 ~ ${ys[ys.length - 1]}년 상장 · ${scope === "all" ? "스팩·리츠 포함" : "스팩·리츠·인프라펀드 제외"} · 막대가 높을수록 순위가 높습니다`;
   el("modal3d").classList.add("on");
   play3d();
+  ovPush(hide3d);
 }
-function close3d() { el("modal3d").classList.remove("on"); cancelAnimationFrame(raf3); }
+function hide3d() { el("modal3d").classList.remove("on"); cancelAnimationFrame(raf3); }
+function close3d() { if (el("modal3d").classList.contains("on")) ovBack(); }
 
 async function init() {
   try {
@@ -838,12 +858,12 @@ async function init() {
   el("estOn").onchange = e => { est = e.target.checked; render(); };
   document.addEventListener("click", e => {
     const r = e.target.closest(".row[data-org]");
-    if (r) (r.dataset.kind === "lockup" ? openIpoList : openLoanList)(r.dataset.org);
+    if (r) { const org = r.dataset.org, f = r.dataset.kind === "lockup" ? openIpoList : openLoanList; showList(() => f(org)); }
   });
   el("mlB").addEventListener("click", e => {
     if (e.target.closest("a")) return;
     const k = e.target.closest("tr.rkr");
-    if (k) { (k.dataset.kind === "loan" ? openLoanList : openIpoList)(k.dataset.org); return; }
+    if (k) { const org = k.dataset.org, f = k.dataset.kind === "loan" ? openLoanList : openIpoList; showList(() => f(org)); return; }
     const r = e.target.closest("tr.lg");
     if (!r) return;
     loanOpen.has(r.dataset.c) ? loanOpen.delete(r.dataset.c) : loanOpen.add(r.dataset.c);
@@ -854,8 +874,8 @@ async function init() {
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeList(); });
   el("btn3d").onclick = open3d;
   el("btn3dLn").onclick = open3dLoan;
-  el("btnAllLn").onclick = () => openRankList("loan");
-  el("btnAllLk").onclick = () => openRankList("lockup");
+  el("btnAllLn").onclick = () => showList(() => openRankList("loan"));
+  el("btnAllLk").onclick = () => showList(() => openRankList("lockup"));
   el("m3close").onclick = close3d;
   el("m3replay").onclick = play3d;
   el("modal3d").onclick = e => { if (e.target.id === "modal3d") close3d(); };
