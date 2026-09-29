@@ -195,6 +195,86 @@
   .g3-t{display:flex;align-items:baseline;gap:10px;font-size:16px;font-weight:800;color:#e6ecf7}
   .g3-t small{font-size:13px;font-weight:600;color:#8f9db6}
   .g3 svg{display:block;width:100%;height:auto}
+  /* ── 모바일·세로 태블릿 (폭 900 이하) ─────────────────────────────────── */
+  @media (max-width:900px){
+    html{-webkit-text-size-adjust:100%}
+    .topbar{height:auto;padding:10px 14px 12px;display:grid;grid-template-columns:1fr auto;
+      grid-template-areas:"brand right" "nav nav";gap:10px 12px}
+    .brand{grid-area:brand;min-width:0}
+    .brand-bar,.brand > div:last-child{display:none}
+    .brand-logo{height:30px}
+    .top-right{grid-area:right;gap:10px}
+    .top-meta{font-size:10.5px;line-height:1.35}
+    .co-logo{padding-left:10px;height:28px} .co-logo img{height:20px}
+    .nav{grid-area:nav;gap:8px}
+    .nav a{flex:1;justify-content:center;height:40px;padding:0;font-size:14.5px;background:rgba(255,255,255,.05)}
+    .page{width:calc(100% - 24px);margin:14px auto 36px}
+
+    /* 표는 카드로 바꾼다. 칸 이름표는 data-l 에서 온다 */
+    table{display:block;min-width:0 !important;width:100%}
+    thead,colgroup{display:none}
+    tbody{display:block}
+    tbody > tr{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;padding:12px 14px;border-bottom:1px solid #1b2439;position:relative}
+    tbody > tr > td{display:block;padding:0 !important;border:0 !important;background:transparent !important;
+      text-align:left !important;min-width:0;white-space:normal !important;font-size:13.5px}
+    tbody > tr > td[data-l]::before{content:attr(data-l);display:block;font-size:10.5px;font-weight:700;color:#7f8da8;margin-bottom:1px}
+    tbody > tr > td:first-child{grid-column:1/-1;font-size:15px}
+    tbody > tr > td:first-child::before,tbody > tr > td[data-l=""]::before{display:none}
+    tbody > tr > td[colspan]{grid-column:1/-1}
+    tbody > tr:last-child{border-bottom:0}
+
+    .hero{flex-direction:column;align-items:stretch;gap:10px;margin:0 0 12px}
+    .hero h1{font-size:21px}
+    .ctl{width:100%} #modeSeg{flex:1} #modeSeg button{flex:1;height:40px;padding:0}
+    .two{grid-template-columns:1fr;gap:12px}
+    .card{padding:16px 14px}
+    .card-h{padding-bottom:12px} .card-t{font-size:17px} .card-t::before{height:17px}
+    .badge{font-size:10px;padding:3px 8px}
+    .tot{gap:6px;margin:12px 0}
+    .tot div{padding:9px 10px;font-size:11.5px}
+    .tot b,.tot div:first-child b{font-size:17px !important}
+    .seg{flex-wrap:wrap} .seg button{height:38px;padding:0 12px;font-size:13.5px}
+    #yearSeg{width:100%;flex-wrap:nowrap !important} #yearSeg button{flex:1;padding:0;font-size:12.5px;white-space:nowrap}
+    #scopeSeg button{height:34px}
+    .rbtn{margin-left:0;width:100%}
+    .rbtn button{flex:1;height:40px;padding:0;font-size:14px}
+
+    .row{grid-template-columns:22px minmax(0,1fr) auto auto;grid-template-areas:"rk nm pct cn" ". bar bar bar";gap:6px 10px;padding:11px 0}
+    .rk{grid-area:rk;font-size:12.5px} .nm{grid-area:nm;font-size:15px}
+    .bar{grid-area:bar} .pct{grid-area:pct;font-size:16px}
+    .cn{grid-area:cn;font-size:12.5px;min-width:54px}
+    .row.me{margin:0 -8px;padding:12px 8px}
+    .row.gap > div:nth-child(n+3){display:none}
+    .basis{font-size:12px;gap:8px}
+    .foot{text-align:left;font-size:10.5px}
+
+    .modal{padding:0;align-items:stretch}
+    .modal-box{width:100%;max-height:100vh;border-radius:0;border:0;padding:16px 14px 24px}
+    .modal-h{flex-wrap:wrap;gap:8px} .modal-t{font-size:17px} .modal-s{font-size:12px}
+    .modal-x button{height:34px;padding:0 11px;font-size:12.5px}
+    .g3{padding:10px 6px 4px} .g3-t{font-size:14px;padding-left:6px} .g3-t small{font-size:11.5px}
+    .lsum{gap:4px 14px;font-size:12px}
+    .lwrap{max-height:none;overflow:visible;border:0}
+    .lt td,.lt2 td{color:#dbe4f5}
+    .lt .nm2{white-space:normal}
+    tr.ls,tr:has(> td[colspan]){display:block;padding:0}
+    tr.ls > td{padding:0 0 0 14px !important;background:rgba(255,255,255,.025) !important}
+    .lt2 tbody > tr{padding:10px 12px}
+    .lt2 tbody > tr > td:first-child{font-weight:700;font-size:14px}
+    tr.lg.on{background:rgba(132,150,240,.08)}
+    /* 전체 순위는 한 줄에 순위·이름·값·점유율만 */
+    tr.rkr{grid-template-columns:30px minmax(0,1fr) auto 54px !important;align-items:center;gap:0 10px !important;padding:11px 12px !important}
+    tr.rkr > td::before{display:none !important}
+    tr.rkr > td:first-child{grid-column:auto !important;font-size:13px !important;color:#8f9db6}
+    tr.rkr > td{text-align:right !important;font-variant-numeric:tabular-nums}
+    tr.rkr > td:nth-child(2){text-align:left !important}
+    tr.rkr > td[data-l="구분"]{display:none}
+    #mlB[data-mode="amt"] tr.rkr > td[data-l="계약"],#mlB[data-mode="amt"] tr.rkr > td[data-l="주관 기업"],
+    #mlB[data-mode="amt"] tr.rkr > td[data-l="건수 점유율"],
+    #mlB[data-mode="cnt"] tr.rkr > td[data-l="대출금액"],#mlB[data-mode="cnt"] tr.rkr > td[data-l="인수금액"],
+    #mlB[data-mode="cnt"] tr.rkr > td[data-l="금액 점유율"]{display:none}
+    tr.rkr.me{background:rgba(245,178,60,.1)}
+  }
 </style>
 </head>
 <body>
@@ -296,6 +376,21 @@
 
 <script>
 const el = id => document.getElementById(id);
+/* 모바일에서는 표를 카드로 바꾼다. 머리줄 이름을 각 칸에 붙여 두면 CSS 가 이름표로 쓴다. */
+const MQ = matchMedia("(max-width:900px)");
+function labelTables() {
+  if (!MQ.matches) return;
+  document.querySelectorAll("table").forEach(t => {
+    const h = t.tHead && t.tHead.rows[0]; if (!h) return;
+    const names = [...h.cells].map(c => c.textContent.trim());
+    [...t.tBodies].forEach(b => [...b.rows].forEach(r => { if (r.cells.length !== names.length) return;
+      [...r.cells].forEach((c, i) => { if (c.dataset.l !== names[i]) c.dataset.l = names[i]; }); }));
+  });
+}
+{ let id = 0; new MutationObserver(() => { cancelAnimationFrame(id); id = requestAnimationFrame(labelTables); })
+    .observe(document.body, { childList: true, subtree: true });
+  MQ.addEventListener("change", labelTables); }
+
 // 이름을 굵게 쓰는 곳은 삼성증권뿐이다. 나머지는 보통 굵기로 둔다.
 const isKey = n => n === "삼성증권";
 const eok = v => { if (v == null) return null; const a = v / 1e8;
@@ -454,6 +549,7 @@ function openRankList(kind) {
       <td class="r">${i + 1}</td><td><div class="nm2">${esc(r[nameKey])}</div></td>${loan ? `<td>${esc(r.lender_type || "")}</td>` : ""}
       <td class="r">${n(r.cnt)}${unit}</td><td class="r">${(r.cnt_ms || 0).toFixed(1)}%</td>
       <td class="r">${r[aKey] ? eok(r[aKey]) + "원" : '<span style="color:#5d6a85">—</span>'}</td><td class="r">${(r[apKey] || 0).toFixed(1)}%</td></tr>`).join("");
+  el("mlB").dataset.mode = mode;
   el("modalList").classList.add("on");
   const wrap = el("modalList").querySelector(".lwrap");
   wrap.scrollTop = 0;
@@ -501,7 +597,10 @@ function render() {
 /* ── 삼성증권 연도별 순위 3D 그래프 ───────────────────────────────
    막대 높이는 순위다 (1위가 가장 높다). 비스듬히 본 직육면체를 SVG 로 그린다.
    x: 연도, y: 순위, z: 깊이.  화면 좌표 = (x + z·0.62, −y − z·0.36)            */
-const G3 = { W: 1000, H: 330, L: 86, B: 268, plotW: 760, plotH: 196, dz: 46, bw: 78, MAXR: 10 };
+const G3_PC = { W: 1000, H: 330, L: 86, B: 268, plotW: 760, plotH: 196, dz: 46, bw: 78, MAXR: 10, m: false };
+// 모바일: 화면이 좁아 그림 폭을 줄이고 글자를 상대적으로 키운다
+const G3_M = { W: 470, H: 344, L: 52, B: 274, plotW: 374, plotH: 196, dz: 32, bw: 44, MAXR: 10, m: true };
+let G3 = G3_PC;
 const NS = "http://www.w3.org/2000/svg";
 const sv = (tag, attrs, text) => { const e = document.createElementNS(NS, tag);
   for (const k in attrs) e.setAttribute(k, attrs[k]); if (text != null) e.textContent = text; return e; };
@@ -543,7 +642,7 @@ function draw3d(svg, series, uid) {
     svg.appendChild(sv("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: r === 1 ? "rgba(245,178,60,.45)" : "#22304d",
       "stroke-width": 1, "stroke-dasharray": r === 1 ? "" : "3 5" }));
     svg.appendChild(sv("line", { x1: c[0], y1: c[1], x2: a[0], y2: a[1], stroke: "#22304d", "stroke-width": 1 }));
-    svg.appendChild(sv("text", { x: c[0] - 10, y: c[1] + 4, "text-anchor": "end", "font-size": 13, "font-weight": 700,
+    svg.appendChild(sv("text", { x: c[0] - (G3.m ? 6 : 10), y: c[1] + 4, "text-anchor": "end", "font-size": G3.m ? 14 : 13, "font-weight": 700,
       fill: r === 1 ? "#f5b23c" : "#7f8da8" }, r + "위"));
   });
 
@@ -554,15 +653,18 @@ function draw3d(svg, series, uid) {
       fill: "rgba(245,178,60,.35)", filter: `url(#g${uid})`, opacity: 0 });
     const side = sv("polygon", { fill: `url(#s${uid})` }), front = sv("polygon", { fill: `url(#f${uid})` }),
       top = sv("polygon", { fill: `url(#t${uid})` }), edge = sv("polyline", { fill: "none", stroke: "rgba(255,240,200,.55)", "stroke-width": 1 });
-    const cx = P3((x0 + x1) / 2, 0, z0)[0] + 14;
+    const cx = P3((x0 + x1) / 2, 0, z0)[0] + (G3.m ? 10 : 14);
     const lab = sv("g", { opacity: 0 });
-    const tRank = sv("text", { x: cx, "text-anchor": "middle", "font-size": 27, "font-weight": 850, fill: "#ffd27a",
+    const tRank = sv("text", { x: cx, "text-anchor": "middle", "font-size": G3.m ? 25 : 27, "font-weight": 850, fill: "#ffd27a",
       style: "paint-order:stroke;stroke:#0d1424;stroke-width:5px" }, s.rank ? s.rank + "위" : "—");
     const tVal = sv("text", { x: cx, "text-anchor": "middle", "font-size": 13.5, "font-weight": 700, fill: "#c9d4ea",
-      style: "paint-order:stroke;stroke:#0d1424;stroke-width:4px" }, s.rank ? `${s.val} · ${s.ms}` : s.val);
-    lab.appendChild(tRank); lab.appendChild(tVal);
+      style: "paint-order:stroke;stroke:#0d1424;stroke-width:4px" }, s.rank && !G3.m ? `${s.val} · ${s.ms}` : s.val);
+    // 모바일은 막대 사이가 좁아 값과 점유율을 두 줄로 나눈다
+    const tMs = sv("text", { x: cx, "text-anchor": "middle", "font-size": 12.5, "font-weight": 700, fill: "#9aa7bd",
+      style: "paint-order:stroke;stroke:#0d1424;stroke-width:4px" }, s.rank && G3.m ? s.ms : "");
+    lab.appendChild(tRank); lab.appendChild(tVal); lab.appendChild(tMs);
     const yr = P3((x0 + x1) / 2, 0, 0);
-    svg.appendChild(sv("text", { x: yr[0] - 6, y: yr[1] + 30, "text-anchor": "middle", "font-size": 16, "font-weight": 800, fill: "#dbe4f5" }, s.year + "년"));
+    svg.appendChild(sv("text", { x: yr[0] - 6, y: yr[1] + 30, "text-anchor": "middle", "font-size": G3.m ? 15 : 16, "font-weight": 800, fill: "#dbe4f5" }, s.year + "년"));
     [glow, side, front, top, edge, lab].forEach(n => g.appendChild(n));
     svg.appendChild(g);
     const target = hOf(s.rank);
@@ -574,7 +676,8 @@ function draw3d(svg, series, uid) {
       edge.setAttribute("points", pts([P3(x0, h, z0), P3(x1, h, z0), P3(x1, h, z1)]));
       glow.setAttribute("opacity", (0.9 * k).toFixed(2));
       const ty = P3(0, h, z1)[1];
-      tRank.setAttribute("y", ty - 26); tVal.setAttribute("y", ty - 8);
+      if (G3.m) { tRank.setAttribute("y", ty - 38); tVal.setAttribute("y", ty - 21); tMs.setAttribute("y", ty - 6); }
+      else { tRank.setAttribute("y", ty - 26); tVal.setAttribute("y", ty - 8); }
       lab.setAttribute("opacity", Math.max(0, (k - 0.72) / 0.28).toFixed(2));
     };
     set(0);
@@ -589,16 +692,17 @@ function lenderSeries(key) {
   const v = r => key === "amt" ? r.balance : r.cnt, pct = r => key === "amt" ? r.balance_ms : r.cnt_ms;
   const rows = ms.rows.filter(r => v(r) > 0).sort((a, b) => v(b) - v(a) || b.balance - a.balance);
   const mi = rows.findIndex(r => r.lender === ME);
-  const pick = rows.slice(0, 10).map((r, i) => [r, i + 1]);
-  if (mi >= 10) pick.push([rows[mi], mi + 1]);
+  const N = MQ.matches ? 5 : 10;                    // 모바일은 막대를 줄여 글자가 읽히게 한다
+  const pick = rows.slice(0, N).map((r, i) => [r, i + 1]);
+  if (mi >= N) pick.push([rows[mi], mi + 1]);
   const max = Math.max(...pick.map(([r]) => v(r)), 1);
-  return { max, key, gap: mi >= 10, bars: pick.map(([r, rank]) => ({
+  return { max, key, gap: mi >= N, bars: pick.map(([r, rank]) => ({
     name: r.lender, rank, me: r.lender === ME, k: v(r) / max,
     val: key === "amt" ? eok(r.balance) : r.cnt.toLocaleString("ko-KR") + "건", ms: pct(r).toFixed(1) + "%" })) };
 }
 function drawBars3d(svg, S, uid) {
   svg.innerHTML = "";
-  const W = 850, H = G3.plotH, L = 74, dz = G3.dz;
+  const M = G3.m, W = M ? 370 : 850, H = G3.plotH, L = M ? 56 : 74, dz = G3.dz;
   const Q = (x, y, z) => [L + x + z * 0.62, G3.B - y - z * 0.36];
   const defs = sv("defs", {});
   defs.innerHTML = `
@@ -619,7 +723,7 @@ function drawBars3d(svg, S, uid) {
     const y = HMAX * f, a = Q(0, y, dz * 2.1), b = Q(W, y, dz * 2.1), c = Q(0, y, 0);
     svg.appendChild(sv("line", { x1: a[0], y1: a[1], x2: b[0], y2: b[1], stroke: "#22304d", "stroke-width": 1, "stroke-dasharray": "3 5" }));
     svg.appendChild(sv("line", { x1: c[0], y1: c[1], x2: a[0], y2: a[1], stroke: "#22304d", "stroke-width": 1 }));
-    svg.appendChild(sv("text", { x: c[0] - 8, y: c[1] + 4, "text-anchor": "end", "font-size": 11.5, "font-weight": 700, fill: "#7f8da8" },
+    svg.appendChild(sv("text", { x: c[0] - (M ? 5 : 8), y: c[1] + 4, "text-anchor": "end", "font-size": M ? 12.5 : 11.5, "font-weight": 700, fill: "#7f8da8" },
       S.key === "amt" ? eok(S.max * f) : Math.round(S.max * f).toLocaleString("ko-KR") + "건"));
   });
   const n = S.bars.length, step = W / n, bw = Math.min(50, step * 0.62), z0 = dz * 0.55, z1 = z0 + dz;
@@ -630,8 +734,8 @@ function drawBars3d(svg, S, uid) {
     const side = sv("polygon", { fill: `url(#s${c}${uid})` }), front = sv("polygon", { fill: `url(#f${c}${uid})` }),
       top = sv("polygon", { fill: `url(#t${c}${uid})` }),
       edge = sv("polyline", { fill: "none", stroke: s.me ? "rgba(255,240,200,.6)" : "rgba(200,220,255,.4)", "stroke-width": 1 });
-    const cx = Q((x0 + x1) / 2, 0, z0)[0] + 14, lab = sv("g", { opacity: 0 });
-    const tVal = sv("text", { x: cx, "text-anchor": "middle", "font-size": s.me ? 17 : 13.5, "font-weight": 850,
+    const cx = Q((x0 + x1) / 2, 0, z0)[0] + (M ? 10 : 14), lab = sv("g", { opacity: 0 });
+    const tVal = sv("text", { x: cx, "text-anchor": "middle", "font-size": M ? (s.me ? 15 : 13.5) : (s.me ? 17 : 13.5), "font-weight": 850,
       fill: s.me ? "#ffd27a" : "#e6edfb", style: "paint-order:stroke;stroke:#0d1424;stroke-width:4px" }, s.val);
     const tPct = sv("text", { x: cx, "text-anchor": "middle", "font-size": 11.5, "font-weight": 700,
       fill: s.me ? "#f0b45c" : "#9aa7bd", style: "paint-order:stroke;stroke:#0d1424;stroke-width:4px" }, s.ms);
@@ -641,8 +745,11 @@ function drawBars3d(svg, S, uid) {
       "font-size": 15, "font-weight": 800, fill: "#5d6a85" }, "⋯"));
     svg.appendChild(sv("text", { x: base[0] - 4, y: base[1] + 22, "text-anchor": "middle", "font-size": s.me ? 15 : 13,
       "font-weight": 850, fill: s.me ? "#f5b23c" : "#8fa0bf" }, s.rank + "위"));
-    svg.appendChild(sv("text", { x: base[0] - 4, y: base[1] + 40, "text-anchor": "middle", "font-size": 11.5,
-      "font-weight": s.me ? 800 : 500, fill: s.me ? "#ffd27a" : "#c9d4ea" }, s.name.length > 7 ? s.name.slice(0, 6) + "…" : s.name));
+    // 모바일은 이름을 두 줄로 나눠 자르지 않고 다 보여준다
+    const nm = M && s.name.length > 4 ? [s.name.slice(0, Math.ceil(s.name.length / 2)), s.name.slice(Math.ceil(s.name.length / 2))]
+      : [s.name.length > 7 ? s.name.slice(0, 6) + "…" : s.name];
+    nm.forEach((t, j) => svg.appendChild(sv("text", { x: base[0] - 4, y: base[1] + 40 + j * 14, "text-anchor": "middle", "font-size": M ? 12 : 11.5,
+      "font-weight": s.me ? 800 : 500, fill: s.me ? "#ffd27a" : "#c9d4ea" }, t)));
     [glow, side, front, top, edge, lab].forEach(e => g.appendChild(e));
     svg.appendChild(g);
     const target = Math.max(HMAX * s.k, 3);
@@ -666,6 +773,8 @@ let raf3 = 0, g3Kind = "ipo";
 function play3d() {
   cancelAnimationFrame(raf3);
   const loan = g3Kind === "loan", gapMs = loan ? 140 : 230;
+  G3 = MQ.matches ? G3_M : G3_PC;
+  ["g3cnt", "g3amt"].forEach(id => el(id).setAttribute("viewBox", `0 0 ${G3.W} ${G3.H}`));
   const a = loan ? drawBars3d(el("g3cnt"), lenderSeries("cnt"), "c") : draw3d(el("g3cnt"), rankSeries("cnt"), "c"),
     b = loan ? drawBars3d(el("g3amt"), lenderSeries("amt"), "a") : draw3d(el("g3amt"), rankSeries("amt"), "a");
   // 위 그래프가 왼쪽부터 차례로, 이어서 아래 그래프가 차례로 솟는다
@@ -685,7 +794,7 @@ function open3dLoan() {
   g3Kind = "loan";
   const ms = (D.ms_loan_by_year || {})[lnYear] || D.ms_loan;
   el("m3t").textContent = `삼성증권 담보대출 순위 · ${lnYear === "all" ? "현재 잔액 전체" : lnYear + "년 체결"}`;
-  el("m3sub").textContent = `${lnYear === "all" ? "현재 남아 있는 계약 전체" : `현재 남아 있는 계약 중 ${lnYear}년에 체결하거나 연장한 계약`} · ${ms.rows.length}개 기관 중 상위 10곳과 삼성증권 · 막대가 높을수록 규모가 큽니다`;
+  el("m3sub").textContent = `${lnYear === "all" ? "현재 남아 있는 계약 전체" : `현재 남아 있는 계약 중 ${lnYear}년에 체결하거나 연장한 계약`} · ${ms.rows.length}개 기관 중 상위 ${MQ.matches ? 5 : 10}곳과 삼성증권 · 막대가 높을수록 규모가 큽니다`;
   el("g3tCnt").innerHTML = "건수 기준 <small>담보대출 계약 건수</small>";
   el("g3tAmt").innerHTML = "금액 기준 <small>대출금액</small>";
   el("modal3d").classList.add("on");

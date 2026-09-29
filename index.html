@@ -229,7 +229,7 @@
   .mo-v b{font-weight:800} .mo-v small{color:var(--muted);margin-left:4px}
   .mo-h{font-size:11px;font-weight:750;color:#6b7280}
   .mini tr.past td{color:#9aa3af}
-  @media(max-width:1200px){.grid{grid-template-columns:repeat(3,1fr)}.sum{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:1200px){.grid{grid-template-columns:repeat(3,1fr)}}
   /* 헤더는 증권사 점유율 화면과 같은 색을 쓴다 */
   .topbar{background:#060b14;border-bottom:1px solid #1a2438}
   .brand-sub{color:#7d8ba4}
@@ -372,6 +372,103 @@
   .ac-t a{color:#95a5f5}
   .ac-t tbody tr{cursor:default} .ac-t tbody tr:hover td{background:transparent}
   .empty{color:#7d8ca6}
+  /* ── 모바일·세로 태블릿 (폭 900 이하) ─────────────────────────────────── */
+  @media (max-width:900px){
+    html{-webkit-text-size-adjust:100%}
+    .topbar{height:auto;padding:10px 14px 12px;display:grid;grid-template-columns:1fr auto;
+      grid-template-areas:"brand right" "nav nav";gap:10px 12px}
+    .brand{grid-area:brand;min-width:0}
+    .brand-bar,.brand > div:last-child{display:none}
+    .brand-logo{height:30px}
+    .top-right{grid-area:right;gap:10px}
+    .top-meta{font-size:10.5px;line-height:1.35}
+    .co-logo{padding-left:10px;height:28px} .co-logo img{height:20px}
+    .nav{grid-area:nav;gap:8px}
+    .nav a{flex:1;justify-content:center;height:40px;padding:0;font-size:14.5px;background:rgba(255,255,255,.05)}
+    .page{width:calc(100% - 24px);margin:14px auto 36px}
+
+    /* 표는 카드로 바꾼다. 칸 이름표는 data-l 에서 온다 */
+    table{display:block;min-width:0 !important;width:100%}
+    thead,colgroup{display:none}
+    tbody{display:block}
+    tbody > tr{display:grid;grid-template-columns:1fr 1fr;gap:7px 14px;padding:12px 14px;border-bottom:1px solid #1b2439;position:relative}
+    tbody > tr > td{display:block;padding:0 !important;border:0 !important;background:transparent !important;
+      text-align:left !important;min-width:0;white-space:normal !important;font-size:13.5px}
+    tbody > tr > td[data-l]::before{content:attr(data-l);display:block;font-size:10.5px;font-weight:700;color:#7f8da8;margin-bottom:1px}
+    tbody > tr > td:first-child{grid-column:1/-1;font-size:15px}
+    tbody > tr > td:first-child::before,tbody > tr > td[data-l=""]::before{display:none}
+    tbody > tr > td[colspan]{grid-column:1/-1}
+    tbody > tr:last-child{border-bottom:0}
+
+    .sum{grid-template-columns:1fr !important;gap:12px}
+    .sp-h{padding:12px 14px} .sp-d{display:none}
+    .sp-r{font-size:10.5px} .sp-r b{font-size:12.5px}
+    .sp-b{grid-template-columns:1fr 1fr !important;gap:10px;padding:12px}
+    .st{padding:12px 12px 11px}
+    .st-v{font-size:28px} .st-v em{display:block;margin:4px 0 0;font-size:14px}
+    .st-go{font-size:11.5px}
+
+    .kindtabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+    .kt{flex:none;height:40px;padding:0 15px} .kt small{display:none}
+    .info{flex:none}
+    .info-p{position:fixed;left:12px;right:12px;top:auto;bottom:16px;width:auto;max-width:none;z-index:60}
+    .info:hover .info-p,.info-i:focus + .info-p{display:none}
+    .info.on .info-p{display:block}
+
+    .bar{padding:12px}
+    .grid{grid-template-columns:1fr 1fr !important;gap:10px}
+    .field:first-child{grid-column:1/-1}
+    input,select{height:42px;font-size:16px}
+    .head{padding:12px 14px}
+    .head > div:last-child{width:100%;justify-content:space-between}
+    .tabs{flex-wrap:nowrap;overflow-x:auto} .tab{flex:none;height:36px}
+    .wrap{max-height:none;overflow:visible}
+
+    /* 목록 */
+    #tb tr.g{padding-right:70px}
+    #tb tr.g > td:last-child{position:absolute;right:12px;top:12px}
+    #tb tr.g.open{background:rgba(90,111,214,.11)}
+    .btn-line{height:34px;padding:0 12px;font-size:12px}
+    tr.sub,tr:has(> td[colspan]){display:block;padding:0}
+    tr.sub > td{padding:0 0 0 14px !important;background:#0c1321 !important}
+    .subt tbody > tr{padding:10px 12px}
+    .subt tbody > tr > td:first-child{font-size:14px;font-weight:700}
+    .co-sub{margin-left:0 !important}
+
+    /* 기업 상세 */
+    .sheet{width:100vw}
+    .sheet-head{padding:14px} .sheet-co{font-size:18px}
+    .sheet-body{padding:14px 12px 40px}
+    .mini{table-layout:auto}
+    .mini tbody > tr{padding:10px 4px}
+    .mini tbody > tr > td:first-child{font-weight:700}
+    .mo{padding:4px 12px}
+    .mo-row{grid-template-columns:56px 1fr !important;gap:6px 10px}
+    .mo-row > :nth-child(3){grid-column:2}
+    .mo-c{grid-template-columns:1fr 92px}
+
+    /* 대상 기업 팝업 */
+    .act{padding:0}
+    .act-box{width:100%;min-height:100%;border-radius:0;border:0}
+    .act-h{position:static;padding:14px 14px 12px}
+    .act-t{font-size:17px} .act-d{font-size:11.5px}
+    .act-x{flex:none} .act-x button{height:34px;padding:0 10px;font-size:12px;white-space:nowrap}
+    .act-k{grid-template-columns:1fr 1fr;gap:8px}
+    .act-k div{padding:9px 12px} .act-k b{font-size:17px}
+    .act-f{flex-wrap:nowrap;overflow-x:auto;gap:8px;padding-bottom:3px;-webkit-overflow-scrolling:touch}
+    .sg{flex:none} .sg button{height:36px;padding:0 12px;white-space:nowrap}
+    .act-b{padding:12px 12px 30px}
+    .ac-top{grid-template-columns:auto 1fr;gap:10px 12px;padding:12px 14px}
+    .ac-a,.ac-o{grid-column:1/-1}
+    .ac-m{padding:0 14px 10px;gap:4px 14px}
+    .ac-p{margin:0 14px 10px}
+    .ac-btn{padding:0 14px 12px;flex-wrap:wrap}
+    .ac-btn button,.ac-btn a{height:36px}
+    .ac-t{padding:0}
+    .ac-t tbody > tr{padding:10px 14px}
+    .ac-t tbody > tr > td:first-child{font-weight:700}
+    .foot{text-align:left}
+  }
 </style>
 </head>
 <body>
@@ -449,6 +546,21 @@
 
 <script>
 const el = id => document.getElementById(id);
+/* 모바일에서는 표를 카드로 바꾼다. 머리줄 이름을 각 칸에 붙여 두면 CSS 가 이름표로 쓴다. */
+const MQ = matchMedia("(max-width:900px)");
+function labelTables() {
+  if (!MQ.matches) return;
+  document.querySelectorAll("table").forEach(t => {
+    const h = t.tHead && t.tHead.rows[0]; if (!h) return;
+    const names = [...h.cells].map(c => c.textContent.trim());
+    [...t.tBodies].forEach(b => [...b.rows].forEach(r => { if (r.cells.length !== names.length) return;
+      [...r.cells].forEach((c, i) => { if (c.dataset.l !== names[i]) c.dataset.l = names[i]; }); }));
+  });
+}
+{ let id = 0; new MutationObserver(() => { cancelAnimationFrame(id); id = requestAnimationFrame(labelTables); })
+    .observe(document.body, { childList: true, subtree: true });
+  MQ.addEventListener("change", labelTables); }
+
 const eok = v => { if (v == null) return null; const a = v / 1e8;
   if (a >= 10000) { const j = a / 10000; return (Number.isInteger(j) ? j.toFixed(0) : j.toFixed(1)) + "조"; }
   if (a < 1) return Math.round(v / 1e4).toLocaleString("ko-KR") + "만"; return Math.round(a).toLocaleString("ko-KR") + "억"; };
@@ -597,6 +709,8 @@ function setup() {
       <small>${sub}</small></button>`;
   }).join("") + `<div class="info"><button class="info-i" type="button" aria-label="데이터 기준 안내">i</button>
       <div class="info-p" role="tooltip">${INFO}</div></div>`;
+  // 손가락으로는 마우스를 올릴 수 없다. 눌러서 열고 닫는다
+  document.querySelector(".info-i").onclick = e => { e.stopPropagation(); e.currentTarget.parentElement.classList.toggle("on"); };
   document.querySelectorAll(".kt").forEach(b => b.onclick = () => {
     kind = b.dataset.k; sortKey = KINDS[kind].sorts[0][0]; setup(); apply();
   });
@@ -1112,6 +1226,7 @@ async function init() {
   el("fq").addEventListener("input", apply);
   ["fOrg", "fWhen", "fType", "fAmt"].forEach(id => el(id).addEventListener("change", apply));
   el("csv").onclick = csv;
+  document.addEventListener("click", e => { if (!e.target.closest(".info")) document.querySelectorAll(".info.on").forEach(x => x.classList.remove("on")); });
   el("actClose").onclick = closeAct;
   el("actCsv").onclick = actCsv;
   el("act").addEventListener("click", e => {
