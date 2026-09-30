@@ -532,6 +532,13 @@ def main():
     meta_path = ROOT / "data" / "market_master_meta.json"
     price_date = (json.loads(meta_path.read_text(encoding="utf-8"))["price_date"]
                   if meta_path.exists() else None)
+    _pm = json.loads(meta_path.read_text(encoding="utf-8")) if meta_path.exists() else {}
+    _fa = _pm.get("fetched_at") or ""
+    if price_date and _fa[:10] == price_date and _fa[11:16] < "15:30":
+        _h, _mi = int(_fa[11:13]), _fa[14:16]
+        price_label = f"{price_date.replace('-', '.')} {'오후' if _h >= 12 else '오전'} {_h - 12 if _h > 12 else _h}시 {_mi}분 장중 가격"
+    else:
+        price_label = f"{price_date.replace('-', '.')} 종가"
 
     data = {
         "meta": {
@@ -539,6 +546,8 @@ def main():
             "generated": datetime.now().strftime("%Y-%m-%d %H:%M"),
             "source": "금융감독원 전자공시시스템(DART)",
             "priceDate": price_date,
+            # 15:30 이전에 받은 당일 시세는 종가가 아니라 장중 가격이다
+            "priceLabel": price_label,
             "universe": {"listed": len(listed),
                          "kospi": sum(1 for v in listed.values() if v["market"] == "KOSPI"),
                          "kosdaq": sum(1 for v in listed.values() if v["market"] == "KOSDAQ"),

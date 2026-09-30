@@ -13,6 +13,7 @@ DART 공시에는 업종도 시가총액도 없다. 화면 필터(업종)와 기
 """
 import io
 import re
+from datetime import datetime
 import time
 
 import pandas as pd
@@ -119,7 +120,9 @@ def main() -> None:
     matched = sum(1 for v in master.values() if v["market_cap"])
     save_json(ROOT / "data" / "market_master.json", master)
     save_json(ROOT / "data" / "market_master_meta.json",
-              {"price_date": price_date(), "price_src": "네이버 금융", "companies": len(master)})
+              {"price_date": price_date(), "price_src": "네이버 금융", "companies": len(master),
+               # 장중에 받으면 종가가 아니다. 받은 시각을 남겨 화면에 그대로 적는다.
+               "fetched_at": datetime.now().strftime("%Y-%m-%d %H:%M")})
     print(f"\ndata/market_master.json — {len(master):,}개사 "
           f"(시총 매칭 {matched:,}개사)")
 

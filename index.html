@@ -916,7 +916,7 @@ function actHead() {
   const k = ACT.kind, lk = k === "lockup", all = actItems(k, ACT.days);
   const mine = all.filter(x => isMine(k, x)), oth = all.filter(x => !isMine(k, x)), soon = actItems(k, 1);
   el("actT").textContent = `${ACT.days}일 내 ${lk ? "보호예수 해제" : "담보대출 만기"} · 대상 기업`;
-  el("actD").textContent = `기준일 ${fd(D.meta.baseDate)} · ${lk ? "평가금액은 " + fd(D.meta.priceDate) + " 종가 기준" : "대출금액은 공시 기재 금액 · 공동담보는 한 번만 합산"}`;
+  el("actD").textContent = `기준일 ${fd(D.meta.baseDate)} · ${lk ? "평가금액은 " + (D.meta.priceLabel || fd(D.meta.priceDate) + " 종가") + " 기준" : "대출금액은 공시 기재 금액 · 공동담보는 한 번만 합산"}`;
   el("actK").innerHTML = `
     <div><small>연락할 기업</small><b>${num(nCo(all))}개사</b><span>${lk ? "주주 " + num(all.length) + "명" : "계약 " + num(all.length) + "건"}</span></div>
     <div><small>${lk ? "해제 물량" : "만기 대출금액"}</small><b>${eok(sumAmt(k, all))}원</b><span>오늘·내일 ${nCo(soon)}개사 · ${eok(sumAmt(k, soon))}원</span></div>
@@ -1227,7 +1227,7 @@ async function init() {
     + `<b>대상</b> 전체 상장사 ${U.listed.toLocaleString("ko-KR")}개사 (KOSPI ${U.kospi.toLocaleString("ko-KR")} · KOSDAQ ${U.kosdaq.toLocaleString("ko-KR")}) · `
     + `담보대출 공시 ${U.with_loan.toLocaleString("ko-KR")}개사 · 보호예수 ${U.with_lockup.toLocaleString("ko-KR")}개사<br>`
     + `<b>담보대출</b> ${D.meta.loanScope}<br><b>보호예수</b> ${D.meta.lockupScope} · 수탁 증권사는 IPO 대표주관회사<br>`
-    + `<b>평가금액</b> ${fd(D.meta.priceDate)} 종가 기준`;
+    + `<b>평가금액</b> ${D.meta.priceLabel || fd(D.meta.priceDate) + " 종가"} 기준`;
   el("foot").style.display = "none";
   // 주소로 상태를 넘겨받는다 — 점유율 화면에서 기관명을 누르면 그 기관 건만 걸러서 연다
   const Q = new URLSearchParams(location.search);
