@@ -14605,6 +14605,36 @@
     "in_lockup_db": false
   },
   {
+    "name": "브릴스",
+    "stock_code": "468670",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-01",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 19500,
+    "offer_amount": 23400000000,
+    "allocations": [
+      {
+        "broker": "IBK투자증권",
+        "ratio": 1.0,
+        "amount": 23400000000
+      }
+    ],
+    "alloc_src": "주관사 단독(인수인 표 미확인)",
+    "lead_managers": [
+      "IBK투자증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "IBK투자증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": null,
+    "in_lockup_db": false
+  },
+  {
     "name": "덕산넵코어스",
     "stock_code": "266690",
     "market": "KOSDAQ",

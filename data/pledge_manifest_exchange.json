@@ -1,10 +1,10 @@
 {
   "period": [
     "20230101",
-    "20260930"
+    "20261001"
   ],
   "report": "최대주주변경을수반하는주식담보제공계약체결",
-  "list_rows": 1657,
+  "list_rows": 1667,
   "targets": [
     {
       "market": "KOSDAQ",
@@ -521,33 +521,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "클래시스",
-      "corp_code": "01061327",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "클래시스",
-      "rcept_dt": "20260626",
-      "rcp_no": "20260626900906"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "클래시스",
-      "corp_code": "01061327",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "클래시스",
-      "rcept_dt": "20260626",
-      "rcp_no": "20260626900913"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "클래시스",
-      "corp_code": "01061327",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "클래시스",
-      "rcept_dt": "20260626",
-      "rcp_no": "20260626900920"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "성호전자",
       "corp_code": "00317210",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -644,6 +617,33 @@
       "filer": "성호전자",
       "rcept_dt": "20260901",
       "rcp_no": "20260901900533"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "클래시스",
+      "corp_code": "01061327",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "클래시스",
+      "rcept_dt": "20260626",
+      "rcp_no": "20260626900906"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "클래시스",
+      "corp_code": "01061327",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "클래시스",
+      "rcept_dt": "20260626",
+      "rcp_no": "20260626900913"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "클래시스",
+      "corp_code": "01061327",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "클래시스",
+      "rcept_dt": "20260626",
+      "rcp_no": "20260626900920"
     },
     {
       "market": "KOSDAQ",
@@ -1340,6 +1340,51 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "미코",
+      "corp_code": "00366942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "미코",
+      "rcept_dt": "20260930",
+      "rcp_no": "20260930901280"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "휴림로봇",
+      "corp_code": "00540429",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "휴림로봇",
+      "rcept_dt": "20260305",
+      "rcp_no": "20260305901928"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "휴림로봇",
+      "corp_code": "00540429",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "휴림로봇",
+      "rcept_dt": "20260318",
+      "rcp_no": "20260318902520"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "휴림로봇",
+      "corp_code": "00540429",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "휴림로봇",
+      "rcept_dt": "20260327",
+      "rcp_no": "20260327902824"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "휴림로봇",
+      "corp_code": "00540429",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "휴림로봇",
+      "rcept_dt": "20260331",
+      "rcp_no": "20260331904763"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "다우데이타",
       "corp_code": "00238782",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
@@ -1418,42 +1463,6 @@
       "filer": "다우데이타",
       "rcept_dt": "20260527",
       "rcp_no": "20260527900222"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "휴림로봇",
-      "corp_code": "00540429",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "휴림로봇",
-      "rcept_dt": "20260305",
-      "rcp_no": "20260305901928"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "휴림로봇",
-      "corp_code": "00540429",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "휴림로봇",
-      "rcept_dt": "20260318",
-      "rcp_no": "20260318902520"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "휴림로봇",
-      "corp_code": "00540429",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "휴림로봇",
-      "rcept_dt": "20260327",
-      "rcp_no": "20260327902824"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "휴림로봇",
-      "corp_code": "00540429",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "휴림로봇",
-      "rcept_dt": "20260331",
-      "rcp_no": "20260331904763"
     },
     {
       "market": "KOSDAQ",
@@ -2060,33 +2069,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "원익머트리얼즈",
-      "corp_code": "00623661",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "원익머트리얼즈",
-      "rcept_dt": "20240215",
-      "rcp_no": "20240215901270"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "원익머트리얼즈",
-      "corp_code": "00623661",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "원익머트리얼즈",
-      "rcept_dt": "20260213",
-      "rcp_no": "20260213901842"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "HLB생명과학",
-      "corp_code": "00365590",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "HLB생명과학",
-      "rcept_dt": "20241017",
-      "rcp_no": "20241017900345"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "에스티큐브",
       "corp_code": "00273110",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
@@ -2123,327 +2105,21 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "페니트리움바이오",
-      "corp_code": "01409022",
+      "corp_name": "원익머트리얼즈",
+      "corp_code": "00623661",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "페니트리움바이오",
-      "rcept_dt": "20240521",
-      "rcp_no": "20240521900240"
+      "filer": "원익머트리얼즈",
+      "rcept_dt": "20240215",
+      "rcp_no": "20240215901270"
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
+      "corp_name": "원익머트리얼즈",
+      "corp_code": "00623661",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20230530",
-      "rcp_no": "20230530900166"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20230802",
-      "rcp_no": "20230802900344"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20230912",
-      "rcp_no": "20230912900330"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20230927",
-      "rcp_no": "20230927900591"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20231025",
-      "rcp_no": "20231025900356"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20231214",
-      "rcp_no": "20231214900556"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20231221",
-      "rcp_no": "20231221900518"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20240528",
-      "rcp_no": "20240528900253"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20240626",
-      "rcp_no": "20240626900496"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20240705",
-      "rcp_no": "20240705900344"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20240805",
-      "rcp_no": "20240805900653"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20240829",
-      "rcp_no": "20240829900288"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20241002",
-      "rcp_no": "20241002900549"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20241028",
-      "rcp_no": "20241028900345"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20241219",
-      "rcp_no": "20241219900226"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20241224",
-      "rcp_no": "20241224900768"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20241227",
-      "rcp_no": "20241227900679"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20250327",
-      "rcp_no": "20250327901554"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20250530",
-      "rcp_no": "20250530900929"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20250805",
-      "rcp_no": "20250805900403"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20250829",
-      "rcp_no": "20250829900466"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20251002",
-      "rcp_no": "20251002900495"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20251029",
-      "rcp_no": "20251029900426"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20251219",
-      "rcp_no": "20251219900435"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20251229",
-      "rcp_no": "20251229900756"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20260102",
-      "rcp_no": "20260102900435"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20260204",
-      "rcp_no": "20260204901173"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
+      "filer": "원익머트리얼즈",
       "rcept_dt": "20260213",
-      "rcp_no": "20260213901753"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20260224",
-      "rcp_no": "20260224900727"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20260305",
-      "rcp_no": "20260305901431"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20260409",
-      "rcp_no": "20260409900939"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20260415",
-      "rcp_no": "20260415900755"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20260529",
-      "rcp_no": "20260529901918"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20260622",
-      "rcp_no": "20260622900659"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "와이지-원",
-      "corp_code": "00139719",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "와이지-원",
-      "rcept_dt": "20260908",
-      "rcp_no": "20260908900479"
+      "rcp_no": "20260213901842"
     },
     {
       "market": "KOSDAQ",
@@ -3554,6 +3230,15 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "젬백스",
+      "corp_code": "00492894",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "젬백스",
+      "rcept_dt": "20261001",
+      "rcp_no": "20261001900476"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "인카금융서비스",
       "corp_code": "01013694",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -3608,21 +3293,327 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "빛과전자",
-      "corp_code": "00367482",
+      "corp_name": "페니트리움바이오",
+      "corp_code": "01409022",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "빛과전자",
-      "rcept_dt": "20260130",
-      "rcp_no": "20260130900002"
+      "filer": "페니트리움바이오",
+      "rcept_dt": "20240521",
+      "rcp_no": "20240521900240"
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "빛과전자",
-      "corp_code": "00367482",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "빛과전자",
-      "rcept_dt": "20260130",
-      "rcp_no": "20260130900892"
+      "filer": "와이지-원",
+      "rcept_dt": "20230530",
+      "rcp_no": "20230530900166"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20230802",
+      "rcp_no": "20230802900344"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20230912",
+      "rcp_no": "20230912900330"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20230927",
+      "rcp_no": "20230927900591"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20231025",
+      "rcp_no": "20231025900356"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20231214",
+      "rcp_no": "20231214900556"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20231221",
+      "rcp_no": "20231221900518"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20240528",
+      "rcp_no": "20240528900253"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20240626",
+      "rcp_no": "20240626900496"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20240705",
+      "rcp_no": "20240705900344"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20240805",
+      "rcp_no": "20240805900653"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20240829",
+      "rcp_no": "20240829900288"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20241002",
+      "rcp_no": "20241002900549"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20241028",
+      "rcp_no": "20241028900345"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20241219",
+      "rcp_no": "20241219900226"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20241224",
+      "rcp_no": "20241224900768"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20241227",
+      "rcp_no": "20241227900679"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20250327",
+      "rcp_no": "20250327901554"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20250530",
+      "rcp_no": "20250530900929"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20250805",
+      "rcp_no": "20250805900403"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20250829",
+      "rcp_no": "20250829900466"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20251002",
+      "rcp_no": "20251002900495"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20251029",
+      "rcp_no": "20251029900426"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20251219",
+      "rcp_no": "20251219900435"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20251229",
+      "rcp_no": "20251229900756"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260102",
+      "rcp_no": "20260102900435"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260204",
+      "rcp_no": "20260204901173"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260213",
+      "rcp_no": "20260213901753"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260224",
+      "rcp_no": "20260224900727"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260305",
+      "rcp_no": "20260305901431"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260409",
+      "rcp_no": "20260409900939"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260415",
+      "rcp_no": "20260415900755"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260529",
+      "rcp_no": "20260529901918"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260622",
+      "rcp_no": "20260622900659"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "와이지-원",
+      "corp_code": "00139719",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "와이지-원",
+      "rcept_dt": "20260908",
+      "rcp_no": "20260908900479"
     },
     {
       "market": "KOSDAQ",
@@ -3770,6 +3761,42 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "빛과전자",
+      "corp_code": "00367482",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "빛과전자",
+      "rcept_dt": "20260130",
+      "rcp_no": "20260130900002"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "빛과전자",
+      "corp_code": "00367482",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "빛과전자",
+      "rcept_dt": "20260130",
+      "rcp_no": "20260130900892"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "HLB생명과학",
+      "corp_code": "00365590",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "HLB생명과학",
+      "rcept_dt": "20241017",
+      "rcp_no": "20241017900345"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "에이팩트",
+      "corp_code": "00667425",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "에이팩트",
+      "rcept_dt": "20260622",
+      "rcp_no": "20260622900881"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "하이록코리아",
       "corp_code": "00165060",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
@@ -3842,69 +3869,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "에이팩트",
-      "corp_code": "00667425",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "에이팩트",
-      "rcept_dt": "20260622",
-      "rcp_no": "20260622900881"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "시노펙스",
-      "corp_code": "00203023",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "시노펙스",
-      "rcept_dt": "20250718",
-      "rcp_no": "20250718900492"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "시노펙스",
-      "corp_code": "00203023",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "시노펙스",
-      "rcept_dt": "20250828",
-      "rcp_no": "20250828900385"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "시노펙스",
-      "corp_code": "00203023",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "시노펙스",
-      "rcept_dt": "20250922",
-      "rcp_no": "20250922900449"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "시노펙스",
-      "corp_code": "00203023",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "시노펙스",
-      "rcept_dt": "20251222",
-      "rcp_no": "20251222900398"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "시노펙스",
-      "corp_code": "00203023",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "시노펙스",
-      "rcept_dt": "20251230",
-      "rcp_no": "20251230901199"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "시노펙스",
-      "corp_code": "00203023",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "시노펙스",
-      "rcept_dt": "20260710",
-      "rcp_no": "20260710900752"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "오이솔루션",
       "corp_code": "00571483",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -3974,6 +3938,69 @@
       "filer": "오이솔루션",
       "rcept_dt": "20260831",
       "rcp_no": "20260831900520"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "오이솔루션",
+      "corp_code": "00571483",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "오이솔루션",
+      "rcept_dt": "20261001",
+      "rcp_no": "20261001900580"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "시노펙스",
+      "corp_code": "00203023",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "시노펙스",
+      "rcept_dt": "20250718",
+      "rcp_no": "20250718900492"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "시노펙스",
+      "corp_code": "00203023",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "시노펙스",
+      "rcept_dt": "20250828",
+      "rcp_no": "20250828900385"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "시노펙스",
+      "corp_code": "00203023",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "시노펙스",
+      "rcept_dt": "20250922",
+      "rcp_no": "20250922900449"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "시노펙스",
+      "corp_code": "00203023",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "시노펙스",
+      "rcept_dt": "20251222",
+      "rcp_no": "20251222900398"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "시노펙스",
+      "corp_code": "00203023",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "시노펙스",
+      "rcept_dt": "20251230",
+      "rcp_no": "20251230901199"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "시노펙스",
+      "corp_code": "00203023",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "시노펙스",
+      "rcept_dt": "20260710",
+      "rcp_no": "20260710900752"
     },
     {
       "market": "KOSDAQ",
@@ -4418,42 +4445,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "리파인",
-      "corp_code": "01210066",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "리파인",
-      "rcept_dt": "20260825",
-      "rcp_no": "20260825900261"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "리파인",
-      "corp_code": "01210066",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "리파인",
-      "rcept_dt": "20260825",
-      "rcp_no": "20260825900393"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "리파인",
-      "corp_code": "01210066",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "리파인",
-      "rcept_dt": "20260827",
-      "rcp_no": "20260827900708"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "리파인",
-      "corp_code": "01210066",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "리파인",
-      "rcept_dt": "20260918",
-      "rcp_no": "20260918900632"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "케이엔제이",
       "corp_code": "00769158",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
@@ -4715,6 +4706,42 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "리파인",
+      "corp_code": "01210066",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "리파인",
+      "rcept_dt": "20260825",
+      "rcp_no": "20260825900261"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "리파인",
+      "corp_code": "01210066",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "리파인",
+      "rcept_dt": "20260825",
+      "rcp_no": "20260825900393"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "리파인",
+      "corp_code": "01210066",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "리파인",
+      "rcept_dt": "20260827",
+      "rcp_no": "20260827900708"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "리파인",
+      "corp_code": "01210066",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "리파인",
+      "rcept_dt": "20260918",
+      "rcp_no": "20260918900632"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "케이프",
       "corp_code": "00152437",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
@@ -4886,12 +4913,75 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "KZ정밀",
+      "corp_code": "00141389",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "KZ정밀",
+      "rcept_dt": "20260930",
+      "rcp_no": "20260930901274"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "해성산업",
       "corp_code": "00219361",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
       "filer": "해성산업",
       "rcept_dt": "20240702",
       "rcp_no": "20240702900577"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "인터로조",
+      "corp_code": "00604426",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "인터로조",
+      "rcept_dt": "20240913",
+      "rcp_no": "20240913900562"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "인터로조",
+      "corp_code": "00604426",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "인터로조",
+      "rcept_dt": "20251001",
+      "rcp_no": "20251001900754"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "인터로조",
+      "corp_code": "00604426",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "인터로조",
+      "rcept_dt": "20260107",
+      "rcp_no": "20260107900189"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "인터로조",
+      "corp_code": "00604426",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "인터로조",
+      "rcept_dt": "20260626",
+      "rcp_no": "20260626900716"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "인터로조",
+      "corp_code": "00604426",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "인터로조",
+      "rcept_dt": "20260922",
+      "rcp_no": "20260922900253"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "인터로조",
+      "corp_code": "00604426",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "인터로조",
+      "rcept_dt": "20260922",
+      "rcp_no": "20260922900598"
     },
     {
       "market": "KOSDAQ",
@@ -4955,60 +5045,6 @@
       "filer": "아리바이오홀딩스",
       "rcept_dt": "20240820",
       "rcp_no": "20240820900598"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "인터로조",
-      "corp_code": "00604426",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "인터로조",
-      "rcept_dt": "20240913",
-      "rcp_no": "20240913900562"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "인터로조",
-      "corp_code": "00604426",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "인터로조",
-      "rcept_dt": "20251001",
-      "rcp_no": "20251001900754"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "인터로조",
-      "corp_code": "00604426",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "인터로조",
-      "rcept_dt": "20260107",
-      "rcp_no": "20260107900189"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "인터로조",
-      "corp_code": "00604426",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "인터로조",
-      "rcept_dt": "20260626",
-      "rcp_no": "20260626900716"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "인터로조",
-      "corp_code": "00604426",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "인터로조",
-      "rcept_dt": "20260922",
-      "rcp_no": "20260922900253"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "인터로조",
-      "corp_code": "00604426",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "인터로조",
-      "rcept_dt": "20260922",
-      "rcp_no": "20260922900598"
     },
     {
       "market": "KOSDAQ",
@@ -5129,15 +5165,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "버킷스튜디오",
-      "corp_code": "00378220",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "버킷스튜디오",
-      "rcept_dt": "20240105",
-      "rcp_no": "20240105900626"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "코난테크놀로지",
       "corp_code": "00601988",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -5189,6 +5216,15 @@
       "filer": "코난테크놀로지",
       "rcept_dt": "20260928",
       "rcp_no": "20260928900939"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "코난테크놀로지",
+      "corp_code": "00601988",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "코난테크놀로지",
+      "rcept_dt": "20260930",
+      "rcp_no": "20260930901220"
     },
     {
       "market": "KOSDAQ",
@@ -5543,6 +5579,15 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "버킷스튜디오",
+      "corp_code": "00378220",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "버킷스튜디오",
+      "rcept_dt": "20240105",
+      "rcp_no": "20240105900626"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "경동제약",
       "corp_code": "00101549",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
@@ -5714,6 +5759,15 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "넥사다이내믹스",
+      "corp_code": "01440153",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "넥사다이내믹스",
+      "rcept_dt": "20250528",
+      "rcp_no": "20250528900596"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "유니트론텍",
       "corp_code": "00879020",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -5783,6 +5837,24 @@
       "filer": "유니트론텍",
       "rcept_dt": "20260929",
       "rcp_no": "20260929900919"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "디오",
+      "corp_code": "00115931",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "디오",
+      "rcept_dt": "20230224",
+      "rcp_no": "20230224900559"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "디오",
+      "corp_code": "00115931",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "디오",
+      "rcept_dt": "20240223",
+      "rcp_no": "20240223900490"
     },
     {
       "market": "KOSDAQ",
@@ -5894,24 +5966,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "디오",
-      "corp_code": "00115931",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "디오",
-      "rcept_dt": "20230224",
-      "rcp_no": "20230224900559"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "디오",
-      "corp_code": "00115931",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "디오",
-      "rcept_dt": "20240223",
-      "rcp_no": "20240223900490"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "코맥스",
       "corp_code": "00268118",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -5921,12 +5975,21 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "넥사다이내믹스",
-      "corp_code": "01440153",
+      "corp_name": "푸드나무",
+      "corp_code": "01259311",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "넥사다이내믹스",
-      "rcept_dt": "20250528",
-      "rcp_no": "20250528900596"
+      "filer": "푸드나무",
+      "rcept_dt": "20260608",
+      "rcp_no": "20260608901075"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "푸드나무",
+      "corp_code": "01259311",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "푸드나무",
+      "rcept_dt": "20260904",
+      "rcp_no": "20260904900307"
     },
     {
       "market": "KOSDAQ",
@@ -6047,6 +6110,51 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "야스",
+      "corp_code": "00875307",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "야스",
+      "rcept_dt": "20240329",
+      "rcp_no": "20240329904538"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "야스",
+      "corp_code": "00875307",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "야스",
+      "rcept_dt": "20240424",
+      "rcp_no": "20240424900382"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "야스",
+      "corp_code": "00875307",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "야스",
+      "rcept_dt": "20240430",
+      "rcp_no": "20240430900638"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "야스",
+      "corp_code": "00875307",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "야스",
+      "rcept_dt": "20240527",
+      "rcp_no": "20240527900506"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "야스",
+      "corp_code": "00875307",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "야스",
+      "rcept_dt": "20240626",
+      "rcp_no": "20240626900700"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "대성하이텍",
       "corp_code": "00577335",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -6155,51 +6263,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "야스",
-      "corp_code": "00875307",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "야스",
-      "rcept_dt": "20240329",
-      "rcp_no": "20240329904538"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "야스",
-      "corp_code": "00875307",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "야스",
-      "rcept_dt": "20240424",
-      "rcp_no": "20240424900382"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "야스",
-      "corp_code": "00875307",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "야스",
-      "rcept_dt": "20240430",
-      "rcp_no": "20240430900638"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "야스",
-      "corp_code": "00875307",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "야스",
-      "rcept_dt": "20240527",
-      "rcp_no": "20240527900506"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "야스",
-      "corp_code": "00875307",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "야스",
-      "rcept_dt": "20240626",
-      "rcp_no": "20240626900700"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "다산네트웍스",
       "corp_code": "00268251",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
@@ -6263,21 +6326,120 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "푸드나무",
-      "corp_code": "01259311",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "푸드나무",
-      "rcept_dt": "20260608",
-      "rcp_no": "20260608901075"
+      "filer": "엑스페릭스",
+      "rcept_dt": "20231205",
+      "rcp_no": "20231205900529"
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "푸드나무",
-      "corp_code": "01259311",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "푸드나무",
-      "rcept_dt": "20260904",
-      "rcp_no": "20260904900307"
+      "filer": "엑스페릭스",
+      "rcept_dt": "20240304",
+      "rcp_no": "20240304900616"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20240424",
+      "rcp_no": "20240424900704"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20240603",
+      "rcp_no": "20240603900505"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20240607",
+      "rcp_no": "20240607900276"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20240723",
+      "rcp_no": "20240723900549"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20241008",
+      "rcp_no": "20241008900522"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20241125",
+      "rcp_no": "20241125900389"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20250609",
+      "rcp_no": "20250609900476"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20250909",
+      "rcp_no": "20250909900246"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20251010",
+      "rcp_no": "20251010900109"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20251125",
+      "rcp_no": "20251125900343"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엑스페릭스",
+      "corp_code": "01231786",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엑스페릭스",
+      "rcept_dt": "20251229",
+      "rcp_no": "20251229900911"
     },
     {
       "market": "KOSDAQ",
@@ -6308,57 +6470,30 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "아리바이오LAB",
-      "corp_code": "01141599",
+      "corp_name": "아이큐어",
+      "corp_code": "00554352",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아리바이오LAB",
-      "rcept_dt": "20260430",
-      "rcp_no": "20260430902111"
+      "filer": "아이큐어",
+      "rcept_dt": "20241226",
+      "rcp_no": "20241226900858"
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "아리바이오LAB",
-      "corp_code": "01141599",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아리바이오LAB",
-      "rcept_dt": "20260609",
-      "rcp_no": "20260609900525"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "아리바이오LAB",
-      "corp_code": "01141599",
+      "corp_name": "아이큐어",
+      "corp_code": "00554352",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아리바이오LAB",
-      "rcept_dt": "20260909",
-      "rcp_no": "20260909900299"
+      "filer": "아이큐어",
+      "rcept_dt": "20241227",
+      "rcp_no": "20241227900631"
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "엠에스오토텍",
-      "corp_code": "00259545",
+      "corp_name": "아이큐어",
+      "corp_code": "00554352",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엠에스오토텍",
-      "rcept_dt": "20250901",
-      "rcp_no": "20250901900887"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엠에스오토텍",
-      "corp_code": "00259545",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엠에스오토텍",
-      "rcept_dt": "20250926",
-      "rcp_no": "20250926900846"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엠에스오토텍",
-      "corp_code": "00259545",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엠에스오토텍",
-      "rcept_dt": "20260514",
-      "rcp_no": "20260514901431"
+      "filer": "아이큐어",
+      "rcept_dt": "20260904",
+      "rcp_no": "20260904900280"
     },
     {
       "market": "KOSDAQ",
@@ -6407,6 +6542,33 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "엠에스오토텍",
+      "corp_code": "00259545",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엠에스오토텍",
+      "rcept_dt": "20250901",
+      "rcp_no": "20250901900887"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엠에스오토텍",
+      "corp_code": "00259545",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엠에스오토텍",
+      "rcept_dt": "20250926",
+      "rcp_no": "20250926900846"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "엠에스오토텍",
+      "corp_code": "00259545",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "엠에스오토텍",
+      "rcept_dt": "20260514",
+      "rcp_no": "20260514901431"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "나인앤컴퍼니",
       "corp_code": "01307335",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -6422,6 +6584,33 @@
       "filer": "나인앤컴퍼니",
       "rcept_dt": "20260820",
       "rcp_no": "20260820900768"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "아리바이오LAB",
+      "corp_code": "01141599",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "아리바이오LAB",
+      "rcept_dt": "20260430",
+      "rcp_no": "20260430902111"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "아리바이오LAB",
+      "corp_code": "01141599",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "아리바이오LAB",
+      "rcept_dt": "20260609",
+      "rcp_no": "20260609900525"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "아리바이오LAB",
+      "corp_code": "01141599",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "아리바이오LAB",
+      "rcept_dt": "20260909",
+      "rcp_no": "20260909900299"
     },
     {
       "market": "KOSDAQ",
@@ -6668,30 +6857,12 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "아이큐어",
-      "corp_code": "00554352",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아이큐어",
-      "rcept_dt": "20241226",
-      "rcp_no": "20241226900858"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "아이큐어",
-      "corp_code": "00554352",
+      "corp_name": "아스타",
+      "corp_code": "01157235",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아이큐어",
-      "rcept_dt": "20241227",
-      "rcp_no": "20241227900631"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "아이큐어",
-      "corp_code": "00554352",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아이큐어",
-      "rcept_dt": "20260904",
-      "rcp_no": "20260904900280"
+      "filer": "아스타",
+      "rcept_dt": "20260930",
+      "rcp_no": "20260930901324"
     },
     {
       "market": "KOSDAQ",
@@ -6746,123 +6917,6 @@
       "filer": "다원시스",
       "rcept_dt": "20260203",
       "rcp_no": "20260203900587"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20231205",
-      "rcp_no": "20231205900529"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20240304",
-      "rcp_no": "20240304900616"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20240424",
-      "rcp_no": "20240424900704"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20240603",
-      "rcp_no": "20240603900505"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20240607",
-      "rcp_no": "20240607900276"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20240723",
-      "rcp_no": "20240723900549"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20241008",
-      "rcp_no": "20241008900522"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20241125",
-      "rcp_no": "20241125900389"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20250609",
-      "rcp_no": "20250609900476"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20250909",
-      "rcp_no": "20250909900246"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20251010",
-      "rcp_no": "20251010900109"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20251125",
-      "rcp_no": "20251125900343"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "엑스페릭스",
-      "corp_code": "01231786",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑스페릭스",
-      "rcept_dt": "20251229",
-      "rcp_no": "20251229900911"
     },
     {
       "market": "KOSDAQ",
@@ -7811,6 +7865,24 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "조이시티",
+      "corp_code": "00397252",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "조이시티",
+      "rcept_dt": "20250214",
+      "rcp_no": "20250214900002"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "조이시티",
+      "corp_code": "00397252",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "조이시티",
+      "rcept_dt": "20250625",
+      "rcp_no": "20250625900248"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "광무",
       "corp_code": "00186452",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -7973,24 +8045,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "조이시티",
-      "corp_code": "00397252",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "조이시티",
-      "rcept_dt": "20250214",
-      "rcp_no": "20250214900002"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "조이시티",
-      "corp_code": "00397252",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "조이시티",
-      "rcept_dt": "20250625",
-      "rcp_no": "20250625900248"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "하이로닉",
       "corp_code": "00977641",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -8015,6 +8069,15 @@
       "filer": "초록뱀미디어",
       "rcept_dt": "20241202",
       "rcp_no": "20241202900004"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "SY동아",
+      "corp_code": "00199988",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "SY동아",
+      "rcept_dt": "20260504",
+      "rcp_no": "20260504900591"
     },
     {
       "market": "KOSDAQ",
@@ -8123,15 +8186,6 @@
       "filer": "테라사이언스",
       "rcept_dt": "20240227",
       "rcp_no": "20240227900898"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "SY동아",
-      "corp_code": "00199988",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "SY동아",
-      "rcept_dt": "20260504",
-      "rcp_no": "20260504900591"
     },
     {
       "market": "KOSDAQ",
@@ -8288,51 +8342,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "씨티씨바이오",
-      "corp_code": "00362292",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "씨티씨바이오",
-      "rcept_dt": "20230516",
-      "rcp_no": "20230516900469"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "씨티씨바이오",
-      "corp_code": "00362292",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "씨티씨바이오",
-      "rcept_dt": "20230808",
-      "rcp_no": "20230808900353"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "씨티씨바이오",
-      "corp_code": "00362292",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "씨티씨바이오",
-      "rcept_dt": "20230816",
-      "rcp_no": "20230816900608"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "드림어스컴퍼니",
-      "corp_code": "00364467",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "드림어스컴퍼니",
-      "rcept_dt": "20251128",
-      "rcp_no": "20251128900603"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "드림어스컴퍼니",
-      "corp_code": "00364467",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "드림어스컴퍼니",
-      "rcept_dt": "20260825",
-      "rcp_no": "20260825900505"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "새빗켐",
       "corp_code": "00862880",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -8405,12 +8414,30 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "CG인바이츠",
-      "corp_code": "00407814",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "CG인바이츠",
-      "rcept_dt": "20230330",
-      "rcp_no": "20230330902648"
+      "corp_name": "싸이토젠",
+      "corp_code": "01046391",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "싸이토젠",
+      "rcept_dt": "20230628",
+      "rcp_no": "20230628900357"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "싸이토젠",
+      "corp_code": "01046391",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "싸이토젠",
+      "rcept_dt": "20230927",
+      "rcp_no": "20230927900511"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "싸이토젠",
+      "corp_code": "01046391",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "싸이토젠",
+      "rcept_dt": "20231227",
+      "rcp_no": "20231227900676"
     },
     {
       "market": "KOSDAQ",
@@ -8420,6 +8447,60 @@
       "filer": "에스넷",
       "rcept_dt": "20230626",
       "rcp_no": "20230626900200"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "드림어스컴퍼니",
+      "corp_code": "00364467",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "드림어스컴퍼니",
+      "rcept_dt": "20251128",
+      "rcp_no": "20251128900603"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "드림어스컴퍼니",
+      "corp_code": "00364467",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "드림어스컴퍼니",
+      "rcept_dt": "20260825",
+      "rcp_no": "20260825900505"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "씨티씨바이오",
+      "corp_code": "00362292",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "씨티씨바이오",
+      "rcept_dt": "20230516",
+      "rcp_no": "20230516900469"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "씨티씨바이오",
+      "corp_code": "00362292",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "씨티씨바이오",
+      "rcept_dt": "20230808",
+      "rcp_no": "20230808900353"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "씨티씨바이오",
+      "corp_code": "00362292",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "씨티씨바이오",
+      "rcept_dt": "20230816",
+      "rcp_no": "20230816900608"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "CG인바이츠",
+      "corp_code": "00407814",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "CG인바이츠",
+      "rcept_dt": "20230330",
+      "rcp_no": "20230330902648"
     },
     {
       "market": "KOSDAQ",
@@ -8483,33 +8564,6 @@
       "filer": "남화토건",
       "rcept_dt": "20260413",
       "rcp_no": "20260413901037"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "싸이토젠",
-      "corp_code": "01046391",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "싸이토젠",
-      "rcept_dt": "20230628",
-      "rcp_no": "20230628900357"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "싸이토젠",
-      "corp_code": "01046391",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "싸이토젠",
-      "rcept_dt": "20230927",
-      "rcp_no": "20230927900511"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "싸이토젠",
-      "corp_code": "01046391",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "싸이토젠",
-      "rcept_dt": "20231227",
-      "rcp_no": "20231227900676"
     },
     {
       "market": "KOSDAQ",
@@ -9269,6 +9323,69 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "해성에어로보틱스",
+      "corp_code": "00453442",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "해성에어로보틱스",
+      "rcept_dt": "20260323",
+      "rcp_no": "20260323901669"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "해성에어로보틱스",
+      "corp_code": "00453442",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "해성에어로보틱스",
+      "rcept_dt": "20260428",
+      "rcp_no": "20260428900002"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "해성에어로보틱스",
+      "corp_code": "00453442",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "해성에어로보틱스",
+      "rcept_dt": "20260727",
+      "rcp_no": "20260727900768"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "해성에어로보틱스",
+      "corp_code": "00453442",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "해성에어로보틱스",
+      "rcept_dt": "20260928",
+      "rcp_no": "20260928900901"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "해성에어로보틱스",
+      "corp_code": "00453442",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "해성에어로보틱스",
+      "rcept_dt": "20260930",
+      "rcp_no": "20260930901287"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "부방",
+      "corp_code": "00243067",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "부방",
+      "rcept_dt": "20230414",
+      "rcp_no": "20230414900299"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "부방",
+      "corp_code": "00243067",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "부방",
+      "rcept_dt": "20240415",
+      "rcp_no": "20240415900396"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "에이비온",
       "corp_code": "00977377",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -9305,21 +9422,57 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "부방",
-      "corp_code": "00243067",
+      "corp_name": "LK삼양",
+      "corp_code": "00992543",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "부방",
-      "rcept_dt": "20230414",
-      "rcp_no": "20230414900299"
+      "filer": "LK삼양",
+      "rcept_dt": "20240627",
+      "rcp_no": "20240627900720"
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "부방",
-      "corp_code": "00243067",
+      "corp_name": "LK삼양",
+      "corp_code": "00992543",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "부방",
-      "rcept_dt": "20240415",
-      "rcp_no": "20240415900396"
+      "filer": "LK삼양",
+      "rcept_dt": "20241209",
+      "rcp_no": "20241209900342"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "LK삼양",
+      "corp_code": "00992543",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "LK삼양",
+      "rcept_dt": "20250530",
+      "rcp_no": "20250530900820"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "LK삼양",
+      "corp_code": "00992543",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "LK삼양",
+      "rcept_dt": "20250627",
+      "rcp_no": "20250627900346"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "LK삼양",
+      "corp_code": "00992543",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "LK삼양",
+      "rcept_dt": "20260402",
+      "rcp_no": "20260402900672"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "LK삼양",
+      "corp_code": "00992543",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "LK삼양",
+      "rcept_dt": "20260706",
+      "rcp_no": "20260706900434"
     },
     {
       "market": "KOSDAQ",
@@ -9944,39 +10097,12 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "해성에어로보틱스",
-      "corp_code": "00453442",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "해성에어로보틱스",
-      "rcept_dt": "20260323",
-      "rcp_no": "20260323901669"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "해성에어로보틱스",
-      "corp_code": "00453442",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "해성에어로보틱스",
-      "rcept_dt": "20260428",
-      "rcp_no": "20260428900002"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "해성에어로보틱스",
-      "corp_code": "00453442",
+      "corp_name": "엠투엔",
+      "corp_code": "00143226",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "해성에어로보틱스",
-      "rcept_dt": "20260727",
-      "rcp_no": "20260727900768"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "해성에어로보틱스",
-      "corp_code": "00453442",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "해성에어로보틱스",
-      "rcept_dt": "20260928",
-      "rcp_no": "20260928900901"
+      "filer": "엠투엔",
+      "rcept_dt": "20260930",
+      "rcp_no": "20260930901217"
     },
     {
       "market": "KOSDAQ",
@@ -10241,60 +10367,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "LK삼양",
-      "corp_code": "00992543",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "LK삼양",
-      "rcept_dt": "20240627",
-      "rcp_no": "20240627900720"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "LK삼양",
-      "corp_code": "00992543",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "LK삼양",
-      "rcept_dt": "20241209",
-      "rcp_no": "20241209900342"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "LK삼양",
-      "corp_code": "00992543",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "LK삼양",
-      "rcept_dt": "20250530",
-      "rcp_no": "20250530900820"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "LK삼양",
-      "corp_code": "00992543",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "LK삼양",
-      "rcept_dt": "20250627",
-      "rcp_no": "20250627900346"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "LK삼양",
-      "corp_code": "00992543",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "LK삼양",
-      "rcept_dt": "20260402",
-      "rcp_no": "20260402900672"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "LK삼양",
-      "corp_code": "00992543",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "LK삼양",
-      "rcept_dt": "20260706",
-      "rcp_no": "20260706900434"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "제이스코홀딩스",
       "corp_code": "00148531",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -10511,6 +10583,33 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "영우디에스피",
+      "corp_code": "00569646",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "영우디에스피",
+      "rcept_dt": "20230710",
+      "rcp_no": "20230710900607"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "영우디에스피",
+      "corp_code": "00569646",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "영우디에스피",
+      "rcept_dt": "20240108",
+      "rcp_no": "20240108900539"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "영우디에스피",
+      "corp_code": "00569646",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "영우디에스피",
+      "rcept_dt": "20241115",
+      "rcp_no": "20241115900573"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "에이치시티",
       "corp_code": "00527464",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -10544,33 +10643,6 @@
       "filer": "에이치시티",
       "rcept_dt": "20260417",
       "rcp_no": "20260417900948"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "영우디에스피",
-      "corp_code": "00569646",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "영우디에스피",
-      "rcept_dt": "20230710",
-      "rcp_no": "20230710900607"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "영우디에스피",
-      "corp_code": "00569646",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "영우디에스피",
-      "rcept_dt": "20240108",
-      "rcp_no": "20240108900539"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "영우디에스피",
-      "corp_code": "00569646",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "영우디에스피",
-      "rcept_dt": "20241115",
-      "rcp_no": "20241115900573"
     },
     {
       "market": "KOSDAQ",
@@ -10634,24 +10706,6 @@
       "filer": "셀피글로벌",
       "rcept_dt": "20230221",
       "rcp_no": "20230221900886"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "앱튼",
-      "corp_code": "01228515",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "앱튼",
-      "rcept_dt": "20260313",
-      "rcp_no": "20260313901949"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "앱튼",
-      "corp_code": "01228515",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "앱튼",
-      "rcept_dt": "20260904",
-      "rcp_no": "20260904900600"
     },
     {
       "market": "KOSDAQ",
@@ -10727,264 +10781,21 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "넥스턴앤롤코리아",
-      "corp_code": "00416414",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "넥스턴앤롤코리아",
-      "rcept_dt": "20230427",
-      "rcp_no": "20230427900802"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "넥스턴앤롤코리아",
-      "corp_code": "00416414",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "넥스턴앤롤코리아",
-      "rcept_dt": "20230504",
-      "rcp_no": "20230504900701"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "넥스턴앤롤코리아",
-      "corp_code": "00416414",
+      "corp_name": "앱튼",
+      "corp_code": "01228515",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "넥스턴앤롤코리아",
-      "rcept_dt": "20260407",
-      "rcp_no": "20260407901123"
+      "filer": "앱튼",
+      "rcept_dt": "20260313",
+      "rcp_no": "20260313901949"
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "넥스턴앤롤코리아",
-      "corp_code": "00416414",
+      "corp_name": "앱튼",
+      "corp_code": "01228515",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "넥스턴앤롤코리아",
-      "rcept_dt": "20260430",
-      "rcp_no": "20260430901488"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "넥스턴앤롤코리아",
-      "corp_code": "00416414",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "넥스턴앤롤코리아",
-      "rcept_dt": "20260723",
-      "rcp_no": "20260723900973"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "넥스턴앤롤코리아",
-      "corp_code": "00416414",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "넥스턴앤롤코리아",
-      "rcept_dt": "20260730",
-      "rcp_no": "20260730900872"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "넥스턴앤롤코리아",
-      "corp_code": "00416414",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "넥스턴앤롤코리아",
-      "rcept_dt": "20260825",
-      "rcp_no": "20260825900571"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "DH오토웨어",
-      "corp_code": "00110583",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "DH오토웨어",
-      "rcept_dt": "20260106",
-      "rcp_no": "20260106900613"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "네오크레마",
-      "corp_code": "01219155",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "네오크레마",
-      "rcept_dt": "20251024",
-      "rcp_no": "20251024900627"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "네오크레마",
-      "corp_code": "01219155",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "네오크레마",
-      "rcept_dt": "20260407",
-      "rcp_no": "20260407900904"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "신테카바이오",
-      "corp_code": "01344336",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "신테카바이오",
-      "rcept_dt": "20250124",
-      "rcp_no": "20250124900924"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "신테카바이오",
-      "corp_code": "01344336",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "신테카바이오",
-      "rcept_dt": "20250325",
-      "rcp_no": "20250325901420"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "신테카바이오",
-      "corp_code": "01344336",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "신테카바이오",
-      "rcept_dt": "20251210",
-      "rcp_no": "20251210900760"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "신테카바이오",
-      "corp_code": "01344336",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "신테카바이오",
-      "rcept_dt": "20251211",
-      "rcp_no": "20251211900728"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "신테카바이오",
-      "corp_code": "01344336",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "신테카바이오",
-      "rcept_dt": "20260528",
-      "rcp_no": "20260528901045"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "신테카바이오",
-      "corp_code": "01344336",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "신테카바이오",
-      "rcept_dt": "20260625",
-      "rcp_no": "20260625900444"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "신테카바이오",
-      "corp_code": "01344336",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "신테카바이오",
-      "rcept_dt": "20260629",
-      "rcp_no": "20260629900508"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "신테카바이오",
-      "corp_code": "01344336",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "신테카바이오",
-      "rcept_dt": "20260728",
-      "rcp_no": "20260728900875"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "신테카바이오",
-      "corp_code": "01344336",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "신테카바이오",
-      "rcept_dt": "20260828",
-      "rcp_no": "20260828900759"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20230103",
-      "rcp_no": "20230103900003"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20230601",
-      "rcp_no": "20230601900570"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20231201",
-      "rcp_no": "20231201900500"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20240305",
-      "rcp_no": "20240305901098"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20240902",
-      "rcp_no": "20240902900732"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20250227",
-      "rcp_no": "20250227900842"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20250328",
-      "rcp_no": "20250328903570"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20250908",
-      "rcp_no": "20250908900429"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20251027",
-      "rcp_no": "20251027900471"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "큐캐피탈",
-      "corp_code": "00267942",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "큐캐피탈",
-      "rcept_dt": "20260225",
-      "rcp_no": "20260225900883"
+      "filer": "앱튼",
+      "rcept_dt": "20260904",
+      "rcp_no": "20260904900600"
     },
     {
       "market": "KOSDAQ",
@@ -11078,6 +10889,276 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "넥스턴앤롤코리아",
+      "corp_code": "00416414",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "넥스턴앤롤코리아",
+      "rcept_dt": "20230427",
+      "rcp_no": "20230427900802"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "넥스턴앤롤코리아",
+      "corp_code": "00416414",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "넥스턴앤롤코리아",
+      "rcept_dt": "20230504",
+      "rcp_no": "20230504900701"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "넥스턴앤롤코리아",
+      "corp_code": "00416414",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "넥스턴앤롤코리아",
+      "rcept_dt": "20260407",
+      "rcp_no": "20260407901123"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "넥스턴앤롤코리아",
+      "corp_code": "00416414",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "넥스턴앤롤코리아",
+      "rcept_dt": "20260430",
+      "rcp_no": "20260430901488"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "넥스턴앤롤코리아",
+      "corp_code": "00416414",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "넥스턴앤롤코리아",
+      "rcept_dt": "20260723",
+      "rcp_no": "20260723900973"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "넥스턴앤롤코리아",
+      "corp_code": "00416414",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "넥스턴앤롤코리아",
+      "rcept_dt": "20260730",
+      "rcp_no": "20260730900872"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "넥스턴앤롤코리아",
+      "corp_code": "00416414",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "넥스턴앤롤코리아",
+      "rcept_dt": "20260825",
+      "rcp_no": "20260825900571"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20250124",
+      "rcp_no": "20250124900924"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20250325",
+      "rcp_no": "20250325901420"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20251210",
+      "rcp_no": "20251210900760"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20251211",
+      "rcp_no": "20251211900728"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20260528",
+      "rcp_no": "20260528901045"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20260625",
+      "rcp_no": "20260625900444"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20260629",
+      "rcp_no": "20260629900508"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20260728",
+      "rcp_no": "20260728900875"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20260828",
+      "rcp_no": "20260828900759"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "신테카바이오",
+      "corp_code": "01344336",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "신테카바이오",
+      "rcept_dt": "20260930",
+      "rcp_no": "20260930901014"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "네오크레마",
+      "corp_code": "01219155",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "네오크레마",
+      "rcept_dt": "20251024",
+      "rcp_no": "20251024900627"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "네오크레마",
+      "corp_code": "01219155",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "네오크레마",
+      "rcept_dt": "20260407",
+      "rcp_no": "20260407900904"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "DH오토웨어",
+      "corp_code": "00110583",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "DH오토웨어",
+      "rcept_dt": "20260106",
+      "rcp_no": "20260106900613"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20230103",
+      "rcp_no": "20230103900003"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20230601",
+      "rcp_no": "20230601900570"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20231201",
+      "rcp_no": "20231201900500"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20240305",
+      "rcp_no": "20240305901098"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20240902",
+      "rcp_no": "20240902900732"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20250227",
+      "rcp_no": "20250227900842"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20250328",
+      "rcp_no": "20250328903570"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20250908",
+      "rcp_no": "20250908900429"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20251027",
+      "rcp_no": "20251027900471"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "큐캐피탈",
+      "corp_code": "00267942",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "큐캐피탈",
+      "rcept_dt": "20260225",
+      "rcp_no": "20260225900883"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "TS트릴리온",
       "corp_code": "01353024",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -11102,6 +11183,33 @@
       "filer": "TS트릴리온",
       "rcept_dt": "20230620",
       "rcp_no": "20230620900199"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "씨유메디칼",
+      "corp_code": "00681249",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "씨유메디칼",
+      "rcept_dt": "20251118",
+      "rcp_no": "20251118900365"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "티에스넥스젠",
+      "corp_code": "00317487",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "티에스넥스젠",
+      "rcept_dt": "20240320",
+      "rcp_no": "20240320902758"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "티에스넥스젠",
+      "corp_code": "00317487",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "티에스넥스젠",
+      "rcept_dt": "20240404",
+      "rcp_no": "20240404900002"
     },
     {
       "market": "KOSDAQ",
@@ -11255,24 +11363,6 @@
       "filer": "멤레이비티",
       "rcept_dt": "20250321",
       "rcp_no": "20250321902311"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "티에스넥스젠",
-      "corp_code": "00317487",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "티에스넥스젠",
-      "rcept_dt": "20240320",
-      "rcp_no": "20240320902758"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "티에스넥스젠",
-      "corp_code": "00317487",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "티에스넥스젠",
-      "rcept_dt": "20240404",
-      "rcp_no": "20240404900002"
     },
     {
       "market": "KOSDAQ",
@@ -11519,15 +11609,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "씨유메디칼",
-      "corp_code": "00681249",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "씨유메디칼",
-      "rcept_dt": "20251118",
-      "rcp_no": "20251118900365"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "하이드로리튬",
       "corp_code": "00527491",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -11591,12 +11672,93 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "제이케이시냅스",
+      "corp_code": "00363510",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "제이케이시냅스",
+      "rcept_dt": "20230601",
+      "rcp_no": "20230601900598"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "제이케이시냅스",
+      "corp_code": "00363510",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "제이케이시냅스",
+      "rcept_dt": "20250107",
+      "rcp_no": "20250107900329"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "LSK아이로봇",
       "corp_code": "00542074",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
       "filer": "LSK아이로봇",
       "rcept_dt": "20260327",
       "rcp_no": "20260327902846"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "CSA 코스믹",
+      "corp_code": "00406037",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "CSA 코스믹",
+      "rcept_dt": "20250820",
+      "rcp_no": "20250820900343"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "CSA 코스믹",
+      "corp_code": "00406037",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "CSA 코스믹",
+      "rcept_dt": "20250822",
+      "rcp_no": "20250822900510"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "CSA 코스믹",
+      "corp_code": "00406037",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "CSA 코스믹",
+      "rcept_dt": "20250922",
+      "rcp_no": "20250922900477"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "CSA 코스믹",
+      "corp_code": "00406037",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "CSA 코스믹",
+      "rcept_dt": "20251022",
+      "rcp_no": "20251022900319"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "CSA 코스믹",
+      "corp_code": "00406037",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "CSA 코스믹",
+      "rcept_dt": "20251121",
+      "rcp_no": "20251121900401"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "CSA 코스믹",
+      "corp_code": "00406037",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "CSA 코스믹",
+      "rcept_dt": "20251205",
+      "rcp_no": "20251205900666"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "CSA 코스믹",
+      "corp_code": "00406037",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "CSA 코스믹",
+      "rcept_dt": "20251224",
+      "rcp_no": "20251224900915"
     },
     {
       "market": "KOSDAQ",
@@ -11627,12 +11789,66 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "엑시온그룹",
-      "corp_code": "00426068",
+      "corp_name": "아이에이",
+      "corp_code": "00252269",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "엑시온그룹",
-      "rcept_dt": "20250807",
-      "rcp_no": "20250807900492"
+      "filer": "아이에이",
+      "rcept_dt": "20241008",
+      "rcp_no": "20241008900620"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "아이에이",
+      "corp_code": "00252269",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "아이에이",
+      "rcept_dt": "20241021",
+      "rcp_no": "20241021900465"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "아이에이",
+      "corp_code": "00252269",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "아이에이",
+      "rcept_dt": "20241104",
+      "rcp_no": "20241104900476"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "아이에이",
+      "corp_code": "00252269",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "아이에이",
+      "rcept_dt": "20241227",
+      "rcp_no": "20241227900918"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "메이슨캐피탈",
+      "corp_code": "00136101",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "메이슨캐피탈",
+      "rcept_dt": "20250515",
+      "rcp_no": "20250515902670"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "메이슨캐피탈",
+      "corp_code": "00136101",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "메이슨캐피탈",
+      "rcept_dt": "20250709",
+      "rcp_no": "20250709900182"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "메이슨캐피탈",
+      "corp_code": "00136101",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "메이슨캐피탈",
+      "rcept_dt": "20260109",
+      "rcp_no": "20260109900545"
     },
     {
       "market": "KOSDAQ",
@@ -11642,33 +11858,6 @@
       "filer": "서울전자통신",
       "rcept_dt": "20260528",
       "rcp_no": "20260528901060"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "퀀텀레일",
-      "corp_code": "00683007",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "퀀텀레일",
-      "rcept_dt": "20251217",
-      "rcp_no": "20251217900852"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "퀀텀레일",
-      "corp_code": "00683007",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "퀀텀레일",
-      "rcept_dt": "20260303",
-      "rcp_no": "20260303901098"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "퀀텀레일",
-      "corp_code": "00683007",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "퀀텀레일",
-      "rcept_dt": "20260630",
-      "rcp_no": "20260630901046"
     },
     {
       "market": "KOSDAQ",
@@ -11744,132 +11933,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "아이에이",
-      "corp_code": "00252269",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아이에이",
-      "rcept_dt": "20241008",
-      "rcp_no": "20241008900620"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "아이에이",
-      "corp_code": "00252269",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아이에이",
-      "rcept_dt": "20241021",
-      "rcp_no": "20241021900465"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "아이에이",
-      "corp_code": "00252269",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아이에이",
-      "rcept_dt": "20241104",
-      "rcp_no": "20241104900476"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "아이에이",
-      "corp_code": "00252269",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "아이에이",
-      "rcept_dt": "20241227",
-      "rcp_no": "20241227900918"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "CSA 코스믹",
-      "corp_code": "00406037",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "CSA 코스믹",
-      "rcept_dt": "20250820",
-      "rcp_no": "20250820900343"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "CSA 코스믹",
-      "corp_code": "00406037",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "CSA 코스믹",
-      "rcept_dt": "20250822",
-      "rcp_no": "20250822900510"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "CSA 코스믹",
-      "corp_code": "00406037",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "CSA 코스믹",
-      "rcept_dt": "20250922",
-      "rcp_no": "20250922900477"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "CSA 코스믹",
-      "corp_code": "00406037",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "CSA 코스믹",
-      "rcept_dt": "20251022",
-      "rcp_no": "20251022900319"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "CSA 코스믹",
-      "corp_code": "00406037",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "CSA 코스믹",
-      "rcept_dt": "20251121",
-      "rcp_no": "20251121900401"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "CSA 코스믹",
-      "corp_code": "00406037",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "CSA 코스믹",
-      "rcept_dt": "20251205",
-      "rcp_no": "20251205900666"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "CSA 코스믹",
-      "corp_code": "00406037",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "CSA 코스믹",
-      "rcept_dt": "20251224",
-      "rcp_no": "20251224900915"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "메이슨캐피탈",
-      "corp_code": "00136101",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "메이슨캐피탈",
-      "rcept_dt": "20250515",
-      "rcp_no": "20250515902670"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "메이슨캐피탈",
-      "corp_code": "00136101",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "메이슨캐피탈",
-      "rcept_dt": "20250709",
-      "rcp_no": "20250709900182"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "메이슨캐피탈",
-      "corp_code": "00136101",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "메이슨캐피탈",
-      "rcept_dt": "20260109",
-      "rcp_no": "20260109900545"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "알톤",
       "corp_code": "00821607",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
@@ -11894,24 +11957,6 @@
       "filer": "알톤",
       "rcept_dt": "20260317",
       "rcp_no": "20260317900662"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "제이케이시냅스",
-      "corp_code": "00363510",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "제이케이시냅스",
-      "rcept_dt": "20230601",
-      "rcp_no": "20230601900598"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "제이케이시냅스",
-      "corp_code": "00363510",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "제이케이시냅스",
-      "rcept_dt": "20250107",
-      "rcp_no": "20250107900329"
     },
     {
       "market": "KOSDAQ",
@@ -12374,30 +12419,12 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "풍전약품",
-      "corp_code": "01110474",
+      "corp_name": "엑시온그룹",
+      "corp_code": "00426068",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "풍전약품",
-      "rcept_dt": "20230818",
-      "rcp_no": "20230818900463"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "풍전약품",
-      "corp_code": "01110474",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "풍전약품",
-      "rcept_dt": "20240226",
-      "rcp_no": "20240226901203"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "풍전약품",
-      "corp_code": "01110474",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "풍전약품",
-      "rcept_dt": "20250122",
-      "rcp_no": "20250122900693"
+      "filer": "엑시온그룹",
+      "rcept_dt": "20250807",
+      "rcp_no": "20250807900492"
     },
     {
       "market": "KOSDAQ",
@@ -12428,6 +12455,60 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "풍전약품",
+      "corp_code": "01110474",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "풍전약품",
+      "rcept_dt": "20230818",
+      "rcp_no": "20230818900463"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "풍전약품",
+      "corp_code": "01110474",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "풍전약품",
+      "rcept_dt": "20240226",
+      "rcp_no": "20240226901203"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "풍전약품",
+      "corp_code": "01110474",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "풍전약품",
+      "rcept_dt": "20250122",
+      "rcp_no": "20250122900693"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "퀀텀레일",
+      "corp_code": "00683007",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "퀀텀레일",
+      "rcept_dt": "20251217",
+      "rcp_no": "20251217900852"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "퀀텀레일",
+      "corp_code": "00683007",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "퀀텀레일",
+      "rcept_dt": "20260303",
+      "rcp_no": "20260303901098"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "퀀텀레일",
+      "corp_code": "00683007",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "퀀텀레일",
+      "rcept_dt": "20260630",
+      "rcp_no": "20260630901046"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "비츠로시스",
       "corp_code": "00201432",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -12446,12 +12527,21 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "롤링스톤",
-      "corp_code": "01049167",
+      "corp_name": "인베니아",
+      "corp_code": "00409371",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "롤링스톤",
-      "rcept_dt": "20250725",
-      "rcp_no": "20250725900672"
+      "filer": "인베니아",
+      "rcept_dt": "20250624",
+      "rcp_no": "20250624900373"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "인베니아",
+      "corp_code": "00409371",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "인베니아",
+      "rcept_dt": "20251224",
+      "rcp_no": "20251224901014"
     },
     {
       "market": "KOSDAQ",
@@ -12524,6 +12614,15 @@
       "filer": "아우딘퓨쳐스",
       "rcept_dt": "20260828",
       "rcp_no": "20260828900723"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "이원컴포텍",
+      "corp_code": "00409140",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "이원컴포텍",
+      "rcept_dt": "20230803",
+      "rcp_no": "20230803900458"
     },
     {
       "market": "KOSDAQ",
@@ -12632,15 +12731,6 @@
       "filer": "삼보산업",
       "rcept_dt": "20260908",
       "rcp_no": "20260908900149"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "이원컴포텍",
-      "corp_code": "00409140",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "이원컴포텍",
-      "rcept_dt": "20230803",
-      "rcp_no": "20230803900458"
     },
     {
       "market": "KOSDAQ",
@@ -12794,6 +12884,15 @@
       "filer": "핌스",
       "rcept_dt": "20260706",
       "rcp_no": "20260706900675"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "롤링스톤",
+      "corp_code": "01049167",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "롤링스톤",
+      "rcept_dt": "20250725",
+      "rcp_no": "20250725900672"
     },
     {
       "market": "KOSDAQ",
@@ -12959,42 +13058,6 @@
     },
     {
       "market": "KOSDAQ",
-      "corp_name": "인베니아",
-      "corp_code": "00409371",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "인베니아",
-      "rcept_dt": "20250624",
-      "rcp_no": "20250624900373"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "인베니아",
-      "corp_code": "00409371",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "인베니아",
-      "rcept_dt": "20251224",
-      "rcp_no": "20251224901014"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "광진실업",
-      "corp_code": "00104120",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "광진실업",
-      "rcept_dt": "20260814",
-      "rcp_no": "20260814900009"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "광진실업",
-      "corp_code": "00104120",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "광진실업",
-      "rcept_dt": "20260911",
-      "rcp_no": "20260911900472"
-    },
-    {
-      "market": "KOSDAQ",
       "corp_name": "큐로홀딩스",
       "corp_code": "00296324",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -13037,6 +13100,24 @@
       "filer": "큐로홀딩스",
       "rcept_dt": "20240823",
       "rcp_no": "20240823900257"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "광진실업",
+      "corp_code": "00104120",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "광진실업",
+      "rcept_dt": "20260814",
+      "rcp_no": "20260814900009"
+    },
+    {
+      "market": "KOSDAQ",
+      "corp_name": "광진실업",
+      "corp_code": "00104120",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "광진실업",
+      "rcept_dt": "20260911",
+      "rcp_no": "20260911900472"
     },
     {
       "market": "KOSDAQ",
@@ -13193,6 +13274,15 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "모아라이프플러스",
+      "corp_code": "00587925",
+      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "모아라이프플러스",
+      "rcept_dt": "20261001",
+      "rcp_no": "20261001900383"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "케이이엠텍",
       "corp_code": "00542898",
       "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
@@ -13208,15 +13298,6 @@
       "filer": "케이이엠텍",
       "rcept_dt": "20260206",
       "rcp_no": "20260206902260"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "모바일어플라이언스",
-      "corp_code": "00556615",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "모바일어플라이언스",
-      "rcept_dt": "20260518",
-      "rcp_no": "20260518900904"
     },
     {
       "market": "KOSDAQ",
@@ -13544,6 +13625,15 @@
     },
     {
       "market": "KOSDAQ",
+      "corp_name": "모바일어플라이언스",
+      "corp_code": "00556615",
+      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
+      "filer": "모바일어플라이언스",
+      "rcept_dt": "20260518",
+      "rcp_no": "20260518900904"
+    },
+    {
+      "market": "KOSDAQ",
       "corp_name": "KD",
       "corp_code": "00111218",
       "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
@@ -13703,132 +13793,6 @@
       "filer": "수성웹툰",
       "rcept_dt": "20251121",
       "rcp_no": "20251121900718"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260203",
-      "rcp_no": "20260203901188"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260210",
-      "rcp_no": "20260210901426"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260211",
-      "rcp_no": "20260211901838"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260212",
-      "rcp_no": "20260212901543"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260213",
-      "rcp_no": "20260213901794"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260219",
-      "rcp_no": "20260219901039"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260310",
-      "rcp_no": "20260310901827"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260403",
-      "rcp_no": "20260403901506"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260406",
-      "rcp_no": "20260406901122"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260407",
-      "rcp_no": "20260407901200"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260410",
-      "rcp_no": "20260410900962"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260415",
-      "rcp_no": "20260415900768"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260430",
-      "rcp_no": "20260430902087"
-    },
-    {
-      "market": "KOSDAQ",
-      "corp_name": "수성웹툰",
-      "corp_code": "00243979",
-      "report_nm": "[기재정정] 최대주주변경을수반하는주식담보제공계약체결",
-      "filer": "수성웹툰",
-      "rcept_dt": "20260806",
-      "rcp_no": "20260806900611"
     }
   ]
 }
