@@ -47,9 +47,11 @@ def year_ranges(start: str, end: str) -> list[tuple[str, str]]:
 def collect_list(start: str, end: str, kind: dict) -> list[dict]:
     rows = []
     for s, e in year_ranges(start, end):
+        # 오늘이 들어간 구간은 캐시를 쓰지 않는다. 같은 날 두 번 돌리면 오후 접수분이 캐시에 가려진다.
+        today = date.today().strftime("%Y%m%d")
         got = dart.search_all(
             kind["public_type"], s, e, report_name=kind["report"],
-            cache_key=f"ALL_{kind['public_type']}_{kind['report']}_{s}_{e}",
+            cache_key=None if e >= today else f"ALL_{kind['public_type']}_{kind['report']}_{s}_{e}",
             on_page=lambda p, t, n, s=s: print(f"  목록 {s[:4]} {p}/{t}p · 누적 {n:,}", flush=True))
         rows.extend(got)
     return rows
