@@ -14626,13 +14626,13 @@
     "lead_managers": [
       "IBK투자증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "IBK투자증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": null,
-    "in_lockup_db": false
+    "prospectus_rcept_no": "20260825000476",
+    "in_lockup_db": true
   },
   {
     "name": "덕산넵코어스",
@@ -14699,7 +14699,7 @@
     "co_managers": [
       "미래에셋증권"
     ],
-    "prospectus_rcept_no": "20260522000660",
+    "prospectus_rcept_no": "20260903000077",
     "in_lockup_db": true
   },
   {
@@ -14724,13 +14724,13 @@
     "lead_managers": [
       "한국투자증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "한국투자증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260915000241",
-    "in_lockup_db": false
+    "prospectus_rcept_no": "20260908000396",
+    "in_lockup_db": true
   },
   {
     "name": "와이즈플래닛컴퍼니",
@@ -14754,13 +14754,13 @@
     "lead_managers": [
       "대신증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "대신증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260911000214",
-    "in_lockup_db": false
+    "prospectus_rcept_no": "20260903000071",
+    "in_lockup_db": true
   },
   {
     "name": "한국제17호스팩",
@@ -14844,13 +14844,13 @@
     "lead_managers": [
       "대신증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "대신증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260909000317",
-    "in_lockup_db": false
+    "prospectus_rcept_no": "20260907000079",
+    "in_lockup_db": true
   },
   {
     "name": "엔에이치스팩34호",
@@ -14934,13 +14934,13 @@
     "lead_managers": [
       "DB증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "DB증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260810000669",
-    "in_lockup_db": false
+    "prospectus_rcept_no": "20260716000552",
+    "in_lockup_db": true
   },
   {
     "name": "니어스랩",
@@ -14969,7 +14969,7 @@
       "삼성증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260811000064",
+    "prospectus_rcept_no": "20260810000140",
     "in_lockup_db": true
   },
   {
@@ -14999,13 +14999,13 @@
     "lead_managers": [
       "미래에셋증권"
     ],
-    "lead_src": "KIND 상장주선인(단독)",
+    "lead_src": "증권신고서",
     "kind_sponsors": [
       "미래에셋증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260810000684",
-    "in_lockup_db": false
+    "prospectus_rcept_no": "20260714000315",
+    "in_lockup_db": true
   },
   {
     "name": "인제니아테라퓨틱스",
@@ -15064,7 +15064,7 @@
       "IBK투자증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260803000167",
+    "prospectus_rcept_no": "20260708000575",
     "in_lockup_db": true
   },
   {
@@ -15094,7 +15094,7 @@
       "한국투자증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260731000443",
+    "prospectus_rcept_no": "20260714000470",
     "in_lockup_db": true
   },
   {
@@ -15132,7 +15132,7 @@
     "co_managers": [
       "IBK투자증권"
     ],
-    "prospectus_rcept_no": "20260710000298",
+    "prospectus_rcept_no": "20260706000283",
     "in_lockup_db": true
   },
   {
@@ -15162,7 +15162,7 @@
       "KB증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260522000421",
+    "prospectus_rcept_no": "20260610000563",
     "in_lockup_db": true
   },
   {
@@ -15192,7 +15192,7 @@
       "KB증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260527000403",
+    "prospectus_rcept_no": "20260612000375",
     "in_lockup_db": true
   },
   {
@@ -15282,7 +15282,7 @@
       "KB증권"
     ],
     "co_managers": [],
-    "prospectus_rcept_no": "20260519000246",
+    "prospectus_rcept_no": "20260611000588",
     "in_lockup_db": true
   },
   {
