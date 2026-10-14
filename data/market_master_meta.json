@@ -1,10 +1,10 @@
 {
-  "price_date": "2026-10-08",
+  "price_date": "2026-10-14",
   "price_src": "네이버 금융",
-  "companies": 2758,
-  "fetched_at": "2026-10-08 21:59",
-  "db_price_date": "2026-10-06",
-  "updated": 2636,
+  "companies": 2753,
+  "fetched_at": "2026-10-14 10:05",
+  "db_price_date": "2026-10-12",
+  "updated": 2638,
   "added": 0,
   "ipo_added": 1
 }
