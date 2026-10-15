@@ -14605,6 +14605,66 @@
     "in_lockup_db": false
   },
   {
+    "name": "멜콘",
+    "stock_code": "179880",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-15",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 12300,
+    "offer_amount": 30750000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 30750000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "대신증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "대신증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20260929000194",
+    "in_lockup_db": false
+  },
+  {
+    "name": "진코스텍",
+    "stock_code": "250030",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-15",
+    "listing_type": "이전상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 23500,
+    "offer_amount": 20022000000,
+    "allocations": [
+      {
+        "broker": "하나증권",
+        "ratio": 1.0,
+        "amount": 20022000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "하나증권"
+    ],
+    "lead_src": "증권신고서",
+    "kind_sponsors": [
+      "하나증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20260910000579",
+    "in_lockup_db": true
+  },
+  {
     "name": "브릴스",
     "stock_code": "468670",
     "market": "KOSDAQ",
