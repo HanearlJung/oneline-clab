@@ -108,8 +108,9 @@ def main() -> None:
         q = caps.get(code) or {}
         master[row["회사명"]] = {
             "stock_code": code,
-            "market": {"유가증권": "KOSPI", "코스닥": "KOSDAQ",
-                       "코넥스": "KONEX"}.get(row["시장구분"], row["시장구분"]),
+            # KIND 목록의 시장 이름은 '유가증권'과 '유가'가 번갈아 온다. 앞글자로 맞춘다.
+            "market": next((v for k, v in (("유가", "KOSPI"), ("코스닥", "KOSDAQ"), ("코넥스", "KONEX"))
+                            if str(row["시장구분"]).startswith(k)), row["시장구분"]),
             "industry": row["업종"],
             "fiscal_month": _month(row["결산월"]),   # "12월" 형태로 온다
             "market_cap": q.get("market_cap"),   # 억원
