@@ -14605,6 +14605,169 @@
     "in_lockup_db": false
   },
   {
+    "name": "티앤이코리아",
+    "stock_code": "0053F0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-29",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 15300,
+    "offer_amount": 36720000000,
+    "allocations": [
+      {
+        "broker": "신한투자증권",
+        "ratio": 1.0,
+        "amount": 36720000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "신한투자증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "신한투자증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261016000162",
+    "in_lockup_db": false
+  },
+  {
+    "name": "에스케이증권제14호기업인수목적",
+    "stock_code": "0205H0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-27",
+    "listing_type": "신규상장",
+    "is_spac": true,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 2000,
+    "offer_amount": 13000000000,
+    "allocations": [
+      {
+        "broker": "SK증권",
+        "ratio": 1.0,
+        "amount": 13000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
+    "lead_managers": [
+      "SK증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "SK증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": null,
+    "in_lockup_db": false
+  },
+  {
+    "name": "디티에스",
+    "stock_code": "0015M0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-23",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 18500,
+    "offer_amount": 41234965000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 0.9,
+        "amount": 37111468500
+      },
+      {
+        "broker": "유진투자증권",
+        "ratio": 0.1,
+        "amount": 4123496500
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "대신증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "대신증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261012000323",
+    "in_lockup_db": false
+  },
+  {
+    "name": "엠에스바이오",
+    "stock_code": "0013Y0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-22",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 7800,
+    "offer_amount": 31200000000,
+    "allocations": [
+      {
+        "broker": "KB증권",
+        "ratio": 1.0,
+        "amount": 31200000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "KB증권"
+    ],
+    "lead_src": "증권신고서",
+    "kind_sponsors": [
+      "KB증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20260929000496",
+    "in_lockup_db": true
+  },
+  {
+    "name": "엘리스",
+    "stock_code": "0158S0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-20",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 90500,
+    "offer_amount": 201091000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 0.8,
+        "amount": 160872800000
+      },
+      {
+        "broker": "삼성증권",
+        "ratio": 0.2,
+        "amount": 40218200000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "미래에셋증권"
+    ],
+    "lead_src": "증권신고서",
+    "kind_sponsors": [
+      "미래에셋증권",
+      "삼성증권"
+    ],
+    "co_managers": [
+      "삼성증권"
+    ],
+    "prospectus_rcept_no": "20260929000656",
+    "in_lockup_db": true
+  },
+  {
     "name": "멜콘",
     "stock_code": "179880",
     "market": "KOSDAQ",
