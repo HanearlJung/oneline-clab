@@ -14605,6 +14605,306 @@
     "in_lockup_db": false
   },
   {
+    "name": "넥스아이",
+    "stock_code": "493410",
+    "market": "KOSDAQ",
+    "listing_date": "2026-11-12",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 8000,
+    "offer_amount": 40000000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 40000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "한국투자증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "한국투자증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261030000472",
+    "in_lockup_db": false
+  },
+  {
+    "name": "바로팜",
+    "stock_code": "0153R0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-11-11",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 16400,
+    "offer_amount": 29192000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 29192000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "미래에셋증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "미래에셋증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261030000406",
+    "in_lockup_db": false
+  },
+  {
+    "name": "동원파츠",
+    "stock_code": "0162D0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-11-10",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 26500,
+    "offer_amount": 53795000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 53795000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "삼성증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "삼성증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261030000114",
+    "in_lockup_db": false
+  },
+  {
+    "name": "아이엠스팩1호",
+    "stock_code": "0222E0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-11-04",
+    "listing_type": "신규상장",
+    "is_spac": true,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 2000,
+    "offer_amount": 10000000000,
+    "allocations": [
+      {
+        "broker": "iM증권",
+        "ratio": 1.0,
+        "amount": 10000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
+    "lead_managers": [
+      "iM증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "iM증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": null,
+    "in_lockup_db": false
+  },
+  {
+    "name": "이에스티",
+    "stock_code": "495910",
+    "market": "KOSDAQ",
+    "listing_date": "2026-11-04",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 12400,
+    "offer_amount": 27280000000,
+    "allocations": [
+      {
+        "broker": "대신증권",
+        "ratio": 1.0,
+        "amount": 27280000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "대신증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "대신증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261021000370",
+    "in_lockup_db": false
+  },
+  {
+    "name": "래블업",
+    "stock_code": "0147B0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-11-03",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 19000,
+    "offer_amount": 41420000000,
+    "allocations": [
+      {
+        "broker": "NH투자증권",
+        "ratio": 1.0,
+        "amount": 41420000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "NH투자증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "NH투자증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261021000341",
+    "in_lockup_db": false
+  },
+  {
+    "name": "영광",
+    "stock_code": "359410",
+    "market": "KOSDAQ",
+    "listing_date": "2026-11-02",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 17000,
+    "offer_amount": 38420000000,
+    "allocations": [
+      {
+        "broker": "한국투자증권",
+        "ratio": 1.0,
+        "amount": 38420000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "한국투자증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "한국투자증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261021000246",
+    "in_lockup_db": false
+  },
+  {
+    "name": "한화플러스제6호스팩",
+    "stock_code": "0127E0",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-30",
+    "listing_type": "신규상장",
+    "is_spac": true,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 2000,
+    "offer_amount": 12000000000,
+    "allocations": [
+      {
+        "broker": "한화투자증권",
+        "ratio": 1.0,
+        "amount": 12000000000
+      }
+    ],
+    "alloc_src": "주관사 단독(전량)",
+    "lead_managers": [
+      "한화투자증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "한화투자증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": null,
+    "in_lockup_db": false
+  },
+  {
+    "name": "인텔리빅스",
+    "stock_code": "420610",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-30",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 9000,
+    "offer_amount": 22500000000,
+    "allocations": [
+      {
+        "broker": "미래에셋증권",
+        "ratio": 1.0,
+        "amount": 22500000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "미래에셋증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "미래에셋증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261020000365",
+    "in_lockup_db": false
+  },
+  {
+    "name": "크리에이츠",
+    "stock_code": "439270",
+    "market": "KOSDAQ",
+    "listing_date": "2026-10-30",
+    "listing_type": "신규상장",
+    "is_spac": false,
+    "is_reit": false,
+    "secu": "주권",
+    "offer_price": 15000,
+    "offer_amount": 21000000000,
+    "allocations": [
+      {
+        "broker": "삼성증권",
+        "ratio": 1.0,
+        "amount": 21000000000
+      }
+    ],
+    "alloc_src": "증권신고서 인수인 표(인수금액)",
+    "lead_managers": [
+      "삼성증권"
+    ],
+    "lead_src": "KIND 상장주선인(단독)",
+    "kind_sponsors": [
+      "삼성증권"
+    ],
+    "co_managers": [],
+    "prospectus_rcept_no": "20261019000286",
+    "in_lockup_db": false
+  },
+  {
     "name": "티앤이코리아",
     "stock_code": "0053F0",
     "market": "KOSDAQ",
